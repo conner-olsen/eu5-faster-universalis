@@ -1,0 +1,12 @@
+﻿pt_save_game_compatability = {
+	requires_real = no
+	hide_effects = yes
+	potential_trigger = {
+		current_date > 1337.5.1
+		NOT = {
+			has_variable = is_pt_game
+		}
+	}
+	army_movement_speed = 16
+	navy_movement_speed = 16
+}

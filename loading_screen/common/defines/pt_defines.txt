@@ -1,12 +1,38 @@
-﻿# NGame = {
-# 	HOUR_TICK = 24 # 2
-# 	MORNING_OFFSET = 0 # 8
-# }
+﻿NGame = {
+	HOUR_TICK = 48 # 2
+	MORNING_OFFSET = 12 # 8
+}
 
-NGUI = {
+NUnit = {
+	# ARMY_MOVEMENT_SPEED = 1.0
+	# NAVY_MOVEMENT_SPEED = 2.5
+	ARMY_MOVEMENT_SPEED = 2.08 # 0.13
+	NAVY_MOVEMENT_SPEED = 8 # 0.5
+	LAND_MORALE = 3.0
+	NAVAL_MORALE = 3.0
+}
+
+NCombat = {
+	# MINIMUM_COMBAT_DURATION = 24
+	# BOMBARD_HOURS = 5
+	# HOURS_PER_PHASE = 5
+	# COMBAT_DAMAGE_MULT = 0.01
+	# COMBAT_HOURLY_MORALE_TICK = 0.01
+	INITIATIVE_BASE_CHANCE = 0.6 # 0.1	# base chance each tick
+	INITIATIVE_CHANCE_EACH = 0.12 # 0.02 # Chance to engage per point of initiative
+	# INITIATIVE_CHANCE_HOURS = 0.01 # Chance to engage per hour passed (adds with INITIATIVE_CHANCE_EACH)
+	COMBAT_SPEED_SCALE = 0.3 # 0.05
+	LAND_STRENGTH_DAMAGE_MODIFIER = 1.2 # 0.2
+	NAVAL_STRENGTH_DAMAGE_MODIFIER = 0.3 # 0.05
+	LAND_MORALE_DAMAGE_MODIFIER = 6.0 # 1.0
+	NAVAL_MORALE_DAMAGE_MODIFIER = 1.2 # 0.2
+	# BASE_MORALE_DAMAGE = 1.0
+}
+
+# NGUI = {
 	# GOVERNMENT_REFORM_SOCIETAL_VALUE_REQUIREMENT_FORECAST_IN_MONTHS = 12
 	# GOVERNMENT_REFORM_SOCIETAL_VALUE_REQUIREMENT_FORECAST_CUTOFF_IN_MONTHS = 24
-}
+# }
 
 NAI = {
 	# These two defines below determine AI performance optimizations for extremely large markets
@@ -18,9 +44,9 @@ NAI = {
 	AI_PERFORMANCE_EVALUATE_CITY_UPGRADES_MINIMUM = 10 # 20 # Upgrade (1/56) of all locations or minimum 100 whichever is largest
 	AI_PERFORMANCE_EVALUATE_CITY_UPGRADES_RATIO = 0.1 # 0.017 # 1/56, check all locations once per 5 years if they should upgrade city
 
-	# AI_ALLOWED_PARALLEL_SAME_TYPE_CONSTRUCTION_RATIO = 0.02 # allowed to build the same type of building in 2% of our locations in parallel
-	# AI_ALLOWED_PARALLEL_SAME_TYPE_CONSTRUCTION_MINIMUM = 3 # minimum allowed of parallel construction of the same type of building
-	# AI_ALLOWED_PARALLEL_TOTAL_CONSTRUCTION_RATIO = 0.05 # Allowed to start new constructions in 5% of our locations each monthly tick
+	AI_ALLOWED_PARALLEL_SAME_TYPE_CONSTRUCTION_RATIO = 0.01 # 0.02 # allowed to build the same type of building in 2% of our locations in parallel
+	AI_ALLOWED_PARALLEL_SAME_TYPE_CONSTRUCTION_MINIMUM = 2 # 3 # minimum allowed of parallel construction of the same type of building
+	AI_ALLOWED_PARALLEL_TOTAL_CONSTRUCTION_RATIO = 0.02 # 0.05 # Allowed to start new constructions in 5% of our locations each monthly tick
 
 	AI_PERFORMANCE_UTILITY_LOCATIONS_TO_SAMPLE = 10 # 20 # Maximum number of sample locations for AI modifier utility for performance costly modifiers
 	AI_PERFORMANCE_CABINET_ACTION_LOCATION_SAMPLE_SIZE = 10 # 20 # Maximum number of sample locations for AI cabinet actions
@@ -32,7 +58,7 @@ NAI = {
 	AI_PERFORMANCE_ESTATE_PRIVILEGES_MONTHS_BETWEEN_UPDATES = 24 # 12 # Number of months between each AI update to change estate privileges
 	AI_PERFORMANCE_ESTATE_PRIVILEGES_UNUSED_TAX_MONTHS_BETWEEN_UPDATES = 4 # 2 # Number of months between each AI update to change estate privileges
 	AI_PERFORMANCE_SCHOLARS_MONTHS_BETWEEN_UPDATES = 12 # 6 #Number of months between each AI update to change religion scholars
-	# AI_PERFORMANCE_TRADE_PROFIT_PER_WEIGHT_CUTOFF = 0.5 # If expected profit from a trade route is less than this amount per merchant capacity used we skip it
+	AI_PERFORMANCE_TRADE_PROFIT_PER_WEIGHT_CUTOFF = 0.6 # 0.5 # If expected profit from a trade route is less than this amount per merchant capacity used we skip it
 
 	AI_PERFORMANCE_PATHFIND_DISTANCE_THRESHOLD = 50 # 100 # distance threshold for less accurate pathfind to save performance for ai, smaller threshold saves more performance
 
