@@ -1,6 +1,6 @@
 ﻿NGame = {
-	HOUR_TICK = 48 # 2
-	MORNING_OFFSET = 12 # 8
+	HOUR_TICK = 47 # 2
+	MORNING_OFFSET = 0 # 8
 }
 
 NUnit = {
@@ -70,8 +70,8 @@ NAI = {
 	AI_PERFORMANCE_SAMPLE_SIZE = 2 # 3 #cutting down on colonial charter tests
 	AI_PERFORMANCE_TECH_QUEUE_SIZE = 10 # 5 # how many techs AI queue at once, higher number is better performance but makes AI slower to react to changes
 
-	AI_DEFAULT_COUNTRY_INTERACTION_FREQUENCY = 60 # 30 # default number of days between ai checking each country interaction
-	AI_DEFAULT_CHARACTER_INTERACTION_FREQUENCY = 360 # 180 # default number of days between ai checking each character interaction
+	AI_DEFAULT_COUNTRY_INTERACTION_FREQUENCY = 61 # 30 # default number of days between ai checking each country interaction
+	AI_DEFAULT_CHARACTER_INTERACTION_FREQUENCY = 361 # 180 # default number of days between ai checking each character interaction
 
 	MAXIMUM_ALLOWED_NUMBER_OF_EACH_OBJECTIVE = 10 # 20 # How many objectives (e.g. carpet siege area) of a certain type the AI can have at once for performance reasons
 	CARPET_SIEGE_SEARCH_DEPTHS = { # How far away will units look when carpet sieging
