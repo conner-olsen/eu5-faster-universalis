@@ -1,0 +1,71 @@
+﻿NJominiMapGraphics = {
+	# FADE_IN_SPEED = 0 # 5.0
+	# FADE_OUT_SPEED = 0 # 5.0
+
+	MAP_OBJECT_CELL_COUNT = 100 # 200
+	MAP_OBJECT_FADE_SPEED = 0 # 3.0
+
+}
+
+NGraphics = {
+	FLAT_MAP_DETAIL_TILES = 10 # 20				#number tiles of the detail texture across the map. Higher value = more tiles = smaller details
+	FLAT_MAP_DETAIL_COAST_TILES = 150 # 300
+}
+
+NMapMarker = {
+	MAP_MARKER_FULL_UPDATE_FREQUENCY = 0.0 # 1
+	# MAP_MARKER_SETTLEMENT_SIZE = { 10.0 10.0 }
+	# MAP_MARKER_TOWN_SIZE = { 13.0 13.0 }
+	# MAP_MARKER_CITY_SIZE = { 18.0 18.0 }
+	# MAP_MARKER_SETTLEMENT_POSITION = { 18.0 -2.0 }
+	# MAP_MARKER_TOWN_POSITION = { 22.0 -1.0 }
+	# MAP_MARKER_CITY_POSITION = { 30.0 4.0 }
+	#
+	# CITY_MARKER_WEIGHT_ICON_MULTIPLIER = 				1.0		# Icons appear at the normal point
+	# CITY_MARKER_WEIGHT_CEILING_FOR_NOT_PLAYER_CAPITAL =	19		# At what zoom level do we kill everything but your capital
+	#
+	# CITY_MARKER_RANK_ZOOM_THRESHOLD = 7
+}
+
+NUnitGraphics = {
+	# UNIT_ICON_SHORT_VARIANT_AT_ZOOM_STEP = 9
+	# UNIT_ZOOM_OUT_STEP = 12
+}
+
+NCityGraphics = {
+	# FLAG_TEXTURE_SIZE = { 192 128 }
+	# FLAG_SCALE = 1.0
+	# LOW_QUALITY_FLAG_TEXTURE_SIZE = { 42 28 }
+	# LOW_QUALITY_FLAG_CAMERA_ZOOM_LEVEL = 4
+	# TOOLTIP_ZOOM_LEVEL = 2
+	MAX_LOCATIONS_REBUILT_BY_FRAME = 5 # 10
+
+	# # Screen percentage culling values for city graphics
+	# # This makes large cities be visible for a lot longer than small villages.
+	# # Lower values mean that the city will be visible at a longer distance (a value of 50% means that the item will be culled if it takes up less than 50% of the screen height)
+	# # Array values are used for different Map Object quality settings (off,low,medium,high)
+	# # 'off' will disable all trees etc, but cities are still rendered. We could use the same settings as low, but this allows us to tweak them separately.
+	# DECAL_CULL_SCREEN_PERCENTAGE	= { 0.200 0.125 0.075 0.050 }
+	# ROAD_CULL_SCREEN_PERCENTAGE		= { 0.200 0.125 0.075 0.050 }
+	# MESH_CULL_SCREEN_PERCENTAGE		= { 0.075 0.050 0.040 0.030 }
+	# MESH_CULL_FADE_RANGE			= { 0.300 0.250 0.120 0.080 } # this vale is in actual screen percentage, it's used for gradual mesh culling - when the "city's" screen percentage is MESH_CULL_SCREEN_PERCENTAGE or lower all meshes are culled, when it's MESH_CULL_SCREEN_PERCENTAGE + MESH_CULL_FADE_RANGE or higher all meshes are visible
+	# CULL_FADE_RANGE					= { 0.100 0.100 0.100 0.100 } # This value is in % of decal/road_cull_screen_percentage
+	#
+	# # Impostor settings
+	# # Impostors are placed with the most important mesh directly on the city position (the locator), and subsequent meshes in a circle around it (filler slots).
+	# # Some meshes can have the "exclusive" mode set, which means its mesh will be placed in the middle and scaled with EXCLUSIVE_SCALE. In this mode no other meshes will spawn
+	# # If there's no exclusive mesh there's going to be 1 center piece mesh and up to FILLER_SLOT_COUNT filler meshes
+	# # Some settings in the db can make the center-piece mesh use filler scale or center-piece scale
+	# IMPOSTOR_EXCLUSIVE_SCALE = 2.5
+	# IMPOSTOR_CENTERPIECE_SCALE = 2.25
+	# IMPOSTOR_FILLER_SCALE = 2.0
+	# IMPOSTOR_FILLER_SLOT_COUNT = 5
+	# IMPOSTOR_FILLER_RADIUS = 3.5
+	# IMPOSTOR_FILLER_ROT_OFFSET = 0.5s	# This value is relative to SLOT_COUNT. 1.0 means the rotation offset is "1 slot" - i.e if you have 4 slots, 1.0 means 90 degrees.
+	# IMPOSTOR_ZOOM_STEP = 6
+	# IMPOSTOR_MOVING_STEP = 1.0f;
+	#
+	# ZOOM_OUT_STEP = 9;
+	#
+	# CITY_SAFE_GRID_RADIUS  = 5.0f;
+}
