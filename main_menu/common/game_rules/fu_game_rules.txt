@@ -1,0 +1,31 @@
+﻿fu_sop_rule = {
+	default = fu_no_cull_sop_countries_setting
+
+	fu_no_cull_sop_countries_setting = {
+		flag = general_rule
+	}
+
+	fu_cull_sop_countries_setting = {
+		flag = general_rule
+	}
+}
+
+fu_nation_removal_rule = {
+	default = fu_no_removal_setting
+
+	fu_no_removal_setting = {
+		flag = general_rule
+	}
+
+	fu_europe_europe_centric_setting = {
+		flag = general_rule
+	}
+
+	fu_asia_centric_setting = {
+		flag = general_rule
+	}
+
+	fu_remove_low_importance_setting = {
+		flag = general_rule
+	}
+}

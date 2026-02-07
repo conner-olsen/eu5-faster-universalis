@@ -66,7 +66,7 @@ NAI = {
 	AI_PERFORMANCE_NAVAL_NODE_LIMIT_PER_DISTANCE = 2 # 3 # AI allowed pathfind node depth based on map distance for naval
 	AI_PERFORMANCE_NODE_LIMIT_BASE = 50 # 100 # each pathfind is allowed at least this many node expansions
 	AI_PERFORMANCE_ATTACH_UNIT_MAX_DISTANCE = 100 # 200 # maximum distance AI allied units are allowed to travel to attach, shorter number saves more performance on pathfinding
-	AI_PERFORMANCE_TRADE_ATTEMPT_PER_GOOD = 2 # 5 # number of attempts AI will do per good per market when looking for profitable import/exports before giving up
+	AI_PERFORMANCE_TRADE_ATTEMfu_PER_GOOD = 2 # 5 # number of attempts AI will do per good per market when looking for profitable import/exports before giving up
 	AI_PERFORMANCE_SAMPLE_SIZE = 2 # 3 #cutting down on colonial charter tests
 	AI_PERFORMANCE_TECH_QUEUE_SIZE = 10 # 5 # how many techs AI queue at once, higher number is better performance but makes AI slower to react to changes
 

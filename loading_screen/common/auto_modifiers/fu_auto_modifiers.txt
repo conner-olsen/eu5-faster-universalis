@@ -1,10 +1,10 @@
-﻿pt_save_game_compatability = {
+﻿fu_save_game_compatability = {
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
 		current_date > 1337.5.1
 		NOT = {
-			has_variable = is_pt_game
+			has_global_variable = is_fu_game
 		}
 	}
 	army_movement_speed = 16
