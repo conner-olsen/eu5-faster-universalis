@@ -1,19 +1,20 @@
-﻿NJominiMapGraphics = {
+﻿# WIP
+# NJominiMapGraphics = {
 	# FADE_IN_SPEED = 0 # 5.0
 	# FADE_OUT_SPEED = 0 # 5.0
+	#
+	# MAP_OBJECT_CELL_COUNT = 100 # 200
+	# MAP_OBJECT_FADE_SPEED = 0 # 3.0
+	#
+# }
 
-	MAP_OBJECT_CELL_COUNT = 100 # 200
-	MAP_OBJECT_FADE_SPEED = 0 # 3.0
-
-}
-
-NGraphics = {
-	FLAT_MAP_DETAIL_TILES = 10 # 20				#number tiles of the detail texture across the map. Higher value = more tiles = smaller details
-	FLAT_MAP_DETAIL_COAST_TILES = 150 # 300
-}
-
-NMapMarker = {
-	MAP_MARKER_FULL_UPDATE_FREQUENCY = 1000.0 # 1
+# NGraphics = {
+# 	FLAT_MAP_DETAIL_TILES = 10 # 20				#number tiles of the detail texture across the map. Higher value = more tiles = smaller details
+# 	FLAT_MAP_DETAIL_COAST_TILES = 150 # 300
+# }
+#
+# NMapMarker = {
+	# MAP_MARKER_FULL_UPDATE_FREQUENCY = 0.1 # 1
 	# MAP_MARKER_SETTLEMENT_SIZE = { 10.0 10.0 }
 	# MAP_MARKER_TOWN_SIZE = { 13.0 13.0 }
 	# MAP_MARKER_CITY_SIZE = { 18.0 18.0 }
@@ -25,20 +26,20 @@ NMapMarker = {
 	# CITY_MARKER_WEIGHT_CEILING_FOR_NOT_PLAYER_CAPITAL =	19		# At what zoom level do we kill everything but your capital
 	#
 	# CITY_MARKER_RANK_ZOOM_THRESHOLD = 7
-}
+# }
 
-NUnitGraphics = {
+# NUnitGraphics = {
 	# UNIT_ICON_SHORT_VARIANT_AT_ZOOM_STEP = 9
 	# UNIT_ZOOM_OUT_STEP = 12
-}
+# }
 
-NCityGraphics = {
+# NCityGraphics = {
 	# FLAG_TEXTURE_SIZE = { 192 128 }
 	# FLAG_SCALE = 1.0
 	# LOW_QUALITY_FLAG_TEXTURE_SIZE = { 42 28 }
 	# LOW_QUALITY_FLAG_CAMERA_ZOOM_LEVEL = 4
 	# TOOLTIP_ZOOM_LEVEL = 2
-	MAX_LOCATIONS_REBUILT_BY_FRAME = 5 # 10
+	# MAX_LOCATIONS_REBUILT_BY_FRAME = 5 # 10
 
 	# # Screen percentage culling values for city graphics
 	# # This makes large cities be visible for a lot longer than small villages.
@@ -68,4 +69,4 @@ NCityGraphics = {
 	# ZOOM_OUT_STEP = 9;
 	#
 	# CITY_SAFE_GRID_RADIUS  = 5.0f;
-}
+# }
