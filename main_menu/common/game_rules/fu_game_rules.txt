@@ -29,3 +29,15 @@ fu_nation_removal_rule = {
 		flag = general_rule
 	}
 }
+
+fu_block_recolonization_rule = {
+	default = fu_recolonization_blocked_setting
+
+	fu_recolonization_blocked_setting = {
+		flag = general_rule
+	}
+
+	fu_recolonization_allowed_setting = {
+		flag = general_rule
+	}
+}

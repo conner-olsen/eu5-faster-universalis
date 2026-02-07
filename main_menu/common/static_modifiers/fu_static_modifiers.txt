@@ -1,0 +1,9 @@
+﻿fu_location_disabled_static_modifier = {
+	game_data = {
+		category = location
+	}
+	local_population_capacity = -1000
+	local_population_growth = -1
+	cap_maximum_population_growth_at_zero = yes
+	local_migration_attraction = -10
+}

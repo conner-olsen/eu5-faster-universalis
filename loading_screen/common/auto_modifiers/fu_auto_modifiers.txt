@@ -10,3 +10,4 @@
 	army_movement_speed = 16
 	navy_movement_speed = 16
 }
+
