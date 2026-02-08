@@ -4,7 +4,7 @@
   "version": "1.0",
   "game_id": "eu5",
   "supported_game_version": "1.0.*",
-  "short_description": "Improves EU5 Performance Without Any Effect on Gameplay or Graphical Quality",
+  "short_description": "Improves EU5 performance without any effect on gameplay or graphical quality.",
   "tags": [
     "Utilities",
     "Fixes",
