@@ -1,15 +1,15 @@
 # \[Insert Mod Repo Name\]
 
-\[Insert Mod Repo Description\]
+A Europa Universalis V mod with the goal of improving game speed while maintaining vanilla balance and gameplay.
 
 For a full current and upcoming feature list, see the steam page below.
-[![Steam Workshop](https://img.shields.io/badge/Steam%20Workshop-Subscribe-blue)](\[Insert Mod Workshop Link\])
+[![Steam Workshop](https://img.shields.io/badge/Steam%20Workshop-Subscribe-blue)](https://steamcommunity.com/sharedfiles/filedetails/?id=3662193478)
 
 ## Installation
 
 ### Steam Workshop (Recommended)
 
-Subscribe on the [Steam Workshop](\[Insert Mod Workshop Link\]).
+Subscribe on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3662193478).
 
 ### Manual Installation
 
