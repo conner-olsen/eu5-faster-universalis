@@ -1,22 +1,31 @@
 ﻿[h1]Overview:[/h1]
-...
+Dramatically improves gameplay speed/tick rate through dozens of changes while maintaining vanilla balance and gameplay.
 
 [h1]Features:[/h1]
 [olist]
- [*][b]Feature 1:[/b] Feature 1 description
-	[list]
-	 [*][b]Sub-Feature 1:[/b] Feature 1 sub-feature description
-	 [*][b]Sub-Feature 2:[/b] Feature 1 sub-feature description
-	[/list]
- [*][b]Feature 2:[/b] Feature 2 description
- [*][b]...[/b]
+ [*][b]100%+ Faster Game Speed:[/b] On 5 speed, you should see time pass around double the vanilla speed (if it took 60 seconds for a year to pass on 5-speed vanilla, it will take 30 seconds on this mod). This difference is even greater at lower speeds. For reference, in my testing, Daily Ticks on 5-speed increased game speed by 12.92%, where as the Steam page video shows, Faster Universalis increased game speed by 102.12% on a late-game vanilla save.
+    [list]
+     [*]Accomplished through dozens of defines changes that would be too many to list here.
+     [*]Removed hourly ticks
+     [*]Combat, Movement Speed, Game & AI Update Frequency, have all been adjusted so that all outcomes and game balance should be identical to vanilla. You should not notice any difference besides the faster speed.
+    [/list]
+ [*][b]Optional Performance Optimization Game Rules:[/b]
+  [list]
+   [*][b]Pop-Based Nation Culling[/b] Deletes Pop-Based Nations in regions without any regular nations. See the mod page screenshot for a comparison to vanilla.
+   [*][b]Region Removals:[/b] Europe Centric, Asia Centric, and Remove Low-Importance Regions. See the mod page screenshots for what each will look like.
+    [list]
+     [*][b]Remove Low-Importance Regions:[/b] Deletes Minor Nations in regions with little chance of interaction, such as small Pacific island nations—full details in the game rule descriptions.
+     [*][b]Europe Centric:[/b] Effectively a Europe-only game, removing far away regions such as East Asia, Indonesia, & Oceania.
+     [*][b]Asia Centric:[/b] Effectively an Asia-only game, removing faraway regions such as Europe & West Africa.
+    [/list]
+  [/list]
 [/olist]
 
 [h1]Planned/Upcoming:[/h1]
 [olist]
- [*][b]Planned Feature 1:[/b] Planned Feature 1 description
- [*][b]Planned Feature 2:[/b] Planned Feature 2 description
- [*][b]...[/b]
+ [*][b]Continued Performance Optimization:[/b] I will be continuing to optimize the mod for performance as I find more opportunities.
+ [*][b]Additional Customization:[/b] Allow adjusting combat speed and movement speed through game rules. Feel free to suggest other settings you would like to see.
+ [*][b]Graphics Tweak Options:[/b] I have been working on improving rendering/FPS performance as well, which will be released in a future update. But as of now, I've only managed a 13% increase in FPS. (If you like, you can uncomment out my WIP graphics defines, but it is not currently enabled by default.) Note that if you are CPU-bound, you may still see a FPS boost currently. And you will see an FPS boost using any of the optional performance game rules in certain scenes, as there will be less to render.
 [/olist]
 
 [h2]Native Localizations:[/h2]
@@ -43,15 +52,21 @@ See the [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/$item-
 
 [h1]Compatibility:[/h1]
 [list]
+ [*]Supports v1.0.11 and the v1.1 beta.
  [*]Not Ironman Compatible.
  [*]Fully save game compatible.
- [*]Should work with any mod.
+ [*]Should not be used with any other tick-change mod, such as Daily Ticks.
  [*]I may add compatibility patches upon request.
 [/list]
 
-In addition to the pinned suggestions discussion, you can also ask any questions, report bugs, or make suggestions in the [url=$REPLACE_ME$]#$REPLACE_ME$ channel of the $REPLACE_ME$ discord server[/url]. And if you are interested in joining in the development of this or one of my other mods, you can ping or add me on Discord @$REPLACE_ME$. All contributions are welcome.
+[h1]Additional Notes[/h1]
+Testers have not noticed any issues/unexpected behavior thus far. But please report any issues or outcomes that don't match vanilla/expected behavior if they occur.
 
-The source and dev versions of the mod are available on [url=$REPLACE_ME$]GitHub.[/url]
+In addition to the comment section and pinned suggestions discussion, you can also ask any questions, report bugs, or make suggestions in the [url=https://discord.gg/zeQ6x9wrPq]#utility-mods channel of the EU5 Community discord server[/url]. And if you are interested in joining in the development of this or one of my other mods, you can ping or add me on Discord @arealconner. All contributions are welcome.
+
+I am also looking for more testers for the mod's development version. If you are interested, please reach out on Discord as well.
+
+The source and dev versions of the mod are available on [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub.[/url]
 
 --NO-TRANSLATE-BELOW--
 [h1]DeepL Translated Mod Pages:[/h1]
