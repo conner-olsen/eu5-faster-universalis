@@ -62,6 +62,8 @@ See the [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/$item-
 [/list]
 
 [h1]Additional Notes[/h1]
+With the drastic speed improvements, you may want to play on a lower speed setting, perhaps 1-speed while at war.
+
 Testers have not noticed any issues/unexpected behavior thus far. But please report any issues or outcomes that don't match vanilla/expected behavior if they occur.
 
 In addition to the comment section and pinned suggestions discussion, you can also ask any questions, report bugs, or make suggestions in the [url=https://discord.gg/zeQ6x9wrPq]#utility-mods channel of the EU5 Community discord server[/url]. And if you are interested in joining in the development of this or one of my other mods, you can ping or add me on Discord @arealconner. All contributions are welcome.
