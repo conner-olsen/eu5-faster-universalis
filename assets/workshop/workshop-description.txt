@@ -21,7 +21,7 @@ Dramatically improves game speed/tick rate while maintaining vanilla balance and
   [/list]
 [/olist]
 
-For reference, in my testing, Daily Ticks on 5-speed increased game speed by 12.92%, where as the Steam page video shows, Faster Universalis without any optional optimizations enabled, increased game speed by 102.12% on a late-game vanilla save. With the optional optimizations enabled, such as Pop-Based Nation Culling, and Europe-centric regions, you can see improvements of over 200%.
+For reference, in my testing, Daily Ticks on 5-speed increased game speed by about 13%, where as the Steam page video shows, Faster Universalis without any optional optimizations enabled, increased game speed by about 100% on a late-game vanilla save. With the optional optimizations enabled, such as Pop-Based Nation Culling, and Europe-centric regions, you can see improvements of over 200%.
 
 [h1]Planned/Upcoming:[/h1]
 [olist]
