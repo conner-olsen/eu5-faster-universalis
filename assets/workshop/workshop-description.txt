@@ -3,7 +3,7 @@ Dramatically improves gameplay speed/tick rate through dozens of changes while m
 
 [h1]Features:[/h1]
 [olist]
- [*][b]100%+ Faster Game Speed:[/b] On 5 speed, you should see time pass around double the vanilla speed (if it took 60 seconds for a year to pass on 5-speed vanilla, it will take 30 seconds on this mod). This difference is even greater at lower speeds. For reference, in my testing, Daily Ticks on 5-speed increased game speed by 12.92%, where as the Steam page video shows, Faster Universalis increased game speed by 102.12% on a late-game vanilla save.
+ [*][b]100%+ Faster Game Speed:[/b] On 5 speed, you should see time pass around twice as fast as vanilla, and an even greater improvement on lower speeds.
     [list]
      [*]Accomplished through dozens of defines changes that would be too many to list here.
      [*]Removed hourly ticks
@@ -20,6 +20,8 @@ Dramatically improves gameplay speed/tick rate through dozens of changes while m
     [/list]
   [/list]
 [/olist]
+
+For reference, in my testing, Daily Ticks on 5-speed increased game speed by 12.92%, where as the Steam page video shows, Faster Universalis without any optional optimizations enabled, increased game speed by 102.12% on a late-game vanilla save. With the optional optimizations enabled, such as Pop-Based Nation Culling, and Europe-centric regions, you can see improvements of over 200%.
 
 [h1]Planned/Upcoming:[/h1]
 [olist]
