@@ -1,4 +1,4 @@
-# \[Insert Mod Repo Name\]
+# Faster Universalis
 
 A Europa Universalis V mod with the goal of improving game speed while maintaining vanilla balance and gameplay.
 
