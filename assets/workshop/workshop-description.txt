@@ -1,5 +1,5 @@
 ﻿[h1]Overview:[/h1]
-Dramatically improves gameplay speed/tick rate through dozens of changes while maintaining vanilla balance and gameplay.
+Dramatically improves game speed/tick rate while maintaining vanilla balance and gameplay.
 
 [h1]Features:[/h1]
 [olist]
