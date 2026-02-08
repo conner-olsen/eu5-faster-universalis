@@ -89,7 +89,7 @@ NPortrait = {
 
 NPop = {
 	PERFORMANCE_UPDATE_DEMANDS_MIN = 0 # We try to update all pop demands within a year, but this sets a minimum of pops per day
-	PERFORMANCE_UPDATE_DEMANDS_MAX = 50 # 100 # We try to update all pop demands within a year, but this sets a maximum of pops per day}
+	PERFORMANCE_UPDATE_DEMANDS_MAX = 50 # 100 # We try to update all pop demands within a year, but this sets a maximum of pops per day
 }
 
 NMarket = {
