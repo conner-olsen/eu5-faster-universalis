@@ -1,0 +1,79 @@
+===WORKSHOP_TITLE===
+极速欧陆 / Faster Universalis
+===WORKSHOP_DESCRIPTION===
+[i]You are on the DeepL-Generated Simplified Chinese Page. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=$item-id$&l=english]Click here for the Native English Page.[/url][/i]
+
+[h1]概述：[/h1]
+在保持原版平衡和玩法的同时，大幅提升游戏运行速度/Tick速率。
+
+[h1]功能：[/h1]
+[olist]
+ [*][b]100%+ 的游戏提速：[/b] 在5档速度下，你应该能看到时间流逝速度约为原版的两倍，在较低速度下的提升甚至更为显著。
+    [list]
+     [*]通过数十项变量（defines）修改实现，由于数量过多，在此不一一列举。
+     [*]移除了每小时跳动（hourly ticks）。
+     [*]战斗、移动速度、游戏与AI更新频率均已调整，因此所有结果和游戏平衡应与原版完全一致。除了更快的速度外，你应该不会察觉到任何差异。
+    [/list]
+ [*][b]可选性能优化游戏规则：[/b]
+  [list]
+   [*][b]基于人口的国家剔除（Pop-Based Nation Culling）：[/b] 删除没有任何常规国家的区域内的基于人口的国家。请查看模组页面截图以了解与原版的对比。
+   [*][b]区域移除：[/b] 以欧洲为中心、以亚洲为中心，以及移除次要区域。请查看模组页面截图了解各个选项的效果。
+    [list]
+     [*][b]移除次要区域：[/b] 删除几乎没有互动机会的区域内的小国，例如太平洋上的微型岛国——详见游戏规则描述。
+     [*][b]以欧洲为中心：[/b] 实际上变成了仅限欧洲的游戏，移除了东亚、印度尼西亚和大洋洲等遥远区域。
+     [*][b]以亚洲为中心：[/b] 实际上变成了仅限亚洲的游戏，移除了欧洲和西非等遥远区域。
+    [/list]
+  [/list]
+[/olist]
+
+作为参考，在我的测试中，“Daily Ticks”在5速下使游戏速度提升了12.92%，而正如Steam页面视频所示，“Faster Universalis”在不开启任何可选优化的原版后期存档中，使游戏速度提升了102.12%。开启可选优化（如人口国家剔除和欧洲中心区域）后，你可以看到超过200%的提升。
+
+[h1]计划中/即将推出：[/h1]
+[olist]
+ [*][b]持续性能优化：[/b] 随着发现更多机会，我将继续优化模组的性能。
+ [*][b]额外自定义：[/b] 允许通过游戏规则调整战斗速度和移动速度。欢迎随时建议你希望看到的其他设置。
+ [*][b]图形调整选项：[/b] 我也一直在努力改进渲染/FPS性能，这将在未来的更新中发布。但到目前为止，我只实现了13%的FPS提升。（如果你愿意，可以取消注释我开发中的图形变量，但目前默认不启用。）请注意，如果你的性能受限于CPU，目前可能仍会看到FPS提升。此外，使用任何可选的性能游戏规则在某些场景下都会提升FPS，因为渲染内容更少。
+[/olist]
+
+[h2]原生本地化：[/h2]
+[list]
+ [*][b]English：[/b] 主要语言
+[/list]
+
+[h2]DeepL 翻译本地化：[/h2]
+[list]
+ [*][b]Chinese / 中文[/b]
+ [*][b]French / Français[/b]
+ [*][b]German / Deutsch[/b]
+ [*][b]Japanese / 日本語[/b]
+ [*][b]Korean / 한국어[/b]
+ [*][b]Polish / Polski[/b]
+ [*][b]Portuguese (Brazil) / Português (Brasil)[/b]
+ [*][b]Russian / Русский[/b]
+ [*][b]Spanish / Español[/b]
+ [*][b]Turkish / Türkçe[/b]
+[/list]
+
+[h1]更改日志：[/h1]
+请参阅 [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]创意工坊页面上的更改说明[/url]。
+
+[h1]兼容性：[/h1]
+[list]
+ [*]支持 v1.0.11 和 v1.1 beta。
+ [*]不兼容铁人模式。
+ [*]完全兼容存档。
+ [*]不应与任何其他修改 Tick 的模组（如 Daily Ticks）同时使用。
+ [*]我可以根据要求添加兼容性补丁。
+[/list]
+
+[h1]附加说明[/h1]
+由于速度提升极其显著，你可能需要调低速度档位，甚至是1档速。
+
+到目前为止，测试人员尚未发现任何问题或异常行为。但如果发生，请报告任何与原版/预期行为不符的问题或结果。
+
+除了评论区和置顶的建议讨论区外，你还可以在 [url=https://discord.gg/zeQ6x9wrPq]EU5 社区 Discord 服务器的 #utility-mods 频道[/url]提问、报告错误或提出建议。如果你有兴趣参与此模组或我其他模组的开发，可以在 Discord 上私信或添加我 @arealconner。欢迎所有贡献。
+
+我也在为模组的开发版本寻找更多测试人员。如果你有兴趣，也请通过 Discord 联系。
+
+模组的源码和开发版本可在 [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub[/url] 上获得。
+

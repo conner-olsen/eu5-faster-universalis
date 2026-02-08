@@ -1,0 +1,79 @@
+===WORKSHOP_TITLE===
+Universalis más rápido / Faster Universalis
+===WORKSHOP_DESCRIPTION===
+[i]You are on the DeepL-Generated Spanish Page. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=$item-id$&l=english]Click here for the Native English Page.[/url][/i]
+
+[h1]Resumen:[/h1]
+Mejora drásticamente la velocidad del juego y la tasa de ticks mientras mantiene el equilibrio y la jugabilidad original (vanilla).
+
+[h1]Características:[/h1]
+[olist]
+ [*][b]Velocidad de juego un 100%+ más rápida:[/b] En velocidad 5, el tiempo debería pasar aproximadamente el doble de rápido que en el juego original, con una mejora aún mayor en velocidades más bajas.
+    [list]
+     [*]Logrado a través de docenas de cambios en los "defines" que serían demasiado numerosos para enumerar aquí.
+     [*]Se han eliminado los ticks por hora.
+     [*]El combate, la velocidad de movimiento y la frecuencia de actualización del juego y la IA se han ajustado para que todos los resultados y el equilibrio del juego sean idénticos al original. No deberías notar ninguna diferencia aparte de la mayor velocidad.
+    [/list]
+ [*][b]Reglas de juego opcionales para la optimización del rendimiento:[/b]
+  [list]
+   [*][b]Eliminación de naciones basadas en población (Pop-Based Nation Culling):[/b] Elimina las naciones basadas en población en regiones sin naciones normales. Mira la captura de pantalla de la página del mod para una comparación con el juego original.
+   [*][b]Eliminación de regiones:[/b] Centrado en Europa, Centrado en Asia y Eliminar regiones de baja importancia. Consulta las capturas de pantalla de la página del mod para ver cómo se ve cada una.
+    [list]
+     [*][b]Eliminar regiones de baja importancia:[/b] Elimina naciones menores en regiones con pocas posibilidades de interacción, como las pequeñas naciones insulares del Pacífico; detalles completos en las descripciones de las reglas del juego.
+     [*][b]Centrado en Europa:[/b] Efectivamente una partida solo de Europa, eliminando regiones lejanas como Asia Oriental, Indonesia y Oceanía.
+     [*][b]Centrado en Asia:[/b] Efectivamente una partida solo de Asia, eliminando regiones lejanas como Europa y África Occidental.
+    [/list]
+  [/list]
+[/olist]
+
+Como referencia, en mis pruebas, Daily Ticks en velocidad 5 aumentó la velocidad del juego en un 12,92%, mientras que, como muestra el video de la página de Steam, Faster Universalis, sin ninguna optimización opcional activada, aumentó la velocidad del juego en un 102,12% en una partida guardada avanzada del juego original. Con las optimizaciones opcionales activadas, como la Eliminación de naciones basada en población y las regiones centradas en Europa, se pueden ver mejoras de más del 200%.
+
+[h1]Planeado/Próximamente:[/h1]
+[olist]
+ [*][b]Optimización continua del rendimiento:[/b] Seguiré optimizando el mod para mejorar el rendimiento a medida que encuentre nuevas oportunidades.
+ [*][b]Personalización adicional:[/b] Permitir el ajuste de la velocidad de combate y de movimiento a través de las reglas del juego. No dudes en sugerir otros ajustes que te gustaría ver.
+ [*][b]Opciones de retoques gráficos:[/b] He estado trabajando en mejorar también el rendimiento de renderizado/FPS, que se lanzará en una futura actualización. Por ahora, solo he logrado un aumento del 13% en los FPS. (Si lo deseas, puedes descomentar mis parámetros gráficos de trabajo en curso, pero actualmente no están activados por defecto). Ten en cuenta que si tu limitación es la CPU, es posible que ya notes una mejora de FPS. Además, verás un aumento de FPS al usar cualquiera de las reglas opcionales de rendimiento en ciertas escenas, ya que habrá menos elementos que renderizar.
+[/olist]
+
+[h2]Localizaciones nativas:[/h2]
+[list]
+ [*][b]English:[/b] Principal
+[/list]
+
+[h2]Localizaciones traducidas por DeepL:[/h2]
+[list]
+ [*][b]Chinese / 中文[/b]
+ [*][b]French / Français[/b]
+ [*][b]German / Deutsch[/b]
+ [*][b]Japanese / 日本語[/b]
+ [*][b]Korean / 한국어[/b]
+ [*][b]Polish / Polski[/b]
+ [*][b]Portuguese (Brazil) / Português (Brasil)[/b]
+ [*][b]Russian / Русский[/b]
+ [*][b]Spanish / Español[/b]
+ [*][b]Turkish / Türkçe[/b]
+[/list]
+
+[h1]Registro de cambios:[/h1]
+Consulta las [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Notas de cambios en la página del workshop[/url].
+
+[h1]Compatibilidad:[/h1]
+[list]
+ [*]Soporta la v1.0.11 y la beta v1.1.
+ [*]No es compatible con Ironman.
+ [*]Totalmente compatible con partidas guardadas.
+ [*]No debe usarse con ningún otro mod de cambio de ticks, como Daily Ticks.
+ [*]Puedo añadir parches de compatibilidad a petición.
+[/list]
+
+[h1]Notas adicionales[/h1]
+Con las drásticas mejoras de velocidad, es posible que prefieras jugar en un ajuste de velocidad más bajo, incluso en velocidad 1.
+
+Los probadores no han notado ningún problema o comportamiento inesperado hasta ahora. No obstante, por favor, informa de cualquier problema o resultado que no coincida con el comportamiento original/esperado si ocurre.
+
+Además de la sección de comentarios y la discusión de sugerencias fijada, también puedes hacer preguntas, informar de errores o hacer sugerencias en el [url=https://discord.gg/zeQ6x9wrPq]canal #utility-mods del servidor de Discord de la comunidad de EU5[/url]. Y si estás interesado en participar en el desarrollo de este o de uno de mis otros mods, puedes mencionarme o añadirme en Discord @arealconner. Todas las contribuciones son bienvenidas.
+
+También estoy buscando más probadores para la versión de desarrollo del mod. Si estás interesado, por favor contacta también por Discord.
+
+El código fuente y las versiones de desarrollo del mod están disponibles en [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub.[/url]
+
