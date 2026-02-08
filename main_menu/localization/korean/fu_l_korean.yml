@@ -13,7 +13,7 @@
  setting_fu_asia_centric_setting_desc: "다음 아대륙에 있는 모든 국가를 제거합니다: 서유럽, 동유럽, 북아프리카, 서아프리카, 중앙아프리카, 북아메리카, 남아메리카"
  setting_fu_remove_low_importance_setting: "중요도가 낮은 국가 제거"
  setting_fu_remove_low_importance_setting_desc: "다음 아대륙의 모든 국가를 제거합니다: 북아메리카, 남아메리카, 태평양 제도"
- rule_fu_block_recolonization_rule: "재개척 금지"
+ rule_fu_block_recolonization_rule: "Faster Universalis: 재식민화 방지"
  setting_fu_recolonization_blocked_setting: "예"
  setting_fu_recolonization_blocked_setting_desc: "Europe Centric 또는 Asia Centric 설정과 함께 사용하면 비활성화된 모든 아대륙의 재개척을 방지합니다. 남아메리카와 같이 기존에 개척되지 않은 아대륙의 개척은 차단하지 않습니다."
  setting_fu_recolonization_allowed_setting: "아니요"

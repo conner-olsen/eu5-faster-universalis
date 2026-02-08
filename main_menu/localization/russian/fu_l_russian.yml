@@ -13,7 +13,7 @@
  setting_fu_asia_centric_setting_desc: "Удаляет все страны в этих субконтинентах: Западная Европа, Восточная Европа, Северная Африка, Западная Африка, Центральная Африка, Северная Америка, Южная Америка."
  setting_fu_remove_low_importance_setting: "Удалить малозначимые страны"
  setting_fu_remove_low_importance_setting_desc: "Удаляет все страны в этих субконтинентах: Северная Америка, Южная Америка, Острова Тихого океана."
- rule_fu_block_recolonization_rule: "Запретить повторную колонизацию"
+ rule_fu_block_recolonization_rule: "Faster Universalis: Блокировка повторной колонизации"
  setting_fu_recolonization_blocked_setting: "Да"
  setting_fu_recolonization_blocked_setting_desc: "Предотвращает повторную колонизацию всех отключенных субконтинентов при использовании настроек «Europe Centric» или «Asia Centric». Не блокирует колонизацию изначально не колонизированных субконтинентов, таких как Южная Америка."
  setting_fu_recolonization_allowed_setting: "Нет"

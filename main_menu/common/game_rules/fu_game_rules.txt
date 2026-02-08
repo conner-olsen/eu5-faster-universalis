@@ -17,15 +17,15 @@ fu_nation_removal_rule = {
 		flag = general_rule
 	}
 
+	fu_remove_low_importance_setting = {
+		flag = general_rule
+	}
+
 	fu_europe_europe_centric_setting = {
 		flag = general_rule
 	}
 
 	fu_asia_centric_setting = {
-		flag = general_rule
-	}
-
-	fu_remove_low_importance_setting = {
 		flag = general_rule
 	}
 }

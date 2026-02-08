@@ -13,7 +13,7 @@
  setting_fu_asia_centric_setting_desc: "移除以下次大陆中的所有国家：西欧、东欧、北非、西非、中非、北美、南美。"
  setting_fu_remove_low_importance_setting: "移除低重要性国家"
  setting_fu_remove_low_importance_setting_desc: "移除以下次大陆的所有国家：北美洲、南美洲、太平洋群岛。"
- rule_fu_block_recolonization_rule: "禁止重新殖民"
+ rule_fu_block_recolonization_rule: "极速风云：禁止重新殖民"
  setting_fu_recolonization_blocked_setting: "请发送需要翻译的文本。"
  setting_fu_recolonization_blocked_setting_desc: "当与“以欧洲为中心”或“以亚洲为中心”设置配合使用时，将防止所有已禁用次大陆的重新殖民。不会阻止对从未被殖民过的次大陆（如南美洲）的殖民。"
  setting_fu_recolonization_allowed_setting: "否"

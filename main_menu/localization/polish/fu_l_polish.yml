@@ -13,7 +13,7 @@
  setting_fu_asia_centric_setting_desc: "Usuwa wszystkie państwa w tych podkontynentach: Europa Zachodnia, Europa Wschodnia, Afryka Północna, Afryka Zachodnia, Afryka Środkowa, Ameryka Północna, Ameryka Południowa"
  setting_fu_remove_low_importance_setting: "Usuń państwa o niskim znaczeniu"
  setting_fu_remove_low_importance_setting_desc: "Usuwa wszystkie państwa na tych subkontynentach: Ameryka Północna, Ameryka Południowa, Wyspy Pacyfiku"
- rule_fu_block_recolonization_rule: "Zablokuj rekolonizację"
+ rule_fu_block_recolonization_rule: "Faster Universalis: Blokuj rekolonizację"
  setting_fu_recolonization_blocked_setting: "Tak"
  setting_fu_recolonization_blocked_setting_desc: "Zapobiegnie ponownej kolonizacji wszystkich wyłączonych subkontynentów przy użyciu ustawień Europe Centric lub Asia Centric. Nie zablokuje kolonizacji nigdy nieskolonizowanych subkontynentów, takich jak Ameryka Południowa."
  setting_fu_recolonization_allowed_setting: "Nie"

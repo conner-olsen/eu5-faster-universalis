@@ -13,7 +13,7 @@
  setting_fu_asia_centric_setting_desc: "Supprime toutes les nations dans ces sous-continents : Europe occidentale, Europe orientale, Afrique du Nord, Afrique de l'Ouest, Afrique centrale, Amérique du Nord, Amérique du Sud"
  setting_fu_remove_low_importance_setting: "Retirer les nations de faible importance"
  setting_fu_remove_low_importance_setting_desc: "Supprime toutes les nations dans ces sous-continents : Amérique du Nord, Amérique du Sud, Îles du Pacifique."
- rule_fu_block_recolonization_rule: "Bloquer la recolonisation"
+ rule_fu_block_recolonization_rule: "Faster Universalis : Bloquer la recolonisation"
  setting_fu_recolonization_blocked_setting: "Oui"
  setting_fu_recolonization_blocked_setting_desc: "Empêchera la recolonisation de tous les sous-continents désactivés lorsqu'utilisé avec les paramètres Europe Centric ou Asia Centric. Ne bloquera pas la colonisation des sous-continents n'ayant jamais été colonisés, tels que l'Amérique du Sud."
  setting_fu_recolonization_allowed_setting: "Non"

@@ -13,7 +13,7 @@
  setting_fu_asia_centric_setting_desc: "以下の亜大陸に含まれるすべての国家を削除します：西ヨーロッパ、東ヨーロッパ、北アフリカ、西アフリカ、中央アフリカ、北アメリカ、南アメリカ"
  setting_fu_remove_low_importance_setting: "重要度の低い国家を削除"
  setting_fu_remove_low_importance_setting_desc: "以下の亜大陸にある全ての国家を削除します：北アメリカ、南アメリカ、太平洋諸島"
- rule_fu_block_recolonization_rule: "再入植を禁止"
+ rule_fu_block_recolonization_rule: "Faster Universalis: 再入植の禁止"
  setting_fu_recolonization_blocked_setting: "はい"
  setting_fu_recolonization_blocked_setting_desc: "Europe Centric、またはAsia Centric設定で使用した場合、無効化されたすべての亜大陸の再植民を防止します。南アメリカのような、一度も植民されていない亜大陸の植民を制限することはありません。"
  setting_fu_recolonization_allowed_setting: "いいえ"

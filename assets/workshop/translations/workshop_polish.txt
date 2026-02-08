@@ -4,76 +4,76 @@ Szybsze Universalis / Faster Universalis
 [i]You are on the DeepL-Generated Polish Page. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=$item-id$&l=english]Click here for the Native English Page.[/url][/i]
 
 [h1]Przegląd:[/h1]
-Znacznie poprawia prędkość gry/częstotliwość ticków, zachowując przy tym balans i rozgrywkę wersji podstawowej (vanilla).
+Dramatycznie poprawia prędkość gry / częstotliwość ticków, zachowując balans i rozgrywkę wersji vanilla.
 
-[h1]Cechy:[/h1]
+[h1]Funkcje:[/h1]
 [olist]
- [*][b]O ponad 100% szybsza gra:[/b] Na prędkości 5 czas powinien płynąć około dwa razy szybciej niż w wersji podstawowej, a na niższych prędkościach poprawa jest jeszcze większa.
+ [*][b]Ponad 100% szybsze tempo gry:[/b] Na prędkości 5 czas powinien płynąć około dwukrotnie szybciej niż w wersji vanilla, a na niższych prędkościach poprawa jest jeszcze bardziej widoczna.
     [list]
-     [*]Osiągnięte dzięki dziesiątkom zmian w plikach defines, których wymienienie tutaj zajęłoby zbyt wiele miejsca.
-     [*]Usunięto godzinowe ticki.
-     [*]Walka, prędkość poruszania się oraz częstotliwość aktualizacji gry i AI zostały dostosowane tak, aby wszystkie wyniki i balans gry były identyczne z wersją podstawową. Nie powinieneś zauważyć żadnej różnicy poza wyższą prędkością.
+     [*]Osiągnięte dzięki dziesiątkom zmian w definicjach (defines), których jest zbyt wiele, by je tutaj wymienić.
+     [*]Usunięto cogodzinne ticki.
+     [*]Walka, prędkość ruchu oraz częstotliwość aktualizacji gry i SI zostały dostosowane tak, aby wszystkie wyniki i balans gry były identyczne z wersją vanilla. Nie powinieneś zauważyć żadnej różnicy poza szybszym tempem.
     [/list]
- [*][b]Opcjonalne reguły gry optymalizujące wydajność:[/b]
+ [*][b]Opcjonalne zasady gry optymalizujące wydajność:[/b]
   [list]
-   [*][b]Usuwanie nacji opartych na populacji (Pop-Based Nation Culling):[/b] Usuwa nacje oparte na populacji w regionach, w których nie ma standardowych państw. Zobacz zrzut ekranu na stronie moda, aby porównać z wersją podstawową.
-   [*][b]Usuwanie regionów:[/b] Skupienie na Europie, Skupienie na Azji oraz Usuwanie regionów o niskim znaczeniu. Zobacz zrzuty ekranu na stronie moda, aby zobaczyć, jak wygląda każdy z nich.
+   [*][b]Usuwanie narodów opartych na popach (Pop-Based Nation Culling):[/b] Usuwa narody oparte na popach w regionach pozbawionych standardowych narodów. Zobacz zrzut ekranu na stronie moda, aby porównać efekt z wersją vanilla.
+   [*][b]Usuwanie regionów:[/b] Skupienie na Europie, Skupienie na Azji oraz Usuwanie regionów o niskim znaczeniu. Zobacz zrzuty ekranu na stronie moda, aby sprawdzić, jak wygląda każdy z tych wariantów.
     [list]
-     [*][b]Usuwanie regionów o niskim znaczeniu:[/b] Usuwa mniejsze nacje w regionach o małej szansie na interakcję, takich jak małe wyspiarskie państwa na Pacyfiku – pełne szczegóły w opisach reguł gry.
-     [*][b]Skupienie na Europie (Europe Centric):[/b] W praktyce gra ograniczona tylko do Europy, usuwająca odległe regiony, takie jak Azja Wschodnia, Indonezja i Oceania.
-     [*][b]Skupienie na Azji (Asia Centric):[/b] W praktyce gra ograniczona tylko do Azji, usuwająca odległe regiony, takie jak Europa i Afryka Zachodnia.
+     [*][b]Usuwanie regionów o niskim znaczeniu:[/b] Usuwa mniejsze narody w regionach o małej szansie na interakcję, takie jak małe państwa wyspiarskie na Pacyfiku – pełne szczegóły w opisach zasad gry.
+     [*][b]Skupienie na Europie:[/b] W praktyce rozgrywka ograniczona do Europy, usuwająca odległe regiony, takie jak Azja Wschodnia, Indonezja i Oceania.
+     [*][b]Skupienie na Azji:[/b] W praktyce rozgrywka ograniczona do Azji, usuwająca odległe regiony, takie jak Europa i Afryka Zachodnia.
     [/list]
   [/list]
 [/olist]
 
-Dla odniesienia, w moich testach mod Daily Ticks na prędkości 5 zwiększył prędkość gry o 12,92%, podczas gdy – jak pokazuje film na stronie Steam – Faster Universalis bez włączonych opcjonalnych optymalizacji zwiększył prędkość gry o 102,12% na zapisie z późnej fazy gry w wersji podstawowej. Przy włączonych opcjonalnych optymalizacjach, takich jak usuwanie nacji opartych na populacji i regiony skupione na Europie, można zaobserwować poprawę o ponad 200%.
+Dla odniesienia: w moich testach mod Daily Ticks na prędkości 5 zwiększył szybkość gry o 12,92%, podczas gdy – jak widać na filmie na stronie Steam – Faster Universalis bez żadnych opcjonalnych optymalizacji zwiększył szybkość gry o 102,12% na zapisie z późnej fazy gry w wersji vanilla. Przy włączonych opcjonalnych optymalizacjach, takich jak usuwanie narodów opartych na popach czy skupienie na Europie, można zaobserwować poprawę o ponad 200%.
 
-[h1]Planowane / Nadchodzące:[/h1]
+[h1]Planowane / Wkrótce:[/h1]
 [olist]
- [*][b]Dalsza optymalizacja wydajności:[/b] Będę nadal optymalizować moda pod kątem wydajności, gdy znajdę ku temu kolejne okazje.
- [*][b]Dodatkowa personalizacja:[/b] Umożliwienie dostosowania prędkości walki i prędkości poruszania się poprzez reguły gry. Zachęcam do sugerowania innych ustawień, które chcielibyście zobaczyć.
- [*][b]Opcje poprawek graficznych:[/b] Pracuję również nad poprawą wydajności renderowania/FPS, co zostanie wydane w przyszłej aktualizacji. Jak dotąd udało mi się uzyskać jedynie 13% wzrost FPS. (Jeśli chcesz, możesz odkomentować moje robocze pliki defines grafiki, ale obecnie nie są one domyślnie włączone). Pamiętaj, że jeśli wąskim gardłem jest Twój procesor (CPU-bound), nadal możesz odczuć wzrost FPS. Zauważysz również wzrost FPS przy użyciu dowolnej z opcjonalnych reguł gry optymalizujących wydajność w określonych scenach, ponieważ będzie mniej obiektów do wyrenderowania.
+ [*][b]Dalsza optymalizacja wydajności:[/b] Będę kontynuował optymalizację moda pod kątem wydajności w miarę znajdowania nowych możliwości.
+ [*][b]Dodatkowa personalizacja:[/b] Możliwość dostosowania prędkości walki i prędkości ruchu poprzez zasady gry. Zachęcam do sugerowania innych ustawień, które chcielibyście zobaczyć.
+ [*][b]Opcje poprawek graficznych:[/b] Pracuję również nad poprawą wydajności renderowania/FPS, co zostanie wydane w przyszłej aktualizacji. Jak na razie udało mi się uzyskać 13% wzrostu FPS. (Jeśli chcesz, możesz odkomentować moje robocze definicje graficzne, ale obecnie nie są one domyślnie włączone). Pamiętaj, że jeśli Twój procesor (CPU) jest wąskim gardłem, możesz już teraz zauważyć wzrost FPS. Wzrost płynności zauważysz również korzystając z opcjonalnych zasad wydajności w niektórych scenach, ponieważ będzie mniej obiektów do wyrenderowania.
 [/olist]
 
-[h2]Natywne lokalizacje:[/h2]
+[h2]Rodzime lokalizacje:[/h2]
 [list]
- [*][b]English:[/b] Primary
+ [*][b]Angielski (English):[/b] Główny
 [/list]
 
 [h2]Lokalizacje przetłumaczone przez DeepL:[/h2]
 [list]
- [*][b]Chinese / 中文[/b]
- [*][b]French / Français[/b]
- [*][b]German / Deutsch[/b]
- [*][b]Japanese / 日本語[/b]
- [*][b]Korean / 한국어[/b]
- [*][b]Polish / Polski[/b]
- [*][b]Portuguese (Brazil) / Português (Brasil)[/b]
- [*][b]Russian / Русский[/b]
- [*][b]Spanish / Español[/b]
- [*][b]Turkish / Türkçe[/b]
+ [*][b]Chiński / 中文[/b]
+ [*][b]Francuski / Français[/b]
+ [*][b]Niemiecki / Deutsch[/b]
+ [*][b]Japoński / 日本語[/b]
+ [*][b]Koreański / 한국어[/b]
+ [*][b]Polski / Polski[/b]
+ [*][b]Portugalski (Brazylia) / Português (Brasil)[/b]
+ [*][b]Rosyjski / Русский[/b]
+ [*][b]Hiszpański / Español[/b]
+ [*][b]Turecki / Türkçe[/b]
 [/list]
 
-[h1]Dziennik zmian:[/h1]
-Zobacz [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]notatki o zmianach na stronie warsztatu[/url].
+[h1]Lista zmian:[/h1]
+Zobacz [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Change Notes na stronie warsztatu[/url].
 
 [h1]Kompatybilność:[/h1]
 [list]
- [*]Wspiera wersję v1.0.11 i betę v1.1.
+ [*]Obsługuje v1.0.11 i betę v1.1.
  [*]Niekompatybilny z trybem Ironman.
- [*]W pełni kompatybilny z zapisami gier.
+ [*]W pełni kompatybilny z zapisami gier (save game).
  [*]Nie powinien być używany z żadnym innym modem zmieniającym ticki, takim jak Daily Ticks.
- [*]Mogę dodać patche kompatybilności na życzenie.
+ [*]Na prośbę mogę dodać patche kompatybilności.
 [/list]
 
 [h1]Dodatkowe uwagi[/h1]
-Dzięki drastycznej poprawie prędkości, możesz chcieć grać na niższym ustawieniu prędkości, nawet na prędkości 1.
+Przy tak drastycznej poprawie prędkości możesz chcieć grać na niższym ustawieniu prędkości, na przykład na prędkości 1 podczas wojny.
 
-Testerzy nie zauważyli dotąd żadnych problemów ani nieoczekiwanych zachowań. Prosimy jednak o zgłaszanie wszelkich problemów lub wyników, które nie pokrywają się z wersją podstawową/oczekiwanym zachowaniem, jeśli wystąpią.
+Testerzy jak dotąd nie zauważyli żadnych problemów ani nieoczekiwanych zachowań. Prosimy jednak o zgłaszanie wszelkich błędów lub wyników, które nie pokrywają się z wersją vanilla / oczekiwanym zachowaniem, jeśli takie wystąpią.
 
-Oprócz sekcji komentarzy i przypiętej dyskusji z sugestiami, możesz również zadawać pytania, zgłaszać błędy lub zgłaszać sugestie na kanale [url=https://discord.gg/zeQ6x9wrPq]#utility-mods na serwerze Discord społeczności EU5[/url]. A jeśli jesteś zainteresowany dołączeniem do prac nad tym lub innym z moich modów, możesz mnie oznaczyć lub dodać na Discordzie @arealconner. Wszelki wkład jest mile widziany.
+Oprócz sekcji komentarzy i przypiętej dyskusji o sugestiach, możesz również zadawać pytania, zgłaszać błędy lub składać propozycje na [url=https://discord.gg/zeQ6x9wrPq]kanale #utility-mods serwera Discord społeczności EU5[/url]. Jeśli jesteś zainteresowany dołączeniem do prac nad tym lub innym z moich modów, możesz wysłać mi wiadomość lub dodać mnie na Discordzie @arealconner. Wszelki wkład jest mile widziany.
 
-Szukam również więcej testerów wersji deweloperskiej moda. Jeśli jesteś zainteresowany, proszę o kontakt również na Discordzie.
+Szukam również więcej testerów wersji deweloperskiej moda. Jeśli jesteś zainteresowany, również skontaktuj się przez Discord.
 
-Wersje źródłowe i deweloperskie moda są dostępne na [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHubie.[/url]
+Wersja źródłowa i deweloperska moda jest dostępna na [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHubie.[/url]
 

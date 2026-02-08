@@ -13,7 +13,7 @@
  setting_fu_asia_centric_setting_desc: "Bu alt kıtalardaki tüm ulusları kaldırır: Batı Avrupa, Doğu Avrupa, Kuzey Afrika, Batı Afrika, Orta Afrika, Kuzey Amerika, Güney Amerika"
  setting_fu_remove_low_importance_setting: "Düşük Önemli Devletleri Kaldır"
  setting_fu_remove_low_importance_setting_desc: "Şu alt kıtalardaki tüm ulusları kaldırır: Kuzey Amerika, Güney Amerika, Pasifik Adaları"
- rule_fu_block_recolonization_rule: "Yeniden Kolonileştirmeyi Engelle"
+ rule_fu_block_recolonization_rule: "Faster Universalis: Yeniden Kolonileştirmeyi Engelle"
  setting_fu_recolonization_blocked_setting: "Evet"
  setting_fu_recolonization_blocked_setting_desc: "Avrupa Merkezli veya Asya Merkezli ayarlarıyla kullanıldığında, devre dışı bırakılmış tüm alt kıtaların yeniden kolonileştirilmesini önler. Güney Amerika gibi hiç kolonileştirilmemiş alt kıtaların kolonileştirilmesini engellemez."
  setting_fu_recolonization_allowed_setting: "Hayır"
