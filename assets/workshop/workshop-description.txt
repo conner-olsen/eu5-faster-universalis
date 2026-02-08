@@ -62,7 +62,7 @@ See the [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/$item-
 [/list]
 
 [h1]Additional Notes[/h1]
-With the drastic speed improvements, you may want to play on a lower speed setting, perhaps 1-speed while at war.
+With the drastic speed increase, you may want to play on a lower speed setting.
 
 Testers have not noticed any issues/unexpected behavior thus far. But please report any issues or outcomes that don't match vanilla/expected behavior if they occur.
 
