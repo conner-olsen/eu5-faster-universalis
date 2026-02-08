@@ -23,6 +23,9 @@ APP_ID = 3450310
 WORKSHOP_TRANSLATION_FILENAME_RE = re.compile(r"^workshop_(.+)\.txt$")
 WORKSHOP_TITLE_MARKER = "===WORKSHOP_TITLE==="
 WORKSHOP_DESCRIPTION_MARKER = "===WORKSHOP_DESCRIPTION==="
+WORKSHOP_NO_TRANSLATE_BELOW = "--NO-TRANSLATE-BELOW--"
+WORKSHOP_ITEM_ID_TOKEN = "$item-id$"
+MAX_DESCRIPTION_LENGTH = 8000
 
 # Steam language codes expected by Workshop updates.
 LANGUAGE_TO_STEAM = {
@@ -154,13 +157,45 @@ def parse_workshop_translation(text):
 	flush()
 	return title, description
 
-def build_language_updates(source_language):
+def split_workshop_description(text):
+	"""Remove the no-translate marker line while keeping the remainder for source uploads."""
+	if text is None:
+		return None
+	lines = text.splitlines(keepends=True)
+	for idx, line in enumerate(lines):
+		if line.strip() == WORKSHOP_NO_TRANSLATE_BELOW:
+			return "".join(lines[:idx] + lines[idx + 1:])
+	return text
+
+def apply_workshop_item_id(text, item_id):
+	"""Replace the $item-id$ token when an item id is available."""
+	if text is None or item_id is None:
+		return text
+	return text.replace(WORKSHOP_ITEM_ID_TOKEN, str(item_id))
+
+def _trim_description(text, lang_label):
+	"""Truncate the description to MAX_DESCRIPTION_LENGTH bytes (UTF-8) and warn if truncated."""
+	if not text:
+		return text
+
+	encoded = text.encode('utf-8')
+	if len(encoded) > MAX_DESCRIPTION_LENGTH:
+		print(f"Warning: Description for '{lang_label}' exceeds {MAX_DESCRIPTION_LENGTH} bytes. Truncating.")
+		# Truncate to MAX_DESCRIPTION_LENGTH bytes and decode, ignoring incomplete characters
+		truncated = encoded[:MAX_DESCRIPTION_LENGTH].decode('utf-8', errors='ignore')
+		return truncated
+	return text
+
+def build_language_updates(source_language, item_id):
 	"""Collect base and translated workshop title/description payloads."""
 	base_description = read_text(WORKSHOP_DESCRIPTION_PATH)
 	if base_description is None:
 		print(f"Error: Workshop description file not found: {WORKSHOP_DESCRIPTION_PATH}")
 		return None
 
+	base_description = split_workshop_description(base_description)
+	base_description = apply_workshop_item_id(base_description, item_id)
+	base_description = _trim_description(base_description, source_language)
 	base_title = load_mod_title(METADATA_PATH)
 
 	# Always include the source-language title/description.
@@ -187,8 +222,12 @@ def build_language_updates(source_language):
 		if text is None:
 			continue
 		title_text, desc_text = parse_workshop_translation(text)
+		title_text = apply_workshop_item_id(title_text, item_id)
+		desc_text = apply_workshop_item_id(desc_text, item_id)
 		if title_text is None and desc_text is None:
 			continue
+
+		desc_text = _trim_description(desc_text, lang)
 		translations[lang] = {"title": title_text, "description": desc_text}
 
 	for lang, entry in translations.items():
@@ -216,7 +255,7 @@ def main():
 	if not source_language:
 		return 1
 
-	updates = build_language_updates(source_language)
+	updates = build_language_updates(source_language, item_id)
 	if updates is None:
 		return 1
 
