@@ -1,0 +1,20 @@
+﻿{
+  "name" : "Faster Universalis: Hourly Tick Sub-mod",
+  "id" : "fusm.hourly.tick",
+  "version" : "1.0",
+  "game_id" : "eu5",
+  "picture" : null,
+  "supported_game_version" : "1.1.*",
+  "short_description" : "Changes Faster Universalis to use Vanilla's hourly ticks.",
+  "tags" : [ "Utilities" ],
+	"relationships" : [
+		{
+			"rel_type" : "dependency",
+			"id" : "faster.universalis",
+			"display_name" : "Faster Universalis",
+			"resource_type" : "mod",
+			"version" : "*"
+		}
+	],
+  "game_custom_data" : { }
+}

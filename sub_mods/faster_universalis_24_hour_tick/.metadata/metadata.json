@@ -1,0 +1,20 @@
+﻿{
+  "name" : "Faster Universalis: Daily Tick Sub-mod",
+  "id" : "fusm.daily.tick",
+  "version" : "1.0",
+  "game_id" : "eu5",
+  "picture" : null,
+  "supported_game_version" : "1.1.*",
+  "short_description" : "Change the Faster Universalis from 47 hour - > 24 hour ticks. ",
+  "tags" : [ "Utilities" ],
+  "relationships" : [
+	  {
+		  "rel_type" : "dependency",
+		  "id" : "faster.universalis",
+		  "display_name" : "Faster Universalis",
+		  "resource_type" : "mod",
+		  "version" : "*"
+	  }
+  ],
+  "game_custom_data" : { }
+}
