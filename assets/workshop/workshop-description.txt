@@ -55,7 +55,7 @@ See the [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/$item-
 [h1]Compatibility:[/h1]
 [list]
  [*]Supports v1.0.11 and the v1.1 beta.
- [*]Not Ironman Compatible.
+ [*]Not Achievement Compatible.
  [*]Fully save game compatible.
  [*]Should not be used with any other tick-change mod, such as Daily Ticks.
  [*]I may add compatibility patches upon request.
@@ -66,7 +66,7 @@ With the drastic speed increase, you may want to play on a lower speed setting.
 
 Testers have not noticed any issues/unexpected behavior thus far. But please report any issues or outcomes that don't match vanilla/expected behavior if they occur.
 
-In addition to the comment section and pinned suggestions discussion, you can also ask any questions, report bugs, or make suggestions in the [url=https://discord.gg/zeQ6x9wrPq]#utility-mods channel of the EU5 Community discord server[/url]. And if you are interested in joining in the development of this or one of my other mods, you can ping or add me on Discord @arealconner. All contributions are welcome.
+In addition to the comment section, you can also ask any questions, report bugs, or make suggestions in the [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis channel of the EU5 Community discord server[/url]. And if you are interested in joining in the development of this or one of my other mods, you can ping or add me on Discord @arealconner. All contributions are welcome.
 
 I am also looking for more testers for the mod's development version. If you are interested, please reach out on Discord as well.
 
