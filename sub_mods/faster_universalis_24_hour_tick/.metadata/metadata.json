@@ -5,7 +5,7 @@
   "game_id" : "eu5",
   "picture" : null,
   "supported_game_version" : "1.1.*",
-  "short_description" : "Change the Faster Universalis from 47 hour - > 24 hour ticks. ",
+  "short_description" : "Changes Faster Universalis to use a more standard 24 hour (daily) tick as seen in other daily tick mods.",
   "tags" : [ "Utilities" ],
   "relationships" : [
 	  {
