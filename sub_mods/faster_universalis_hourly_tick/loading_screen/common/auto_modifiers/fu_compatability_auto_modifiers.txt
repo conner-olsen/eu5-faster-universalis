@@ -1,1 +1,16 @@
 ﻿# Revert to vanilla
+TRY_REPLACE:fu_save_game_compatability = {
+	requires_real = no
+	hide_effects = yes
+	potential_trigger = {
+		current_date > 1337.5.1
+		NOT = {
+			has_global_variable = is_fu_game
+		}
+	}
+}
+
+TRY_REPLACE:fu_tick_rate_adjustments = {
+	requires_real = no
+	hide_effects = yes
+}
