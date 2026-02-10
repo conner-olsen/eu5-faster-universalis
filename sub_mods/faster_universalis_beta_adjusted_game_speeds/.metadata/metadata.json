@@ -1,0 +1,20 @@
+﻿{
+  "name" : "Faster Universalis: v1.1+ Adjusted Game Speeds",
+  "id" : "fusm.adjusted.game.speed.stable",
+  "version" : "1.0",
+  "game_id" : "eu5",
+  "picture" : null,
+  "supported_game_version" : "1.1.*",
+  "short_description" : "Changes each game speed to be around 2x faster than its vanilla counterpart.",
+  "tags" : [ "Utilities" ],
+	"relationships" : [
+		{
+			"rel_type" : "dependency",
+			"id" : "faster.universalis",
+			"display_name" : "Faster Universalis",
+			"resource_type" : "mod",
+			"version" : "*"
+		}
+	],
+  "game_custom_data" : { }
+}
