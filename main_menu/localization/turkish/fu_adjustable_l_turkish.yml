@@ -1,0 +1,4 @@
+﻿l_turkish:
+ OCCUPATION_X_DAYS_LEFT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y] gün kaldı"
+ OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y] gün"
+ OCCUPATION_FINISHED_IN_X_DAYS: "İşgal [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] gün içinde tamamlanacak.[VAR_0]Bu işgalin süresi şunlardan kaynaklanmaktadır:[VAR_1]$WHY$\n\n"

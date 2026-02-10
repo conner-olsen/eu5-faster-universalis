@@ -1,0 +1,4 @@
+﻿l_russian:
+ OCCUPATION_X_DAYS_LEFT: "Осталось [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] дн."
+ OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]д"
+ OCCUPATION_FINISHED_IN_X_DAYS: "Оккупация завершится через [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] дн.[VAR_0]Длительность этой оккупации обусловлена следующими факторами:[VAR_1]$WHY$\n\n"

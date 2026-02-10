@@ -1,0 +1,4 @@
+﻿l_polish:
+ OCCUPATION_X_DAYS_LEFT: "Pozostało [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] dni"
+ OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y] dni"
+ OCCUPATION_FINISHED_IN_X_DAYS: "Okupacja zakończy się za [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] dni.[VAR_0]Długość tej okupacji wynika z:[VAR_1]$WHY$\n\n"

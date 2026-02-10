@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+ OCCUPATION_X_DAYS_LEFT: "剩余 [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] 天"
+ OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]天"
+ OCCUPATION_FINISHED_IN_X_DAYS: "占领将在 [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] 天后完成。[VAR_0]占领时长取决于：[VAR_1]$WHY$\n\n"

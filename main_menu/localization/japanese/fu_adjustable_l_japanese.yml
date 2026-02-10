@@ -1,0 +1,4 @@
+﻿l_japanese:
+ OCCUPATION_X_DAYS_LEFT: "残り[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]日"
+ OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]日"
+ OCCUPATION_FINISHED_IN_X_DAYS: "占領はあと[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]日で完了します。[VAR_0]この占領期間は以下の要因によります:[VAR_1]$WHY$\n\n"

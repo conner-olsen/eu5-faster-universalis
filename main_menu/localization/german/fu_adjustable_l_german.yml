@@ -1,0 +1,4 @@
+﻿l_german:
+ OCCUPATION_X_DAYS_LEFT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y] Tag(e) übrig"
+ OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y] Tage"
+ OCCUPATION_FINISHED_IN_X_DAYS: "Die Besetzung wird in [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] Tag(en) abgeschlossen sein.[VAR_0]Die Dauer dieser Besetzung ist bedingt durch:[VAR_1]$WHY$\n\n"

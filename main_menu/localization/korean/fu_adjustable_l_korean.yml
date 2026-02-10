@@ -1,0 +1,4 @@
+﻿l_korean:
+ OCCUPATION_X_DAYS_LEFT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]일 남음"
+ OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]일"
+ OCCUPATION_FINISHED_IN_X_DAYS: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]일 후에 점령이 완료됩니다.[VAR_0]이 점령 기간은 다음 요인에 의한 것입니다:[VAR_1]$WHY$\n\n"
