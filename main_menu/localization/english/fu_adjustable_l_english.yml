@@ -1,0 +1,4 @@
+﻿l_english:
+ OCCUPATION_X_DAYS_LEFT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y] day(s) left"
+ OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]d"
+ OCCUPATION_FINISHED_IN_X_DAYS: "The occupation will be finished in [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] day(s).\nThe length of this occupation is due to:\n$WHY$"
