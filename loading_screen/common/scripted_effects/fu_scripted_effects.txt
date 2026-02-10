@@ -55,7 +55,12 @@ fu_remove_low_importance_nations_effect = {
 
 fu_remove_sub_continent = {
 	every_location_in_sub_continent = {
-		fu_remove_location = yes
+		if = {
+			limit = {
+				fu_can_remove_location = yes
+			}
+			fu_remove_location = yes
+		}
 	}
 }
 
