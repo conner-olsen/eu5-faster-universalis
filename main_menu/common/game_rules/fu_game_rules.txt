@@ -1,4 +1,60 @@
-﻿fu_sop_rule = {
+﻿fu_army_movement_speed_game_rule = {
+	default = fu_vanilla_army_speed_setting
+
+	fu_vanilla_army_speed_setting = {
+		flag = general_rule
+	}
+
+	fu_half_army_speed_setting = {
+		flag = general_rule
+	}
+
+	fu_third_army_speed_setting = {
+		flag = general_rule
+	}
+
+	fu_quarter_army_speed_setting = {
+		flag = general_rule
+	}
+}
+
+fu_navy_movement_speed_game_rule = {
+	default = fu_vanilla_navy_speed_setting
+
+	fu_vanilla_navy_speed_setting = {
+		flag = general_rule
+	}
+
+	fu_half_navy_speed_setting = {
+		flag = general_rule
+	}
+
+	fu_third_navy_speed_setting = {
+		flag = general_rule
+	}
+
+	fu_quarter_navy_speed_setting = {
+		flag = general_rule
+	}
+}
+
+# fu_combat_speed_game_rule = {
+# 	default = fu_default_combat_speed_setting
+#
+# 	fu_default_combat_speed_setting = {
+# 		flag = general_rule
+# 	}
+#
+# 	fu_vanilla_combat_speed_setting = {
+# 		flag = general_rule
+# 	}
+#
+# 	fu_slowed_combat_speed_setting = {
+# 		flag = general_rule
+# 	}
+# }
+#
+fu_sop_rule = {
 	default = fu_no_cull_sop_countries_setting
 
 	fu_no_cull_sop_countries_setting = {
