@@ -7,7 +7,7 @@
 			has_global_variable = is_fu_game
 		}
 	}
-	army_movement_speed = 8
-	navy_movement_speed = 8
+	army_movement_speed = 12
+	navy_movement_speed = 12
 }
 
