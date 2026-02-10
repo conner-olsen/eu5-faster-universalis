@@ -55,12 +55,7 @@ fu_remove_low_importance_nations_effect = {
 
 fu_remove_sub_continent = {
 	every_location_in_sub_continent = {
-		if = {
-			limit = {
-				fu_can_remove_location = yes
-			}
-			fu_remove_location = yes
-		}
+		fu_remove_location = yes
 	}
 }
 
@@ -76,18 +71,23 @@ fu_remove_and_disable_sub_continent = {
 }
 
 fu_remove_location = {
-	every_buildings_in_location = {
-		change_building_level = -10
-	}
-	every_pop = {
-		destroy_pop = this
-	}
 	if = {
 		limit = {
-			has_owner = yes
+			fu_can_remove_location = yes
 		}
-		owner = {
-			abandon_location = prev
+		every_buildings_in_location = {
+			change_building_level = -10
+		}
+		every_pop = {
+			destroy_pop = this
+		}
+		if = {
+			limit = {
+				has_owner = yes
+			}
+			owner = {
+				abandon_location = prev
+			}
 		}
 	}
 }
