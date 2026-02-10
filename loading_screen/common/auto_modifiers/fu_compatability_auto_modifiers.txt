@@ -11,3 +11,9 @@
 	navy_movement_speed = 16
 }
 
+fu_tick_rate_adjustments = {
+	requires_real = no
+	hide_effects = yes
+	# 48% less education ticks, base +75%*(1/0.48)
+	country_child_education = 1.56
+}
