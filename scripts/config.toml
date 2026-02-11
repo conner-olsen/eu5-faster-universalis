@@ -18,3 +18,11 @@ workshop_id = 3662933683
 [[submods]]
 mod_id = "fusm.hourly.tick"
 workshop_id = 3662938575
+
+[[submods]]
+mod_id = "fusm.adjusted.game.speed.beta"
+workshop_id = 3664191297
+
+[[submods]]
+mod_id = "fusm.adjusted.game.speed.stable"
+workshop_id = 3664483182
