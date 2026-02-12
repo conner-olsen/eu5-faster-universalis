@@ -6,7 +6,7 @@ Dramatically improves game speed/tick rate while maintaining vanilla balance and
  [*][b]100%+ Faster Game Speed:[/b] On 5 speed, you should see time pass around twice as fast as vanilla, and an even greater improvement on lower speeds.
     [list]
      [*]Accomplished through dozens of defines changes that would be too many to list here.
-     [*]Removed hourly ticks
+     [*]Removed hourly ticks (and goes beyond, with the base mod using 1.9 day (47 hour) ticks. But can be adjusted through [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submods available here.[/url])
      [*]Combat, Movement Speed, Game & AI Update Frequency, have all been adjusted so that all outcomes and game balance should be identical to vanilla. You should not notice any difference besides the faster speed.
     [/list]
  [*][b]Optional Performance Optimization Game Rules:[/b]
