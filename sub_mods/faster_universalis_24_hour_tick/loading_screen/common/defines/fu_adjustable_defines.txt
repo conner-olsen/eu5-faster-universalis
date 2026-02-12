@@ -9,6 +9,7 @@ NUnit = {
 }
 
 NCombat = {
+	MINIMUM_COMBAT_DURATION = 2
 	INITIATIVE_BASE_CHANCE = 0.6 # 0.1	# base chance each tick
 	INITIATIVE_CHANCE_EACH = 0.12 # 0.02 # Chance to engage per point of initiative
 	COMBAT_SPEED_SCALE = 0.3 # 0.05
