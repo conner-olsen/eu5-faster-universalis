@@ -18,7 +18,7 @@ Dramatically improves game speed/tick rate while maintaining vanilla balance and
      [*][b]Europe Centric:[/b] Effectively a Europe-only game, removing far away regions such as East Asia, Indonesia, & Oceania.
      [*][b]Asia Centric:[/b] Effectively an Asia-only game, removing faraway regions such as Europe & West Africa.
     [/list]
-   [*][b]Remove Unowned Pops:[/b] Deletes pops in unowned locations. Stacks with nation removal.
+   [*][b]Unowned Pop Removal:[/b] Deletes pops in unowned locations. Stacks with nation removal.
    [*][b]Block Recolonization:[/b] If enabled with the Europe Centric or Asia Centric removals, prevents recolonization of the removed regions. Turning this off can create an interesting experience of the scramble to recolonize the lost old world.
   [/list]
  [*][b]Speed Adjustment Game Rules[/b]

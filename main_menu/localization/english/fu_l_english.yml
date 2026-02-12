@@ -49,7 +49,7 @@
  setting_fu_recolonization_blocked_setting_desc: "Will delete the pops in and prevent recolonization of all disabled subcontinents when used with Europe Centric, or Asia Centric settings. Will not block colonization or remove pops of never colonized subcontinents such as South America."
  setting_fu_recolonization_allowed_setting: "Option 1/2: No"
  setting_fu_recolonization_allowed_setting_desc: "You will be able to recolonize all removed subcontinents."
- rule_fu_pop_removal_rule: "Faster Universalis: Pop-Based Countries"
+ rule_fu_pop_removal_rule: "Faster Universalis: Unowned Pop Removal"
  setting_fu_keep_pops_setting: "Option 1/2: Keep All Pops"
  setting_fu_keep_pops_setting_desc: "No pops will be deleted."
  setting_fu_remove_unowned_pops_setting: "Option 2/2: Remove Unowned Pops"
