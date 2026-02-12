@@ -6,23 +6,25 @@ Universalis Mais Rápido / Faster Universalis
 [h1]Visão Geral:[/h1]
 Melhora drasticamente a velocidade do jogo/taxa de tiques, mantendo o equilíbrio e a jogabilidade originais (vanilla).
 
-[h1]Funcionalidades:[/h1]
+[h1]Recursos:[/h1]
 [olist]
- [*][b]Velocidade de Jogo 100%+ Mais Rápida:[/b] Na velocidade 5, você deve ver o tempo passar cerca de duas vezes mais rápido que no vanilla, e uma melhoria ainda maior em velocidades mais baixas.
+ [*][b]Velocidade de Jogo 100%+ mais Rápida:[/b] Na velocidade 5, você deve ver o tempo passar cerca de duas vezes mais rápido que no original, e uma melhoria ainda maior em velocidades mais baixas.
     [list]
-     [*]Realizado através de dezenas de mudanças de definições (defines) que seriam numerosas demais para listar aqui.
-     [*]Remoção de tiques horários.
-     [*]Combate, Velocidade de Movimento, Frequência de Atualização do Jogo e da IA foram todos ajustados para que todos os resultados e o equilíbrio do jogo sejam idênticos ao vanilla. Você não deve notar nenhuma diferença além da velocidade mais rápida.
+     [*]Realizado através de dezenas de alterações de defines que seriam numerosas demais para listar aqui.
+     [*]Removido os tiques horários (e vai além, com o mod base usando tiques de 1,9 dia (47 horas). Mas pode ser ajustado através de [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submods disponíveis aqui.[/url])
+     [*]O Combate, a Velocidade de Movimento e a Frequência de Atualização do Jogo e da IA foram todos ajustados para que todos os resultados e o equilíbrio do jogo sejam idênticos ao vanilla. Você não deve notar nenhuma diferença além da velocidade mais rápida.
     [/list]
- [*][b]Regras de Jogo Opcionais para Otimização de Desempenho:[/b]
+ [*][b]Regras de Jogo Opcionais de Otimização de Desempenho:[/b]
   [list]
-   [*][b]Eliminação de Nações Baseadas em Pops:[/b] Exclui Nações Baseadas em População (Pops) em regiões sem nenhuma nação regular. Veja a captura de tela da página do mod para uma comparação com o vanilla.
-   [*][b]Remoções de Regiões:[/b] Focado na Europa, Focado na Ásia e Remover Regiões de Baixa Importância. Veja as capturas de tela da página do mod para ver como cada uma ficará.
+   [*][b]Remoção de Nações Baseadas em Pops:[/b] Exclui todas as nações baseadas em populações (pops).
+   [*][b]Remoções de Regiões:[/b] Centrado na Europa, Centrado na Ásia e Remover Regiões de Baixa Importância. Veja as capturas de tela da página do mod para saber como cada uma ficará.
     [list]
-     [*][b]Remover Regiões de Baixa Importância:[/b] Exclui Nações Menores em regiões com pouca chance de interação, como pequenas nações insulares do Pacífico — detalhes completos nas descrições das regras de jogo.
-     [*][b]Focado na Europa:[/b] Efetivamente um jogo apenas na Europa, removendo regiões distantes como Leste Asiático, Indonésia e Oceania.
-     [*][b]Focado na Ásia:[/b] Efetivamente um jogo apenas na Ásia, removendo regiões distantes como Europa e África Ocidental.
+     [*][b]Remover Regiões de Baixa Importância:[/b] Exclui nações menores em regiões com pouca chance de interação, como pequenas nações insulares do Pacífico — detalhes completos nas descrições das regras de jogo.
+     [*][b]Centrado na Europa:[/b] Efetivamente um jogo apenas na Europa, removendo regiões distantes como Leste Asiático, Indonésia e Oceania.
+     [*][b]Centrado na Ásia:[/b] Efetivamente um jogo apenas na Ásia, removendo regiões distantes como Europa e África Ocidental.
     [/list]
+   [*][b]Remoção de Pops sem Dono:[/b] Exclui pops em locais que não pertencem a ninguém. Acumula com a remoção de nações.
+   [*][b]Bloquear Recolonização:[/b] Se ativado com as remoções Centrado na Europa ou Centrado na Ásia, evita a recolonização das regiões removidas. Desativar isso pode criar uma experiência interessante de corrida para recolonizar o velho mundo perdido.
   [/list]
  [*][b]Regras de Jogo de Ajuste de Velocidade[/b]
   [list]
@@ -32,36 +34,36 @@ Melhora drasticamente a velocidade do jogo/taxa de tiques, mantendo o equilíbri
   [/list]
 [/olist]
 
-Para referência, nos meus testes, o mod "Daily Ticks" na velocidade 5 aumentou a velocidade do jogo em cerca de 13%, enquanto, como mostra o vídeo da página do Steam, o Faster Universalis, sem nenhuma otimização opcional ativada, aumentou a velocidade do jogo em cerca de 100% em um save de fim de jogo vanilla. Com as otimizações opcionais ativadas, como a Eliminação de Nações Baseadas em Pops e regiões focadas na Europa, você pode ver melhorias superiores a 200%.
+Para referência, em meus testes, o Daily Ticks na velocidade 5 aumentou a velocidade do jogo em cerca de 13%, enquanto, como mostra o vídeo da página do Steam, o Faster Universalis, sem nenhuma otimização opcional ativada, aumentou a velocidade do jogo em cerca de 100% em um save de final de jogo vanilla. Com as otimizações opcionais ativadas, como a Eliminação de Nações Baseadas em Pops e regiões centradas na Europa, você pode ver melhorias de mais de 200%.
 
 [h1]Planejado/Em breve:[/h1]
 [olist]
- [*][b]Otimização de Desempenho Contínua:[/b] Continuarei a otimizar o mod para desempenho conforme encontrar mais oportunidades.
- [*][b]Customização Adicional:[/b] Permitir o ajuste da velocidade de combate e de movimento através das regras de jogo. Sinta-se à vontade para sugerir outras configurações que gostaria de ver.
- [*][b]Opções de Ajuste Gráfico:[/b] Tenho trabalhado para melhorar o desempenho de renderização/FPS também, o que será lançado em uma atualização futura. Mas, até agora, consegui apenas um aumento de 13% no FPS. (Se desejar, você pode descomentar minhas definições gráficas de trabalho em andamento, mas elas não estão ativadas por padrão no momento.) Note que, se o seu gargalo for a CPU, você ainda poderá ver um aumento de FPS atualmente. E você verá um aumento de FPS usando qualquer uma das regras de jogo de desempenho opcionais em certas cenas, pois haverá menos para renderizar.
+ [*][b]Otimização de Desempenho Contínua:[/b] Continuarei a otimizar o mod para desempenho à medida que encontrar mais oportunidades.
+ [*][b]Personalização Adicional:[/b] Permitir o ajuste da velocidade de combate e da velocidade de movimento através das regras de jogo. Sinta-se à vontade para sugerir outras configurações que você gostaria de ver.
+ [*][b]Opções de Ajustes Gráficos:[/b] Tenho trabalhado na melhoria do desempenho de renderização/FPS também, que será lançada em uma atualização futura. Mas, até o momento, só consegui um aumento de 13% no FPS. (Se desejar, você pode descomentar meus defines gráficos em desenvolvimento (WIP), mas eles não estão ativados por padrão no momento.) Observe que, se você estiver limitado pela CPU (CPU-bound), ainda poderá notar um aumento de FPS atualmente. E você verá um aumento de FPS usando qualquer uma das regras de jogo de desempenho opcionais em certas cenas, pois haverá menos para renderizar.
 [/olist]
 
 [h2]Localizações Nativas:[/h2]
 [list]
- [*][b]English:[/b] Primário
+ [*][b]Inglês:[/b] Primário
 [/list]
 
 [h2]Localizações Traduzidas pelo DeepL:[/h2]
 [list]
- [*][b]Chinese / 中文[/b]
- [*][b]French / Français[/b]
- [*][b]German / Deutsch[/b]
- [*][b]Japanese / 日本語[/b]
- [*][b]Korean / 한국어[/b]
- [*][b]Polish / Polski[/b]
- [*][b]Portuguese (Brazil) / Português (Brasil)[/b]
- [*][b]Russian / Русский[/b]
- [*][b]Spanish / Español[/b]
- [*][b]Turkish / Türkçe[/b]
+ [*][b]Chinês / 中文[/b]
+ [*][b]Francês / Français[/b]
+ [*][b]Alemão / Deutsch[/b]
+ [*][b]Japonês / 日本語[/b]
+ [*][b]Coreano / 한국어[/b]
+ [*][b]Polonês / Polski[/b]
+ [*][b]Português (Brasil) / Português (Brasil)[/b]
+ [*][b]Russo / Русский[/b]
+ [*][b]Espanhol / Español[/b]
+ [*][b]Turco / Türkçe[/b]
 [/list]
 
-[h1]Registro de Alterações:[/h1]
-Veja as [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Notas de Alteração na página do workshop[/url].
+[h1]Histórico de Alterações:[/h1]
+Veja as [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Notas de Alteração na página da oficina[/url].
 
 [h1]Compatibilidade:[/h1]
 [list]
@@ -75,9 +77,9 @@ Veja as [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/366219
 [h1]Notas Adicionais[/h1]
 Com o aumento drástico de velocidade, você pode querer jogar em uma configuração de velocidade mais baixa.
 
-Os testadores não notaram problemas ou comportamentos inesperados até o momento. Mas, por favor, relate quaisquer problemas ou resultados que não correspondam ao comportamento vanilla/esperado, caso ocorram.
+Os testadores não notaram problemas ou comportamentos inesperados até agora. No entanto, relate quaisquer problemas ou resultados que não correspondam ao comportamento vanilla/esperado, caso ocorram.
 
-Além da seção de comentários, você também pode tirar dúvidas, relatar bugs ou fazer sugestões no canal [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis do servidor de Discord da Comunidade de EU5[/url]. E se estiver interessado em participar do desenvolvimento deste ou de um dos meus outros mods, você pode me marcar ou me adicionar no Discord @arealconner. Todas as contribuições são bem-vindas.
+Além da seção de comentários, você também pode fazer perguntas, relatar bugs ou dar sugestões no [url=https://discord.gg/zeQ6x9wrPq]canal #faster-universalis do servidor de Discord da Comunidade de EU5[/url]. E se você estiver interessado em participar do desenvolvimento deste ou de um dos meus outros mods, pode me chamar ou adicionar no Discord @arealconner. Todas as contribuições são bem-vindas.
 
 Também estou procurando mais testadores para a versão de desenvolvimento do mod. Se estiver interessado, entre em contato pelo Discord também.
 
