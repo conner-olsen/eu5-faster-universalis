@@ -1,10 +1,11 @@
-﻿fu_cull_sop_effect = {
-	every_location_in_the_world = {
+﻿fu_remove_sop_effect = {
+	every_country = {
 		limit = {
-			has_owner = no
+			country_type = pop
 		}
-		every_pop = {
-			destroy_pop = this
+		change_country_type = building
+		every_owned_building = {
+			change_building_level = -10
 		}
 	}
 }
@@ -70,7 +71,7 @@ fu_remove_and_disable_sub_continent = {
 				years = -1
 				mode = add
 			}
-			fu_remove_location = yes
+			fu_remove_location_and_pops = yes
 		}
 	}
 }
@@ -83,8 +84,25 @@ fu_remove_location = {
 		every_buildings_in_location = {
 			change_building_level = -10
 		}
-		every_pop = {
-			destroy_pop = this
+		if = {
+			limit = {
+				has_owner = yes
+			}
+			owner = {
+				abandon_location = prev
+			}
+		}
+	}
+}
+
+# Regardless of pop removal settings, disabled regions should have their pops removed.
+fu_remove_location_and_pops = {
+	if = {
+		limit = {
+			fu_can_remove_location = yes
+		}
+		every_buildings_in_location = {
+			change_building_level = -10
 		}
 		if = {
 			limit = {
@@ -92,6 +110,22 @@ fu_remove_location = {
 			}
 			owner = {
 				abandon_location = prev
+			}
+			every_pop = {
+				destroy_pop = this
+			}
+		}
+	}
+}
+
+fu_remove_unowned_pops = {
+	every_location_in_the_world = {
+		if = {
+			limit = {
+				has_owner = no
+			}
+			every_pop = {
+				destroy_pop = this
 			}
 		}
 	}
