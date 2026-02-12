@@ -31,7 +31,7 @@
 
  ## Performance:
  rule_fu_sop_rule: "Faster Universalis: Pop-Based Countries"
- setting_fu_no_cull_sop_countries_setting: "Option 1/2: Keep All Pop-Based Countries"
+ setting_fu_no_cull_sop_countries_setting: "Option 1/2: Keep Pop-Based Countries"
  setting_fu_no_cull_sop_countries_setting_desc: "No changes will be made to the game's pop-based countries."
  setting_fu_remove_sop_countries_setting: "Option 2/2: Remove Pop-Based Countries"
  setting_fu_remove_sop_countries_setting_desc: "Will remove every pop-based country that is not present in an owned location."
