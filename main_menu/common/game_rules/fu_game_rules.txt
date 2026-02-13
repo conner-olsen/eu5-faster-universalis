@@ -5,15 +5,19 @@
 		flag = general_rule
 	}
 
-	fu_half_army_speed_setting = {
+	fu_66_army_speed_setting = {
 		flag = general_rule
 	}
 
-	fu_third_army_speed_setting = {
+	fu_50_army_speed_setting = {
 		flag = general_rule
 	}
 
-	fu_quarter_army_speed_setting = {
+	fu_33_army_speed_setting = {
+		flag = general_rule
+	}
+
+	fu_25_army_speed_setting = {
 		flag = general_rule
 	}
 }
@@ -25,15 +29,19 @@ fu_navy_movement_speed_game_rule = {
 		flag = general_rule
 	}
 
-	fu_half_navy_speed_setting = {
+	fu_66_navy_speed_setting = {
 		flag = general_rule
 	}
 
-	fu_third_navy_speed_setting = {
+	fu_50_navy_speed_setting = {
 		flag = general_rule
 	}
 
-	fu_quarter_navy_speed_setting = {
+	fu_33_navy_speed_setting = {
+		flag = general_rule
+	}
+
+	fu_25_navy_speed_setting = {
 		flag = general_rule
 	}
 }
@@ -61,7 +69,7 @@ fu_sop_rule = {
 		flag = general_rule
 	}
 
-	fu_cull_sop_countries_setting = {
+	fu_remove_sop_countries_setting = {
 		flag = general_rule
 	}
 }
@@ -94,6 +102,18 @@ fu_block_recolonization_rule = {
 	}
 
 	fu_recolonization_allowed_setting = {
+		flag = general_rule
+	}
+}
+
+fu_pop_removal_rule = {
+	default = fu_keep_pops_setting
+
+	fu_keep_pops_setting = {
+		flag = general_rule
+	}
+
+	fu_remove_unowned_pops_setting = {
 		flag = general_rule
 	}
 }

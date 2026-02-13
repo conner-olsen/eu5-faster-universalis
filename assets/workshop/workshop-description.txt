@@ -6,18 +6,20 @@ Dramatically improves game speed/tick rate while maintaining vanilla balance and
  [*][b]100%+ Faster Game Speed:[/b] On 5 speed, you should see time pass around twice as fast as vanilla, and an even greater improvement on lower speeds.
     [list]
      [*]Accomplished through dozens of defines changes that would be too many to list here.
-     [*]Removed hourly ticks
+     [*]Removed hourly ticks (and goes beyond, with the base mod using 1.9 day (47 hour) ticks. But can be adjusted through [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submods available here.[/url])
      [*]Combat, Movement Speed, Game & AI Update Frequency, have all been adjusted so that all outcomes and game balance should be identical to vanilla. You should not notice any difference besides the faster speed.
     [/list]
  [*][b]Optional Performance Optimization Game Rules:[/b]
   [list]
-   [*][b]Pop-Based Nation Culling[/b] Deletes Pop-Based Nations in regions without any regular nations. See the mod page screenshot for a comparison to vanilla.
+   [*][b]Pop-Based Nation Removal:[/b] Deletes All Pop-Based Nations.
    [*][b]Region Removals:[/b] Europe Centric, Asia Centric, and Remove Low-Importance Regions. See the mod page screenshots for what each will look like.
     [list]
      [*][b]Remove Low-Importance Regions:[/b] Deletes Minor Nations in regions with little chance of interaction, such as small Pacific island nations—full details in the game rule descriptions.
      [*][b]Europe Centric:[/b] Effectively a Europe-only game, removing far away regions such as East Asia, Indonesia, & Oceania.
      [*][b]Asia Centric:[/b] Effectively an Asia-only game, removing faraway regions such as Europe & West Africa.
     [/list]
+   [*][b]Unowned Pop Removal:[/b] Deletes pops in unowned locations. Stacks with nation removal.
+   [*][b]Block Recolonization:[/b] If enabled with the Europe Centric or Asia Centric removals, prevents recolonization of the removed regions. Turning this off can create an interesting experience of the scramble to recolonize the lost old world.
   [/list]
  [*][b]Speed Adjustment Game Rules[/b]
   [list]

@@ -1,74 +1,98 @@
 ﻿### Army Speed ###
-fu_half_army_speed_adjustment = {
+fu_66_army_speed_adjustment = {
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
-		has_game_rule = fu_half_army_speed_setting
+		has_game_rule = fu_66_army_speed_setting
 	}
 	limit = {
-		has_game_rule = fu_half_army_speed_setting
+		has_game_rule = fu_66_army_speed_setting
+	}
+	army_movement_speed = -0.33
+}
+
+fu_50_army_speed_adjustment = {
+	requires_real = no
+	hide_effects = yes
+	potential_trigger = {
+		has_game_rule = fu_50_army_speed_setting
+	}
+	limit = {
+		has_game_rule = fu_50_army_speed_setting
 	}
 	army_movement_speed = -0.5
 }
 
-fu_third_army_speed_adjustment = {
+fu_33_army_speed_adjustment = {
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
-		has_game_rule = fu_third_army_speed_setting
+		has_game_rule = fu_33_army_speed_setting
 	}
 	limit = {
-		has_game_rule = fu_third_army_speed_setting
+		has_game_rule = fu_33_army_speed_setting
 	}
 	army_movement_speed = -0.66
 }
 
 
-fu_quarter_army_speed_adjustment = {
+fu_25_army_speed_adjustment = {
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
-		has_game_rule = fu_quarter_army_speed_setting
+		has_game_rule = fu_25_army_speed_setting
 	}
 	limit = {
-		has_game_rule = fu_quarter_army_speed_setting
+		has_game_rule = fu_25_army_speed_setting
 	}
 	army_movement_speed = -0.75
 }
 
 ### Navy Speed ###
-fu_half_navy_speed_adjustment = {
+fu_50_navy_speed_adjustment = {
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
-		has_game_rule = fu_half_navy_speed_setting
+		has_game_rule = fu_66_navy_speed_setting
 	}
 	limit = {
-		has_game_rule = fu_half_navy_speed_setting
+		has_game_rule = fu_66_navy_speed_setting
+	}
+	navy_movement_speed = -0.33
+}
+
+fu_50_navy_speed_adjustment = {
+	requires_real = no
+	hide_effects = yes
+	potential_trigger = {
+		has_game_rule = fu_50_navy_speed_setting
+	}
+	limit = {
+		has_game_rule = fu_50_navy_speed_setting
 	}
 	navy_movement_speed = -0.5
 }
 
-fu_third_navy_speed_adjustment = {
+fu_33_navy_speed_adjustment = {
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
-		has_game_rule = fu_third_navy_speed_setting
+		has_game_rule = fu_33_navy_speed_setting
 	}
 	limit = {
-		has_game_rule = fu_third_navy_speed_setting
+		has_game_rule = fu_33_navy_speed_setting
 	}
 	navy_movement_speed = -0.66
 }
 
-fu_third_navy_speed_adjustment = {
+fu_33_navy_speed_adjustment = {
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
-		has_game_rule = fu_quarter_navy_speed_setting
+		has_game_rule = fu_25_navy_speed_setting
 	}
 	limit = {
-		has_game_rule = fu_quarter_navy_speed_setting
+		has_game_rule = fu_25_navy_speed_setting
 	}
 	navy_movement_speed = -0.75
 }

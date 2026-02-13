@@ -12,9 +12,9 @@ fu_on_game_start = {
 		set_global_variable = is_fu_game
 		if = {
 			limit = {
-				has_game_rule = fu_cull_sop_countries_setting
+				has_game_rule = fu_remove_sop_countries_setting
 			}
-			fu_cull_sop_effect = yes
+			fu_remove_sop_effect = yes
 		}
 		if = {
 			limit = {
@@ -33,6 +33,12 @@ fu_on_game_start = {
 				has_game_rule = fu_remove_low_importance_setting
 			}
 			fu_remove_low_importance_nations_effect = yes
+		}
+		if = {
+			limit = {
+				has_game_rule = fu_remove_unowned_pops_setting
+			}
+			fu_remove_unowned_pops = yes
 		}
 		set_global_variable = fu_setup_complete
 	}

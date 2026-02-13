@@ -17,7 +17,7 @@ NUnit = {
 
 # Default combat speed scaling of roughly (1/4 vanilla which would be 5.875x). Highest value before buffing siege phase.
 NCombat = {
-	# MINIMUM_COMBAT_DURATION = 24
+	MINIMUM_COMBAT_DURATION = 1
 	# BOMBARD_HOURS = 5
 	# HOURS_PER_PHASE = 5
 	# COMBAT_DAMAGE_MULT = 0.01
