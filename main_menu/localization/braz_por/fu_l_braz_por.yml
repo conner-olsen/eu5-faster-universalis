@@ -16,7 +16,7 @@
  setting_fu_recolonization_blocked_setting_desc: "Excluirá os pops e impedirá a recolonização de todos os subcontinentes desativados ao usar as definições Europe Centric ou Asia Centric. Não bloqueará a colonização nem removerá pops de subcontinentes nunca colonizados, como a América do Sul."
  setting_fu_recolonization_allowed_setting: "Opção 1/2: Não"
  setting_fu_recolonization_allowed_setting_desc: "Você poderá recolonizar todos os subcontinentes removidos."
- AUTO_MODIFIER_NAME_fu_save_game_compatability: "Compatibilidade de Jogos Salvos"
+ AUTO_MODIFIER_NAME_fu_save_game_compatability: "Compatibilidade com Jogos Salvos"
  fu_save_game_compatability: "Compatibilidade de Jogo Salvo"
  STATIC_MODIFIER_NAME_fu_location_disabled_static_modifier: "Local Desativado por Regra de Jogo"
  rule_fu_army_movement_speed_game_rule: "Faster Universalis: Velocidade de Movimento do Exército"

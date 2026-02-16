@@ -16,7 +16,7 @@
  setting_fu_recolonization_blocked_setting_desc: "Usunie populacje i uniemożliwi ponowną kolonizację wszystkich wyłączonych subkontynentów w przypadku korzystania z ustawień Skupienie na Europie lub Skupienie na Azji. Nie zablokuje kolonizacji ani nie usunie populacji z nigdy nieskolonizowanych subkontynentów, takich jak Ameryka Południowa."
  setting_fu_recolonization_allowed_setting: "Opcja 1/2: Nie"
  setting_fu_recolonization_allowed_setting_desc: "Będziesz mógł ponownie skolonizować wszystkie usunięte subkontynenty."
- AUTO_MODIFIER_NAME_fu_save_game_compatability: "Kompatybilność zapisów gry"
+ AUTO_MODIFIER_NAME_fu_save_game_compatability: "Kompatybilność z zapisami gry"
  fu_save_game_compatability: "Kompatybilność zapisów gry"
  STATIC_MODIFIER_NAME_fu_location_disabled_static_modifier: "Lokacja wyłączona przez zasadę gry"
  rule_fu_army_movement_speed_game_rule: "Faster Universalis: Prędkość ruchu armii"
