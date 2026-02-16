@@ -41,3 +41,13 @@ NCombat = {
 	# DAYS_PER_SIEGE_PHASE_WITHOUT_FORT = 7 # 15
 	# SIEGE_DAYS_PER_PHASE = 3 # 5 - Not actually sure what this does, I don't know what 5-day phase exists?
 }
+
+NCountry = {
+	# 180*(25/48)
+	PARLIAMENT_DURATION_DAYS = 94 # 180
+}
+
+NInternationalOrganization = {
+	# 365*(25/48)
+	PARLIAMENT_DURATION_DAYS = 190 # 365
+}

@@ -1,4 +1,13 @@
 ﻿l_english:
+ # Correct Occupation Length
  OCCUPATION_X_DAYS_LEFT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y] day(s) left"
  OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]d"
  OCCUPATION_FINISHED_IN_X_DAYS: "The occupation will be finished in [Multiply_int32('(int32)$VAL$', '(int32)2')|Y] day(s).\nThe length of this occupation is due to:\n$WHY$"
+
+ # Correct Parliament Length
+ ALERT_PARLIAMENT_IN_SESSION: "#T Parliament in Session!#!\nYour [parliament|e] is in session and has [Multiply_int32(Player.GetGovernment.GetParliament.GetRemainingParliamentDuration, '(int32)2')|W] days left."
+ PARLIAMENT_MARKER_DURATION_TXT: "#T [Player.GetGovernment.GetParliament.GetName] in Session#!\nDebating [Player.GetGovernment.GetParliament.GetCurrentDebateName] for another [Multiply_int32(Player.GetGovernment.GetParliament.GetRemainingParliamentDuration, '(int32)2')|W] days in @location![Player.GetGovernment.GetParliament.GetParliamentLocation.GetName]."
+ PARLIAMENT_DURATION_TXT: "[Multiply_int32(Player.GetGovernment.GetParliament.GetRemainingParliamentDuration, '(int32)2')|W] days left in @location![Player.GetGovernment.GetParliament.GetParliamentLocation.GetName]"
+ PARLIAMENT_DURATION_TXT_NO_LOCATION: "[Multiply_int32(Player.GetGovernment.GetParliament.GetRemainingParliamentDuration, '(int32)2')|W] days left"
+ IO_PARLIAMENT_DURATION_TXT: "#T [InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetName] in Session#!\nDebating [InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetCurrentDebateName] for another [Multiply_int32(InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetRemainingParliamentDuration, '(int32)2')|W] days in @location![InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetParliamentLocation.GetName]."
+ INTERNATIONAL_ORGANIZATION_PARLIAMENT_DURATION_TXT: "[Multiply_int32(InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetRemainingParliamentDuration, '(int32)2')] days left in [InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetParliamentLocation.GetName]"
