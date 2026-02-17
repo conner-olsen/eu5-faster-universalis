@@ -2,6 +2,10 @@
 	on_actions = { fu_on_game_start }
 }
 
+four_yearly_country_pulse = {
+	on_actions = { fu_clear_situations }
+}
+
 fu_on_game_start = {
 	trigger = {
 		NOT = {
@@ -43,3 +47,19 @@ fu_on_game_start = {
 		set_global_variable = fu_setup_complete
 	}
 }
+
+fu_clear_situations = {
+	trigger = {
+		is_ai = no
+		is_situation_active = situation:great_pestilence
+		or = {
+			has_game_rule = fu_europe_europe_centric_setting
+			has_game_rule = fu_asia_centric_setting
+		}
+	}
+	effect = {
+		end_situation = situation:great_pestilence
+	}
+}
+
+
