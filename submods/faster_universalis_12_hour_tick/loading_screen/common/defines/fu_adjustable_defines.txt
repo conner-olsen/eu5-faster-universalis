@@ -1,15 +1,16 @@
-﻿NGame = {
-	HOUR_TICK = 24 # 2
+﻿# Adjusting for 1/6th the ticks
+NGame = {
+	HOUR_TICK = 12 # 2
 	MORNING_OFFSET = 0 # 8
 }
 
 NUnit = {
-	ARMY_MOVEMENT_SPEED = 0.845 # 0.13
-	NAVY_MOVEMENT_SPEED = 3.25 # 0.5
+	ARMY_MOVEMENT_SPEED = 0.78 # 0.13
+	NAVY_MOVEMENT_SPEED = 3 # 0.5
 }
 
 NCombat = {
-	MINIMUM_COMBAT_DURATION = 2 # 24
+	MINIMUM_COMBAT_DURATION = 4 # 24
 	INITIATIVE_BASE_CHANCE = 0.6 # 0.1	# base chance each tick
 	INITIATIVE_CHANCE_EACH = 0.12 # 0.02 # Chance to engage per point of initiative
 	COMBAT_SPEED_SCALE = 0.3 # 0.05
