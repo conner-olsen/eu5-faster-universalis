@@ -49,7 +49,7 @@ fu_25_army_speed_adjustment = {
 }
 
 ### Navy Speed ###
-fu_50_navy_speed_adjustment = {
+fu_66_navy_speed_adjustment = {
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
