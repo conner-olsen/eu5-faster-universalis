@@ -44,13 +44,13 @@
  ## Combat Speed:
  rule_fu_combat_speed_game_rule: "Faster Universalis: Battle Length"
  setting_fu_vanilla_combat_speed_setting: "Option 1/4: Vanilla"
- setting_fu_vanilla_combat_speed_setting_desc: "Battles will take the same amount of time as vanilla."
+ setting_fu_vanilla_combat_speed_setting_desc: "Battles will last the same amount of time as vanilla."
  setting_fu_double_combat_speed_setting: "Option 2/4: 200%"
- setting_fu_double_combat_speed_setting_desc: "Battles will take half the time as the default setting."
+ setting_fu_double_combat_speed_setting_desc: "Battles will last half the time as the default setting."
  setting_fu_default_combat_speed_setting: "Option 3/4: Default"
  setting_fu_default_combat_speed_setting_desc: "The mods default recommended setting. Battles will last 3.91x longer, but losses/outcomes will be identical to vanilla."
  setting_fu_half_combat_speed_setting: "Option 4/4: 50%"
- setting_fu_half_combat_speed_setting_desc: "Battles will take twice as long as the default setting."
+ setting_fu_half_combat_speed_setting_desc: "Battles will last twice as long as the default setting."
 
  ## Performance:
  rule_fu_sop_rule: "Faster Universalis: Pop-Based Countries"
