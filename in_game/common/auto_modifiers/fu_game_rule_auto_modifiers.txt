@@ -85,7 +85,7 @@ fu_33_navy_speed_adjustment = {
 	navy_movement_speed = -0.66
 }
 
-fu_33_navy_speed_adjustment = {
+fu_25_navy_speed_adjustment = {
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
