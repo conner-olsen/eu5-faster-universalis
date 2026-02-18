@@ -28,7 +28,9 @@ Dramatically improves game speed/tick rate while maintaining vanilla balance and
    [*][b]Battle Length:[/b] Allows you to adjust how long battles will last (while losses/outcomes remain the same as vanilla).
   [/list]
  [*][b]Minor QoL Adjustments:[/b]
+  [list]
    [*][b]Doubled MP Event Timeout Time[/b]
+  [/list]
 [/olist]
 
 For reference, in my testing, Daily Ticks on 5-speed increased game speed by about 13%, where as the Steam page video shows, Faster Universalis without any optional optimizations enabled, increased game speed by about 100% on a late-game vanilla save. With the optional optimizations enabled, such as Pop-Based Nation Culling, and Europe-centric regions, you can see improvements of over 200%.
