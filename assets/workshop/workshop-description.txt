@@ -25,7 +25,7 @@ Dramatically improves game speed/tick rate while maintaining vanilla balance and
   [list]
    [*][b]Army Movement Speed:[/b] Allows you to adjust army movement speed.
    [*][b]Navy Movement Speed:[/b] Allows you to adjust navy movement speed.
-   [*][b]Combat Speed:[/b] Allows you to adjust the speed at which combat occurs.
+   [*][b]Battle Length:[/b] Allows you to adjust how long battles will last (while losses/outcomes remain the same as vanilla).
   [/list]
 [/olist]
 
