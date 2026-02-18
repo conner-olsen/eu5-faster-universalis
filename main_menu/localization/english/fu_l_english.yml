@@ -42,7 +42,7 @@
  setting_fu_25_navy_speed_setting_desc: "Slows navy movement speed to 1/4th (25%) allowing for better control at higher game speeds."
 
  ## Combat Speed:
- rule_fu_combat_speed_game_rule: "Battle Length"
+ rule_fu_combat_speed_game_rule: "Faster Universalis: Battle Length"
  setting_fu_vanilla_combat_speed_setting: "Option 1/4: Vanilla"
  setting_fu_vanilla_combat_speed_setting_desc: "Battles will take the same amount of time as vanilla."
  setting_fu_double_combat_speed_setting: "Option 2/4: 200%"
@@ -76,4 +76,4 @@
  setting_fu_keep_pops_setting: "Option 1/2: Keep All Pops"
  setting_fu_keep_pops_setting_desc: "No pops will be deleted."
  setting_fu_remove_unowned_pops_setting: "Option 2/2: Remove Unowned Pops"
- setting_fu_remove_unowned_pops_setting_desc: "Delete pops from locations without owners (including pop-based countries). Better performance, but will make colonization faster, as there will be no local populations. This stacks with national removal."
+ setting_fu_remove_unowned_pops_setting_desc: "Delete pops from locations without owners (including pop-based countries). Better performance, but will make colonization faster, as there will be no local populations. This stacks with nation removal."

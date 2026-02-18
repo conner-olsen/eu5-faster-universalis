@@ -1,4 +1,62 @@
-﻿fu_army_movement_speed_game_rule = {
+﻿# Optimization Setting
+fu_sop_rule = {
+	default = fu_no_cull_sop_countries_setting
+
+	fu_no_cull_sop_countries_setting = {
+		flag = general_rule
+	}
+
+	fu_remove_sop_countries_setting = {
+		flag = general_rule
+	}
+}
+
+fu_nation_removal_rule = {
+	default = fu_no_removal_setting
+
+	fu_no_removal_setting = {
+		flag = general_rule
+	}
+
+	fu_remove_low_importance_setting = {
+		flag = general_rule
+	}
+
+	fu_europe_europe_centric_setting = {
+		flag = general_rule
+	}
+
+	fu_asia_centric_setting = {
+		flag = general_rule
+	}
+}
+
+fu_pop_removal_rule = {
+	default = fu_keep_pops_setting
+
+	fu_keep_pops_setting = {
+		flag = general_rule
+	}
+
+	fu_remove_unowned_pops_setting = {
+		flag = general_rule
+	}
+}
+
+fu_block_recolonization_rule = {
+	default = fu_recolonization_blocked_setting
+
+	fu_recolonization_blocked_setting = {
+		flag = general_rule
+	}
+
+	fu_recolonization_allowed_setting = {
+		flag = general_rule
+	}
+}
+
+# QoL Setting
+fu_army_movement_speed_game_rule = {
 	default = fu_vanilla_army_speed_setting
 
 	fu_vanilla_army_speed_setting = {
@@ -77,58 +135,3 @@ fu_combat_speed_game_rule = {
 	}
 }
 
-fu_sop_rule = {
-	default = fu_no_cull_sop_countries_setting
-
-	fu_no_cull_sop_countries_setting = {
-		flag = general_rule
-	}
-
-	fu_remove_sop_countries_setting = {
-		flag = general_rule
-	}
-}
-
-fu_nation_removal_rule = {
-	default = fu_no_removal_setting
-
-	fu_no_removal_setting = {
-		flag = general_rule
-	}
-
-	fu_remove_low_importance_setting = {
-		flag = general_rule
-	}
-
-	fu_europe_europe_centric_setting = {
-		flag = general_rule
-	}
-
-	fu_asia_centric_setting = {
-		flag = general_rule
-	}
-}
-
-fu_block_recolonization_rule = {
-	default = fu_recolonization_blocked_setting
-
-	fu_recolonization_blocked_setting = {
-		flag = general_rule
-	}
-
-	fu_recolonization_allowed_setting = {
-		flag = general_rule
-	}
-}
-
-fu_pop_removal_rule = {
-	default = fu_keep_pops_setting
-
-	fu_keep_pops_setting = {
-		flag = general_rule
-	}
-
-	fu_remove_unowned_pops_setting = {
-		flag = general_rule
-	}
-}
