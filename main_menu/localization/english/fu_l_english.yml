@@ -1,6 +1,15 @@
 ﻿l_english:
  # Modifiers:
  AUTO_MODIFIER_NAME_fu_save_game_compatability: "Save Game Compatibility"
+ AUTO_MODIFIER_NAME_fu_tick_rate_adjustments: "Tick Rate Adjustments"
+ AUTO_MODIFIER_NAME_fu_66_army_speed_adjustment: "66% Army Speed Adjustment"
+ AUTO_MODIFIER_NAME_fu_50_army_speed_adjustment: "50% Army Speed Adjustment"
+ AUTO_MODIFIER_NAME_fu_33_army_speed_adjustment: "33% Army Speed Adjustment"
+ AUTO_MODIFIER_NAME_fu_25_army_speed_adjustment: "25% Army Speed Adjustment"
+ AUTO_MODIFIER_NAME_fu_66_navy_speed_adjustment: "50% Navy Speed Adjustment"
+ AUTO_MODIFIER_NAME_fu_50_navy_speed_adjustment: "50% Navy Speed Adjustment"
+ AUTO_MODIFIER_NAME_fu_33_navy_speed_adjustment: "33% Navy Speed Adjustment"
+ AUTO_MODIFIER_NAME_fu_25_navy_speed_adjustment: "33% Navy Speed Adjustment"
  fu_save_game_compatability: "Save Game Compatibility"
  STATIC_MODIFIER_NAME_fu_location_disabled_static_modifier: "Location Disabled by Game Rule"
 
@@ -18,7 +27,7 @@
  setting_fu_25_army_speed_setting: "Option 5/5: 25%"
  setting_fu_25_army_speed_setting_desc: "Slows army movement speed to 1/4th (25%) allowing for better control at higher game speeds."
  rule_fu_navy_movement_speed_game_rule: "Faster Universalis: Navy Movement Speed"
- setting_fu_vanilla_navy_speed_setting: "Vanilla"
+ setting_fu_vanilla_navy_speed_setting: "Option 1/5: Vanilla"
  setting_fu_vanilla_navy_speed_setting_desc: "Same exact time to move between sea tiles as vanilla."
  setting_fu_66_navy_speed_setting: "Option 2/5: 66%"
  setting_fu_66_navy_speed_setting_desc: "Slows navy movement speed to 2/3rd (66%) allowing for better control at higher game speeds."
