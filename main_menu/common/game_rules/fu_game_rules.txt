@@ -6,18 +6,22 @@
 	}
 
 	fu_66_army_speed_setting = {
+		apply_modifier = all:fu_66_army_speed_adjustment
 		flag = general_rule
 	}
 
 	fu_50_army_speed_setting = {
+		apply_modifier = all:fu_50_army_speed_adjustment
 		flag = general_rule
 	}
 
 	fu_33_army_speed_setting = {
+		apply_modifier = all:fu_33_army_speed_adjustment
 		flag = general_rule
 	}
 
 	fu_25_army_speed_setting = {
+		apply_modifier = all:fu_25_army_speed_adjustment
 		flag = general_rule
 	}
 }
@@ -30,18 +34,22 @@ fu_navy_movement_speed_game_rule = {
 	}
 
 	fu_66_navy_speed_setting = {
+		apply_modifier = all:fu_66_navy_speed_adjustment
 		flag = general_rule
 	}
 
 	fu_50_navy_speed_setting = {
+		apply_modifier = all:fu_50_navy_speed_adjustment
 		flag = general_rule
 	}
 
 	fu_33_navy_speed_setting = {
+		apply_modifier = all:fu_33_navy_speed_adjustment
 		flag = general_rule
 	}
 
 	fu_25_navy_speed_setting = {
+		apply_modifier = all:fu_25_navy_speed_adjustment
 		flag = general_rule
 	}
 }
