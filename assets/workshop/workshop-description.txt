@@ -27,6 +27,8 @@ Dramatically improves game speed/tick rate while maintaining vanilla balance and
    [*][b]Navy Movement Speed:[/b] Allows you to adjust navy movement speed.
    [*][b]Battle Length:[/b] Allows you to adjust how long battles will last (while losses/outcomes remain the same as vanilla).
   [/list]
+ [*][b]Minor QoL Adjustments:[/b]
+   [*][b]Doubled MP Event Timeout Time[/b]
 [/olist]
 
 For reference, in my testing, Daily Ticks on 5-speed increased game speed by about 13%, where as the Steam page video shows, Faster Universalis without any optional optimizations enabled, increased game speed by about 100% on a late-game vanilla save. With the optional optimizations enabled, such as Pop-Based Nation Culling, and Europe-centric regions, you can see improvements of over 200%.
@@ -70,7 +72,7 @@ See the [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/$item-
 [/list]
 
 [h1]Additional Notes[/h1]
-To be compatible with both v1.0.11 and the v1.1 beta, I haven't adjusted the delay between ticks. This means that while 5-speed is 2x faster than vanilla, the other speeds are disproportionately faster, such as 1-speed being 23.5x faster than vanilla. But I you can also use the speed adjustment [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submods available here for your respective game version.[/url]) When v1.1 is released, the speed adjustment submods will be merged into the main mod.
+To be compatible with both v1.0.11 and the v1.1 beta, I haven't adjusted the delay between ticks. This means that while 5-speed is 2x faster than vanilla, the other speeds are disproportionately faster, such as 1-speed being 23.5x faster than vanilla. But you can also use the speed adjustment [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submods available here for your respective game version.[/url]) When v1.1 is released, the speed adjustment submods will be merged into the main mod.
 
 Please report any issues or outcomes that don't match vanilla/expected behavior if they occur.
 
