@@ -1,0 +1,10 @@
+﻿# Scaled by 11.75x to be 2x the vanilla equivalent
+NGame = {
+	GAME_SPEED_TICKS = {	# how many seconds should an hour take in every game speed
+		4.7 # 2x-11.75 # 1
+		2.35 # 2x-4.7 # 0.4
+		1.175 # 0.1
+		0.02 # 2x-0.235 # 0.02
+		0.0
+	}
+}

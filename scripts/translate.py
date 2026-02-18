@@ -292,16 +292,11 @@ def mask_text_var(text):
 		placeholders.append(match.group(0))
 		return f'[VAR_{idx}]'
 
-	# 0. Protect escaped newlines so they survive translation.
-	text = re.sub(r'(\\n)', replace_match, text)
-	# 1. Protect [...]
-	text = re.sub(r'(\[.*?\])', replace_match, text)
-	# 2. Protect $...$
-	text = re.sub(r'(\$.*?\$)', replace_match, text)
-	# 3. Protect @...!
-	text = re.sub(r'(@[a-zA-Z0-9_]+!?)', replace_match, text)
-	# 4. Protect #...#!
-	text = re.sub(r'(#[a-zA-Z0-9_]+|#!)', replace_match, text)
+	# Single pass prevents already-masked [VAR_x] tokens from being re-masked.
+	pattern = re.compile(
+		r'(\\n|\[.*?\]|\$.*?\$|@[a-zA-Z0-9_]+!?|#[a-zA-Z0-9_]+|#!)'
+	)
+	text = pattern.sub(replace_match, text)
 
 	return text, placeholders
 
@@ -368,6 +363,11 @@ def unmask_text_var_xml(text, placeholders):
 		text
 	)
 
+def normalize_localization_linebreaks(text):
+	"""Convert raw line breaks to escaped \\n for single-line localization values."""
+	text = text.replace("\r\n", "\n").replace("\r", "\n")
+	return text.replace("\n", r"\n")
+
 def missing_placeholder_indices(translated_text, placeholders):
 	"""Return indices of placeholders missing from translated_text (VAR or XML-tagged)."""
 	found_set = set(int(x) for x in re.findall(r'VAR_(\d+)', translated_text))
@@ -379,6 +379,8 @@ def missing_placeholder_indices(translated_text, placeholders):
 	missing = []
 	for i, placeholder in enumerate(placeholders):
 		if i in found_set:
+			continue
+		if placeholder == r"\n" and "\n" in translated_text:
 			continue
 		if placeholder and placeholder in translated_text:
 			continue
@@ -414,7 +416,7 @@ def translate_deepl_xml(translator, masked_text, placeholders, deepl_code, sourc
 		split_sentences=split_sentences,
 		preserve_formatting=True
 	)
-	translated_raw = unescape_xml(result.text)
+	translated_raw = normalize_localization_linebreaks(unescape_xml(result.text))
 	missing = missing_placeholder_indices(translated_raw, placeholders)
 	translated_text = unmask_text_var_xml(translated_raw, placeholders)
 	translated_text = unmask_text_var(translated_text, placeholders)
@@ -429,8 +431,9 @@ def translate_deepl_plain(translator, masked_text, placeholders, deepl_code, sou
 		split_sentences=split_sentences,
 		preserve_formatting=True
 	)
-	missing = missing_placeholder_indices(result.text, placeholders)
-	translated_text = unmask_text_var(result.text, placeholders)
+	translated_raw = normalize_localization_linebreaks(result.text)
+	missing = missing_placeholder_indices(translated_raw, placeholders)
+	translated_text = unmask_text_var(translated_raw, placeholders)
 	return translated_text, missing
 
 def validate_translation(translated_text, placeholders):
@@ -531,6 +534,7 @@ def translate_localization_value_gemini(
 		print("  [Error] Gemini API returned no text.")
 		return None
 
+	translated_text = normalize_localization_linebreaks(translated_text)
 	missing = missing_placeholder_indices(translated_text, placeholders)
 	if missing:
 		missing_tags = [placeholders[i] for i in missing]
