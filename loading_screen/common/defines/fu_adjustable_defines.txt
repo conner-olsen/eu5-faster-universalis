@@ -15,28 +15,28 @@ NUnit = {
 	# NAVAL_MORALE = 3.0
 }
 
-# Default combat speed scaling of roughly (1/4 vanilla which would be 5.875x). Highest value before buffing siege phase.
+# Default combat speed optimized for the maximum increase while keeping initiative the same: (1/(0.1+0.02*6))=(50/11)=4.54
 NCombat = {
-	MINIMUM_COMBAT_DURATION = 1 # 24
+	MINIMUM_COMBAT_DURATION = 5 # 1 # 24
 	# BOMBARD_HOURS = 5
 	# HOURS_PER_PHASE = 5
-	# COMBAT_DAMAGE_MULT = 0.01
+	COMBAT_DAMAGE_MULT = 0.04 # 0.01
 	# COMBAT_HOURLY_MORALE_TICK = 0.01
-	INITIATIVE_BASE_CHANCE = 0.6 # 0.1	# base chance each tick
-	INITIATIVE_CHANCE_EACH = 0.12 # 0.02 # Chance to engage per point of initiative
+	INITIATIVE_BASE_CHANCE = 0.45 # 0.1	# base chance each tick
+	INITIATIVE_CHANCE_EACH = 0.09 # 0.02 # Chance to engage per point of initiative
 	# INITIATIVE_CHANCE_HOURS = 0.01 # Chance to engage per hour passed (adds with INITIATIVE_CHANCE_EACH)
-	COMBAT_SPEED_SCALE = 0.3 # 0.05
-	LAND_STRENGTH_DAMAGE_MODIFIER = 1.2 # 0.2
-	NAVAL_STRENGTH_DAMAGE_MODIFIER = 0.3 # 0.05
-	LAND_MORALE_DAMAGE_MODIFIER = 6.0 # 1.0
-	NAVAL_MORALE_DAMAGE_MODIFIER = 1.2 # 0.2
-	# BASE_MORALE_DAMAGE = 1.0
+	COMBAT_SPEED_SCALE = 0.22 # 0.05
+	# LAND_STRENGTH_DAMAGE_MODIFIER = 0.9 # 0.2
+	# NAVAL_STRENGTH_DAMAGE_MODIFIER = 0.22 # 0.05
+	# LAND_MORALE_DAMAGE_MODIFIER = 4.54 # 1.0
+	# NAVAL_MORALE_DAMAGE_MODIFIER = 0.9 # 0.2
+	BASE_MORALE_DAMAGE = 4.54 # 1.0
 
 	# Siege
 	# Theoretically should be 16 days
 	# But this proved closer in testing
 	# However siege testing has a high margin of error.
-	DAYS_PER_SIEGE_PHASE = 20 # 30
+	DAYS_PER_SIEGE_PHASE = 16 # 20 # 30
 	# MIN_DAYS_PER_SIEGE_PHASE =  4 # 7
 	# DAYS_PER_SIEGE_PHASE_WITHOUT_FORT = 7 # 15
 	# SIEGE_DAYS_PER_PHASE = 3 # 5 - Not actually sure what this does, I don't know what 5-day phase exists?
