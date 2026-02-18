@@ -10,6 +10,9 @@
  STATIC_MODIFIER_NAME_fu_50_navy_speed_adjustment: "50% Navy Speed Adjustment"
  STATIC_MODIFIER_NAME_fu_33_navy_speed_adjustment: "33% Navy Speed Adjustment"
  STATIC_MODIFIER_NAME_fu_25_navy_speed_adjustment: "33% Navy Speed Adjustment"
+ STATIC_MODIFIER_NAME_fu_vanilla_combat_speed_adjustment: "Vanilla Combat Speed Adjustment"
+ STATIC_MODIFIER_NAME_fu_double_combat_speed_adjustment: "Double Combat Speed Adjustment"
+ STATIC_MODIFIER_NAME_fu_half_combat_speed_adjustment: "50% Combat Speed Adjustment"
  fu_save_game_compatability: "Save Game Compatibility"
  STATIC_MODIFIER_NAME_fu_location_disabled_static_modifier: "Location Disabled by Game Rule"
 
@@ -37,6 +40,17 @@
  setting_fu_33_navy_speed_setting_desc: "Slows navy movement speed to 1/3rd (33%) allowing for better control at higher game speeds."
  setting_fu_25_navy_speed_setting: "Option 5/5: 25%"
  setting_fu_25_navy_speed_setting_desc: "Slows navy movement speed to 1/4th (25%) allowing for better control at higher game speeds."
+
+ ## Combat Speed:
+ rule_fu_combat_speed_game_rule: "Battle Length"
+ setting_fu_vanilla_combat_speed_setting: "Option 1/4: Vanilla"
+ setting_fu_vanilla_combat_speed_setting_desc: "Battles will take the same amount of time as vanilla."
+ setting_fu_double_combat_speed_setting: "Option 2/4: 200%"
+ setting_fu_double_combat_speed_setting_desc: "Battles will take half the time as the default setting."
+ setting_fu_default_combat_speed_setting: "Option 3/4: Default"
+ setting_fu_default_combat_speed_setting_desc: "The mods default recommended setting. Battles will last 3.91x longer, but losses/outcomes will be identical to vanilla."
+ setting_fu_half_combat_speed_setting: "Option 4/4: 50%"
+ setting_fu_half_combat_speed_setting_desc: "Battles will take twice as long as the default setting."
 
  ## Performance:
  rule_fu_sop_rule: "Faster Universalis: Pop-Based Countries"

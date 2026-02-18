@@ -60,20 +60,46 @@ fu_25_navy_speed_adjustment = {
 ### Combat Speed ###
 # Note to those who don't understand where these values come from:
 # In vanilla, the ticks are bi-hourly
-# Thus there are 12 hourly ticks a day.
+# Thus there are 12 bi-hourly ticks a day.
 # I am using 47 hour ticks, which would be 23.5x less ticks.
-# fu_vanilla_combat_speed_adjustment = { # Needs to be adjusted by ((47/2)/6)=3.91
-# 	requires_real = no
-# 	hide_effects = yes
-# 	potential_trigger = {
-# 		has_game_rule = fu_vanilla_combat_speed_setting
-# 	}
-# 	limit = {
-# 		has_game_rule = fu_vanilla_combat_speed_setting
-# 	}
-# 	naval_damage_done = 3.91
-# 	army_infantry_power = 3.91
-# 	army_cavalry_power = 3.91
-# 	army_artillery_power = 3.91
-# 	army_auxiliary_power = 3.91
-# }
+fu_vanilla_combat_speed_adjustment = { # Needs to be adjusted by ((47/2)/(50/11))=5.17
+	game_data = {
+		category = country
+	}
+	naval_damage_done = 5.17
+	army_infantry_power = 5.17
+	army_cavalry_power = 5.17
+	army_artillery_power = 5.17
+	army_auxiliary_power = 5.17
+	combat_speed_modifier = 5.17
+	army_initiative = 5.17
+	navy_initiative = 5.17
+}
+
+fu_double_combat_speed_adjustment = {
+	game_data = {
+		category = country
+	}
+	naval_damage_done = 1
+	army_infantry_power = 1
+	army_cavalry_power = 1
+	army_artillery_power = 1
+	army_auxiliary_power = 1
+	combat_speed_modifier = 1
+	army_initiative = 1
+	navy_initiative = 1
+}
+
+fu_half_combat_speed_adjustment = {
+	game_data = {
+		category = country
+	}
+	naval_damage_done = -0.5
+	army_infantry_power = -0.5
+	army_cavalry_power = -0.5
+	army_artillery_power = -0.5
+	army_auxiliary_power = -0.5
+	combat_speed_modifier = -0.5
+	army_initiative = -0.5
+	navy_initiative = -0.5
+}

@@ -54,22 +54,29 @@ fu_navy_movement_speed_game_rule = {
 	}
 }
 
-# fu_combat_speed_game_rule = {
-# 	default = fu_default_combat_speed_setting
-#
-# 	fu_default_combat_speed_setting = {
-# 		flag = general_rule
-# 	}
-#
-# 	fu_vanilla_combat_speed_setting = {
-# 		flag = general_rule
-# 	}
-#
-# 	fu_slowed_combat_speed_setting = {
-# 		flag = general_rule
-# 	}
-# }
-#
+fu_combat_speed_game_rule = {
+	default = fu_default_combat_speed_setting
+
+	fu_vanilla_combat_speed_setting = {
+		apply_modifier = all:fu_vanilla_combat_speed_adjustment
+		flag = general_rule
+	}
+
+	fu_double_combat_speed_setting = {
+		apply_modifier = all:fu_double_combat_speed_adjustment
+		flag = general_rule
+	}
+
+	fu_default_combat_speed_setting = {
+		flag = general_rule
+	}
+
+	fu_half_combat_speed_setting = {
+		apply_modifier = all:fu_half_combat_speed_adjustment
+		flag = general_rule
+	}
+}
+
 fu_sop_rule = {
 	default = fu_no_cull_sop_countries_setting
 
