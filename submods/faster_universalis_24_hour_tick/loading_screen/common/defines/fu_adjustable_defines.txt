@@ -1,21 +1,20 @@
 ﻿NGame = {
-	HOUR_TICK = 24 # 2
-	MORNING_OFFSET = 0 # 8
+	HOUR_TICK = 24 # 2 # In vanilla, there is 2-hour ticks, and 12-ticks a day. FU has 23.5x less ticks.
+	MORNING_OFFSET = 0 # 8 # This is only a visual offset change, does not change the number of ticks.
 }
 
 NUnit = {
-	ARMY_MOVEMENT_SPEED = 0.845 # 0.13
-	NAVY_MOVEMENT_SPEED = 3.25 # 0.5
+	ARMY_MOVEMENT_SPEED = 0.86 # 0.13
+	NAVY_MOVEMENT_SPEED = 3.31 # 0.5
 }
 
 NCombat = {
-	MINIMUM_COMBAT_DURATION = 2 # 24
-	INITIATIVE_BASE_CHANCE = 0.6 # 0.1	# base chance each tick
-	INITIATIVE_CHANCE_EACH = 0.12 # 0.02 # Chance to engage per point of initiative
-	COMBAT_SPEED_SCALE = 0.3 # 0.05
-	LAND_STRENGTH_DAMAGE_MODIFIER = 1.2 # 0.2
-	NAVAL_STRENGTH_DAMAGE_MODIFIER = 0.3 # 0.05
-	LAND_MORALE_DAMAGE_MODIFIER = 6.0 # 1.0
-	NAVAL_MORALE_DAMAGE_MODIFIER = 1.2 # 0.2
+	RETREAT_STRENGTH_DAMAGE = 0.02 # 0.1
+	MINIMUM_COMBAT_DURATION = 5 # 1 # 24
+	COMBAT_DAMAGE_MULT = 0.04 # 0.01
+	COMBAT_HOURLY_MORALE_TICK = 0.05 # 0.01 # Not 100% sure what this is yet, but this matters a lot for loss ratio
+	INITIATIVE_BASE_CHANCE = 0.45 # 0.1	# base chance each tick
+	INITIATIVE_CHANCE_EACH = 0.09 # 0.02 # Chance to engage per point of initiative
+	COMBAT_SPEED_SCALE = 0.22 # 0.05
+	BASE_MORALE_DAMAGE = 4.54 # 1.0
 }
-

@@ -7,8 +7,8 @@
 			has_global_variable = is_fu_game
 		}
 	}
-	army_movement_speed = 6.5
-	navy_movement_speed = 6.5
+	army_movement_speed = 3.31
+	navy_movement_speed = 3.31
 }
 
 fu_tick_rate_adjustments = {

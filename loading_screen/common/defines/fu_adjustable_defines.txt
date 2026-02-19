@@ -1,7 +1,6 @@
 ﻿NGame = {
 	HOUR_TICK = 47 # 2 # In vanilla, there is 2-hour ticks, and 12-ticks a day. FU has 23.5x less ticks.
 	MORNING_OFFSET = 0 # 8 # This is only a visual offset change, does not change the number of ticks.
-	EVENT_MP_TIMEOUT_MONTHS = 6 # 3
 }
 
 # Theoretically it should be 23.5x multiplier on vanilla.
