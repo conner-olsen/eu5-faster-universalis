@@ -26,3 +26,7 @@ workshop_id = 3664191297
 [[submods]]
 mod_id = "fusm.adjusted.game.speed.stable"
 workshop_id = 3664483182
+
+[[submods]]
+mod_id = "fusm.halfday.tick"
+workshop_id = 3669113942
