@@ -1,17 +1,15 @@
-﻿monthly_country_pulse = {
-	on_actions = { fu_on_game_start }
-}
-
-four_yearly_country_pulse = {
+﻿four_yearly_country_pulse = {
 	on_actions = { fu_clear_situations }
 }
 
-fu_on_game_start = {
-	trigger = {
-		NOT = {
-			has_global_variable = fu_setup_complete
-		}
+on_game_start = {
+	on_actions = {
+		delay = { days =  1 }
+		fu_game_setup
 	}
+}
+
+fu_game_setup = {
 	effect = {
 		set_global_variable = is_fu_game
 		if = {
@@ -44,7 +42,6 @@ fu_on_game_start = {
 			}
 			fu_remove_unowned_pops = yes
 		}
-		set_global_variable = fu_setup_complete
 	}
 }
 
