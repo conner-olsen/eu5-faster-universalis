@@ -4,51 +4,55 @@ Daha Hızlı Universalis / Faster Universalis
 [i]You are on the DeepL-Generated Turkish Page. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=$item-id$&l=english]Click here for the Native English Page.[/url][/i]
 
 [h1]Genel Bakış:[/h1]
-Orijinal dengeyi ve oynanışı korurken oyun hızını/tik oranını (tick rate) önemli ölçüde artırır.
+Vanilla dengesini ve oynanışını korurken oyun hızını/tik hızını önemli ölçüde artırır.
 
 [h1]Özellikler:[/h1]
 [olist]
- [*][b]%100+ Daha Hızlı Oyun Hızı:[/b] 5. hızda zamanın orijinaline göre yaklaşık iki kat daha hızlı geçtiğini göreceksiniz; düşük hızlarda ise daha da büyük bir iyileşme söz konusudur.
+ [*][b]%100+ Daha Hızlı Oyun Hızı:[/b] 5. hızda, zamanın vanilla versiyondan yaklaşık iki kat daha hızlı geçtiğini göreceksiniz ve düşük hızlarda daha da büyük bir iyileşme fark edeceksiniz.
     [list]
-     [*]Burada listelenemeyecek kadar çok olan düzinelerce tanımlama (define) değişikliği ile gerçekleştirilmiştir.
-     [*]Saatlik tikler kaldırıldı (ve ana modun 1,9 günlük (47 saatlik) tikler kullanmasıyla daha da ileri gidildi. Ancak [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]buradaki alt modlar[/url] aracılığıyla ayarlanabilir.)
-     [*]Muharebe, Hareket Hızı, Oyun ve Yapay Zeka Güncelleme Sıklığı; tüm sonuçlar ve oyun dengesi orijinaliyle aynı olacak şekilde ayarlandı. Daha yüksek hız dışında herhangi bir fark fark etmemelisiniz.
+     [*]Burada listelenemeyecek kadar çok olan düzinelerce defines değişikliği ile gerçekleştirilmiştir.
+     [*]Saatlik tikler kaldırıldı (temel modun 1.9 günlük (47 saat) tikler kullanmasıyla bunun da ötesine geçer. Ancak [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]buradaki mevcut alt modlar[/url] aracılığıyla ayarlanabilir.)
+     [*]Muharebe, Hareket Hızı, Oyun ve YZ Güncelleme Sıklığı; tüm sonuçlar ve oyun dengesi vanilla ile özdeş olacak şekilde ayarlanmıştır. Daha yüksek hız dışında herhangi bir fark fark etmemelisiniz.
     [/list]
  [*][b]İsteğe Bağlı Performans Optimizasyonu Oyun Kuralları:[/b]
   [list]
-   [*][b]Nüfus Tabanlı Devlet Kaldırma:[/b] Tüm Nüfus Tabanlı Devletleri siler.
-   [*][b]Bölge Kaldırmaları:[/b] Avrupa Odaklı, Asya Odaklı ve Düşük Önemli Bölgeleri Kaldır. Her birinin nasıl görüneceğini görmek için mod sayfası ekran görüntülerine bakın.
+   [*][b]Popülasyon Tabanlı Ülke Kaldırma:[/b] Tüm popülasyon tabanlı ülkeleri siler.
+   [*][b]Bölge Kaldırmaları:[/b] Avrupa Odaklı, Asya Odaklı ve Düşük Önemli Bölgeleri Kaldır. Her birinin nasıl görüneceğini mod sayfası ekran görüntülerinden görebilirsiniz.
     [list]
-     [*][b]Düşük Önemli Bölgeleri Kaldır:[/b] Küçük Pasifik adası devletleri gibi etkileşim şansı düşük olan bölgelerdeki Küçük Devletleri siler—tüm ayrıntılar oyun kuralı açıklamalarındadır.
+     [*][b]Düşük Önemli Bölgeleri Kaldır:[/b] Küçük Pasifik adası ülkeleri gibi etkileşim şansı düşük olan bölgelerdeki küçük ülkeleri siler; tüm detaylar oyun kuralı açıklamalarındadır.
      [*][b]Avrupa Odaklı:[/b] Doğu Asya, Endonezya ve Okyanusya gibi uzak bölgeleri kaldırarak etkili bir şekilde sadece Avrupa odaklı bir oyun sunar.
      [*][b]Asya Odaklı:[/b] Avrupa ve Batı Afrika gibi uzak bölgeleri kaldırarak etkili bir şekilde sadece Asya odaklı bir oyun sunar.
     [/list]
-   [*][b]Sahipsiz Nüfus Kaldırma:[/b] Sahipsiz konumlardaki nüfusları siler. Devlet kaldırma ile birlikte kullanılabilir.
-   [*][b]Yeniden Kolonizasyonu Engelle:[/b] Avrupa Odaklı veya Asya Odaklı kaldırmalarla etkinleştirilirse, kaldırılan bölgelerin yeniden kolonize edilmesini önler. Bunu kapatmak, kayıp eski dünyayı yeniden kolonize etme yarışı içeren ilginç bir deneyim yaratabilir.
+   [*][b]Sahipsiz Popülasyon Kaldırma:[/b] Sahipsiz konumlardaki popülasyonları siler. Ülke kaldırma ile birlikte çalışır.
+   [*][b]Yeniden Kolonileştirmeyi Engelle:[/b] Avrupa Odaklı veya Asya Odaklı kaldırmalarla birlikte etkinleştirilirse, kaldırılan bölgelerin yeniden kolonileştirilmesini engeller. Bunu kapatmak, kayıp eski dünyayı yeniden kolonileştirmek için ilginç bir yarış deneyimi yaratabilir.
   [/list]
  [*][b]Hız Ayarı Oyun Kuralları[/b]
   [list]
    [*][b]Ordu Hareket Hızı:[/b] Ordu hareket hızını ayarlamanıza olanak tanır.
    [*][b]Donanma Hareket Hızı:[/b] Donanma hareket hızını ayarlamanıza olanak tanır.
-   [*][b]Muharebe Süresi:[/b] Muharebelerin ne kadar süreceğini ayarlamanıza olanak tanır (kayıplar/sonuçlar orijinaliyle aynı kalırken).
+   [*][b]Muharebe Süresi:[/b] Kayıplar/sonuçlar vanilla ile aynı kalırken muharebelerin ne kadar süreceğini ayarlamanıza olanak tanır.
+  [/list]
+ [*][b]Küçük Yaşam Kalitesi (QoL) Düzenlemeleri:[/b]
+  [list]
+   [*][b]İki Katına Çıkarılmış MP Etkinlik Zaman Aşımı Süresi[/b]
   [/list]
 [/olist]
 
-Referans olması açısından, yaptığım testlerde Daily Ticks 5. hızda oyun hızını yaklaşık %13 artırırken, Steam sayfasındaki videoda görüldüğü gibi, Faster Universalis herhangi bir isteğe bağlı optimizasyon etkinleştirilmeden oyun sonu orijinal bir kayıt dosyasında oyun hızını yaklaşık %100 artırmıştır. Nüfus Tabanlı Devlet Temizleme ve Avrupa odaklı bölgeler gibi isteğe bağlı optimizasyonlar etkinleştirildiğinde %200'ün üzerinde iyileşme görebilirsiniz.
+Referans olması açısından, yaptığım testlerde "Daily Ticks" 5. hızda oyun hızını yaklaşık %13 artırırken, Steam sayfası videosunda görüldüğü üzere Faster Universalis, herhangi bir isteğe bağlı optimizasyon etkinleştirilmeden, geç oyun vanilla kaydında oyun hızını yaklaşık %100 artırmıştır. Popülasyon Tabanlı Ülke Ayıklama ve Avrupa Odaklı bölgeler gibi isteğe bağlı optimizasyonlar etkinleştirildiğinde %200'ün üzerinde iyileşme görebilirsiniz.
 
-[h1]Planlananlar/Gelecek Özellikler:[/h1]
+[h1]Planlanan/Gelecek Özellikler:[/h1]
 [olist]
  [*][b]Sürekli Performans Optimizasyonu:[/b] Daha fazla fırsat buldukça modu performans için optimize etmeye devam edeceğim.
- [*][b]Ek Özelleştirme:[/b] Oyun kuralları aracılığıyla muharebe hızını ve hareket hızını ayarlamaya olanak tanıyacak. Görmek istediğiniz diğer ayarları önermekten çekinmeyin.
- [*][b]Grafik İyileştirme Seçenekleri:[/b] Gelecekteki bir güncellemede yayınlanacak olan işleme/FPS performansını iyileştirme üzerinde de çalışıyorum. Ancak şu an itibariyle FPS'de yalnızca %13'lük bir artış sağlayabildim. (İsterseniz yapım aşamasındaki grafik tanımlamalarımın yorum satırlarını kaldırabilirsiniz, ancak şu anda varsayılan olarak etkin değildir.) İşlemci darboğazınız varsa, şu anda bile bir FPS artışı görebileceğinizi unutmayın. Ayrıca isteğe bağlı performans oyun kurallarından herhangi birini kullanarak belirli sahnelerde FPS artışı göreceksiniz, çünkü işlenecek daha az şey olacaktır.
+ [*][b]Ek Özelleştirme:[/b] Oyun kuralları aracılığıyla muharebe hızı ve hareket hızının ayarlanmasına olanak tanınacak. Görmek istediğiniz diğer ayarları önermekten çekinmeyin.
+ [*][b]Grafik İyileştirme Seçenekleri:[/b] İşleme/FPS performansını iyileştirmek üzerinde de çalışıyorum ve bu gelecek bir güncellemede yayınlanacak. Ancak şu an itibariyle FPS'de sadece %13'lük bir artış sağlayabildim. (İsterseniz yapım aşamasındaki grafik tanımlarımın başındaki yorum işaretini kaldırabilirsiniz, ancak şu anda varsayılan olarak etkin değildir.) CPU darboğazınız varsa şu anda hala bir FPS artışı görebileceğinizi unutmayın. Ayrıca, işlenecek daha az şey olacağı için belirli sahnelerde isteğe bağlı performans oyun kurallarından herhangi birini kullanarak bir FPS artışı göreceksiniz.
 [/olist]
 
-[h2]Yerel Dil Çevirileri:[/h2]
+[h2]Ana Dil Yerelleştirmeleri:[/h2]
 [list]
  [*][b]İngilizce:[/b] Birincil
 [/list]
 
-[h2]DeepL İle Çevrilen Diller:[/h2]
+[h2]DeepL ile Çevrilmiş Yerelleştirmeler:[/h2]
 [list]
  [*][b]Çince / 中文[/b]
  [*][b]Fransızca / Français[/b]
@@ -63,23 +67,23 @@ Referans olması açısından, yaptığım testlerde Daily Ticks 5. hızda oyun 
 [/list]
 
 [h1]Değişiklik Günlüğü:[/h1]
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Atölye sayfasındaki Değişiklik Notlarına[/url] bakın.
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Workshop sayfasındaki Değişiklik Notlarına[/url] göz atın.
 
 [h1]Uyumluluk:[/h1]
 [list]
- [*]v1.0.11 ve v1.1 betayı destekler.
+ [*]v1.0.11 ve v1.1 betasını destekler.
  [*]Başarımlar (Achievement) ile uyumlu değildir.
  [*]Kayıtlı oyunlarla tam uyumludur.
- [*]Daily Ticks gibi başka herhangi bir tik değiştirme moduyla birlikte kullanılmamalıdır.
- [*]Talep üzerine uyumluluk yamaları ekleyebilirim.
+ [*]Daily Ticks gibi başka bir tik değiştirme moduyla birlikte kullanılmamalıdır.
+ [*]İstek üzerine uyumluluk yamaları ekleyebilirim.
 [/list]
 
 [h1]Ek Notlar[/h1]
-Hem v1.0.11 hem de v1.1 beta ile uyumlu olması için tikler arasındaki gecikmeyi ayarlamadım. Bu, 5. hızın orijinalinden 2 kat daha hızlı olduğu, ancak diğer hızların orantısız şekilde daha hızlı olduğu anlamına gelir (örneğin 1. hız orijinalinden 23,5 kat daha hızlıdır). Ancak kendi oyun sürümünüz için [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]burada bulunan hız ayarı alt modlarını da kullanabilirsiniz.[/url] v1.1 yayınlandığında, hız ayarı alt modları ana modla birleştirilecektir.
+Hem v1.0.11 hem de v1.1 betası ile uyumlu olması için tikler arasındaki gecikmeyi ayarlamadım. Bu, 5. hızın vanilla versiyondan 2 kat daha hızlı olduğu, ancak diğer hızların orantısız şekilde daha hızlı olduğu anlamına gelir (örneğin 1. hız vanilla versiyondan 23,5 kat daha hızlıdır). Ancak [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]buradaki ilgili oyun sürümünüz için mevcut olan hız ayarı alt modlarını[/url] da kullanabilirsiniz. v1.1 yayınlandığında, hız ayarı alt modları ana mod ile birleştirilecektir.
 
-Lütfen herhangi bir sorunla veya orijinal/beklenen davranışla eşleşmeyen sonuçlarla karşılaşırsanız bildirin.
+Lütfen herhangi bir sorun oluşursa veya vanilla/beklenen davranışla eşleşmeyen sonuçlar olursa bildirin.
 
-Yorumlar bölümüne ek olarak, [url=https://discord.gg/zeQ6x9wrPq]EU5 Topluluğu discord sunucusunun #faster-universalis kanalında[/url] soru sorabilir, hata bildirebilir veya öneride bulunabilirsiniz. Ayrıca bu modun veya diğer modlarımdan birinin geliştirilmesine katılmak isterseniz Discord'da @arealconner üzerinden bana ping atabilir veya ekleyebilirsiniz. Tüm katkılar memnuniyetle karşılanır.
+Yorumlar bölümüne ek olarak, [url=https://discord.gg/zeQ6x9wrPq]EU5 Community Discord sunucusunun #faster-universalis kanalında[/url] sorular sorabilir, hata bildirebilir veya önerilerde bulunabilirsiniz. Ve eğer bu modun veya diğer modlarımdan birinin geliştirilmesine katılmak isterseniz, Discord'da @arealconner adresinden bana ulaşabilir veya beni ekleyebilirsiniz. Tüm katkılar memnuniyetle karşılanır.
 
-Modun kaynak ve geliştirme sürümleri [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub'da mevcuttur.[/url]
+Modun kaynak ve geliştirici sürümleri [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub'da[/url] mevcuttur.
 
