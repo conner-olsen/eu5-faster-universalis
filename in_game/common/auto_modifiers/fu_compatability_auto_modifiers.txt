@@ -16,4 +16,5 @@ fu_tick_rate_adjustments = {
 	hide_effects = yes
 	# 48% less education ticks, base +75%*(1/0.48)
 	country_child_education = 1.57
+	global_construction_speed = 1.57
 }

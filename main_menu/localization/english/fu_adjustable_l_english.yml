@@ -14,3 +14,12 @@
  PARLIAMENT_DURATION_TXT_NO_LOCATION: "[Multiply_int32(Player.GetGovernment.GetParliament.GetRemainingParliamentDuration, '(int32)2')|W] days left"
  IO_PARLIAMENT_DURATION_TXT: "#T [InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetName] in Session#!\nDebating [InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetCurrentDebateName] for another [Multiply_int32(InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetRemainingParliamentDuration, '(int32)2')|W] days in @location![InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetParliamentLocation.GetName]."
  INTERNATIONAL_ORGANIZATION_PARLIAMENT_DURATION_TXT: "[Multiply_int32(InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetRemainingParliamentDuration, '(int32)2')] days left in [InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetParliamentLocation.GetName]"
+
+ # Correct Construction Time
+ # BUILD_CONST_LOC_FINISH_TIP: "Will finish on [Construction.GetFinishedDateIncludingQueue]"
+ BUILD_CONST_LOC_FINISH_TIP: "Will finish in [Multiply_int32(Construction.GetDurationInDays, '(int32)2')] $DAYS_LONG_LOC$"
+ LOCATION_VIEW_ARMY_BUILDER_DURATION: "[Multiply_int32(ConstructionItem.GetConstruction.GetDurationInDays, '(int32)2')] $DAYS_LONG_LOC$"
+ EXPLORATION_CONSTRUCTION_DURATION: "[Multiply_int32(Construction.GetDurationInDays, '(int32)2')] $DAYS_LONG_LOC$"
+ CONSTRUCTION_DURATION_DAYS: "[Multiply_int32(Construction.GetDurationInDays, '(int32)2')]$DAYS_SHORT_LOC$"
+ CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE: "[Multiply_int32(Construction.GetDurationInDays, '(int32)2')]$DAYS_SHORT_LOC$ #L (+[Subtract_int32(Construction.CountAllInLocation, '(int32)1')])#!"
+ SPECIFIC_CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE: "[Multiply_int32(Construction.GetDurationInDaysIncludingQueue, '(int32)2')]$DAYS_SHORT_LOC$ #L (+[Subtract_int32(Construction.CountAllInLocation, '(int32)1')])#!"
