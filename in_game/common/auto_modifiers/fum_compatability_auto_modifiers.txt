@@ -3,7 +3,10 @@
 	hide_effects = yes
 	potential_trigger = {
 		NOT = {
-			has_global_variable = is_fum_game
+			OR = {
+				has_global_variable = is_fum_game
+				has_global_variable = is_fu_game
+			}
 		}
 	}
 	army_movement_speed = 13
