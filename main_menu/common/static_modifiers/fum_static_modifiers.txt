@@ -1,4 +1,4 @@
-﻿fu_location_disabled_static_modifier = {
+﻿fum_location_disabled_static_modifier = {
 	game_data = {
 		category = location
 	}

@@ -12,14 +12,14 @@
 			exists = scope:target
 			scope:target = {
 				any_location_in_province_definition = {
-					has_location_modifier = fu_location_disabled_static_modifier
+					has_location_modifier = fum_location_disabled_static_modifier
 				}
 			}
 		}
 		enabled = {
 			NOT = {
 				any_location_in_province_definition = {
-					has_location_modifier = fu_location_disabled_static_modifier
+					has_location_modifier = fum_location_disabled_static_modifier
 				}
 			}
 			hidden_trigger = {

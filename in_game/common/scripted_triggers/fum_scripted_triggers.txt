@@ -1,4 +1,4 @@
-﻿fu_can_remove_location = {
+﻿fum_can_remove_location = {
 	NOT = {
 		OR = {
 			region = region:caucasus_region

@@ -1,11 +1,11 @@
 ﻿# This is to get rid of false errors
-fu_dummy = {
-	add_country_modifier = { modifier = fu_66_army_speed_adjustment years = 1 }
-	add_country_modifier = { modifier = fu_50_army_speed_adjustment years = 1 }
-	add_country_modifier = { modifier = fu_33_army_speed_adjustment years = 1 }
-	add_country_modifier = { modifier = fu_25_army_speed_adjustment years = 1 }
-	add_country_modifier = { modifier = fu_66_navy_speed_adjustment years = 1 }
-	add_country_modifier = { modifier = fu_50_navy_speed_adjustment years = 1 }
-	add_country_modifier = { modifier = fu_33_navy_speed_adjustment years = 1 }
-	add_country_modifier = { modifier = fu_25_navy_speed_adjustment years = 1 }
+fum_dummy = {
+	add_country_modifier = { modifier = fum_66_army_speed_adjustment years = 1 }
+	add_country_modifier = { modifier = fum_50_army_speed_adjustment years = 1 }
+	add_country_modifier = { modifier = fum_33_army_speed_adjustment years = 1 }
+	add_country_modifier = { modifier = fum_25_army_speed_adjustment years = 1 }
+	add_country_modifier = { modifier = fum_66_navy_speed_adjustment years = 1 }
+	add_country_modifier = { modifier = fum_50_navy_speed_adjustment years = 1 }
+	add_country_modifier = { modifier = fum_33_navy_speed_adjustment years = 1 }
+	add_country_modifier = { modifier = fum_25_navy_speed_adjustment years = 1 }
 }
