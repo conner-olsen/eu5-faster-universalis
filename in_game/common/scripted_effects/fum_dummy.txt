@@ -9,6 +9,6 @@ fum_dummy = {
 	add_country_modifier = { modifier = fum_33_navy_speed_adjustment years = 1 }
 	add_country_modifier = { modifier = fum_25_navy_speed_adjustment years = 1 }
 	add_country_modifier = { modifier = fum_vanilla_combat_speed_adjustment years = 1 }
-	add_country_modifier = { modifier = fu_double_combat_speed_adjustment years = 1 }
+	add_country_modifier = { modifier = fum_double_combat_speed_adjustment years = 1 }
 	add_country_modifier = { modifier = fum_half_combat_speed_adjustment years = 1 }
 }
