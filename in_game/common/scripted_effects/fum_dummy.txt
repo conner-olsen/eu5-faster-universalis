@@ -11,4 +11,5 @@ fum_dummy = {
 	add_country_modifier = { modifier = fum_vanilla_combat_speed_adjustment years = 1 }
 	add_country_modifier = { modifier = fum_double_combat_speed_adjustment years = 1 }
 	add_country_modifier = { modifier = fum_half_combat_speed_adjustment years = 1 }
+	set_variable = is_fu_game
 }
