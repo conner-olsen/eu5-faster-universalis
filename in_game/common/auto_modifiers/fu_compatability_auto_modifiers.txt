@@ -2,7 +2,6 @@
 	requires_real = no
 	hide_effects = yes
 	potential_trigger = {
-		current_date > 1337.5.1
 		NOT = {
 			has_global_variable = is_fu_game
 		}
