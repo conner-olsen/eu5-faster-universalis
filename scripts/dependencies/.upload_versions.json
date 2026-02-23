@@ -1,0 +1,11 @@
+{
+  "entries": {
+    "main:release": "1.3.4",
+    "submod:fusm.adjusted.game.speed.beta": "1.0",
+    "submod:fusm.adjusted.game.speed.stable": "1.0",
+    "submod:fusm.daily.tick": "1.0.1",
+    "submod:fusm.halfday.tick": "1.0.1",
+    "submod:fusm.hourly.tick": "1.0.1"
+  },
+  "version": 1
+}

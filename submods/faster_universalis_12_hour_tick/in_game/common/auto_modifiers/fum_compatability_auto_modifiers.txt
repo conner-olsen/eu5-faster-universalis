@@ -10,8 +10,3 @@
 	army_movement_speed = 3.31
 	navy_movement_speed = 3.31
 }
-
-fum_tick_rate_adjustments = {
-	requires_real = no
-	hide_effects = yes
-}
