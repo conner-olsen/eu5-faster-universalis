@@ -1,7 +1,6 @@
 ﻿l_english:
  # Modifiers:
  AUTO_MODIFIER_NAME_fum_save_game_compatability: "Save Game Compatibility"
- AUTO_MODIFIER_NAME_fum_tick_rate_adjustments: "Tick Rate Adjustments"
  STATIC_MODIFIER_NAME_fum_66_army_speed_adjustment: "66% Army Speed Adjustment"
  STATIC_MODIFIER_NAME_fum_50_army_speed_adjustment: "50% Army Speed Adjustment"
  STATIC_MODIFIER_NAME_fum_33_army_speed_adjustment: "33% Army Speed Adjustment"
