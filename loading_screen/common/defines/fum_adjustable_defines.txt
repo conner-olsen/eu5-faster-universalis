@@ -52,3 +52,9 @@ NInternationalOrganization = {
 	# 365*(25/48)
 	PARLIAMENT_DURATION_DAYS = 190 # 365
 }
+
+NCharacter = {
+	# 170*(1/0.48)
+	PREGNANCY_CHANCE = 354	 # 170	#1000 is diceroll
+	# MONTHLY_STAT_INCREASE_CHANCE_FOR_CHILD = 55 # <= on 1d100
+}
