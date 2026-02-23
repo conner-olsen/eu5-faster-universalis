@@ -1,0 +1,137 @@
+﻿# Optimization Setting
+fum_sop_rule = {
+	default = fum_no_cull_sop_countries_setting
+
+	fum_no_cull_sop_countries_setting = {
+		flag = general_rule
+	}
+
+	fum_remove_sop_countries_setting = {
+		flag = general_rule
+	}
+}
+
+fum_nation_removal_rule = {
+	default = fum_no_removal_setting
+
+	fum_no_removal_setting = {
+		flag = general_rule
+	}
+
+	fum_remove_low_importance_setting = {
+		flag = general_rule
+	}
+
+	fum_europe_europe_centric_setting = {
+		flag = general_rule
+	}
+
+	fum_asia_centric_setting = {
+		flag = general_rule
+	}
+}
+
+fum_pop_removal_rule = {
+	default = fum_keep_pops_setting
+
+	fum_keep_pops_setting = {
+		flag = general_rule
+	}
+
+	fum_remove_unowned_pops_setting = {
+		flag = general_rule
+	}
+}
+
+fum_block_recolonization_rule = {
+	default = fum_recolonization_blocked_setting
+
+	fum_recolonization_blocked_setting = {
+		flag = general_rule
+	}
+
+	fum_recolonization_allowed_setting = {
+		flag = general_rule
+	}
+}
+
+# QoL Setting
+fum_army_movement_speed_game_rule = {
+	default = fum_vanilla_army_speed_setting
+
+	fum_vanilla_army_speed_setting = {
+		flag = general_rule
+	}
+
+	fum_66_army_speed_setting = {
+		apply_modifier = all:fum_66_army_speed_adjustment
+		flag = general_rule
+	}
+
+	fum_50_army_speed_setting = {
+		apply_modifier = all:fum_50_army_speed_adjustment
+		flag = general_rule
+	}
+
+	fum_33_army_speed_setting = {
+		apply_modifier = all:fum_33_army_speed_adjustment
+		flag = general_rule
+	}
+
+	fum_25_army_speed_setting = {
+		apply_modifier = all:fum_25_army_speed_adjustment
+		flag = general_rule
+	}
+}
+
+fum_navy_movement_speed_game_rule = {
+	default = fum_vanilla_navy_speed_setting
+
+	fum_vanilla_navy_speed_setting = {
+		flag = general_rule
+	}
+
+	fum_66_navy_speed_setting = {
+		apply_modifier = all:fum_66_navy_speed_adjustment
+		flag = general_rule
+	}
+
+	fum_50_navy_speed_setting = {
+		apply_modifier = all:fum_50_navy_speed_adjustment
+		flag = general_rule
+	}
+
+	fum_33_navy_speed_setting = {
+		apply_modifier = all:fum_33_navy_speed_adjustment
+		flag = general_rule
+	}
+
+	fum_25_navy_speed_setting = {
+		apply_modifier = all:fum_25_navy_speed_adjustment
+		flag = general_rule
+	}
+}
+
+fum_combat_speed_game_rule = {
+	default = fum_default_combat_speed_setting
+
+	fum_vanilla_combat_speed_setting = {
+		apply_modifier = all:fum_vanilla_combat_speed_adjustment
+		flag = general_rule
+	}
+
+	fum_double_combat_speed_setting = {
+		apply_modifier = all:fum_double_combat_speed_adjustment
+		flag = general_rule
+	}
+
+	fum_default_combat_speed_setting = {
+		flag = general_rule
+	}
+
+	fum_half_combat_speed_setting = {
+		apply_modifier = all:fum_half_combat_speed_adjustment
+		flag = general_rule
+	}
+}
+

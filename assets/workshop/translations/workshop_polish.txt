@@ -3,87 +3,91 @@ Szybsze Universalis / Faster Universalis
 ===WORKSHOP_DESCRIPTION===
 [i]You are on the DeepL-Generated Polish Page. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=$item-id$&l=english]Click here for the Native English Page.[/url][/i]
 
-[h1]Przegląd:[/h1]
-Znacznie poprawia prędkość gry/częstotliwość tyknięć (tick rate), zachowując przy tym balans i rozgrywkę z wersji vanilla.
+[h1]Overview:[/h1]
+Drastycznie poprawia prędkość gry/częstotliwość ticków, zachowując przy tym balans i rozgrywkę wersji podstawowej (vanilla).
 
-[h1]Funkcje:[/h1]
+[h1]Features:[/h1]
 [olist]
- [*][b]O ponad 100% szybsza gra:[/b] Na prędkości 5 czas płynie około dwa razy szybciej niż w wersji podstawowej, a na niższych prędkościach poprawa jest jeszcze większa.
+ [*][b]O 100%+ szybsza prędkość gry:[/b] Na prędkości 5 czas powinien płynąć około dwa razy szybciej niż w wersji podstawowej, a na niższych prędkościach poprawa jest jeszcze bardziej widoczna.
     [list]
      [*]Osiągnięte dzięki dziesiątkom zmian w plikach defines, których jest zbyt wiele, by je tutaj wymienić.
-     [*]Usunięto tyknięcia godzinowe (mod bazowy wykorzystuje tyknięcia co 1,9 dnia (47 godzin), co można dostosować za pomocą [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submodów dostępnych tutaj.[/url])
-     [*]Walka, prędkość ruchu oraz częstotliwość aktualizacji gry i AI zostały dostosowane tak, aby wszystkie wyniki i balans gry pozostały identyczne z wersją vanilla. Nie powinieneś zauważyć żadnej różnicy poza wyższą prędkością.
+     [*]Usunięto ticki godzinowe (idąc o krok dalej, podstawowy mod używa ticków co 1,9 dnia (47 godzin). Można to jednak dostosować za pomocą [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submodów dostępnych tutaj.[/url])
+     [*]Walka, prędkość ruchu, częstotliwość aktualizacji gry i SI zostały dostosowane tak, aby wszystkie wyniki i balans gry były identyczne z wersją podstawową. Nie powinieneś zauważyć żadnej różnicy poza szybszym działaniem.
     [/list]
  [*][b]Opcjonalne zasady gry optymalizujące wydajność:[/b]
   [list]
-   [*][b]Usuwanie narodów opartych na populacji (Pop-Based):[/b] Usuwa wszystkie narody oparte na populacji.
-   [*][b]Usuwanie regionów:[/b] Skupienie na Europie, Skupienie na Azji oraz Usuwanie regionów o niskim znaczeniu. Zobacz zrzuty ekranu na stronie moda, aby sprawdzić, jak wyglądają poszczególne opcje.
+   [*][b]Usuwanie narodów opartych na populacji (Pop-Based Nation Removal):[/b] Usuwa wszystkie narody oparte na populacji.
+   [*][b]Usuwanie regionów:[/b] Skoncentrowane na Europie, Skoncentrowane na Azji oraz Usuwanie regionów o niskim znaczeniu. Zobacz zrzuty ekranu na stronie moda, aby sprawdzić, jak wyglądają poszczególne opcje.
     [list]
-     [*][b]Usuwanie regionów o niskim znaczeniu:[/b] Usuwa mniejsze narody w regionach o małej szansie na interakcję, takie jak małe państwa wyspiarskie na Pacyfiku – pełne szczegóły w opisach zasad gry.
-     [*][b]Skupienie na Europie:[/b] Skutecznie ogranicza grę tylko do Europy, usuwając odległe regiony, takie jak Azja Wschodnia, Indonezja i Oceania.
-     [*][b]Skupienie na Azji:[/b] Skutecznie ogranicza grę tylko do Azji, usuwając odległe regiony, takie jak Europa i Afryka Zachodnia.
+     [*][b]Usuń regiony o niskim znaczeniu:[/b] Usuwa mniejsze narody w regionach o niewielkiej szansie na interakcję, takie jak małe narody wyspiarskie na Pacyfiku — pełne szczegóły w opisach zasad gry.
+     [*][b]Skoncentrowane na Europie:[/b] W praktyce rozgrywka tylko w Europie, usuwająca odległe regiony, takie jak Azja Wschodnia, Indonezja i Oceania.
+     [*][b]Skoncentrowane na Azji:[/b] W praktyce rozgrywka tylko w Azji, usuwająca odległe regiony, takie jak Europa i Afryka Zachodnia.
     [/list]
-   [*][b]Usuwanie populacji z nieposiadanych lokacji:[/b] Usuwa populacje w miejscach, które nie należą do żadnego państwa. Łączy się z opcją usuwania narodów.
-   [*][b]Blokada rekolonizacji:[/b] Jeśli opcja jest włączona wraz z usuwaniem regionów (Skupienie na Europie lub Azji), zapobiega rekolonizacji usuniętych regionów. Wyłączenie tej opcji może stworzyć interesujące doświadczenie "wyścigu" o rekolonizację utraconego starego świata.
+   [*][b]Usuwanie populacji z nieposiadanych lokacji:[/b] Usuwa populację w miejscach bez właściciela. Łączy się z opcją usuwania narodów.
+   [*][b]Blokada rekolonizacji:[/b] Jeśli włączone wraz z usuwaniem regionów (Europa lub Azja), zapobiega ponownej kolonizacji usuniętych obszarów. Wyłączenie tej opcji może stworzyć ciekawe doświadczenie wyścigu o rekolonizację utraconego "starego świata".
   [/list]
- [*][b]Zasady gry dotyczące regulacji prędkości[/b]
+ [*][b]Zasady gry dotyczące dostosowania prędkości[/b]
   [list]
    [*][b]Prędkość ruchu armii:[/b] Pozwala dostosować prędkość poruszania się armii.
    [*][b]Prędkość ruchu floty:[/b] Pozwala dostosować prędkość poruszania się floty.
-   [*][b]Długość bitew:[/b] Pozwala dostosować czas trwania bitew (podczas gdy straty/wyniki pozostają takie same jak w wersji vanilla).
+   [*][b]Długość bitew:[/b] Pozwala dostosować czas trwania bitew (podczas gdy straty/wyniki pozostają takie same jak w wersji podstawowej).
   [/list]
- [*][b]Drobne poprawki komfortu gry (QoL):[/b]
+ [*][b]Drobne poprawki QoL:[/b]
   [list]
    [*][b]Podwojony czas wygaśnięcia wydarzeń w trybie wieloosobowym[/b]
   [/list]
 [/olist]
 
-Dla porównania, w moich testach mod Daily Ticks na prędkości 5 zwiększył prędkość gry o około 13%, podczas gdy – jak widać na filmie na stronie Steam – Faster Universalis bez włączonych opcjonalnych optymalizacji zwiększył prędkość gry o około 100% na zapisie z późnej fazy gry w wersji vanilla. Przy włączonych opcjonalnych optymalizacjach, takich jak usuwanie narodów Pop-Based i skupienie na regionie Europy, można zauważyć poprawę o ponad 200%.
+Dla odniesienia, w moich testach Daily Ticks na prędkości 5 zwiększyło prędkość gry o około 13%, podczas gdy — jak pokazuje film na stronie Steam — Faster Universalis bez żadnych włączonych opcjonalnych optymalizacji zwiększyło prędkość gry o około 100% na zapisie z późnej fazy gry w wersji podstawowej. Przy włączonych opcjonalnych optymalizacjach, takich jak usuwanie narodów opartych na populacji i regiony skoncentrowane na Europie, można zauważyć poprawę o ponad 200%.
 
-[h1]Planowane/Wkrótce:[/h1]
+[h1]Planned/Upcoming:[/h1]
 [olist]
- [*][b]Dalsza optymalizacja wydajności:[/b] Będę kontynuował optymalizację moda, w miarę jak znajdę kolejne możliwości.
- [*][b]Dodatkowa personalizacja:[/b] Umożliwienie regulacji prędkości walki i prędkości ruchu poprzez zasady gry. Zapraszam do sugerowania innych ustawień, które chcielibyście zobaczyć.
- [*][b]Opcje modyfikacji grafiki:[/b] Pracuję również nad poprawą wydajności renderowania/FPS, co zostanie wydane w przyszłej aktualizacji. Jak na razie udało mi się uzyskać jedynie 13% wzrost FPS. (Jeśli chcesz, możesz odkomentować moje robocze definicje graficzne, ale obecnie nie są one domyślnie włączone). Pamiętaj, że jeśli Twoim ograniczeniem jest procesor (CPU-bound), możesz już teraz odczuć wzrost FPS. Zauważysz go również korzystając z dowolnej opcjonalnej zasady optymalizacji wydajności w określonych scenach, ponieważ będzie mniej elementów do renderowania.
+ [*][b]Dalsza optymalizacja wydajności:[/b] Będę kontynuował optymalizację moda pod kątem wydajności, gdy znajdę ku temu kolejne okazje.
+ [*][b]Dodatkowa personalizacja:[/b] Umożliwienie dostosowania prędkości walki i ruchu poprzez zasady gry. Zachęcam do sugerowania innych ustawień, które chcielibyście zobaczyć.
+ [*][b]Opcje ulepszeń graficznych:[/b] Pracowałem również nad poprawą wydajności renderowania/FPS, co zostanie wydane w przyszłej aktualizacji. Jak na razie udało mi się uzyskać jedynie 13% wzrostu FPS. (Jeśli chcesz, możesz odkomentować moje robocze definicje graficzne w plikach, ale obecnie nie są one domyślnie włączone). Pamiętaj, że jeśli ogranicza Cię procesor (CPU-bound), możesz już teraz zauważyć wzrost FPS. Odczujesz go również korzystając z opcjonalnych zasad gry w określonych widokach, ponieważ będzie mniej elementów do wyrenderowania.
 [/olist]
 
-[h2]Rodzime lokalizacje:[/h2]
+[h2]Native Localizations:[/h2]
 [list]
- [*][b]Angielski:[/b] Podstawowa
+ [*][b]English:[/b] Primary
 [/list]
 
-[h2]Lokalizacje przetłumaczone przez DeepL:[/h2]
+[h2]DeepL-Translated Localizations:[/h2]
 [list]
- [*][b]Chiński / 中文[/b]
- [*][b]Francuski / Français[/b]
- [*][b]Niemiecki / Deutsch[/b]
- [*][b]Japoński / 日本語[/b]
- [*][b]Koreański / 한국어[/b]
- [*][b]Polski / Polski[/b]
- [*][b]Portugalski (Brazylia) / Português (Brasil)[/b]
- [*][b]Rosyjski / Русский[/b]
- [*][b]Hiszpański / Español[/b]
- [*][b]Turecki / Türkçe[/b]
+ [*][b]Chinese / 中文[/b]
+ [*][b]French / Français[/b]
+ [*][b]German / Deutsch[/b]
+ [*][b]Japanese / 日本語[/b]
+ [*][b]Korean / 한국어[/b]
+ [*][b]Polish / Polski[/b]
+ [*][b]Portuguese (Brazil) / Português (Brasil)[/b]
+ [*][b]Russian / Русский[/b]
+ [*][b]Spanish / Español[/b]
+ [*][b]Turkish / Türkçe[/b]
 [/list]
 
-[h1]Dziennik zmian:[/h1]
+[h1]Change Log:[/h1]
 Zobacz [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Change Notes na stronie warsztatu[/url].
 
-[h1]Kompatybilność:[/h1]
+[h1]Compatibility:[/h1]
 [list]
- [*]Obsługuje wersję v1.0.11 oraz betę v1.1.
- [*]Niekompatybilny z osiągnięciami (Achievements).
- [*]W pełni kompatybilny z zapisanymi grami (Save games).
- [*]Nie powinien być używany z żadnym innym modem zmieniającym częstotliwość tyknięć, takim jak Daily Ticks.
+ [*]Wspiera v1.0.11 oraz betę v1.1.
+ [*]Niekompatybilny z osiągnięciami.
+ [*]W pełni kompatybilny z zapisami gry.
+ [*]Nie powinien być używany z żadnym innym modem zmieniającym ticki, takim jak Daily Ticks.
  [*]Mogę dodać patche kompatybilności na prośbę użytkowników.
 [/list]
 
-[h1]Dodatkowe uwagi[/h1]
-Aby zachować kompatybilność zarówno z v1.0.11, jak i betą v1.1, nie dostosowywałem opóźnienia między tyknięciami. Oznacza to, że podczas gdy prędkość 5 jest 2x szybsza niż vanilla, pozostałe prędkości są nieproporcjonalnie szybsze – na przykład prędkość 1 jest 23,5x szybsza niż w wersji podstawowej. Możesz jednak użyć [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submodów regulujących prędkość dostępnych tutaj dla Twojej wersji gry.[/url] Po wydaniu wersji v1.1 submody regulujące prędkość zostaną połączone z głównym modem.
+Mod powinien działać z każdym innym modem, który nie zmienia częstotliwości ticków (np. Daily Ticks).
 
-Prosimy o zgłaszanie wszelkich problemów lub wyników, które nie pokrywają się z zachowaniem wersji vanilla/oczekiwanym działaniem, jeśli wystąpią.
+Istnieje potencjalny problem między głównym modem a jakimkolwiek modem używającym triggerów specyficznych dla konkretnego dnia, ale obecnie nie znam żadnych modów, które by to robiły lub miały z tym problemy.
 
-Oprócz sekcji komentarzy, możesz również zadawać pytania, zgłaszać błędy lub składać sugestie na kanale [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis na serwerze Discord społeczności EU5[/url]. Jeśli jesteś zainteresowany udziałem w pracach nad tym lub innymi moimi modami, możesz mnie oznaczyć lub dodać na Discordzie: @arealconner. Wszelka pomoc jest mile widziana.
+[h1]Additional Notes[/h1]
+Aby zachować kompatybilność zarówno z v1.0.11, jak i betą v1.1, nie dostosowałem opóźnienia między tickami. Oznacza to, że podczas gdy prędkość 5 jest 2x szybsza niż vanilla, pozostałe prędkości są nieproporcjonalnie szybsze, np. prędkość 1 jest 23,5x szybsza niż vanilla. Możesz jednak użyć [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submodów do regulacji prędkości dostępnych tutaj dla odpowiedniej wersji gry.[/url] Po wydaniu v1.1 submody regulujące prędkość zostaną włączone do głównego moda.
 
-Wersje źródłowe i deweloperskie moda są dostępne na [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHubie.[/url]
+Proszę zgłaszać wszelkie problemy lub wyniki, które nie pokrywają się z zachowaniem wersji podstawowej lub oczekiwanym działaniem.
+
+Oprócz sekcji komentarzy, możesz również zadawać pytania, zgłaszać błędy lub składać sugestie na kanale [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis na serwerze Discord społeczności EU5[/url]. Jeśli jesteś zainteresowany udziałem w rozwoju tego lub innego z moich modów, możesz do mnie napisać lub dodać mnie na Discordzie: @arealconner. Każdy wkład jest mile widziany.
+
+Wersje źródłowe i deweloperskie moda są dostępne na [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub.[/url]
 

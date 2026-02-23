@@ -1,0 +1,30 @@
+﻿INJECT:create_colonial_charter = {
+	select_trigger = {
+		top_widget = colony_item_card_at_province_select
+		looking_for_a = province_definition
+		source = actor
+		source_flags = possible_colonial_charters
+		target_flag = verification
+		cache_targets = yes #these are the same no matter where we're coming from
+		name = "create_colonial_charter_select_province_definition"
+		none_available_msg_key = "create_colonial_charter_no_provinces"
+		show_if = {
+			exists = scope:target
+			scope:target = {
+				any_location_in_province_definition = {
+					has_location_modifier = fum_location_disabled_static_modifier
+				}
+			}
+		}
+		enabled = {
+			NOT = {
+				any_location_in_province_definition = {
+					has_location_modifier = fum_location_disabled_static_modifier
+				}
+			}
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
+}

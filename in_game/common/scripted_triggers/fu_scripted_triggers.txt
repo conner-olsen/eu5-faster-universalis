@@ -1,9 +1,0 @@
-﻿fu_can_remove_location = {
-	NOT = {
-		OR = {
-			region = region:caucasus_region
-			region = region:steppes_region
-			region = region:egypt_region
-		}
-	}
-}

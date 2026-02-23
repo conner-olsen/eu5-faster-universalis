@@ -1,0 +1,22 @@
+﻿fum_save_game_compatability = {
+	requires_real = no
+	hide_effects = yes
+	potential_trigger = {
+		NOT = {
+			OR = {
+				has_global_variable = is_fum_game
+				has_global_variable = is_fu_game
+			}
+		}
+	}
+	army_movement_speed = 13
+	navy_movement_speed = 13
+}
+
+fum_tick_rate_adjustments = {
+	requires_real = no
+	hide_effects = yes
+	# 48% less education ticks, base +75%*(1/0.48)
+	country_child_education = 1.57
+	global_construction_speed = 1.57
+}

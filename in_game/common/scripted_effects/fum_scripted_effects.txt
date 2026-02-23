@@ -1,0 +1,132 @@
+﻿fum_remove_sop_effect = {
+	every_country = {
+		limit = {
+			country_type = pop
+		}
+		change_country_type = building
+		every_owned_building = {
+			change_building_level = -10
+		}
+	}
+}
+
+fum_europe_centric_effect = {
+	if = {
+		limit = { has_game_rule = fum_recolonization_blocked_setting }
+		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:south_asia = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:south_east_asia = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:australasia = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:pacific_islands = { fum_remove_and_disable_sub_continent = yes }
+	} else = {
+		sub_continent:east_asia = { fum_remove_sub_continent = yes }
+		sub_continent:south_asia = { fum_remove_sub_continent = yes }
+		sub_continent:south_east_asia = { fum_remove_sub_continent = yes }
+		sub_continent:australasia = { fum_remove_sub_continent = yes }
+		sub_continent:pacific_islands = { fum_remove_sub_continent = yes }
+	}
+	sub_continent:south_america = { fum_remove_sub_continent = yes }
+}
+
+fum_asia_centric_effect = {
+	if = {
+		limit = { has_game_rule = fum_recolonization_blocked_setting }
+		sub_continent:western_europe = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:eastern_europe = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:north_africa = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:west_africa = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:central_africa = { fum_remove_and_disable_sub_continent = yes }
+	}
+	else = {
+		sub_continent:western_europe = { fum_remove_sub_continent = yes }
+		sub_continent:eastern_europe = { fum_remove_sub_continent = yes }
+		sub_continent:north_africa = { fum_remove_sub_continent = yes }
+		sub_continent:west_africa = { fum_remove_sub_continent = yes }
+		sub_continent:central_africa = { fum_remove_sub_continent = yes }
+	}
+	sub_continent:north_america = { fum_remove_sub_continent = yes }
+	sub_continent:south_america = { fum_remove_sub_continent = yes }
+}
+
+fum_remove_low_importance_nations_effect = {
+	sub_continent:pacific_islands = { fum_remove_sub_continent = yes }
+	sub_continent:north_america = { fum_remove_sub_continent = yes }
+	sub_continent:south_america = { fum_remove_sub_continent = yes }
+}
+
+fum_remove_sub_continent = {
+	every_location_in_sub_continent = {
+		fum_remove_location = yes
+	}
+}
+
+fum_remove_and_disable_sub_continent = {
+	every_location_in_sub_continent = {
+		if = {
+			limit = {
+				fum_can_remove_location = yes
+			}
+			add_location_modifier = {
+				modifier = fum_location_disabled_static_modifier
+				years = -1
+				mode = add
+			}
+			fum_remove_location_and_pops = yes
+		}
+	}
+}
+
+fum_remove_location = {
+	if = {
+		limit = {
+			fum_can_remove_location = yes
+		}
+		every_buildings_in_location = {
+			change_building_level = -10
+		}
+		if = {
+			limit = {
+				has_owner = yes
+			}
+			owner = {
+				abandon_location = prev
+			}
+		}
+	}
+}
+
+# Regardless of pop removal settings, disabled regions should have their pops removed.
+fum_remove_location_and_pops = {
+	if = {
+		limit = {
+			fum_can_remove_location = yes
+		}
+		every_buildings_in_location = {
+			change_building_level = -10
+		}
+		if = {
+			limit = {
+				has_owner = yes
+			}
+			owner = {
+				abandon_location = prev
+			}
+			every_pop = {
+				destroy_pop = this
+			}
+		}
+	}
+}
+
+fum_remove_unowned_pops = {
+	every_location_in_the_world = {
+		if = {
+			limit = {
+				has_owner = no
+			}
+			every_pop = {
+				destroy_pop = this
+			}
+		}
+	}
+}

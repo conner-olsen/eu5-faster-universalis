@@ -1,0 +1,62 @@
+﻿four_yearly_country_pulse = {
+	on_actions = { fum_clear_situations }
+}
+
+on_game_start = {
+	on_actions = {
+		delay = { days =  1 }
+		fum_game_setup
+	}
+}
+
+fum_game_setup = {
+	effect = {
+		set_global_variable = is_fum_game
+		if = {
+			limit = {
+				has_game_rule = fum_remove_sop_countries_setting
+			}
+			fum_remove_sop_effect = yes
+		}
+		if = {
+			limit = {
+				has_game_rule = fum_europe_europe_centric_setting
+			}
+			fum_europe_centric_effect = yes
+		}
+		if = {
+			limit = {
+				has_game_rule = fum_asia_centric_setting
+			}
+			fum_asia_centric_effect = yes
+		}
+		if = {
+			limit = {
+				has_game_rule = fum_remove_low_importance_setting
+			}
+			fum_remove_low_importance_nations_effect = yes
+		}
+		if = {
+			limit = {
+				has_game_rule = fum_remove_unowned_pops_setting
+			}
+			fum_remove_unowned_pops = yes
+		}
+	}
+}
+
+fum_clear_situations = {
+	trigger = {
+		is_ai = no
+		is_situation_active = situation:great_pestilence
+		or = {
+			has_game_rule = fum_europe_europe_centric_setting
+			has_game_rule = fum_asia_centric_setting
+		}
+	}
+	effect = {
+		end_situation = situation:great_pestilence
+	}
+}
+
+

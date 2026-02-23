@@ -1,3 +1,4 @@
+import argparse
 import os
 import re
 import sys
@@ -29,11 +30,12 @@ if not AUTH_KEY:
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
+SUBMODS_DIR = os.path.join(ROOT_DIR, "submods")
 
 BASE_LOC_PATH = os.path.join(ROOT_DIR, "main_menu", "localization")
 CONFIG_PATH = os.path.join(SCRIPT_DIR, "config.toml")
 METADATA_PATH = os.path.join(ROOT_DIR, ".metadata", "metadata.json")
-WORKSHOP_DESCRIPTION_PATH = os.path.join(ROOT_DIR, "assets", "workshop", "workshop-description.txt")
+WORKSHOP_DESCRIPTION_PATH = os.path.join(ROOT_DIR, "assets", "workshop", "workshop-description.bbcode")
 WORKSHOP_TRANSLATIONS_DIR = os.path.join(ROOT_DIR, "assets", "workshop", "translations")
 WORKSHOP_TRANSLATION_FILENAME = "workshop_{lang}.txt"
 WORKSHOP_TRANSLATION_TEMPLATE_PATH = os.path.join(WORKSHOP_TRANSLATIONS_DIR, "translation_template.txt")
@@ -116,21 +118,23 @@ def _parse_positive_int(value, label):
 
 def load_config(config_path):
 	"""Load config.toml and validate required keys and values."""
+	invalid = (None,) * 10
+
 	if not os.path.exists(config_path):
 		print(f"Error: Config file not found: {config_path}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	try:
 		with open(config_path, "rb") as f:
 			data = tomllib.load(f)
 	except Exception as e:
 		print(f"Error reading config file: {e}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	source_language = data.get("source_language")
 	if not source_language:
 		print(f"Error: source_language not set in {config_path}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	source_language = str(source_language).strip().lower()
 
@@ -138,94 +142,103 @@ def load_config(config_path):
 		valid = ", ".join(sorted(LANGUAGE_CONFIG.keys()))
 		print(f"Error: Unsupported source_language '{source_language}'.")
 		print(f"Supported values: {valid}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	if "localization_translator" not in data:
 		print(f"Error: localization_translator not set in {config_path}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	localization_translator = data.get("localization_translator")
 	if not isinstance(localization_translator, str):
 		print("Error: localization_translator must be a string.")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	if localization_translator not in ALLOWED_LOCALIZATION_TRANSLATORS:
 		valid = ", ".join(sorted(ALLOWED_LOCALIZATION_TRANSLATORS))
 		print(f"Error: Unsupported localization_translator '{localization_translator}'.")
 		print(f"Supported values: {valid}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	if "gemini_localization_system_prompt" not in data:
 		print(f"Error: gemini_localization_system_prompt not set in {config_path}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	gemini_localization_system_prompt = data.get("gemini_localization_system_prompt")
 	if not isinstance(gemini_localization_system_prompt, str) or not gemini_localization_system_prompt.strip():
 		print("Error: gemini_localization_system_prompt must be a non-empty string.")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	if "translate_workshop" not in data:
 		print(f"Error: translate_workshop not set in {config_path}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	translate_workshop = data.get("translate_workshop")
 	if not isinstance(translate_workshop, bool):
 		print("Error: translate_workshop must be a boolean (true/false).")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
+
+	if "translate_submods_by_default" not in data:
+		print(f"Error: translate_submods_by_default not set in {config_path}")
+		return invalid
+	translate_submods_by_default = data.get("translate_submods_by_default")
+	if not isinstance(translate_submods_by_default, bool):
+		print("Error: translate_submods_by_default must be a boolean (true/false).")
+		return invalid
 
 	if "workshop_description_translator" not in data:
 		print(f"Error: workshop_description_translator not set in {config_path}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	workshop_description_translator = data.get("workshop_description_translator")
 	if not isinstance(workshop_description_translator, str):
 		print("Error: workshop_description_translator must be a string.")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	if workshop_description_translator not in ALLOWED_WORKSHOP_DESCRIPTION_TRANSLATORS:
 		valid = ", ".join(sorted(ALLOWED_WORKSHOP_DESCRIPTION_TRANSLATORS))
 		print(f"Error: Unsupported workshop_description_translator '{workshop_description_translator}'.")
 		print(f"Supported values: {valid}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	if "workshop_title_translator" not in data:
 		print(f"Error: workshop_title_translator not set in {config_path}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	workshop_title_translator = data.get("workshop_title_translator")
 	if not isinstance(workshop_title_translator, str):
 		print("Error: workshop_title_translator must be a string.")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	if workshop_title_translator not in ALLOWED_WORKSHOP_TITLE_TRANSLATORS:
 		valid = ", ".join(sorted(ALLOWED_WORKSHOP_TITLE_TRANSLATORS))
 		print(f"Error: Unsupported workshop_title_translator '{workshop_title_translator}'.")
 		print(f"Supported values: {valid}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	if "gemini_description_system_prompt" not in data:
 		print(f"Error: gemini_description_system_prompt not set in {config_path}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	gemini_description_system_prompt = data.get("gemini_description_system_prompt")
 	if not isinstance(gemini_description_system_prompt, str) or not gemini_description_system_prompt.strip():
 		print("Error: gemini_description_system_prompt must be a non-empty string.")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	if "gemini_title_system_prompt" not in data:
 		print(f"Error: gemini_title_system_prompt not set in {config_path}")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 	gemini_title_system_prompt = data.get("gemini_title_system_prompt")
 	if not isinstance(gemini_title_system_prompt, str) or not gemini_title_system_prompt.strip():
 		print("Error: gemini_title_system_prompt must be a non-empty string.")
-		return None, None, None, None, None, None, None, None, None
+		return invalid
 
 	workshop_item_id = None
 	if translate_workshop:
 		if "workshop_upload_item_id" not in data:
 			print(f"Error: workshop_upload_item_id not set in {config_path}")
-			return None, None, None, None, None, None, None, None, None
+			return invalid
 		workshop_item_id = _parse_positive_int(
 			data.get("workshop_upload_item_id"),
 			"workshop_upload_item_id"
 		)
 		if workshop_item_id is None:
-			return None, None, None, None, None, None, None, None, None
+			return invalid
 
 	return (
 		source_language,
 		translate_workshop,
+		translate_submods_by_default,
 		localization_translator,
 		gemini_localization_system_prompt,
 		workshop_description_translator,
@@ -234,6 +247,83 @@ def load_config(config_path):
 		gemini_title_system_prompt,
 		workshop_item_id
 	)
+
+def parse_args():
+	"""Parse command line arguments."""
+	parser = argparse.ArgumentParser(
+		description="Translate localization and optional workshop text."
+	)
+	parser.add_argument(
+		"--submods",
+		action="store_true",
+		help="Also process all submods under submods/* (overrides translate_submods_by_default for this run)."
+	)
+	return parser.parse_args()
+
+def build_translation_targets(include_submods):
+	"""Build translation targets for the main mod and optional submods."""
+	targets = [
+		{
+			"cache_key": "main",
+			"log_prefix": "",
+			"loc_base_path": BASE_LOC_PATH,
+			"metadata_path": METADATA_PATH,
+			"workshop_description_path": WORKSHOP_DESCRIPTION_PATH,
+			"workshop_translations_dir": WORKSHOP_TRANSLATIONS_DIR,
+			"workshop_template_path": WORKSHOP_TRANSLATION_TEMPLATE_PATH
+		}
+	]
+
+	if not include_submods:
+		return targets
+
+	if not os.path.isdir(SUBMODS_DIR):
+		print(f"Warning: --submods specified, but directory not found: {SUBMODS_DIR}")
+		return targets
+
+	for entry in sorted(os.scandir(SUBMODS_DIR), key=lambda e: e.name.lower()):
+		if not entry.is_dir():
+			continue
+		submod_root = entry.path
+		workshop_dir = os.path.join(submod_root, "workshop")
+		translations_dir = os.path.join(workshop_dir, "translations")
+		targets.append(
+			{
+				"cache_key": entry.name,
+				"log_prefix": f"[submods/{entry.name}] ",
+				"loc_base_path": os.path.join(submod_root, "main_menu", "localization"),
+				"metadata_path": os.path.join(submod_root, ".metadata", "metadata.json"),
+				"workshop_description_path": os.path.join(workshop_dir, "workshop-description.bbcode"),
+				"workshop_translations_dir": translations_dir,
+				"workshop_template_path": os.path.join(translations_dir, "translation_template.txt")
+			}
+		)
+
+	return targets
+
+def get_cache_bucket(hash_data, cache_key):
+	"""Return the hash/cache bucket for the main mod or a specific submod."""
+	if cache_key == "main":
+		files = hash_data.setdefault("files", {})
+		if not isinstance(files, dict):
+			hash_data["files"] = {}
+		return hash_data
+
+	submods_cache = hash_data.setdefault("submods", {})
+	if not isinstance(submods_cache, dict):
+		submods_cache = {}
+		hash_data["submods"] = submods_cache
+
+	cache_bucket = submods_cache.setdefault(cache_key, {})
+	if not isinstance(cache_bucket, dict):
+		cache_bucket = {}
+		submods_cache[cache_key] = cache_bucket
+
+	files = cache_bucket.setdefault("files", {})
+	if not isinstance(files, dict):
+		cache_bucket["files"] = {}
+
+	return cache_bucket
 
 def get_translator():
 	"""Create a DeepL Translator instance."""
@@ -813,13 +903,15 @@ def process_file(
 	source_lines,
 	source_entries,
 	source_filepath,
+	loc_base_path,
 	target_folder_name,
 	deepl_code,
 	source_lang_id,
 	source_lang_deepl,
 	changed_keys,
 	localization_translator,
-	gemini_localization_system_prompt
+	gemini_localization_system_prompt,
+	log_prefix
 ):
 	"""Translate/update one localization file for a single target language."""
 	filename = os.path.basename(source_filepath)
@@ -829,13 +921,13 @@ def process_file(
 	else:
 		new_filename = filename
 
-	target_dir = os.path.join(BASE_LOC_PATH, target_folder_name)
+	target_dir = os.path.join(loc_base_path, target_folder_name)
 	os.makedirs(target_dir, exist_ok=True)
 	target_filepath = os.path.join(target_dir, new_filename)
 
 	# If the target doesn't exist yet, write a fully translated file.
 	if not os.path.exists(target_filepath):
-		print(f"Translating {filename} -> {target_folder_name}...")
+		print(f"{log_prefix}Translating {filename} -> {target_folder_name}...")
 		new_lines = translate_source_lines(
 			translator,
 			source_lines,
@@ -865,10 +957,10 @@ def process_file(
 
 	# Skip work if nothing changed and the header matches.
 	if not changed_keys and not has_missing_keys and not has_removed_keys and not header_needs_update:
-		print(f"No changes for {filename} -> {target_folder_name}; skipping.")
+		print(f"{log_prefix}No changes for {filename} -> {target_folder_name}; skipping.")
 		return
 
-	print(f"Translating {filename} -> {target_folder_name}...")
+	print(f"{log_prefix}Translating {filename} -> {target_folder_name}...")
 
 	# Update only changed or missing keys; preserve everything else.
 	file_changed = ensure_target_header(target_lines, new_lang_id)
@@ -876,7 +968,7 @@ def process_file(
 		target_lines, removed_count = prune_target_lines(target_lines, source_keys)
 		if removed_count:
 			file_changed = True
-			print(f"  Removed {removed_count} obsolete keys from {filename} -> {target_folder_name}.")
+			print(f"{log_prefix}  Removed {removed_count} obsolete keys from {filename} -> {target_folder_name}.")
 	file_changed = update_target_lines(
 		translator,
 		target_lines,
@@ -893,7 +985,7 @@ def process_file(
 		with open(target_filepath, 'w', encoding='utf-8-sig') as f:
 			f.writelines(target_lines)
 	else:
-		print(f"No output changes for {filename} -> {target_folder_name}.")
+		print(f"{log_prefix}No output changes for {filename} -> {target_folder_name}.")
 
 def _remove_dev_suffix(name):
 	"""Strip a trailing ' Dev' suffix from a mod name."""
@@ -904,7 +996,6 @@ def _remove_dev_suffix(name):
 def load_workshop_title(metadata_path):
 	"""Load the workshop title from metadata.json and remove dev suffix."""
 	if not os.path.exists(metadata_path):
-		print(f"Warning: Metadata file not found: {metadata_path}")
 		return None
 	try:
 		with open(metadata_path, "r", encoding="utf-8-sig") as f:
@@ -923,7 +1014,6 @@ def load_workshop_title(metadata_path):
 def load_workshop_description(description_path):
 	"""Read the workshop description source text."""
 	if not os.path.exists(description_path):
-		print(f"Warning: Workshop description file not found: {description_path}")
 		return None
 	try:
 		with open(description_path, "r", encoding="utf-8-sig") as f:
@@ -971,10 +1061,23 @@ def load_workshop_translation_template(template_path):
 		return None
 
 	if WORKSHOP_TITLE_MARKER not in template or WORKSHOP_DESCRIPTION_MARKER not in template:
-		print("Warning: translation_template.txt is missing required markers; falling back to default output.")
+		print(f"Warning: Workshop translation template '{template_path}' is missing required markers; ignoring it.")
 		return None
 
 	return template
+
+def resolve_workshop_translation_template(primary_template_path, fallback_template_path):
+	"""Load workshop template, falling back to fallback_template_path when needed."""
+	template = load_workshop_translation_template(primary_template_path)
+	if template is not None:
+		return template
+
+	primary_norm = os.path.normcase(os.path.normpath(primary_template_path))
+	fallback_norm = os.path.normcase(os.path.normpath(fallback_template_path))
+	if primary_norm == fallback_norm:
+		return None
+
+	return load_workshop_translation_template(fallback_template_path)
 
 def render_workshop_translation_text(
 	template,
@@ -1161,26 +1264,41 @@ def translate_workshop_assets(
 	translator,
 	source_language,
 	source_lang_deepl,
-	hash_data,
+	cache_bucket,
 	workshop_description_translator,
 	gemini_description_system_prompt,
 	workshop_title_translator,
 	gemini_title_system_prompt,
-	workshop_item_id
+	workshop_item_id,
+	metadata_path,
+	workshop_description_path,
+	workshop_translations_dir,
+	workshop_template_path,
+	main_workshop_template_path,
+	log_prefix
 ):
 	"""Translate workshop titles/descriptions and update cache metadata."""
-	title = load_workshop_title(METADATA_PATH)
-	raw_description = load_workshop_description(WORKSHOP_DESCRIPTION_PATH)
-	translatable_description, _ = split_workshop_description(raw_description)
-	description = apply_workshop_item_id(translatable_description, workshop_item_id)
-	translation_template = load_workshop_translation_template(WORKSHOP_TRANSLATION_TEMPLATE_PATH)
-
-	if title is None and description is None:
+	has_description_file = os.path.exists(workshop_description_path)
+	if not has_description_file:
+		print(f"{log_prefix}Workshop description not found: {workshop_description_path}; skipping workshop translations.")
 		return False
 
-	os.makedirs(WORKSHOP_TRANSLATIONS_DIR, exist_ok=True)
+	title = load_workshop_title(metadata_path)
+	raw_description = load_workshop_description(workshop_description_path)
+	translatable_description, _ = split_workshop_description(raw_description)
+	description = apply_workshop_item_id(translatable_description, workshop_item_id)
+	if description is None:
+		print(f"{log_prefix}Workshop description could not be read; skipping workshop translations.")
+		return False
 
-	workshop_cache = hash_data.setdefault("workshop", {})
+	translation_template = resolve_workshop_translation_template(
+		workshop_template_path,
+		main_workshop_template_path
+	)
+
+	os.makedirs(workshop_translations_dir, exist_ok=True)
+
+	workshop_cache = cache_bucket.setdefault("workshop", {})
 	# Cache raw translated title/description per language so template changes don't force retranslation.
 	translation_cache = workshop_cache.setdefault("translations", {})
 	description_changed = False
@@ -1204,7 +1322,7 @@ def translate_workshop_assets(
 			continue
 
 		translation_path = os.path.join(
-			WORKSHOP_TRANSLATIONS_DIR,
+			workshop_translations_dir,
 			WORKSHOP_TRANSLATION_FILENAME.format(lang=folder_name)
 		)
 		file_changed = False
@@ -1215,7 +1333,7 @@ def translate_workshop_assets(
 		if title:
 			if cached_title is None or title_translator_changed:
 				provider_label = "gemini-3-flash" if workshop_title_translator == "gemini-3-flash" else "deepl"
-				print(f"Translating workshop title -> {folder_name} ({provider_label})...")
+				print(f"{log_prefix}Translating workshop title -> {folder_name} ({provider_label})...")
 				if workshop_title_translator == "gemini-3-flash":
 					target_language = LANGUAGE_DISPLAY_NAMES.get(folder_name, folder_name)
 					translated_title = translate_workshop_title_gemini(
@@ -1238,13 +1356,13 @@ def translate_workshop_assets(
 				else:
 					title_success = False
 			else:
-				print(f"Workshop title cached -> {folder_name}; skipping.")
+				print(f"{log_prefix}Workshop title cached -> {folder_name}; skipping.")
 
 		if description is not None:
 			needs_description = description_changed or cached_description is None
 			if needs_description:
 				provider_label = "gemini-3-flash" if workshop_description_translator == "gemini-3-flash" else "deepl"
-				print(f"Translating workshop description -> {folder_name} ({provider_label})...")
+				print(f"{log_prefix}Translating workshop description -> {folder_name} ({provider_label})...")
 				if workshop_description_translator == "gemini-3-flash":
 					target_language = LANGUAGE_DISPLAY_NAMES.get(folder_name, folder_name)
 					translated_description = translate_workshop_description_gemini(
@@ -1267,7 +1385,7 @@ def translate_workshop_assets(
 				cache_changed = True
 				file_changed = True
 			else:
-				print(f"Workshop description unchanged -> {folder_name}; skipping.")
+				print(f"{log_prefix}Workshop description unchanged -> {folder_name}; skipping.")
 
 		if file_changed or template_changed or not os.path.exists(translation_path):
 			if cached_title is None and cached_description is None:
@@ -1303,6 +1421,8 @@ def translate_workshop_assets(
 
 def main():
 	"""Script entry point."""
+	args = parse_args()
+
 	translator = get_translator()
 	if not translator:
 		return
@@ -1310,6 +1430,7 @@ def main():
 	(
 		source_language,
 		translate_workshop,
+		translate_submods_by_default,
 		localization_translator,
 		gemini_localization_system_prompt,
 		workshop_description_translator,
@@ -1324,81 +1445,110 @@ def main():
 	source_lang_id = LANGUAGE_CONFIG[source_language]["loc_id"]
 	source_lang_deepl = LANGUAGE_CONFIG[source_language]["deepl"]
 
-	source_dir = os.path.join(BASE_LOC_PATH, source_language)
-
-	if not os.path.exists(source_dir):
-		print(f"Error: Source directory not found: {source_dir}")
-		return
-
 	# Load existing hash cache to identify changed keys.
 	hash_data = load_hashes(HASHES_PATH)
 	hashes_modified = False
-	processed_files = set()
 
-	for root, _, files in os.walk(source_dir):
-		for file in files:
-			if file.endswith(".yml"):
-				source_filepath = os.path.join(root, file)
-				with open(source_filepath, 'r', encoding='utf-8-sig') as f:
-					source_lines = f.readlines()
-
-				# Build per-key hashes from the source file.
-				source_entries = parse_source_entries(source_lines)
-				source_hashes = {}
-				for entry in source_entries:
-					source_hashes[entry["key"]] = hash_text(entry["value"])
-
-				source_rel_path = os.path.relpath(source_filepath, BASE_LOC_PATH)
-				processed_files.add(source_rel_path)
-
-				# Determine which keys changed since last run.
-				prev_hashes = hash_data["files"].get(source_rel_path, {})
-				changed_keys = set()
-				for key, current_hash in source_hashes.items():
-					if prev_hashes.get(key) != current_hash:
-						changed_keys.add(key)
-
-				for folder_name, deepl_code in TARGET_LANGUAGES.items():
-					if folder_name == source_language:
-						continue
-					process_file(
-						translator,
-						source_lines,
-						source_entries,
-						source_filepath,
-						folder_name,
-						deepl_code,
-						source_lang_id,
-						source_lang_deepl,
-						changed_keys,
-						localization_translator,
-						gemini_localization_system_prompt
-					)
-
-				# Persist updated hashes for this file.
-				if prev_hashes != source_hashes:
-					hash_data["files"][source_rel_path] = source_hashes
+	include_submods = args.submods or translate_submods_by_default
+	targets = build_translation_targets(include_submods)
+	if include_submods:
+		active_submods = {target["cache_key"] for target in targets if target["cache_key"] != "main"}
+		submods_cache = hash_data.get("submods")
+		if isinstance(submods_cache, dict):
+			for cache_key in list(submods_cache.keys()):
+				if cache_key not in active_submods:
+					del submods_cache[cache_key]
 					hashes_modified = True
 
-	# Drop cache entries for source files that no longer exist.
-	for rel_path in list(hash_data["files"].keys()):
-		if rel_path not in processed_files:
-			del hash_data["files"][rel_path]
-			hashes_modified = True
+	for target in targets:
+		cache_key = target["cache_key"]
+		log_prefix = target["log_prefix"]
+		loc_base_path = target["loc_base_path"]
+		source_dir = os.path.join(loc_base_path, source_language)
+		cache_bucket = get_cache_bucket(hash_data, cache_key)
+		file_hashes = cache_bucket["files"]
+		processed_files = set()
 
-	# Optionally translate workshop title/description.
-	if translate_workshop:
-		hashes_modified = translate_workshop_assets(
-			translator,
-			source_language,
-			source_lang_deepl,
-			hash_data,
-			workshop_description_translator,
-			gemini_description_system_prompt,
-			workshop_title_translator,
-			gemini_title_system_prompt,
-			workshop_item_id
-		) or hashes_modified
+		if os.path.exists(source_dir):
+			for root, _, files in os.walk(source_dir):
+				for file in files:
+					if not file.endswith(".yml"):
+						continue
+
+					source_filepath = os.path.join(root, file)
+					with open(source_filepath, 'r', encoding='utf-8-sig') as f:
+						source_lines = f.readlines()
+
+					# Build per-key hashes from the source file.
+					source_entries = parse_source_entries(source_lines)
+					source_hashes = {}
+					for entry in source_entries:
+						source_hashes[entry["key"]] = hash_text(entry["value"])
+
+					source_rel_path = os.path.relpath(source_filepath, loc_base_path)
+					processed_files.add(source_rel_path)
+
+					# Determine which keys changed since last run.
+					prev_hashes = file_hashes.get(source_rel_path, {})
+					changed_keys = set()
+					for key, current_hash in source_hashes.items():
+						if prev_hashes.get(key) != current_hash:
+							changed_keys.add(key)
+
+					for folder_name, deepl_code in TARGET_LANGUAGES.items():
+						if folder_name == source_language:
+							continue
+						process_file(
+							translator,
+							source_lines,
+							source_entries,
+							source_filepath,
+							loc_base_path,
+							folder_name,
+							deepl_code,
+							source_lang_id,
+							source_lang_deepl,
+							changed_keys,
+							localization_translator,
+							gemini_localization_system_prompt,
+							log_prefix
+						)
+
+					# Persist updated hashes for this file.
+					if prev_hashes != source_hashes:
+						file_hashes[source_rel_path] = source_hashes
+						hashes_modified = True
+
+			# Drop cache entries for source files that no longer exist.
+			for rel_path in list(file_hashes.keys()):
+				if rel_path not in processed_files:
+					del file_hashes[rel_path]
+					hashes_modified = True
+		else:
+			print(f"{log_prefix}Localization source directory not found: {source_dir}; skipping localization translation.")
+			if file_hashes:
+				file_hashes.clear()
+				hashes_modified = True
+
+		# Optionally translate workshop title/description.
+		if translate_workshop:
+			hashes_modified = translate_workshop_assets(
+				translator,
+				source_language,
+				source_lang_deepl,
+				cache_bucket,
+				workshop_description_translator,
+				gemini_description_system_prompt,
+				workshop_title_translator,
+				gemini_title_system_prompt,
+				workshop_item_id,
+				target["metadata_path"],
+				target["workshop_description_path"],
+				target["workshop_translations_dir"],
+				target["workshop_template_path"],
+				WORKSHOP_TRANSLATION_TEMPLATE_PATH,
+				log_prefix
+			) or hashes_modified
 
 	# Write cache only if something changed.
 	if hashes_modified:
