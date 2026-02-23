@@ -48,6 +48,10 @@ WORKSHOP_ITEM_ID_TOKEN = "$item-id$"
 MAX_DESCRIPTION_LENGTH = 8000
 UPLOAD_MOD_DEFAULT_KEY = "upload_mod_by_default"
 UPLOAD_WORKSHOP_PAGES_DEFAULT_KEY = "upload_workshop_pages_by_default"
+UPLOAD_SUBMODS_DEFAULT_KEY = "upload_submods_by_default"
+UPLOAD_ON_VERSION_CHANGE_KEY = "upload_only_on_version_change"
+UPLOAD_VERSIONS_PATH = os.path.join(DEPENDENCIES_DIR, ".upload_versions.json")
+UPLOAD_VERSIONS_FILE_VERSION = 1
 
 LANGUAGE_TO_STEAM = {
     "english": "english",
@@ -144,21 +148,104 @@ def load_required_bool(config, key):
         return None
     return value
 
+def load_optional_bool(config, key, default):
+    """Load an optional boolean config setting."""
+    if key not in config:
+        return default
+    value = config.get(key)
+    if not isinstance(value, bool):
+        print(f"Error: {key} must be true or false in config.toml.")
+        return None
+    return value
+
 def resolve_upload_targets(args, config):
-    """Resolve whether to upload mod files and/or workshop pages."""
-    if args.mod or args.workshop_pages:
-        # CLI target flags always override config defaults.
-        return args.mod, args.workshop_pages
+    """Resolve whether to upload mod, workshop pages, and submods."""
+    if args.mod or args.workshop_pages or args.submods:
+        # CLI target flags override config defaults for this run.
+        return args.mod, args.workshop_pages, args.submods
 
     upload_mod = load_required_bool(config, UPLOAD_MOD_DEFAULT_KEY)
     if upload_mod is None:
-        return None, None
+        return None, None, None
 
     upload_workshop_pages = load_required_bool(config, UPLOAD_WORKSHOP_PAGES_DEFAULT_KEY)
     if upload_workshop_pages is None:
-        return None, None
+        return None, None, None
 
-    return upload_mod, upload_workshop_pages
+    upload_submods = load_optional_bool(config, UPLOAD_SUBMODS_DEFAULT_KEY, False)
+    if upload_submods is None:
+        return None, None, None
+
+    return upload_mod, upload_workshop_pages, upload_submods
+
+def load_upload_versions(path):
+    """Load cached uploaded versions for main mod and submods."""
+    if not os.path.exists(path):
+        return {"version": UPLOAD_VERSIONS_FILE_VERSION, "entries": {}}
+
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"Warning: Failed to read upload version cache '{path}': {e}. Rebuilding.")
+        return {"version": UPLOAD_VERSIONS_FILE_VERSION, "entries": {}}
+
+    if not isinstance(data, dict):
+        print(f"Warning: Upload version cache '{path}' is invalid. Rebuilding.")
+        return {"version": UPLOAD_VERSIONS_FILE_VERSION, "entries": {}}
+
+    if data.get("version") != UPLOAD_VERSIONS_FILE_VERSION:
+        print(f"Warning: Upload version cache '{path}' has unsupported version. Rebuilding.")
+        return {"version": UPLOAD_VERSIONS_FILE_VERSION, "entries": {}}
+
+    entries = data.get("entries")
+    if not isinstance(entries, dict):
+        print(f"Warning: Upload version cache '{path}' has invalid entries. Rebuilding.")
+        return {"version": UPLOAD_VERSIONS_FILE_VERSION, "entries": {}}
+
+    return data
+
+def save_upload_versions(path, data):
+    """Persist uploaded version cache atomically."""
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    temp_path = path + ".tmp"
+    with open(temp_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, sort_keys=True)
+    os.replace(temp_path, path)
+
+def load_metadata_version(metadata_path, label):
+    """Read and validate metadata.json version."""
+    try:
+        with open(metadata_path, "r", encoding="utf-8-sig") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: Metadata file not found for {label}: {metadata_path}")
+        return None
+    except Exception as e:
+        print(f"Error: Failed reading metadata for {label} at '{metadata_path}': {e}")
+        return None
+
+    version = data.get("version")
+    if version is None:
+        print(f"Error: Missing 'version' in metadata for {label}: {metadata_path}")
+        return None
+
+    version = str(version).strip()
+    if not version:
+        print(f"Error: Blank 'version' in metadata for {label}: {metadata_path}")
+        return None
+
+    return version
+
+def should_upload_for_version(version_cache, cache_key, current_version):
+    """Return True when upload is needed for a version-gated entry."""
+    entries = version_cache.setdefault("entries", {})
+    return entries.get(cache_key) != current_version
+
+def set_uploaded_version(version_cache, cache_key, uploaded_version):
+    """Update cached uploaded version for an entry."""
+    entries = version_cache.setdefault("entries", {})
+    entries[cache_key] = uploaded_version
 
 def _replace_value_preserve_comment(line, key, value):
     pattern = re.compile(rf"^(\s*{re.escape(key)}\s*=\s*)([^#]*?)(\s*)(#.*)?$")
@@ -443,9 +530,15 @@ def _load_submod_metadata(mod_dir):
     if name is not None and not name:
         name = None
 
+    version = data.get("version")
+    version = str(version).strip() if version is not None else None
+    if version == "":
+        version = None
+
     return {
         "id": mod_id,
         "name": name,
+        "version": version,
         "root": mod_dir,
         "thumbnail": os.path.join(mod_dir, ".metadata", "thumbnail.png")
     }
@@ -469,19 +562,20 @@ def ensure_submod_item_id(steam, mod_id, workshop_id, config_path):
 
     return new_id
 
-def upload_submods(steam, config):
+def upload_submods(steam, config, version_gate_enabled=False, version_cache=None):
     submods_root = os.path.join(ROOT_DIR, SUBMODS_DIR_NAME)
     if not os.path.isdir(submods_root):
         print(f"Warning: submods folder not found: {submods_root}")
-        return True
+        return True, False
 
     mapping = load_submods_config(config)
     success = True
+    cache_changed = False
 
     entries = sorted(os.listdir(submods_root))
     if not entries:
         print(f"Warning: No submods found in {submods_root}.")
-        return True
+        return True, False
 
     for entry in entries:
         mod_dir = os.path.join(submods_root, entry)
@@ -494,6 +588,24 @@ def upload_submods(steam, config):
             continue
 
         mod_id = meta["id"]
+        version = meta.get("version")
+        cache_key = f"submod:{mod_id}"
+
+        if version_gate_enabled:
+            if not version:
+                print(
+                    f"Error: upload_only_on_version_change is enabled, "
+                    f"but submod '{mod_id}' is missing metadata.version."
+                )
+                success = False
+                continue
+            if version_cache is None:
+                print("Error: Internal version cache not provided for submod upload gating.")
+                return False, cache_changed
+            if not should_upload_for_version(version_cache, cache_key, version):
+                print(f"Skipping submod '{mod_id}': version '{version}' already uploaded.")
+                continue
+
         workshop_id = mapping.get(mod_id, 0)
         workshop_id = _parse_int(workshop_id, f"workshop id for {mod_id}", allow_zero=True)
         if workshop_id is None:
@@ -516,8 +628,13 @@ def upload_submods(steam, config):
 
         if not upload_release(steam.Workshop, meta["root"], preview_path, workshop_id, title):
             success = False
+            continue
 
-    return success
+        if version_gate_enabled:
+            set_uploaded_version(version_cache, cache_key, version)
+            cache_changed = True
+
+    return success, cache_changed
 
 def _normalize_release_title(raw_name):
     title = str(raw_name)
@@ -879,45 +996,81 @@ def main():
     if config is None:
         return 1
 
-    upload_mod, upload_workshop_pages = resolve_upload_targets(args, config)
+    upload_mod, upload_workshop_pages, upload_submods_selected = resolve_upload_targets(args, config)
     if upload_mod is None:
         return 1
 
-    if not upload_mod and not upload_workshop_pages:
+    upload_only_on_version_change = load_optional_bool(config, UPLOAD_ON_VERSION_CHANGE_KEY, False)
+    if upload_only_on_version_change is None:
+        return 1
+
+    version_cache = load_upload_versions(UPLOAD_VERSIONS_PATH) if upload_only_on_version_change else None
+
+    if not upload_mod and not upload_workshop_pages and not upload_submods_selected:
         print(
             "No upload actions selected. "
-            "Enable defaults in config.toml or pass --mod and/or --workshop-pages."
+            "Enable defaults in config.toml or pass --mod/--workshop-pages/--submods."
         )
+        return 0
+
+    upload_mod_effective = upload_mod
+    main_version = None
+    main_cache_key = "main:dev" if args.dev else "main:release"
+    if upload_mod and upload_only_on_version_change:
+        main_version = load_metadata_version(METADATA_PATH, "main mod")
+        if main_version is None:
+            return 1
+        if not should_upload_for_version(version_cache, main_cache_key, main_version):
+            print(f"Skipping main mod upload: version '{main_version}' already uploaded.")
+            upload_mod_effective = False
+
+    if not upload_mod_effective and not upload_workshop_pages and not upload_submods_selected:
+        print("No uploads required after version check.")
         return 0
 
     item_id_key = "workshop_upload_item_id_dev" if args.dev else "workshop_upload_item_id"
     item_label = "dev item id" if args.dev else "item id"
-    item_id = load_workshop_item_id(config, item_id_key, item_label)
-    if item_id is None:
-        return 1
-
+    item_id = None
     dev_name = load_dev_name(config) if args.dev else None
+
+    if upload_mod_effective or upload_workshop_pages:
+        item_id = load_workshop_item_id(config, item_id_key, item_label)
+        if item_id is None:
+            return 1
+
     release_dir = None
     preview_path = None
     workshop_title = None
-    if upload_mod:
+    if upload_mod_effective:
         release_dir, preview_path, workshop_title = build_release(dev_mode=args.dev, dev_name=dev_name)
 
     uploaded_main = False
 
     with steamworks_session() as steam:
-        item_id = ensure_item_id(steam, item_id, CONFIG_PATH, item_id_key)
-        if item_id is None:
-            return 1
+        if upload_mod_effective or upload_workshop_pages:
+            item_id = ensure_item_id(steam, item_id, CONFIG_PATH, item_id_key)
+            if item_id is None:
+                return 1
 
-        if upload_mod:
+        if upload_mod_effective:
             if not upload_release(steam.Workshop, release_dir, preview_path, item_id, workshop_title):
                 return 1
             uploaded_main = True
-            if args.submods and not upload_submods(steam, config):
+            if upload_only_on_version_change:
+                set_uploaded_version(version_cache, main_cache_key, main_version)
+                save_upload_versions(UPLOAD_VERSIONS_PATH, version_cache)
+
+        if upload_submods_selected:
+            submods_ok, submod_cache_changed = upload_submods(
+                steam,
+                config,
+                version_gate_enabled=upload_only_on_version_change,
+                version_cache=version_cache
+            )
+            if not submods_ok:
                 return 1
-        elif args.submods:
-            print("Warning: --submods ignored because mod upload is not selected.")
+            if upload_only_on_version_change and submod_cache_changed:
+                save_upload_versions(UPLOAD_VERSIONS_PATH, version_cache)
 
         if upload_workshop_pages:
             updates = build_workshop_page_updates(
