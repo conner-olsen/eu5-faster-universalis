@@ -17,140 +17,140 @@
 				hbox = {
 					# SPEED 1
 					gamespeed_button_disabled = {
-						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)22'))]"
+						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)15'))]"
 						blockoverride "gamespeed_button_disabled_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)22')]"
+							onclick = "[OnSetGameSpeed('(int32)15')]"
 						}
 					}
 					gamespeed_play_button = {
-						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)22'))]"
+						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)15'))]"
 						blockoverride "gamespeed_play_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)22')]"
+							onclick = "[OnSetGameSpeed('(int32)15')]"
 						}
 					}
 					gamespeed_paused_button = {
-						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)22'))]"
+						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)15'))]"
 						blockoverride "gamespeed_paused_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)22')]"
+							onclick = "[OnSetGameSpeed('(int32)15')]"
 						}
 					}
 
 					# SPEED 2
 					gamespeed_button_disabled = {
-						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)23'))]"
+						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)16'))]"
 						blockoverride "gamespeed_button_disabled_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)23')]"
+							onclick = "[OnSetGameSpeed('(int32)16')]"
 						}
 					}
 					gamespeed_play_button = {
-						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)23'))]"
+						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)16'))]"
 						blockoverride "gamespeed_play_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)23')]"
+							onclick = "[OnSetGameSpeed('(int32)16')]"
 						}
 					}
 					gamespeed_paused_button = {
-						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)23'))]"
+						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)16'))]"
 						blockoverride "gamespeed_paused_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)23')]"
+							onclick = "[OnSetGameSpeed('(int32)16')]"
 						}
 					}
 
 					# SPEED 3
 					gamespeed_button_disabled = {
-						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)24'))]"
+						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)17'))]"
 						blockoverride "gamespeed_button_disabled_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)24')]"
+							onclick = "[OnSetGameSpeed('(int32)17')]"
 						}
 					}
 					gamespeed_play_button = {
-						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)24'))]"
+						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)17'))]"
 						blockoverride "gamespeed_play_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)24')]"
+							onclick = "[OnSetGameSpeed('(int32)17')]"
 						}
 					}
 					gamespeed_paused_button = {
-						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)24'))]"
+						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)17'))]"
 						blockoverride "gamespeed_paused_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)24')]"
+							onclick = "[OnSetGameSpeed('(int32)17')]"
 						}
 					}
 
 					# SPEED 4
 					gamespeed_button_disabled = {
-						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)25'))]"
+						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)18'))]"
 						blockoverride "gamespeed_button_disabled_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)25')]"
+							onclick = "[OnSetGameSpeed('(int32)18')]"
 						}
 					}
 					gamespeed_play_button = {
-						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)25'))]"
+						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)18'))]"
 						blockoverride "gamespeed_play_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)25')]"
+							onclick = "[OnSetGameSpeed('(int32)18')]"
 						}
 					}
 					gamespeed_paused_button = {
-						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)25'))]"
+						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)18'))]"
 						blockoverride "gamespeed_paused_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)25')]"
+							onclick = "[OnSetGameSpeed('(int32)18')]"
 						}
 					}
 
 					# SPEED 5
 					gamespeed_button_disabled = {
-						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)26'))]"
+						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)19'))]"
 						blockoverride "gamespeed_button_disabled_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)26')]"
+							onclick = "[OnSetGameSpeed('(int32)19')]"
 						}
 					}
 					gamespeed_play_button = {
-						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)26'))]"
+						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)19'))]"
 						blockoverride "gamespeed_play_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)26')]"
+							onclick = "[OnSetGameSpeed('(int32)19')]"
 						}
 					}
 					gamespeed_paused_button = {
-						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)26'))]"
+						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)19'))]"
 						blockoverride "gamespeed_paused_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)26')]"
+							onclick = "[OnSetGameSpeed('(int32)19')]"
 						}
 					}
 					# SPEED 6
 					gamespeed_button_disabled = {
-						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)27'))]"
+						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)20'))]"
 						blockoverride "gamespeed_button_disabled_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)27')]"
+							onclick = "[OnSetGameSpeed('(int32)20')]"
 						}
 					}
 					gamespeed_play_button = {
-						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)27'))]"
+						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)20'))]"
 						blockoverride "gamespeed_play_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)27')]"
+							onclick = "[OnSetGameSpeed('(int32)20')]"
 						}
 					}
 					gamespeed_paused_button = {
-						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)27'))]"
+						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)20'))]"
 						blockoverride "gamespeed_paused_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)27')]"
+							onclick = "[OnSetGameSpeed('(int32)20')]"
 						}
 					}
 
 					# SPEED 7
 					gamespeed_button_disabled = {
-						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)28'))]"
+						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)21'))]"
 						blockoverride "gamespeed_button_disabled_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)28')]"
+							onclick = "[OnSetGameSpeed('(int32)21')]"
 						}
 					}
 					gamespeed_play_button = {
-						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)28'))]"
+						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)21'))]"
 						blockoverride "gamespeed_play_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)28')]"
+							onclick = "[OnSetGameSpeed('(int32)21')]"
 						}
 					}
 					gamespeed_paused_button = {
-						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)28'))]"
+						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)21'))]"
 						blockoverride "gamespeed_paused_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)28')]"
+							onclick = "[OnSetGameSpeed('(int32)21')]"
 						}
 					}
 
