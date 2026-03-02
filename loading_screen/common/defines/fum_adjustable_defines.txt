@@ -1,6 +1,55 @@
 ﻿NGame = {
 	HOUR_TICK = 47 # 2 # In vanilla, there is 2-hour ticks, and 12-ticks a day. FU has 23.5x less ticks.
 	MORNING_OFFSET = 0 # 8 # This is only a visual offset change, does not change the number of ticks.
+
+	GAME_SPEED_TICKS = {	# how many seconds should an hour take in every game speed
+		4.7
+		2.3
+		1.1
+		0.5
+		0.2
+		0.02
+		0.0
+		4.7
+		2.3
+		1.1
+		0.5
+		0.2
+		0.02
+		0.0
+		4.7 #
+		2.3
+		1.1
+		0.5
+		0.2
+		0.02
+		0.0
+	}
+
+
+	GAME_SPEED_SCALES = {	# Factors to scale speed
+		0.5
+		0.75
+		1.0
+		1.25
+		1.5
+		1.75
+		2.0
+		0.5
+		0.75
+		1.0
+		1.25
+		1.5
+		1.75
+		2.0
+		0.5 #
+		0.75
+		1.0
+		1.25
+		1.5
+		1.75
+		2.0
+	}
 }
 
 # Theoretically it should be 23.5x multiplier on vanilla.

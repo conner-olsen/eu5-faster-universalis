@@ -3,91 +3,96 @@ Szybsze Universalis / Faster Universalis
 ===WORKSHOP_DESCRIPTION===
 [i]You are on the DeepL-Generated Polish Page. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=$item-id$&l=english]Click here for the Native English Page.[/url][/i]
 
-[h1]Overview:[/h1]
-Drastycznie poprawia prędkość gry/częstotliwość ticków, zachowując przy tym balans i rozgrywkę wersji podstawowej (vanilla).
+[h1]Przegląd:[/h1]
+Dramatycznie poprawia prędkość gry/częstotliwość tyknięć (tick rate), zachowując przy tym balans i rozgrywkę podstawowej wersji gry (vanilla).
 
-[h1]Features:[/h1]
+[h1]Funkcje:[/h1]
 [olist]
- [*][b]O 100%+ szybsza prędkość gry:[/b] Na prędkości 5 czas powinien płynąć około dwa razy szybciej niż w wersji podstawowej, a na niższych prędkościach poprawa jest jeszcze bardziej widoczna.
-    [list]
-     [*]Osiągnięte dzięki dziesiątkom zmian w plikach defines, których jest zbyt wiele, by je tutaj wymienić.
-     [*]Usunięto ticki godzinowe (idąc o krok dalej, podstawowy mod używa ticków co 1,9 dnia (47 godzin). Można to jednak dostosować za pomocą [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submodów dostępnych tutaj.[/url])
-     [*]Walka, prędkość ruchu, częstotliwość aktualizacji gry i SI zostały dostosowane tak, aby wszystkie wyniki i balans gry były identyczne z wersją podstawową. Nie powinieneś zauważyć żadnej różnicy poza szybszym działaniem.
-    [/list]
+ [*][b]Prędkość gry większa o ponad 100%:[/b] Na prędkości 5 powinieneś zauważyć, że czas płynie około dwukrotnie szybciej niż w wersji podstawowej, a na niższych prędkościach poprawa jest jeszcze większa.
+  [list]
+   [*]Osiągnięto to dzięki dziesiątkom zmian w parametrach (defines), których jest zbyt wiele, by je tutaj wymienić.
+   [*]Usunięto cogodzinne tyknięcia (idąc jeszcze dalej – bazowa wersja moda używa tyknięć co 1,9 dnia (47 godzin). Można to jednak dostosować za pomocą [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submodów dostępnych tutaj.[/url])
+   [*]Liczby obrażeń podczas bitew bez cogodzinnych tyknięć!
+   [*]Walka, prędkość poruszania się, częstotliwość aktualizacji gry i AI zostały dostosowane tak, aby wszystkie wyniki i balans gry były identyczne z wersją podstawową. Nie powinieneś zauważyć żadnej różnicy poza wyższą prędkością.
+  [/list]
  [*][b]Opcjonalne zasady gry optymalizujące wydajność:[/b]
   [list]
-   [*][b]Usuwanie narodów opartych na populacji (Pop-Based Nation Removal):[/b] Usuwa wszystkie narody oparte na populacji.
+   [*][b]Usuwanie państw opartych na populacji (pops):[/b] Usuwa wszystkie narody oparte na systemie populacji.
    [*][b]Usuwanie regionów:[/b] Skoncentrowane na Europie, Skoncentrowane na Azji oraz Usuwanie regionów o niskim znaczeniu. Zobacz zrzuty ekranu na stronie moda, aby sprawdzić, jak wyglądają poszczególne opcje.
     [list]
-     [*][b]Usuń regiony o niskim znaczeniu:[/b] Usuwa mniejsze narody w regionach o niewielkiej szansie na interakcję, takie jak małe narody wyspiarskie na Pacyfiku — pełne szczegóły w opisach zasad gry.
+     [*][b]Usuwanie regionów o niskim znaczeniu:[/b] Usuwa mniejsze narody w regionach o małej szansie na interakcję, takich jak małe narody wyspiarskie na Pacyfiku — pełne szczegóły w opisach zasad gry.
      [*][b]Skoncentrowane na Europie:[/b] W praktyce rozgrywka tylko w Europie, usuwająca odległe regiony, takie jak Azja Wschodnia, Indonezja i Oceania.
      [*][b]Skoncentrowane na Azji:[/b] W praktyce rozgrywka tylko w Azji, usuwająca odległe regiony, takie jak Europa i Afryka Zachodnia.
     [/list]
-   [*][b]Usuwanie populacji z nieposiadanych lokacji:[/b] Usuwa populację w miejscach bez właściciela. Łączy się z opcją usuwania narodów.
-   [*][b]Blokada rekolonizacji:[/b] Jeśli włączone wraz z usuwaniem regionów (Europa lub Azja), zapobiega ponownej kolonizacji usuniętych obszarów. Wyłączenie tej opcji może stworzyć ciekawe doświadczenie wyścigu o rekolonizację utraconego "starego świata".
+   [*][b]Usuwanie nieposiadanej populacji:[/b] Usuwa populację w nieposiadanych lokacjach. Łączy się z opcją usuwania państw.
+   [*][b]Blokada rekolonizacji:[/b] Jeśli włączone wraz z usuwaniem regionów (Europa lub Azja), zapobiega ponownej kolonizacji usuniętych regionów. Wyłączenie tej opcji może stworzyć ciekawe doświadczenie wyścigu o rekolonizację utraconego starego świata.
   [/list]
  [*][b]Zasady gry dotyczące dostosowania prędkości[/b]
   [list]
-   [*][b]Prędkość ruchu armii:[/b] Pozwala dostosować prędkość poruszania się armii.
+   [*][b]Prędkość ruchu armii:[/b] Pozwala dostosować prędkość poruszania się wojsk lądowych.
    [*][b]Prędkość ruchu floty:[/b] Pozwala dostosować prędkość poruszania się floty.
-   [*][b]Długość bitew:[/b] Pozwala dostosować czas trwania bitew (podczas gdy straty/wyniki pozostają takie same jak w wersji podstawowej).
+   [*][b]Długość bitwy:[/b] Pozwala dostosować czas trwania bitew (podczas gdy straty/wyniki pozostają takie same jak w wersji podstawowej).
   [/list]
- [*][b]Drobne poprawki QoL:[/b]
+ [*][b]Drobne poprawki komfortu gry (QoL):[/b]
   [list]
-   [*][b]Podwojony czas wygaśnięcia wydarzeń w trybie wieloosobowym[/b]
+   [*][b]Podwojony czas wygaśnięcia wydarzeń w trybie MP[/b]
   [/list]
 [/olist]
 
-Dla odniesienia, w moich testach Daily Ticks na prędkości 5 zwiększyło prędkość gry o około 13%, podczas gdy — jak pokazuje film na stronie Steam — Faster Universalis bez żadnych włączonych opcjonalnych optymalizacji zwiększyło prędkość gry o około 100% na zapisie z późnej fazy gry w wersji podstawowej. Przy włączonych opcjonalnych optymalizacjach, takich jak usuwanie narodów opartych na populacji i regiony skoncentrowane na Europie, można zauważyć poprawę o ponad 200%.
+Dla porównania, w moich testach mod Daily Ticks na prędkości 5 zwiększył prędkość gry o około 13%, podczas gdy — jak pokazuje film na stronie Steam — Faster Universalis bez żadnych włączonych opcjonalnych optymalizacji zwiększył prędkość o około 100% na zapisie z późnej fazy gry w wersji podstawowej. Przy włączonych opcjonalnych optymalizacjach, takich jak usuwanie państw opartych na populacji i regiony skoncentrowane na Europie, można zauważyć poprawę o ponad 200%.
 
-[h1]Planned/Upcoming:[/h1]
+[h1]Planowane/Nadchodzące:[/h1]
 [olist]
- [*][b]Dalsza optymalizacja wydajności:[/b] Będę kontynuował optymalizację moda pod kątem wydajności, gdy znajdę ku temu kolejne okazje.
+ [*][b]Dalsza optymalizacja wydajności:[/b] Będę nadal optymalizować moda pod kątem wydajności, gdy tylko znajdę ku temu okazje.
  [*][b]Dodatkowa personalizacja:[/b] Umożliwienie dostosowania prędkości walki i ruchu poprzez zasady gry. Zachęcam do sugerowania innych ustawień, które chcielibyście zobaczyć.
- [*][b]Opcje ulepszeń graficznych:[/b] Pracowałem również nad poprawą wydajności renderowania/FPS, co zostanie wydane w przyszłej aktualizacji. Jak na razie udało mi się uzyskać jedynie 13% wzrostu FPS. (Jeśli chcesz, możesz odkomentować moje robocze definicje graficzne w plikach, ale obecnie nie są one domyślnie włączone). Pamiętaj, że jeśli ogranicza Cię procesor (CPU-bound), możesz już teraz zauważyć wzrost FPS. Odczujesz go również korzystając z opcjonalnych zasad gry w określonych widokach, ponieważ będzie mniej elementów do wyrenderowania.
+ [*][b]Opcje poprawek graficznych:[/b] Pracowałem również nad poprawą wydajności renderowania/FPS, co zostanie wydane w przyszłej aktualizacji. Jak dotąd udało mi się uzyskać jedynie 13% wzrostu FPS. (Jeśli chcesz, możesz odkomentować moje robocze parametry graficzne defines, ale obecnie nie są one domyślnie włączone). Pamiętaj, że jeśli wąskim gardłem jest Twój procesor (CPU-bound), nadal możesz odczuć wzrost FPS. Odczujesz go również korzystając z opcjonalnych zasad wydajności w niektórych scenach, ponieważ będzie mniej elementów do wyrenderowania.
 [/olist]
 
-[h2]Native Localizations:[/h2]
+[h2]Natywne lokalizacje:[/h2]
 [list]
- [*][b]English:[/b] Primary
+ [*][b]Angielski:[/b] Główny
 [/list]
 
-[h2]DeepL-Translated Localizations:[/h2]
+[h2]Lokalizacje przetłumaczone przez DeepL:[/h2]
 [list]
- [*][b]Chinese / 中文[/b]
- [*][b]French / Français[/b]
- [*][b]German / Deutsch[/b]
- [*][b]Japanese / 日本語[/b]
- [*][b]Korean / 한국어[/b]
- [*][b]Polish / Polski[/b]
- [*][b]Portuguese (Brazil) / Português (Brasil)[/b]
- [*][b]Russian / Русский[/b]
- [*][b]Spanish / Español[/b]
- [*][b]Turkish / Türkçe[/b]
+ [*][b]Chiński / 中文[/b]
+ [*][b]Francuski / Français[/b]
+ [*][b]Niemiecki / Deutsch[/b]
+ [*][b]Japoński / 日本語[/b]
+ [*][b]Koreański / 한국어[/b]
+ [*][b]Polski / Polski[/b]
+ [*][b]Portugalski (Brazylia) / Português (Brasil)[/b]
+ [*][b]Rosyjski / Русский[/b]
+ [*][b]Hiszpański / Español[/b]
+ [*][b]Turecki / Türkçe[/b]
 [/list]
 
-[h1]Change Log:[/h1]
+[h1]Lista zmian:[/h1]
 Zobacz [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Change Notes na stronie warsztatu[/url].
 
-[h1]Compatibility:[/h1]
+[h1]Kompatybilność:[/h1]
 [list]
- [*]Wspiera v1.0.11 oraz betę v1.1.
- [*]Niekompatybilny z osiągnięciami.
- [*]W pełni kompatybilny z zapisami gry.
- [*]Nie powinien być używany z żadnym innym modem zmieniającym ticki, takim jak Daily Ticks.
+ [*]Obsługuje wersję v1.0.11 oraz betę v1.1.
+ [*]Niekompatybilny z osiągnięciami (Achievements).
+ [*]W pełni kompatybilny z zapisanymi grami.
+ [*]Nie powinien być używany z żadnym innym modem zmieniającym częstotliwość tyknięć (tick rate), takim jak Daily Ticks.
  [*]Mogę dodać patche kompatybilności na prośbę użytkowników.
 [/list]
 
-Mod powinien działać z każdym innym modem, który nie zmienia częstotliwości ticków (np. Daily Ticks).
+Mod powinien działać z każdym innym modem, który nie zmienia częstotliwości tyknięć (tj. Daily Ticks).
 
-Istnieje potencjalny problem między głównym modem a jakimkolwiek modem używającym triggerów specyficznych dla konkretnego dnia, ale obecnie nie znam żadnych modów, które by to robiły lub miały z tym problemy.
+Istnieje potencjalny problem między głównym modem a dowolnym modem używającym triggerów przypisanych do konkretnego dnia, ale obecnie nie znam żadnych modów, które by takowe posiadały lub sprawiały problemy.
 
-[h1]Additional Notes[/h1]
-Aby zachować kompatybilność zarówno z v1.0.11, jak i betą v1.1, nie dostosowałem opóźnienia między tickami. Oznacza to, że podczas gdy prędkość 5 jest 2x szybsza niż vanilla, pozostałe prędkości są nieproporcjonalnie szybsze, np. prędkość 1 jest 23,5x szybsza niż vanilla. Możesz jednak użyć [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submodów do regulacji prędkości dostępnych tutaj dla odpowiedniej wersji gry.[/url] Po wydaniu v1.1 submody regulujące prędkość zostaną włączone do głównego moda.
+[h1]Dodatkowe uwagi[/h1]
+Proszę zgłaszać wszelkie problemy lub wyniki, które nie zgadzają się z wersją podstawową/oczekiwanym zachowaniem, jeśli wystąpią.
 
-Proszę zgłaszać wszelkie problemy lub wyniki, które nie pokrywają się z zachowaniem wersji podstawowej lub oczekiwanym działaniem.
+Oprócz sekcji komentarzy, możesz również zadawać pytania, zgłaszać błędy lub składać propozycje na [url=https://discord.gg/zeQ6x9wrPq]kanale #faster-universalis na serwerze discord EU5 Community[/url]. Jeśli jesteś zainteresowany dołączeniem do prac nad tym lub innym z moich modów, możesz mnie oznaczyć lub dodać na Discordzie: @arealconner. Wszelki wkład jest mile widziany.
 
-Oprócz sekcji komentarzy, możesz również zadawać pytania, zgłaszać błędy lub składać sugestie na kanale [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis na serwerze Discord społeczności EU5[/url]. Jeśli jesteś zainteresowany udziałem w rozwoju tego lub innego z moich modów, możesz do mnie napisać lub dodać mnie na Discordzie: @arealconner. Każdy wkład jest mile widziany.
+Wersje źródłowe i deweloperskie moda są dostępne na [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHubie.[/url]
 
-Wersje źródłowe i deweloperskie moda są dostępne na [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub.[/url]
+Istnieją dwa znane problemy niezwiązane z samą rozgrywką:
+[list]
+ [*] Przy rozpoczynaniu nowej gry/ładowaniu zapisu sprzed tej zmiany, prędkość gry będzie wyświetlana jako niewybrana; po prostu wybierz dowolną prędkość gry.
+ [*] Ustawienia „Prędkość gry po rozpoczęciu wojny” oraz „Prędkość gry, gdy wybrana jednostka wejdzie do walki” będą korzystać z prędkości podstawowych zamiast moich, pokazując brak wybranej prędkości, a liczby obrażeń się nie pojawią. Zaleca się zatem wyłączenie obu tych opcji.
+[/list]
 
