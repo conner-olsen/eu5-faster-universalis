@@ -71,6 +71,4 @@
 	# CITY_SAFE_GRID_RADIUS  = 5.0f;
 # }
 
-NUnitGraphics = {
-	INSTANT_MOVEMENT_SPEED_LIMIT = 20
-}
+
