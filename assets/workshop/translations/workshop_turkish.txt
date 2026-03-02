@@ -8,91 +8,91 @@ Vanilla dengesini ve oynanışını korurken oyun hızını/tik oranını öneml
 
 [h1]Özellikler:[/h1]
 [olist]
- [*][b]%100+ Daha Hızlı Oyun Hızı:[/b] 5. hızda, zamanın vanilla'ya kıyasla yaklaşık iki kat daha hızlı geçtiğini göreceksiniz ve düşük hızlarda daha da büyük bir iyileşme hissedilecektir.
+ [*][b]%100+ Daha Hızlı Oyun Hızı:[/b] 5. hızda, zamanın vanilla'ya göre yaklaşık iki kat daha hızlı geçtiğini görmelisiniz; düşük hızlarda ise daha da büyük bir iyileşme fark edeceksiniz.
   [list]
-   [*]Burada listelenemeyecek kadar çok sayıda olan düzinelerce define (tanımlama) değişikliğiyle gerçekleştirildi.
-   [*]Saatlik tikler kaldırıldı (temel modun 1.9 günlük (47 saat) tikler kullanmasıyla daha da ileri gidildi. Ancak bu, [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]buradaki alt modlar aracılığıyla ayarlanabilir.[/url])
+   [*]Burada listelenemeyecek kadar çok sayıda "defines" değişikliği ile gerçekleştirilmiştir.
+   [*]Saatlik tikler kaldırıldı (ve bunun ötesine geçerek, temel mod 1,9 günlük (47 saatlik) tikler kullanır. Ancak bu ayar [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]buradaki alt modlar aracılığıyla düzenlenebilir.[/url])
    [*]Saatlik Tikler Olmadan Savaş Sırasında Hasar Rakamları!
-   [*]Çatışma, Hareket Hızı, Oyun ve YZ Güncelleme Sıklığı; tüm sonuçların ve oyun dengesinin vanilla ile aynı kalması için ayarlandı. Daha yüksek hız dışında herhangi bir fark fark etmemelisiniz.
+   [*]Muharebe, Hareket Hızı, Oyun ve YZ Güncelleme Sıklığı; tüm sonuçlar ve oyun dengesi vanilla ile aynı olacak şekilde ayarlandı. Daha yüksek hız dışında herhangi bir fark fark etmemelisiniz.
   [/list]
  [*][b]İsteğe Bağlı Performans Optimizasyonu Oyun Kuralları:[/b]
   [list]
-   [*][b]Nüfus Temelli Ulus Kaldırma:[/b] Tüm Nüfus Temelli Ulusları siler.
-   [*][b]Bölge Kaldırma:[/b] Avrupa Merkezli, Asya Merkezli ve Düşük Önemli Bölgeleri Kaldır. Her birinin nasıl görüneceğini görmek için mod sayfası ekran görüntülerine bakın.
+   [*][b]Nüfus Tabanlı Ulus Kaldırma:[/b] Tüm nüfus tabanlı ulusları siler.
+   [*][b]Bölge Kaldırmaları:[/b] Avrupa Odaklı, Asya Odaklı ve Düşük Önemli Bölgeleri Kaldır. Her birinin nasıl göründüğünü görmek için mod sayfası ekran görüntülerine bakın.
     [list]
-     [*][b]Düşük Önemli Bölgeleri Kaldır:[/b] Küçük Pasifik ada ulusları gibi etkileşim şansı düşük olan bölgelerdeki küçük ulusları siler — tüm ayrıntılar oyun kuralı açıklamalarındadır.
-     [*][b]Avrupa Merkezli:[/b] Doğu Asya, Endonezya ve Okyanusya gibi uzak bölgeleri kaldırarak etkili bir şekilde sadece Avrupa odaklı bir oyun sunar.
-     [*][b]Asya Merkezli:[/b] Avrupa ve Batı Afrika gibi uzak bölgeleri kaldırarak etkili bir şekilde sadece Asya odaklı bir oyun sunar.
+     [*][b]Düşük Önemli Bölgeleri Kaldır:[/b] Küçük Pasifik adası ulusları gibi etkileşim şansı düşük olan bölgelerdeki küçük ulusları siler — tüm ayrıntılar oyun kuralı açıklamalarındadır.
+     [*][b]Avrupa Odaklı:[/b] Doğu Asya, Endonezya ve Okyanusya gibi uzak bölgeleri kaldırarak etkili bir şekilde sadece Avrupa odaklı bir oyun sunar.
+     [*][b]Asya Odaklı:[/b] Avrupa ve Batı Afrika gibi uzak bölgeleri kaldırarak etkili bir şekilde sadece Asya odaklı bir oyun sunar.
     [/list]
-   [*][b]Sahipsiz Nüfus Kaldırma:[/b] Sahipsiz konumlardaki nüfusları (pop) siler. Ulus kaldırma ile birlikte kullanılabilir.
-   [*][b]Yeniden Kolonizasyonu Engelle:[/b] Avrupa Merkezli veya Asya Merkezli kaldırma işlemleriyle etkinleştirilirse, kaldırılan bölgelerin yeniden kolonize edilmesini önler. Bunu kapatmak, kayıp eski dünyayı yeniden kolonize etmek için ilginç bir yarış deneyimi yaratabilir.
+   [*][b]Sahipsiz Nüfus Kaldırma:[/b] Sahipsiz konumlardaki nüfusları (pop) siler. Ulus kaldırma seçeneği ile birleşebilir.
+   [*][b]Yeniden Kolonileştirmeyi Engelle:[/b] Avrupa Odaklı veya Asya Odaklı kaldırma seçenekleriyle etkinleştirilirse, kaldırılan bölgelerin yeniden kolonileştirilmesini önler. Bunu kapatmak, kayıp eski dünyayı yeniden kolonileştirmek için ilginç bir yarış deneyimi yaratabilir.
   [/list]
  [*][b]Hız Ayarı Oyun Kuralları[/b]
   [list]
    [*][b]Ordu Hareket Hızı:[/b] Ordu hareket hızını ayarlamanıza olanak tanır.
    [*][b]Donanma Hareket Hızı:[/b] Donanma hareket hızını ayarlamanıza olanak tanır.
-   [*][b]Savaş Süresi:[/b] Savaşların ne kadar süreceğini ayarlamanıza olanak tanır (kayıplar/sonuçlar vanilla ile aynı kalır).
+   [*][b]Muharebe Süresi:[/b] Kayıplar/sonuçlar vanilla ile aynı kalırken muharebelerin ne kadar süreceğini ayarlamanıza olanak tanır.
   [/list]
  [*][b]Küçük Yaşam Kalitesi (QoL) Düzenlemeleri:[/b]
   [list]
-   [*][b]İki Katına Çıkarılmış MP Etkinlik Zaman Aşımı Süresi[/b]
+   [*][b]İkiye Katlanmış MP Etkinlik Zaman Aşımı Süresi[/b]
   [/list]
 [/olist]
 
-Referans olarak, yaptığım testlerde 5. hızda Daily Ticks oyun hızını yaklaşık %13 artırırken; Steam sayfası videosunda gösterildiği gibi Faster Universalis, herhangi bir isteğe bağlı optimizasyon etkinleştirilmeden, oyunun sonlarındaki bir vanilla kaydında oyun hızını yaklaşık %100 artırmıştır. Nüfus Temelli Ulus Ayıklama ve Avrupa merkezli bölgeler gibi isteğe bağlı optimizasyonlar etkinleştirildiğinde %200'ün üzerinde iyileşme görebilirsiniz.
+Referans olması açısından; yaptığım testlerde "Daily Ticks" modu 5. hızda oyun hızını yaklaşık %13 artırırken, Steam sayfası videosunda görüldüğü üzere Faster Universalis, herhangi bir isteğe bağlı optimizasyon etkinleştirilmeden geç oyun aşamasındaki bir vanilla kaydında oyun hızını yaklaşık %100 artırmıştır. Nüfus Tabanlı Ulus Ayıklama ve Avrupa Odaklı bölgeler gibi isteğe bağlı optimizasyonlar etkinleştirildiğinde %200'ün üzerinde iyileşme görebilirsiniz.
 
-[h1]Planlanan/Gelecek Özellikler:[/h1]
+[h1]Planlananlar/Gelecek Özellikler:[/h1]
 [olist]
- [*][b]Devam Eden Performans Optimizasyonu:[/b] Daha fazla fırsat buldukça modu performans için optimize etmeye devam edeceğim.
- [*][b]Ek Özelleştirme:[/b] Oyun kuralları aracılığıyla çatışma hızının ve hareket hızının ayarlanmasına olanak tanınacak. Görmek istediğiniz diğer ayarları önermekten çekinmeyin.
- [*][b]Grafik İyileştirme Seçenekleri:[/b] Gelecekteki bir güncellemede yayınlanacak olan işleme/FPS performansını iyileştirme üzerinde de çalışıyorum. Ancak şu an itibariyle FPS'de yalnızca %13'lük bir artış sağlayabildim. (İsterseniz, yapım aşamasındaki grafik tanımlarımın başındaki yorum işaretlerini kaldırabilirsiniz, ancak şu anda varsayılan olarak etkin değildir.) İşlemci darboğazı yaşıyorsanız, şu anda bile bir FPS artışı görebileceğinizi unutmayın. Ayrıca, işlenecek daha az şey olacağı için belirli sahnelerde isteğe bağlı performans oyun kurallarından herhangi birini kullanarak bir FPS artışı göreceksiniz.
+ [*][b]Sürekli Performans Optimizasyonu:[/b] Yeni fırsatlar buldukça modu performans için optimize etmeye devam edeceğim.
+ [*][b]Ek Özelleştirme:[/b] Muharebe hızı ve hareket hızının oyun kuralları üzerinden ayarlanmasına olanak tanıyacağım. Görmek istediğiniz diğer ayarları önermekten çekinmeyin.
+ [*][b]Grafik Düzenleme Seçenekleri:[/b] İşleme/FPS performansını iyileştirmek üzerinde de çalışıyorum ve bu gelecek bir güncellemede yayınlanacak. Ancak şu an itibariyle FPS'de yalnızca %13'lük bir artış sağlayabildim. (İsterseniz yapım aşamasındaki grafik "defines" ayarlarımın başındaki yorum satırlarını kaldırabilirsiniz, ancak şu anda varsayılan olarak etkin değildir.) Eğer CPU darboğazı yaşıyorsanız, şu anda bile bir FPS artışı görebilirsiniz. Ayrıca, bazı sahnelerde render edilecek daha az şey olacağından, isteğe bağlı performans oyun kurallarından herhangi birini kullanırken de FPS artışı göreceksiniz.
 [/olist]
 
 [h2]Yerel Çeviriler:[/h2]
 [list]
- [*][b]İngilizce / English:[/b] Birincil
+ [*][b]English:[/b] Birincil
 [/list]
 
-[h2]DeepL ile Çevrilen Diller:[/h2]
+[h2]DeepL ile Çevrilmiş Yerelleştirmeler:[/h2]
 [list]
- [*][b]Çince / 中文[/b]
- [*][b]Fransızca / Français[/b]
- [*][b]Almanca / Deutsch[/b]
- [*][b]Japonca / 日本語[/b]
- [*][b]Korece / 한국어[/b]
- [*][b]Lehçe / Polski[/b]
- [*][b]Portekizce (Brezilya) / Português (Brasil)[/b]
- [*][b]Rusça / Русский[/b]
- [*][b]İspanyolca / Español[/b]
- [*][b]Türkçe / Türkçe[/b]
+ [*][b]Chinese / 中文[/b]
+ [*][b]French / Français[/b]
+ [*][b]German / Deutsch[/b]
+ [*][b]Japanese / 日本語[/b]
+ [*][b]Korean / 한국어[/b]
+ [*][b]Polish / Polski[/b]
+ [*][b]Portuguese (Brazil) / Português (Brasil)[/b]
+ [*][b]Russian / Русский[/b]
+ [*][b]Spanish / Español[/b]
+ [*][b]Turkish / Türkçe[/b]
 [/list]
 
 [h1]Değişiklik Günlüğü:[/h1]
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Workshop sayfasındaki Değişiklik Notlarına[/url] göz atın.
+Workshop sayfasındaki [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Değişiklik Notlarına[/url] göz atın.
 
 [h1]Uyumluluk:[/h1]
 [list]
- [*]v1.0.11 ve v1.1 betasını destekler.
- [*]Başarımlarla Uyumlu Değildir.
- [*]Kayıtlı oyunlarla tam uyumludur.
- [*]Daily Ticks gibi tik oranını değiştiren başka bir modla birlikte kullanılmamalıdır.
+ [*]v1.0.11 ve v1.1 beta sürümlerini destekler.
+ [*]Başarım (Achievement) uyumlu değildir.
+ [*]Kayıtlı oyunlarla (save) tam uyumludur.
+ [*]Daily Ticks gibi başka bir tik değiştirme moduyla birlikte kullanılmamalıdır.
  [*]İstek üzerine uyumluluk yamaları ekleyebilirim.
 [/list]
 
-Mod, tik oranını değiştirmeyen (örneğin Daily Ticks) diğer tüm modlarla çalışmalıdır.
+Mod, tik oranını değiştirmeyen (örneğin Daily Ticks haricindeki) diğer tüm modlarla çalışmalıdır.
 
-Ana mod ile güne özel tetikleyici (trigger) kullanan herhangi bir mod arasında potansiyel bir sorun olabilir, ancak şu anda bunu yapan veya herhangi bir sorunu olan bir moddan haberdar değilim.
+Ana mod ile güne özel tetikleyici (day-specific trigger) kullanan herhangi bir mod arasında potansiyel bir sorun olabilir, ancak şu anda bunu yapan veya sorun çıkaran herhangi bir moddan haberdar değilim.
 
 [h1]Ek Notlar[/h1]
-Lütfen meydana gelirse vanilla/beklenen davranışla eşleşmeyen herhangi bir sorunu veya sonucu bildirin.
+Lütfen vanilla/beklenen davranışla eşleşmeyen herhangi bir sorun veya sonuç oluşursa bildirin.
 
-Yorum bölümüne ek olarak, [url=https://discord.gg/zeQ6x9wrPq]EU5 Topluluğu discord sunucusunun #faster-universalis kanalında[/url] sorularınızı sorabilir, hataları bildirebilir veya önerilerde bulunabilirsiniz. Ve eğer bu modun veya diğer modlarımdan birinin geliştirilmesine katılmak isterseniz, Discord üzerinden bana @arealconner kullanıcı adından ping atabilir veya ekleyebilirsiniz. Tüm katkıları bekliyoruz.
+Yorum bölümüne ek olarak, [url=https://discord.gg/zeQ6x9wrPq]EU5 Community Discord sunucusundaki #faster-universalis kanalından[/url] soru sorabilir, hata bildirebilir veya önerilerde bulunabilirsiniz. Bu modun veya diğer modlarımdan birinin geliştirilmesine katılmak isterseniz, Discord üzerinden bana @arealconner kullanıcı adıyla ping atabilir veya ekleyebilirsiniz. Tüm katkılara açığım.
 
-Modun kaynak ve geliştirme sürümleri [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub'da mevcuttur.[/url]
+Modun kaynak kodu ve geliştirici sürümleri [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub'da[/url] mevcuttur.
 
-Oynanışla ilgili olmayan bilinen iki sorun vardır:
+Oynanışla ilgili olmayan iki bilinen sorun vardır (saatlik veya 12 saatlik tik alt modları için geçerli değildir):
 [list]
- [*] Yeni bir oyuna başlarken veya bu değişiklikten önceki bir kayıtlı oyunu yüklerken, oyun hızı seçilmemiş olarak görünecektir; herhangi bir oyun hızını seçmeniz yeterlidir.
- [*] "Savaş Başladığında Oyun Hızı" ve "Seçili Bir Birim Çatışmaya Girdiğinde Oyun Hızı" ayarları benimkiler yerine vanilla oyun hızlarını kullanacak, seçili bir oyun hızı olmadığını gösterecek ve hasar rakamları görünmeyecektir. Bu nedenle her ikisinin de kapatılması önerilir.
+ [*] Yeni bir oyuna başlarken veya bu değişiklikten önceki bir kayıtlı oyunu yüklerken oyun hızı seçilmemiş olarak görünecektir; herhangi bir oyun hızını seçmeniz yeterlidir.
+ [*] "Savaş Başladığında Oyun Hızı" ve "Seçili Bir Birim Muharebeye Girdiğinde Oyun Hızı" ayarları benim hızlarım yerine vanilla oyun hızlarını kullanacaktır; bu durumda oyun hızı seçilmemiş görünecek ve hasar rakamları belirmeyecektir. Bu nedenle her iki ayarın da kapatılması önerilir.
 [/list]
 
