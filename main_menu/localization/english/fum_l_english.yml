@@ -56,7 +56,7 @@
  setting_fum_no_cull_sop_countries_setting: "Option 1/2: Keep Pop-Based Countries"
  setting_fum_no_cull_sop_countries_setting_desc: "No changes will be made to the game's pop-based countries."
  setting_fum_remove_sop_countries_setting: "Option 2/2: Remove Pop-Based Countries"
- setting_fum_remove_sop_countries_setting_desc: "Will remove every pop-based country that is not present in an owned location."
+ setting_fum_remove_sop_countries_setting_desc: "Will remove every pop-based country."
  rule_fum_nation_removal_rule: "Faster Universalis: Nation Removal"
  setting_fum_no_removal_setting: "Option 1/4: No Removal"
  setting_fum_no_removal_setting_desc: "All nations will be present in the game."
