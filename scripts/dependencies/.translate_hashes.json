@@ -22,7 +22,6 @@
     },
     "english\\fum_l_english.yml": {
       "AUTO_MODIFIER_NAME_fum_save_game_compatability": "43ad21b6739ba3528cd23132e0932a92fd3ad36f8f913881da09704e9e05b76d",
-      "AUTO_MODIFIER_NAME_fum_tick_rate_adjustments": "e3275b637beef5a0f159d20acd8ade952da95d6acfc12ca93758f1642a8cdccb",
       "STATIC_MODIFIER_NAME_fum_25_army_speed_adjustment": "384243ad7034b25da2f53a8b8cc5d02ca29f47983edeb1a980d41302261fbf84",
       "STATIC_MODIFIER_NAME_fum_25_navy_speed_adjustment": "28e16dc46c3064879e27ca825b3466e800c3c5f1a4ad0c23b0cc96f76c38f8f6",
       "STATIC_MODIFIER_NAME_fum_33_army_speed_adjustment": "9b4c1c2b77007f40f9e6e2e639e644812f91f0904f13bb03cef5d046c4ca3cd8",
@@ -82,7 +81,7 @@
       "setting_fum_remove_low_importance_setting": "db36f7bd0e149b860e4163f8b9332ee3dda12dd9b558dd6f46b7eea5212cdbbe",
       "setting_fum_remove_low_importance_setting_desc": "dae3df5d52fef3ce966e4c436b1abd84a0cda39678880ae4caf89ba47f5567bb",
       "setting_fum_remove_sop_countries_setting": "7518b900aa8742c8bc7366b9df26656404740d27ef602d83967bf7d5f76901cb",
-      "setting_fum_remove_sop_countries_setting_desc": "8449ac1a71854d506c2d8ebd8a8d8e7b8eb2ede7bdce7581dd42513239243745",
+      "setting_fum_remove_sop_countries_setting_desc": "15b1342140e50fc5506eea7db394c8cd002d676c58512169ab2dc0551f4afc05",
       "setting_fum_remove_unowned_pops_setting": "623d99af0c2f2d92a27b44d5ea099876b43a06def35821ebef962a5bafd08e11",
       "setting_fum_remove_unowned_pops_setting_desc": "77e64b15730e607d84ac22ec9ecdc12c379cbf979388d87ae049f093b926ffe6",
       "setting_fum_vanilla_army_speed_setting": "71b6bea16e982fb24323850f99c239a6d013540d6ea4bc75e75cf0cfdb400ec0",
