@@ -1,4 +1,88 @@
-﻿template speed_bar {
+﻿types FUM_HUD_TopbarTypes {
+	type gamespeed_button_disabled = button {
+		texture = "gfx/interface/component_tiles/hud_corners/speed_bar/speed_disabled.dds"
+		texture_density = 2
+		size = { 21 40 }
+		tooltip_enabled = no
+		button = {
+			block "gamespeed_button_disabled_onclick" {
+				onclick = "[OnSetGameSpeed('(int32)15')]"
+			}
+			tooltipwidget = {
+				LeftClickButtonTooltip = {
+					blockoverride "onclick_text" {
+						text = "[GetGameSpeedTooltip]"
+					}
+				}
+			}
+			enabled = "[CanChangeGameSpeed]"
+			# block "gamespeed_button_texture" {
+			texture = "[GetGraphicalCultureTexture('speed_button')]"
+			# }
+			texture_density = 2
+			# block "gamespeed_button_size" {
+			size = { 100% 100% }
+			# }
+		}
+	}
+
+	type gamespeed_play_button = button {
+		texture = "gfx/interface/component_tiles/hud_corners/speed_bar/speed_on.dds"
+		texture_density = 2
+		size = { 21 40 }
+		tooltip_enabled = no
+		button = {
+			block "gamespeed_play_button_onclick" {
+				onclick = "[OnSetGameSpeed('(int32)15')]"
+			}
+			tooltipwidget = {
+				LeftClickButtonTooltip = {
+					blockoverride "onclick_text" {
+						text = "[GetGameSpeedTooltip]"
+					}
+				}
+			}
+			enabled = "[CanChangeGameSpeed]"
+			# block "gamespeed_button_texture" {
+			texture = "[GetGraphicalCultureTexture('speed_button')]"
+			# }
+			texture_density = 2
+			# block "gamespeed_button_size" {
+			size = { 100% 100% }
+			# }
+		}
+	}
+
+	type gamespeed_paused_button = button {
+		texture = "gfx/interface/component_tiles/hud_corners/speed_bar/speed_paused.dds"
+		texture_density = 2
+		size = { 21 40 }
+		tooltip_enabled = no
+		button = {
+			block "gamespeed_paused_button_onclick" {
+				onclick = "[OnSetGameSpeed('(int32)15')]"
+			}
+			tooltipwidget = {
+				LeftClickButtonTooltip = {
+					blockoverride "onclick_text" {
+						text = "[GetGameSpeedTooltip]"
+					}
+				}
+			}
+			enabled = "[CanChangeGameSpeed]"
+			# block "gamespeed_button_texture" {
+			texture = "[GetGraphicalCultureTexture('speed_button')]"
+			# }
+			texture_density = 2
+			# block "gamespeed_button_size" {
+			size = { 100% 100% }
+			# }
+		}
+	}
+}
+
+
+template speed_bar {
 	hbox = {
 		using = layoutpolicy_expanding
 		using = top_bar_bg
@@ -18,21 +102,12 @@
 					# SPEED 1
 					gamespeed_button_disabled = {
 						visible = "[Not(IsGameSpeedEqualOrGreaterThan('(int32)15'))]"
-						blockoverride "gamespeed_button_disabled_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)15')]"
-						}
 					}
 					gamespeed_play_button = {
 						visible = "[And(Not(IsGamePaused), IsGameSpeedEqualOrGreaterThan('(int32)15'))]"
-						blockoverride "gamespeed_play_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)15')]"
-						}
 					}
 					gamespeed_paused_button = {
 						visible = "[And(IsGamePaused, IsGameSpeedEqualOrGreaterThan('(int32)15'))]"
-						blockoverride "gamespeed_paused_button_onclick" {
-							onclick = "[OnSetGameSpeed('(int32)15')]"
-						}
 					}
 
 					# SPEED 2
