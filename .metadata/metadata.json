@@ -1,7 +1,7 @@
 ﻿{
   "name": "Faster Universalis Dev",
   "id": "faster.universalis.dev",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "game_id": "eu5",
   "supported_game_version": "1.1.*",
   "short_description": "Improves EU5 performance without any effect on gameplay or graphical quality.",
