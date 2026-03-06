@@ -3,96 +3,97 @@ Schnelleres Universalis / Faster Universalis
 ===WORKSHOP_DESCRIPTION===
 [i]You are on the DeepL-Generated German Page. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=$item-id$&l=english]Click here for the Native English Page.[/url][/i]
 
-[h1]Überblick:[/h1]
-Verbessert die Spielgeschwindigkeit/Tickrate drastisch, während die Vanilla-Balance und das Gameplay beibehalten werden.
+[h1]Übersicht:[/h1]
+Dramatisch verbesserte Spielgeschwindigkeit/Tick-Rate unter Beibehaltung der Vanilla-Balance und des Gameplays.
 
 [h1]Features:[/h1]
 [olist]
- [*][b]100 %+ schnellere Spielgeschwindigkeit:[/b] Auf Geschwindigkeit 5 sollte die Zeit etwa doppelt so schnell vergehen wie in Vanilla, bei niedrigeren Geschwindigkeiten ist die Verbesserung sogar noch deutlicher.
+ [*][b]100%+ schnellere Spielgeschwindigkeit:[/b] Auf Geschwindigkeitsstufe 5 sollte die Zeit etwa doppelt so schnell vergehen wie in der Vanilla-Version, bei niedrigeren Geschwindigkeiten ist die Verbesserung sogar noch deutlicher.
   [list]
-   [*]Erreicht durch Dutzende von Änderungen an den Defines, die hier zu zahlreich wären, um sie alle aufzuführen.
-   [*]Stündliche Ticks entfernt (und geht darüber hinaus, da die Basis-Mod 1,9-Tage-Ticks (47 Stunden) verwendet. Kann aber über [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]hier verfügbare Submods[/url] angepasst werden).
+   [*]Erreicht durch Dutzende von Änderungen an den Defines, die zu zahlreich sind, um sie hier alle aufzuführen.
+   [*]Stündliche Ticks wurden entfernt (und es geht noch weiter: Die Basis-Mod verwendet 1,9-Tage-Ticks (47 Stunden). Dies kann jedoch über die [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]hier verfügbaren Submods angepasst werden.[/url])
    [*]Schadenszahlen während der Schlacht ohne stündliche Ticks!
-   [*]Kampf, Bewegungsgeschwindigkeit sowie die Update-Frequenz von Spiel & KI wurden so angepasst, dass alle Ergebnisse und die Spielbalance identisch mit Vanilla sein sollten. Sie sollten außer der höheren Geschwindigkeit keinen Unterschied bemerken.
+   [*]Kampf, Bewegungsgeschwindigkeit sowie die Aktualisierungsfrequenz von Spiel & KI wurden so angepasst, dass alle Ergebnisse und die Spielbalance identisch mit der Vanilla-Version sein sollten. Außer der höheren Geschwindigkeit sollten Sie keinen Unterschied bemerken.
   [/list]
  [*][b]Optionale Spielregeln zur Performance-Optimierung:[/b]
   [list]
-   [*][b]Pop-basierte Nationen-Entfernung:[/b] Löscht alle pop-basierten Nationen.
-   [*][b]Regionen-Entfernung:[/b] Europa-zentriert, Asien-zentriert und Entfernung unbedeutender Regionen. Schauen Sie sich die Screenshots auf der Mod-Seite an, um zu sehen, wie die jeweilige Option aussieht.
+   [*][b]Entfernung pop-basierter Nationen:[/b] Löscht alle pop-basierten Nationen.
+   [*][b]Regional-Entfernungen:[/b] Europa-zentriert, Asien-zentriert und Entfernung von Regionen mit geringer Bedeutung. Sehen Sie sich die Screenshots auf der Mod-Seite an, um zu sehen, wie die einzelnen Optionen aussehen.
     [list]
-     [*][b]Entfernung unbedeutender Regionen:[/b] Löscht kleinere Nationen in Regionen mit geringer Interaktionschance, wie z. B. kleine pazifische Inselstaaten – Details finden Sie in den Beschreibungen der Spielregeln.
-     [*][b]Europa-zentriert:[/b] Effektiv ein reines Europa-Spiel, bei dem weit entfernte Regionen wie Ostasien, Indonesien und Ozeanien entfernt werden.
-     [*][b]Asien-zentriert:[/b] Effektiv ein reines Asien-Spiel, bei dem weit entfernte Regionen wie Europa und Westafrika entfernt werden.
+     [*][b]Entfernung von Regionen mit geringer Bedeutung:[/b] Löscht kleinere Nationen in Regionen mit geringer Interaktionswahrscheinlichkeit, wie z. B. kleine pazifische Inselstaaten – vollständige Details finden Sie in den Beschreibungen der Spielregeln.
+     [*][b]Europa-zentriert:[/b] Effektiv ein reines Europa-Spiel, bei dem weit entfernte Regionen wie Ostasien, Indonesien & Ozeanien entfernt werden.
+     [*][b]Asien-zentriert:[/b] Effektiv ein reines Asien-Spiel, bei dem weit entfernte Regionen wie Europa & Westafrika entfernt werden.
     [/list]
-   [*][b]Entfernung von Pops in unbesetztem Gebiet:[/b] Löscht Pops an unbesetzten Orten. Kombinierbar mit der Nationen-Entfernung.
-   [*][b]Rekolonisierung blockieren:[/b] Wenn dies zusammen mit der Europa-zentrierten oder Asien-zentrierten Entfernung aktiviert ist, wird die Rekolonisierung der entfernten Regionen verhindert. Das Deaktivieren dieser Option kann zu einer interessanten Erfahrung führen – einem Wettlauf um die Rekolonisierung der verlorenen „Alten Welt“.
+   [*][b]Entfernung unbesetzter Pops:[/b] Löscht Pops an Orten ohne Besitzer. Stapelbar mit der Nationen-Entfernung.
+   [*][b]Rekolonisierung blockieren:[/b] Wenn dies zusammen mit der europa- oder asienzentrierten Entfernung aktiviert ist, wird die Rekolonisierung der entfernten Regionen verhindert. Das Deaktivieren dieser Option kann eine interessante Erfahrung schaffen, wenn es zum Wettlauf um die Rekolonisierung der verlorenen „alten Welt“ kommt.
   [/list]
  [*][b]Spielregeln zur Geschwindigkeitsanpassung[/b]
   [list]
-   [*][b]Armee-Bewegungsgeschwindigkeit:[/b] Ermöglicht die Anpassung der Bewegungsgeschwindigkeit von Armeen.
-   [*][b]Flotten-Bewegungsgeschwindigkeit:[/b] Ermöglicht die Anpassung der Bewegungsgeschwindigkeit von Flotten.
-   [*][b]Schlachtdauer:[/b] Ermöglicht die Anpassung der Dauer von Schlachten (während Verluste/Ergebnisse identisch mit Vanilla bleiben).
+   [*][b]Armee-Bewegungsgeschwindigkeit:[/b] Ermöglicht das Anpassen der Bewegungsgeschwindigkeit von Armeen.
+   [*][b]Flotten-Bewegungsgeschwindigkeit:[/b] Ermöglicht das Anpassen der Bewegungsgeschwindigkeit von Flotten.
+   [*][b]Schlachtdauer:[/b] Ermöglicht das Anpassen der Dauer von Schlachten (während Verluste/Ergebnisse identisch mit der Vanilla-Version bleiben).
   [/list]
  [*][b]Kleinere QoL-Anpassungen:[/b]
   [list]
-   [*][b]Verdoppelte Zeitüberschreitung für MP-Events[/b]
+   [*][b]Verdoppelte MP-Event-Timeout-Zeit[/b]
   [/list]
 [/olist]
 
-Zum Vergleich: In meinen Tests erhöhte „Daily Ticks“ auf Geschwindigkeit 5 die Spielgeschwindigkeit um etwa 13 %, während „Faster Universalis“ (wie im Video auf der Steam-Seite zu sehen) die Geschwindigkeit in einem Vanilla-Late-Game-Spielstand um etwa 100 % steigerte – ohne aktivierte optionale Optimierungen. Mit aktivierten optionalen Optimierungen, wie der Pop-basierten Nationen-Entfernung und der Europa-Zentrierung, können Verbesserungen von über 200 % erzielt werden.
+Als Referenz: In meinen Tests erhöhten „Daily Ticks“ die Spielgeschwindigkeit auf Stufe 5 um etwa 13 %, während das Video auf der Steam-Seite zeigt, dass Faster Universalis ohne aktivierte optionale Optimierungen die Spielgeschwindigkeit in einem Late-Game-Vanilla-Spielstand um etwa 100 % erhöhte. Mit den optionalen Optimierungen, wie dem Entfernen pop-basierter Nationen und europa-zentrierten Regionen, können Verbesserungen von über 200 % erzielt werden.
 
 [h1]Geplant/Demnächst:[/h1]
 [olist]
- [*][b]Fortlaufende Performance-Optimierung:[/b] Ich werde die Mod weiter optimieren, sobald ich neue Möglichkeiten finde.
- [*][b]Zusätzliche Anpassungsmöglichkeiten:[/b] Anpassung der Kampfgeschwindigkeit und Bewegungsgeschwindigkeit über Spielregeln ermöglichen. Schlagen Sie gerne weitere Einstellungen vor, die Sie sehen möchten.
- [*][b]Optionen für Grafik-Tweaks:[/b] Ich arbeite auch an der Verbesserung der Rendering-/FPS-Performance, was in einem zukünftigen Update veröffentlicht wird. Bisher konnte ich jedoch nur eine Steigerung der FPS um 13 % erreichen. (Falls Sie möchten, können Sie meine „WIP Graphics Defines“ einkommentieren, sie sind jedoch standardmäßig deaktiviert.) Beachten Sie: Wenn Sie CPU-limitiert sind, können Sie schon jetzt einen FPS-Boost feststellen. Zudem erhalten Sie einen FPS-Boost, wenn Sie eine der optionalen Performance-Spielregeln nutzen, da in bestimmten Szenen weniger gerendert werden muss.
+ [*][b]Fortlaufende Performance-Optimierung:[/b] Ich werde die Mod weiter auf Leistung optimieren, sobald ich neue Möglichkeiten finde.
+ [*][b]Zusätzliche Anpassungsmöglichkeiten:[/b] Anpassung der Kampfgeschwindigkeit und Bewegungsgeschwindigkeit über Spielregeln. Schlagen Sie gerne weitere Einstellungen vor, die Sie gerne sehen würden.
+ [*][b]Grafik-Tweak-Optionen:[/b] Ich arbeite auch an der Verbesserung der Rendering-/FPS-Leistung, was in einem zukünftigen Update veröffentlicht wird. Bisher konnte ich jedoch nur eine Steigerung der FPS um 13 % erzielen. (Wenn Sie möchten, können Sie meine Work-in-Progress-Grafik-Defines auskommentieren, aber sie sind derzeit nicht standardmäßig aktiviert.) Beachten Sie, dass Sie bei einer CPU-Limitierung bereits jetzt einen FPS-Schub bemerken könnten. Zudem werden Sie bei Verwendung der optionalen Performance-Spielregeln in bestimmten Szenen einen FPS-Schub sehen, da weniger gerendert werden muss.
 [/olist]
 
 [h2]Native Lokalisierungen:[/h2]
 [list]
- [*][b]Englisch:[/b] Primär
+ [*][b]English:[/b] Primary
 [/list]
 
-[h2]DeepL-übersetzte Lokalisierungen:[/h2]
+[h2]Mit DeepL übersetzte Lokalisierungen:[/h2]
 [list]
- [*][b]Chinesisch / 中文[/b]
- [*][b]Französisch / Français[/b]
+ [*][b]Chinese / 中文[/b]
+ [*][b]French / Français[/b]
  [*][b]German / Deutsch[/b]
- [*][b]Japanisch / 日本語[/b]
- [*][b]Koreanisch / 한국어[/b]
- [*][b]Polnisch / Polski[/b]
- [*][b]Portugiesisch (Brasilien) / Português (Brasil)[/b]
- [*][b]Russisch / Русский[/b]
- [*][b]Spanisch / Español[/b]
- [*][b]Türkisch / Türkçe[/b]
+ [*][b]Japanese / 日本語[/b]
+ [*][b]Korean / 한국어[/b]
+ [*][b]Polish / Polski[/b]
+ [*][b]Portuguese (Brazil) / Português (Brasil)[/b]
+ [*][b]Russian / Русский[/b]
+ [*][b]Spanish / Español[/b]
+ [*][b]Turkish / Türkçe[/b]
 [/list]
 
 [h1]Änderungsprotokoll:[/h1]
-Siehe [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Änderungshinweise auf der Workshop-Seite[/url].
+Siehe die [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Änderungshinweise auf der Workshop-Seite[/url].
 
 [h1]Kompatibilität:[/h1]
 [list]
- [*]Unterstützt v1.0.11 und die v1.1 Beta.
+ [*]Aktualisiert für 1.1+
  [*]Nicht Achievement-kompatibel.
- [*]Vollständig kompatibel mit Spielständen.
- [*]Sollte nicht mit anderen Mods verwendet werden, die die Tickrate ändern (z. B. Daily Ticks).
- [*]Auf Anfrage erstelle ich eventuell Kompatibilitäts-Patches.
+ [*]Vollständig spielstandkompatibel.
+ [*]Sollte nicht mit anderen Mods verwendet werden, die die Tick-Rate ändern, wie z. B. Daily Ticks.
+ [*]Nach GlorpUI oder anderen Mods laden, die die obere Leiste bearbeiten (ich bearbeite nur die Spielgeschwindigkeiten selbst, daher werden andere Änderungen nicht überschrieben).
+ [*]Auf Anfrage kann ich Kompatitäts-Patches hinzufügen.
 [/list]
 
-Die Mod sollte mit jeder anderen Mod funktionieren, die nicht die Tickrate ändert (z. B. Daily Ticks).
+Die Mod sollte mit jeder anderen Mod funktionieren, die die Tick-Rate nicht ändert (z. B. Daily Ticks).
 
-Es kann ein potenzielles Problem mit der Haupt-Mod und jeder Mod geben, die einen tages-spezifischen Trigger verwendet, aber mir sind derzeit keine Mods bekannt, die dies tun oder Probleme verursachen.
+Es kann ein potenzielles Problem mit der Haupt-Mod und Mods geben, die tagesabhängige Trigger verwenden, aber derzeit sind mir keine Mods bekannt, die dies tun oder Probleme verursachen.
 
 [h1]Zusätzliche Hinweise[/h1]
-Bitte melden Sie alle Probleme oder Ergebnisse, die nicht dem Vanilla-Verhalten entsprechen oder unerwartet sind.
+Bitte melden Sie alle Probleme oder Ergebnisse, die nicht der Vanilla-Version oder dem erwarteten Verhalten entsprechen, falls diese auftreten.
 
-Zusätzlich zum Kommentarbereich können Sie auch Fragen stellen, Fehler melden oder Vorschläge im [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis Channel des EU5 Community Discord-Servers[/url] machen. Und falls Sie Interesse haben, an der Entwicklung dieser oder einer meiner anderen Mods mitzuwirken, können Sie mich auf Discord unter @arealconner anpingen oder hinzufügen. Alle Beiträge sind willkommen.
+Zusätzlich zum Kommentarbereich können Sie Fragen stellen, Fehler melden oder Vorschläge im [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis-Kanal des EU5-Community-Discord-Servers[/url] machen. Wenn Sie daran interessiert sind, an der Entwicklung dieser oder einer meiner anderen Mods mitzuwirken, können Sie mich auf Discord unter @arealconner anpingen oder hinzufügen. Alle Beiträge sind willkommen.
 
-Die Quellcode- und Entwicklerversionen der Mod sind auf [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub[/url] verfügbar.
+Die Quell- und Entwicklerversionen der Mod sind auf [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub verfügbar.[/url]
 
-Es gibt zwei bekannte Probleme, die nicht das Gameplay betreffen (gilt nicht für Submods mit stündlichen oder 12-Stunden-Ticks):
+Es gibt zwei bekannte, nicht das Gameplay betreffende Probleme (gilt nicht für Submods mit stündlichen oder 12-Stunden-Ticks):
 [list]
- [*] Beim Starten eines neuen Spiels oder Laden eines Spielstands von vor dieser Änderung wird keine ausgewählte Spielgeschwindigkeit angezeigt; wählen Sie einfach eine beliebige Geschwindigkeit aus.
- [*] Die Einstellungen „Spielgeschwindigkeit bei Kriegsbeginn“ und „Spielgeschwindigkeit, wenn eine ausgewählte Einheit in den Kampf eintritt“ verwenden die Vanilla-Spielgeschwindigkeiten anstelle meiner eigenen. Dabei wird keine Spielgeschwindigkeit als ausgewählt angezeigt und es erscheinen keine Schadenszahlen. Es wird daher empfohlen, beide Einstellungen zu deaktivieren.
+ [*] Beim Starten eines neuen Spiels oder beim Laden eines Spielstands von vor dieser Änderung wird keine ausgewählte Spielgeschwindigkeit angezeigt; wählen Sie einfach eine beliebige Spielgeschwindigkeit aus.
+ [*] Die Einstellungen „Spielgeschwindigkeit bei Kriegsbeginn“ und „Spielgeschwindigkeit, wenn eine ausgewählte Einheit in einen Kampf eintritt“ verwenden die Vanilla-Spielgeschwindigkeiten anstelle meiner eigenen. Dabei wird keine Spielgeschwindigkeit als ausgewählt angezeigt und es erscheinen keine Schadenszahlen. Es wird daher empfohlen, beide Einstellungen zu deaktivieren.
 [/list]
 
