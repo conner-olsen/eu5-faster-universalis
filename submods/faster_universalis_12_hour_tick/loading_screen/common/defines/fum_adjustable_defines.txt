@@ -12,11 +12,12 @@ NUnit = {
 NCombat = {
 	RETREAT_STRENGTH_DAMAGE = 0.02 # 0.1
 	MINIMUM_COMBAT_DURATION = 5 # 1 # 24
+	BOMBARD_HOURS = 1 # 5
 	COMBAT_DAMAGE_MULT = 0.04 # 0.01
 	COMBAT_HOURLY_MORALE_TICK = 0.05 # 0.01 # Not 100% sure what this is yet, but this matters a lot for loss ratio
 	INITIATIVE_BASE_CHANCE = 0.45 # 0.1	# base chance each tick
 	INITIATIVE_CHANCE_EACH = 0.09 # 0.02 # Chance to engage per point of initiative
+	INITIATIVE_CHANCE_HOURS = 0.04 # 0.01 # Chance to engage per hour passed (adds with INITIATIVE_CHANCE_EACH) # FUM-Note: Barely matters
 	COMBAT_SPEED_SCALE = 0.22 # 0.05
 	BASE_MORALE_DAMAGE = 4.54 # 1.0
 }
-
