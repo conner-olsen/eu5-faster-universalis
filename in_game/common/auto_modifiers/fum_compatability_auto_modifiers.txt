@@ -16,4 +16,6 @@
 INJECT:country_base_values = {
 	country_child_education = 1.57
 	global_construction_speed = 1.57
+	regiment_recruit_speed = 1
+	ship_build_speed = 1.1
 }
