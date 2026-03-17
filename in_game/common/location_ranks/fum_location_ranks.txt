@@ -1,0 +1,4 @@
+﻿#noinspection ALL
+# Correct Upgrade Time
+INJECT:city = { build_time = 365 }
+INJECT:town = { build_time = 183 }
