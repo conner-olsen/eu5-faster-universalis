@@ -17,3 +17,5 @@
  CONSTRUCTION_DURATION_DAYS: "[Multiply_int32(Construction.GetDurationInDays, '(int32)2')]$DAYS_SHORT_LOC$"
  CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE: "[Multiply_int32(Construction.GetDurationInDays, '(int32)2')]$DAYS_SHORT_LOC$ #L (+[Subtract_int32(Construction.CountAllInLocation, '(int32)1')])#!"
  SPECIFIC_CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE: "[Multiply_int32(Construction.GetDurationInDaysIncludingQueue, '(int32)2')]$DAYS_SHORT_LOC$ #L (+[Subtract_int32(Construction.CountAllInLocation, '(int32)1')])#!"
+ FOUND_city_effect: "Предоставление прав на превращение [LOCATION.GetName] в город будет стоить $COST$ и займет [Multiply_int32('(int32)$TIME$', '(int32)2')|Y] дней."
+ FOUND_town_effect: "Основание города в [LOCATION.GetName] будет стоить $COST$ и займёт [Multiply_int32('(int32)$TIME$', '(int32)2')|Y] дней."

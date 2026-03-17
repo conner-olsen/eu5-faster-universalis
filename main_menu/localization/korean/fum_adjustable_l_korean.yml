@@ -17,3 +17,5 @@
  CONSTRUCTION_DURATION_DAYS: "[Multiply_int32(Construction.GetDurationInDays, '(int32)2')]$DAYS_SHORT_LOC$"
  CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE: "[Multiply_int32(Construction.GetDurationInDays, '(int32)2')]$DAYS_SHORT_LOC$ #L (+[Subtract_int32(Construction.CountAllInLocation, '(int32)1')])#!"
  SPECIFIC_CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE: "[Multiply_int32(Construction.GetDurationInDaysIncludingQueue, '(int32)2')]$DAYS_SHORT_LOC$ #L (+[Subtract_int32(Construction.CountAllInLocation, '(int32)1')])#!"
+ FOUND_city_effect: "[LOCATION.GetName]에 도시권을 부여하는 데 $COST$의 비용과 [Multiply_int32('(int32)$TIME$', '(int32)2')|Y]일의 시간이 소요됩니다."
+ FOUND_town_effect: "[LOCATION.GetName]에 도시를 건설하는 데 $COST$의 비용이 들며 [Multiply_int32('(int32)$TIME$', '(int32)2')|Y]일이 소요됩니다."
