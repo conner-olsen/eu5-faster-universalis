@@ -12,36 +12,6 @@ on_game_start = {
 fum_game_setup = {
 	effect = {
 		set_global_variable = is_fum_game
-		if = {
-			limit = {
-				has_game_rule = fum_remove_sop_countries_setting
-			}
-			fum_remove_sop_effect = yes
-		}
-		if = {
-			limit = {
-				has_game_rule = fum_europe_europe_centric_setting
-			}
-			fum_europe_centric_effect = yes
-		}
-		if = {
-			limit = {
-				has_game_rule = fum_asia_centric_setting
-			}
-			fum_asia_centric_effect = yes
-		}
-		if = {
-			limit = {
-				has_game_rule = fum_remove_low_importance_setting
-			}
-			fum_remove_low_importance_nations_effect = yes
-		}
-		if = {
-			limit = {
-				has_game_rule = fum_remove_unowned_pops_setting
-			}
-			fum_remove_unowned_pops = yes
-		}
 	}
 }
 

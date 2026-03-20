@@ -1,0 +1,26 @@
+﻿l_english:
+ # Mod
+ fum_name: "Faster Universalis Dev"
+ fum_desc: "Improves EU5 performance without any effect on gameplay or graphical quality."
+
+ # Tabs
+ fum__performance_name: "Performance"
+
+ # Groups
+ fum__general_name: "General"
+ fum__general_desc: "Will not apply until you press the 'Apply' button."
+
+ # Performance Tab - General
+ fum__nation_removal_name: ""
+ fum__nation_removal_desc: ""
+ fum__nation_removal_option_1_name: "No Removal"
+ fum__nation_removal_option_1_desc: "All nations will be present in the game."
+ fum__nation_removal_option_2_name: "Remove Low Impact Nations"
+ fum__nation_removal_option_2_desc: "Removes all nations in these subcontinents: North America, South America, Pacific Islands"
+ fum__nation_removal_option_3_name: "Europe Centric"
+ fum__nation_removal_option_3_desc: "Removes all nations in these subcontinents: East Asia, South Asia, South East Asia, Australasia, Pacific Islands, South America"
+ fum__nation_removal_option_4_name: "Asia Centric"
+ fum__nation_removal_option_4_desc: "Removes all nations in these subcontinents: Western Europe, Eastern Europe, North Africa, West Africa, Central Africa, North America, South America"
+ fum__apply_performance_settings_name: "Apply Performance Settings"
+ fum__apply_performance_settings_desc: ""
+ fum__apply_performance_settings_text: "Apply"

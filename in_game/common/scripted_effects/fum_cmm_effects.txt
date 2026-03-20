@@ -1,0 +1,62 @@
+﻿# Root scope: country.
+fum_register_mod = {
+	cmm_register_global_dropdown_setting = {
+		mod_id = fum
+		setting_id = nation_removal
+		tab_id = performance
+		group_id = general
+		default_index = 1
+		option_count = 4
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__nation_removal
+		index = 2
+		alias = fum_remove_low_importance_setting
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__nation_removal
+		index = 3
+		alias = fum_europe_europe_centric_setting
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__nation_removal
+		index = 4
+		alias = fum_asia_centric_setting
+	}
+
+	cmm_register_global_button_setting = {
+		mod_id = fum
+		setting_id = apply_performance_settings
+		tab_id = performance
+		group_id = general
+	}
+}
+
+# Callback handler for cmf_on_callback.
+# var:cmf_callback is the flag of the setting, alert, or action bar element that was interacted with.
+# Scope: country
+fum_handle_callback = {
+	switch = {
+		trigger = var:cmf_callback
+		flag:fum__nation_removal = {
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__nation_removal
+				index = 2
+				alias = fum_remove_low_importance_setting
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__nation_removal
+				index = 3
+				alias = fum_europe_europe_centric_setting
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__nation_removal
+				index = 4
+				alias = fum_asia_centric_setting
+			}
+		}
+		flag:fum__apply_performance_settings = {
+			fum_apply_performance_settings = yes
+		}
+	}
+}
