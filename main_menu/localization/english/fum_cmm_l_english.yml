@@ -7,10 +7,12 @@
  fum__performance_name: "Performance"
 
  # Groups
- fum__general_name: "General"
- fum__general_desc: "Will not apply until you press the 'Apply' button."
+ fum__removals_name: "Removals"
+ fum__removals_desc: "Will not apply until you press the 'Apply' button."
 
- # Performance Tab - General
+ # Performance Tab - Removals
+ fum__sop_removal_name: "Remove Pop-Based Countries"
+ fum__sop_removal_desc: "Removes all SOPs. "
  fum__nation_removal_name: "Nation Removal"
  fum__nation_removal_desc: "Removes nations based on the specified setting, hover over the dropdown for details."
  fum__nation_removal_option_1_name: "No Removal"
@@ -21,6 +23,20 @@
  fum__nation_removal_option_3_desc: "Removes all nations in these subcontinents: East Asia, South Asia, South East Asia, Australasia, Pacific Islands, South America"
  fum__nation_removal_option_4_name: "Asia Centric"
  fum__nation_removal_option_4_desc: "Removes all nations in these subcontinents: Western Europe, Eastern Europe, North Africa, West Africa, Central Africa, North America, South America"
+ fum__block_recolonization_name: "Block Recolonization"
+ fum__block_recolonization_desc: "Will delete the pops in and prevent recolonization of all disabled subcontinents when used with Europe Centric, or Asia Centric settings. Will not block colonization or remove pops of never colonized subcontinents such as South America."
+ fum__pop_removal_name: "Remove Unowned Pops"
+ fum__pop_removal_desc: "Delete pops from locations without owners (including pop-based countries). Better performance, but will make colonization faster, as there will be no local populations. This stacks with nation removal."
  fum__apply_performance_settings_name: "Apply Performance Settings"
- fum__apply_performance_settings_desc: ""
+ fum__apply_performance_settings_desc: "Will apply all the selecting settings."
  fum__apply_performance_settings_text: "Apply"
+
+ # Flag keys (self-referencing to suppress engine warnings)
+ fum: "fum"
+ fum__performance: "fum__performance"
+ fum__removals: "fum__removals"
+ fum__sop_removal: "fum__sop_removal"
+ fum__nation_removal: "fum__nation_removal"
+ fum__block_recolonization: "fum__block_recolonization"
+ fum__pop_removal: "fum__pop_removal"
+ fum__apply_performance_settings: "fum__apply_performance_settings"

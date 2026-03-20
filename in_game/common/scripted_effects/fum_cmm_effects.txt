@@ -1,10 +1,22 @@
 ﻿# Root scope: country.
 fum_register_mod = {
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = sop_removal
+		tab_id = performance
+		group_id = removals
+		default_value = 0
+	}
+	cmm_sync_bool_alias = {
+		setting = fum__sop_removal
+		alias = fum_sop_removal_setting
+	}
+
 	cmm_register_global_dropdown_setting = {
 		mod_id = fum
 		setting_id = nation_removal
 		tab_id = performance
-		group_id = general
+		group_id = removals
 		default_index = 1
 		option_count = 4
 	}
@@ -24,11 +36,35 @@ fum_register_mod = {
 		alias = fum_asia_centric_setting
 	}
 
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = block_recolonization
+		tab_id = performance
+		group_id = removals
+		default_value = 0
+	}
+	cmm_sync_bool_alias = {
+		setting = fum__block_recolonization
+		alias = fum_block_recolonization_setting
+	}
+
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = pop_removal
+		tab_id = performance
+		group_id = removals
+		default_value = 0
+	}
+	cmm_sync_bool_alias = {
+		setting = fum__pop_removal
+		alias = fum_pop_removal_setting
+	}
+
 	cmm_register_global_button_setting = {
 		mod_id = fum
 		setting_id = apply_performance_settings
 		tab_id = performance
-		group_id = general
+		group_id = removals
 	}
 }
 

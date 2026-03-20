@@ -12,7 +12,7 @@
 
 fum_europe_centric_effect = {
 	if = {
-		limit = { has_game_rule = fum_recolonization_blocked_setting }
+		limit = { has_global_variable = fum_block_recolonization_setting }
 		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = yes }
 		sub_continent:south_asia = { fum_remove_and_disable_sub_continent = yes }
 		sub_continent:south_east_asia = { fum_remove_and_disable_sub_continent = yes }
@@ -30,7 +30,7 @@ fum_europe_centric_effect = {
 
 fum_asia_centric_effect = {
 	if = {
-		limit = { has_game_rule = fum_recolonization_blocked_setting }
+		limit = { has_global_variable = fum_block_recolonization_setting }
 		sub_continent:western_europe = { fum_remove_and_disable_sub_continent = yes }
 		sub_continent:eastern_europe = { fum_remove_and_disable_sub_continent = yes }
 		sub_continent:north_africa = { fum_remove_and_disable_sub_continent = yes }
@@ -134,7 +134,7 @@ fum_remove_unowned_pops = {
 fum_apply_performance_settings = {
 	if = {
 		limit = {
-			"global_variable_map(cmm|flag:fum__sop_removal)" = 1
+			has_global_variable = fum_sop_removal_setting
 		}
 		fum_remove_sop_effect = yes
 	}
@@ -158,7 +158,7 @@ fum_apply_performance_settings = {
 	}
 	if = {
 		limit = {
-			has_game_rule = fum_remove_unowned_pops_setting
+			has_global_variable = fum_pop_removal_setting
 		}
 		fum_remove_unowned_pops = yes
 	}
