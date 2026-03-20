@@ -1,6 +1,6 @@
 ﻿l_english:
  # Mod
- fum_name: "Faster Universalis Dev"
+ fum_name: "Faster Universalis"
  fum_desc: "Improves EU5 performance without any effect on gameplay or graphical quality."
 
  # Tabs
@@ -11,8 +11,8 @@
  fum__general_desc: "Will not apply until you press the 'Apply' button."
 
  # Performance Tab - General
- fum__nation_removal_name: ""
- fum__nation_removal_desc: ""
+ fum__nation_removal_name: "Nation Removal"
+ fum__nation_removal_desc: "Removes nations based on the specified setting, hover over the dropdown for details."
  fum__nation_removal_option_1_name: "No Removal"
  fum__nation_removal_option_1_desc: "All nations will be present in the game."
  fum__nation_removal_option_2_name: "Remove Low Impact Nations"
