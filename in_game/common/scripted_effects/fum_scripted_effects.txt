@@ -133,33 +133,23 @@ fum_remove_unowned_pops = {
 
 fum_apply_performance_settings = {
 	if = {
-		limit = {
-			has_global_variable = fum_sop_removal_setting
-		}
+		limit = { has_global_variable = fum__sop_removal_setting }
 		fum_remove_sop_effect = yes
 	}
 	if = {
-		limit = {
-			has_global_variable = fum_europe_europe_centric_setting
-		}
+		limit = { has_global_variable = fum__europe_europe_centric_setting }
 		fum_europe_centric_effect = yes
 	}
 	if = {
-		limit = {
-			has_global_variable = fum_asia_centric_setting
-		}
+		limit = { has_global_variable = fum__asia_centric_setting }
 		fum_asia_centric_effect = yes
 	}
 	if = {
-		limit = {
-			has_global_variable = fum_remove_low_importance_setting
-		}
+		limit = { has_global_variable = fum__remove_low_importance_setting }
 		fum_remove_low_importance_nations_effect = yes
 	}
 	if = {
-		limit = {
-			has_global_variable = fum_pop_removal_setting
-		}
+		limit = { has_global_variable = fum__pop_removal_setting }
 		fum_remove_unowned_pops = yes
 	}
 }

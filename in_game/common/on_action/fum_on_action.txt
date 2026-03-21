@@ -20,8 +20,9 @@ fum_clear_situations = {
 		is_ai = no
 		is_situation_active = situation:great_pestilence
 		or = {
-			has_game_rule = fum_europe_europe_centric_setting
-			has_game_rule = fum_asia_centric_setting
+			has_global_variable = fum__remove_low_importance_setting
+			has_global_variable = fum__europe_europe_centric_setting
+			has_global_variable = fum__asia_centric_setting
 		}
 	}
 	effect = {
