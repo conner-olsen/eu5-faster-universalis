@@ -14,7 +14,7 @@
  fum__nation_removal_desc: "Removes nations based on the specified setting, hover over the dropdown for details."
  fum__nation_removal_option_1_name: "No Removal"
  fum__nation_removal_option_1_desc: "All nations will be present in the game."
- fum__nation_removal_option_2_name: "Remove Low Impact Nations"
+ fum__nation_removal_option_2_name: "Low Impact Nations"
  fum__nation_removal_option_2_desc: "Removes all nations in these subcontinents: North America, South America, Pacific Islands"
  fum__nation_removal_option_3_name: "Europe Centric"
  fum__nation_removal_option_3_desc: "Removes all nations in these subcontinents: East Asia, South Asia, South East Asia, Australasia, Pacific Islands, South America"
