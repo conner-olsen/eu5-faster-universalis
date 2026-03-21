@@ -25,12 +25,12 @@ fum_register_cmf_mod = {
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__nation_removal
 		index = 2
-		alias = fum_remove__low_importance_setting2
+		alias = fum__remove_low_importance_setting
 	}
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__nation_removal
 		index = 3
-		alias = fum_europe__europe_centric_setting
+		alias = fum__europe_centric_setting
 	}
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__nation_removal
@@ -148,12 +148,12 @@ fum_handle_cmf_callback = {
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
 				index = 2
-				alias = fum_remove__low_importance_setting2
+				alias = fum__remove_low_importance_setting
 			}
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
 				index = 3
-				alias = fum_europe__europe_centric_setting
+				alias = fum__europe_centric_setting
 			}
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
