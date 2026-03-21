@@ -49,12 +49,21 @@
  fum__battle_length_option_4_name: "2x Slower"
  fum__battle_length_option_4_desc: "Battles will last twice as long as the default setting."
 
+ # other Tab
+ fum__other_name: "Other"
+ ## general Group
+ fum__general_name: "General"
+ fum__enable_save_game_compatability_name: "Enable Save Game Compatibility"
+ fum__enable_save_game_compatability_desc: "When enabled, the mod will make corrections to be compatible with existing save games. The mod will attempt to set this automatically. However, if you started the game with Faster Universalis, make sure it is disabled; if you loaded an existing game, make sure it's enabled."
+
  # Optional: self-referencing flag keys to suppress IDE warnings (safe to remove if you want)
  fum: "fum"
  fum__performance: "fum__performance"
  fum__qol: "fum__qol"
+ fum__other: "fum__other"
  fum__removals: "fum__removals"
  fum__speeds: "fum__speeds"
+ fum__general: "fum__general"
  fum__sop_removal: "fum__sop_removal"
  fum__nation_removal: "fum__nation_removal"
  fum__block_recolonization: "fum__block_recolonization"
@@ -63,3 +72,4 @@
  fum__army_movement_speed: "fum__army_movement_speed"
  fum__navy_movement_speed: "fum__navy_movement_speed"
  fum__battle_length: "fum__battle_length"
+ fum__enable_save_game_compatability: "fum__enable_save_game_compatability"

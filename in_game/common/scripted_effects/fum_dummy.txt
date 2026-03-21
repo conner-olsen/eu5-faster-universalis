@@ -1,4 +1,4 @@
 ﻿# This is to get rid of false errors
 fum_dummy = {
-	set_variable = is_fu_game
+	set_variable = is_fum_game
 }
