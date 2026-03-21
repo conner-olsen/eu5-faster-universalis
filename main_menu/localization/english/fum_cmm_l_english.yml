@@ -5,10 +5,12 @@
 
  # Tabs
  fum__performance_name: "Performance"
+ fum__qol_name: "QoL"
 
  # Groups
  fum__removals_name: "Removals"
  fum__removals_desc: "Will not apply until you press the 'Apply' button."
+ fum__speeds_name: "Speeds"
 
  # Performance Tab - Removals
  fum__sop_removal_name: "Remove Pop-Based Countries"
@@ -31,12 +33,35 @@
  fum__apply_performance_settings_desc: "Will apply all the selecting settings."
  fum__apply_performance_settings_text: "Apply"
 
- # Flag keys (self-referencing to suppress engine warnings)
+ # QoL Tab - Speeds
+ fum__army_movement_speed_name: "Army Movement Speed"
+ fum__army_movement_speed_desc: "Changes army movement speed. 0% is vanilla. "
+ fum__army_movement_speed_format: "[CMMV('fum__army_movement_speed')]%"
+ fum__navy_movement_speed_name: "Navy Movement Speed"
+ fum__navy_movement_speed_desc: "Changes navy movement speed. 0% is vanilla. "
+ fum__navy_movement_speed_format: "[CMMV('fum__navy_movement_speed')]%"
+ fum__battle_length_name: "Battle Length"
+ fum__battle_length_desc: "Determines how long battles will last. "
+ fum__battle_length_option_1_name: "Vanilla"
+ fum__battle_length_option_1_desc: "Battles will last the same amount of time as vanilla."
+ fum__battle_length_option_2_name: "2x Faster"
+ fum__battle_length_option_2_desc: "Battles will last half the time as the default setting."
+ fum__battle_length_option_3_name: "Default"
+ fum__battle_length_option_3_desc: "The mods default recommended setting. Battles will last 3.91x longer, but losses/outcomes will be identical to vanilla."
+ fum__battle_length_option_4_name: "2x Slower"
+ fum__battle_length_option_4_desc: "Battles will last twice as long as the default setting."
+
+ # Optional: self-referencing flag keys to suppress IDE warnings (safe to remove if you want)
  fum: "fum"
  fum__performance: "fum__performance"
+ fum__qol: "fum__qol"
  fum__removals: "fum__removals"
+ fum__speeds: "fum__speeds"
  fum__sop_removal: "fum__sop_removal"
  fum__nation_removal: "fum__nation_removal"
  fum__block_recolonization: "fum__block_recolonization"
  fum__pop_removal: "fum__pop_removal"
  fum__apply_performance_settings: "fum__apply_performance_settings"
+ fum__army_movement_speed: "fum__army_movement_speed"
+ fum__navy_movement_speed: "fum__navy_movement_speed"
+ fum__battle_length: "fum__battle_length"

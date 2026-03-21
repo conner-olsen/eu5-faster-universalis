@@ -66,6 +66,52 @@ fum_register_mod = {
 		tab_id = performance
 		group_id = removals
 	}
+
+	cmm_register_global_slider_setting = {
+		mod_id = fum
+		setting_id = army_movement_speed
+		tab_id = qol
+		group_id = speeds
+		default_value = 0
+		min_value = -100
+		max_value = 100
+		step_value = 1
+	}
+
+	cmm_register_global_slider_setting = {
+		mod_id = fum
+		setting_id = navy_movement_speed
+		tab_id = qol
+		group_id = speeds
+		default_value = 0
+		min_value = -100
+		max_value = 100
+		step_value = 1
+	}
+
+	cmm_register_global_dropdown_setting = {
+		mod_id = fum
+		setting_id = battle_length
+		tab_id = qol
+		group_id = speeds
+		default_index = 3
+		option_count = 4
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__battle_length
+		index = 1
+		alias = fum__battle_length_vanilla
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__battle_length
+		index = 2
+		alias = fum__half_battle_length
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__battle_length
+		index = 4
+		alias = fum__double_battle_length
+	}
 }
 
 # Callback handler for cmf_on_callback.
