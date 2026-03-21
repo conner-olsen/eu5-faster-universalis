@@ -3,16 +3,11 @@
  fum_name: "Faster Universalis"
  fum_desc: "Improves EU5 performance without any effect on gameplay or graphical quality."
 
- # Tabs
+ # performance Tab
  fum__performance_name: "Performance"
- fum__qol_name: "QoL"
-
- # Groups
+ ## removals Group
  fum__removals_name: "Removals"
  fum__removals_desc: "Will not apply until you press the 'Apply' button."
- fum__speeds_name: "Speeds"
-
- # Performance Tab - Removals
  fum__sop_removal_name: "Remove Pop-Based Countries"
  fum__sop_removal_desc: "Removes all SOPs. "
  fum__nation_removal_name: "Nation Removal"
@@ -33,7 +28,10 @@
  fum__apply_performance_settings_desc: "Will apply all the selecting settings."
  fum__apply_performance_settings_text: "Apply"
 
- # QoL Tab - Speeds
+ # qol Tab
+ fum__qol_name: "QoL"
+ ## speeds Group
+ fum__speeds_name: "Speeds"
  fum__army_movement_speed_name: "Army Movement Speed"
  fum__army_movement_speed_desc: "Changes army movement speed. 0% is vanilla. "
  fum__army_movement_speed_format: "[CMMV('fum__army_movement_speed')]%"

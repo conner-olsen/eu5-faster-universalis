@@ -1,5 +1,7 @@
 ﻿# Root scope: country.
-fum_register_mod = {
+fum_register_cmf_mod = {
+	# performance Tab
+	## removals Group
 	cmm_register_global_bool_setting = {
 		mod_id = fum
 		setting_id = sop_removal
@@ -67,6 +69,8 @@ fum_register_mod = {
 		group_id = removals
 	}
 
+	# qol Tab
+	## speeds Group
 	cmm_register_global_slider_setting = {
 		mod_id = fum
 		setting_id = army_movement_speed
@@ -129,19 +133,27 @@ fum_register_mod = {
 # Callback handler for cmf_on_callback.
 # var:cmf_callback is the flag of the setting, alert, or action bar element that was interacted with.
 # Scope: country
-fum_handle_callback = {
+fum_handle_cmf_callback = {
 	switch = {
 		trigger = var:cmf_callback
+		# performance Tab
+		## removals Group
+		flag:fum__sop_removal = {
+			cmm_sync_bool_alias = {
+				setting = fum__sop_removal
+				alias = fum__sop_removal_setting
+			}
+		}
 		flag:fum__nation_removal = {
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
 				index = 2
-				alias = fum__remove_low_importance_setting
+				alias = fum_remove__low_importance_setting2
 			}
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
 				index = 3
-				alias = fum__europe_europe_centric_setting
+				alias = fum_europe__europe_centric_setting
 			}
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
@@ -149,8 +161,55 @@ fum_handle_callback = {
 				alias = fum__asia_centric_setting
 			}
 		}
+		flag:fum__block_recolonization = {
+			cmm_sync_bool_alias = {
+				setting = fum__block_recolonization
+				alias = fum_block_recolonization_setting
+			}
+		}
+		flag:fum__pop_removal = {
+			cmm_sync_bool_alias = {
+				setting = fum__pop_removal
+				alias = fum__pop_removal_setting
+			}
+		}
 		flag:fum__apply_performance_settings = {
 			fum_apply_performance_settings = yes
+		}
+		# qol Tab
+		## speeds Group
+		flag:fum__army_movement_speed = {
+			cmm_sync_setting_alias = {
+				setting = fum__army_movement_speed
+				alias = fum__army_movement_speed
+			}
+		}
+		flag:fum__navy_movement_speed = {
+			cmm_sync_setting_alias = {
+				setting = fum__navy_movement_speed
+				alias = fum__navy_movement_speed
+			}
+		}
+		flag:fum__battle_length = {
+			cmm_sync_setting_alias = {
+				setting = fum__battle_length
+				alias = fum__battle_length
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__battle_length
+				index = 1
+				alias = fum__battle_length_vanilla
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__battle_length
+				index = 2
+				alias = fum__half_battle_length
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__battle_length
+				index = 4
+				alias = fum__double_battle_length
+			}
 		}
 	}
 }
