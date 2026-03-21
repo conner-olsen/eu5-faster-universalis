@@ -3,11 +3,10 @@
  fum_name: "Faster Universalis"
  fum_desc: "Improves EU5 performance without any effect on gameplay or graphical quality."
 
- # performance Tab
+ # Performance (performance) Tab
  fum__performance_name: "Performance"
- ## removals Group
- fum__removals_name: "Removals"
- fum__removals_desc: "Will not apply until you press the 'Apply' button."
+ ## Removals (removals) Group
+ fum__performance__removals_name: "Removals"
  fum__sop_removal_name: "Remove Pop-Based Countries"
  fum__sop_removal_desc: "Removes all SOPs. "
  fum__nation_removal_name: "Nation Removal"
@@ -28,10 +27,10 @@
  fum__apply_performance_settings_desc: "Will apply all the selecting settings."
  fum__apply_performance_settings_text: "Apply"
 
- # qol Tab
+ # QoL (qol) Tab
  fum__qol_name: "QoL"
- ## speeds Group
- fum__speeds_name: "Speeds"
+ ## Speeds (speeds) Group
+ fum__qol__speeds_name: "Speeds"
  fum__army_movement_speed_name: "Army Movement Speed"
  fum__army_movement_speed_desc: "Changes army movement speed. 0% is vanilla. "
  fum__army_movement_speed_format: "[CMMV('fum__army_movement_speed')]%"
@@ -49,10 +48,10 @@
  fum__battle_length_option_4_name: "2x Slower"
  fum__battle_length_option_4_desc: "Battles will last twice as long as the default setting."
 
- # other Tab
+ # Other (other) Tab
  fum__other_name: "Other"
- ## general Group
- fum__general_name: "General"
+ ## General (general) Group
+ fum__other__general_name: "General"
  fum__enable_save_game_compatability_name: "Enable Save Game Compatibility"
  fum__enable_save_game_compatability_desc: "When enabled, the mod will make corrections to be compatible with existing save games. The mod will attempt to set this automatically. However, if you started the game with Faster Universalis, make sure it is disabled; if you loaded an existing game, make sure it's enabled."
 
@@ -61,9 +60,9 @@
  fum__performance: "fum__performance"
  fum__qol: "fum__qol"
  fum__other: "fum__other"
- fum__removals: "fum__removals"
- fum__speeds: "fum__speeds"
- fum__general: "fum__general"
+ fum__performance__removals: "fum__performance__removals"
+ fum__qol__speeds: "fum__qol__speeds"
+ fum__other__general: "fum__other__general"
  fum__sop_removal: "fum__sop_removal"
  fum__nation_removal: "fum__nation_removal"
  fum__block_recolonization: "fum__block_recolonization"

@@ -1,7 +1,7 @@
 ﻿# Root scope: country.
 fum_register_cmf_mod = {
-	# performance Tab
-	## removals Group
+	# Performance (performance) Tab
+	## Removals (removals) Group
 	cmm_register_global_bool_setting = {
 		mod_id = fum
 		setting_id = sop_removal
@@ -69,8 +69,8 @@ fum_register_cmf_mod = {
 		group_id = removals
 	}
 
-	# qol Tab
-	## speeds Group
+	# QoL (qol) Tab
+	## Speeds (speeds) Group
 	cmm_register_global_slider_setting = {
 		mod_id = fum
 		setting_id = army_movement_speed
@@ -129,8 +129,8 @@ fum_register_cmf_mod = {
 		alias = fum__double_battle_length
 	}
 
-	# other Tab
-	## general Group
+	# Other (other) Tab
+	## General (general) Group
 	cmm_register_global_bool_setting = {
 		mod_id = fum
 		setting_id = enable_save_game_compatability
@@ -146,8 +146,8 @@ fum_register_cmf_mod = {
 fum_handle_cmf_callback = {
 	switch = {
 		trigger = var:cmf_callback
-		# performance Tab
-		## removals Group
+		# Performance (performance) Tab
+		## Removals (removals) Group
 		flag:fum__sop_removal = {
 			cmm_sync_bool_alias = {
 				setting = fum__sop_removal
@@ -186,8 +186,8 @@ fum_handle_cmf_callback = {
 		flag:fum__apply_performance_settings = {
 			fum_apply_performance_settings = yes
 		}
-		# qol Tab
-		## speeds Group
+		# QoL (qol) Tab
+		## Speeds (speeds) Group
 		flag:fum__army_movement_speed = {
 			cmm_sync_setting_alias = {
 				setting = fum__army_movement_speed
