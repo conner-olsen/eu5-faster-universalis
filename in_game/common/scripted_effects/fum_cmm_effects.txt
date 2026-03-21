@@ -77,6 +77,10 @@ fum_register_mod = {
 		max_value = 100
 		step_value = 1
 	}
+	cmm_sync_setting_alias = {
+		setting = fum__army_movement_speed
+		alias = fum__army_movement_speed
+	}
 
 	cmm_register_global_slider_setting = {
 		mod_id = fum
@@ -90,7 +94,7 @@ fum_register_mod = {
 	}
 	cmm_sync_setting_alias = {
 		setting = fum__navy_movement_speed
-		alias = fum__navy_movement_speed_setting
+		alias = fum__navy_movement_speed
 	}
 
 	cmm_register_global_dropdown_setting = {
@@ -103,7 +107,7 @@ fum_register_mod = {
 	}
 	cmm_sync_setting_alias = {
 		setting = fum__battle_length
-		alias = fum__battle_length_setting
+		alias = fum__battle_length
 	}
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__battle_length
