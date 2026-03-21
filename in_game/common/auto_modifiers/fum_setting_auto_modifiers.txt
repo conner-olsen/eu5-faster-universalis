@@ -45,7 +45,16 @@ fum_double_battle_length_adjustment = {
 	navy_initiative = -0.5
 }
 
-INJECT:country_base_values = {
-	army_movement_speed = "global_variable_map(cmm|flag:fum__army_movement_speed)"
-	navy_movement_speed = "global_variable_map(cmm|flag:fum__navy_movement_speed)"
+fum_army_speed_adjustment = {
+	requires_real = no
+	hide_effects = yes
+	army_movement_speed = 0.01
+	scales_with = fum_army_speed_multiplier
+}
+
+fum_navy_speed_adjustment = {
+	requires_real = no
+	hide_effects = yes
+	navy_movement_speed = 0.01
+	scales_with = fum_navy_speed_multiplier
 }

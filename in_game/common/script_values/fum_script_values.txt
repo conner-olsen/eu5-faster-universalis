@@ -1,0 +1,7 @@
+﻿fum_army_speed_multiplier = {
+	value = "global_variable_map(cmm|flag:fum__army_movement_speed)"
+}
+
+fum_navy_speed_multiplier = {
+	value = "global_variable_map(cmm|flag:fum__navy_movement_speed)"
+}

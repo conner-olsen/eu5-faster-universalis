@@ -9,7 +9,7 @@ fum_register_mod = {
 	}
 	cmm_sync_bool_alias = {
 		setting = fum__sop_removal
-		alias = fum_sop_removal_setting
+		alias = fum__sop_removal_setting
 	}
 
 	cmm_register_global_dropdown_setting = {
@@ -23,17 +23,17 @@ fum_register_mod = {
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__nation_removal
 		index = 2
-		alias = fum_remove_low_importance_setting
+		alias = fum_remove__low_importance_setting2
 	}
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__nation_removal
 		index = 3
-		alias = fum_europe_europe_centric_setting
+		alias = fum_europe__europe_centric_setting
 	}
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__nation_removal
 		index = 4
-		alias = fum_asia_centric_setting
+		alias = fum__asia_centric_setting
 	}
 
 	cmm_register_global_bool_setting = {
@@ -57,7 +57,7 @@ fum_register_mod = {
 	}
 	cmm_sync_bool_alias = {
 		setting = fum__pop_removal
-		alias = fum_pop_removal_setting
+		alias = fum__pop_removal_setting
 	}
 
 	cmm_register_global_button_setting = {
@@ -88,6 +88,10 @@ fum_register_mod = {
 		max_value = 100
 		step_value = 1
 	}
+	cmm_sync_setting_alias = {
+		setting = fum__navy_movement_speed
+		alias = fum__navy_movement_speed_setting
+	}
 
 	cmm_register_global_dropdown_setting = {
 		mod_id = fum
@@ -96,6 +100,10 @@ fum_register_mod = {
 		group_id = speeds
 		default_index = 3
 		option_count = 4
+	}
+	cmm_sync_setting_alias = {
+		setting = fum__battle_length
+		alias = fum__battle_length_setting
 	}
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__battle_length
@@ -124,17 +132,17 @@ fum_handle_callback = {
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
 				index = 2
-				alias = fum_remove_low_importance_setting
+				alias = fum__remove_low_importance_setting
 			}
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
 				index = 3
-				alias = fum_europe_europe_centric_setting
+				alias = fum__europe_europe_centric_setting
 			}
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
 				index = 4
-				alias = fum_asia_centric_setting
+				alias = fum__asia_centric_setting
 			}
 		}
 		flag:fum__apply_performance_settings = {
