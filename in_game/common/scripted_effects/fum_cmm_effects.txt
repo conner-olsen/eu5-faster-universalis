@@ -138,6 +138,10 @@ fum_register_cmf_mod = {
 		group_id = general
 		default_value = 0
 	}
+	cmm_set_no_reset = {
+		mod_id = fum
+		setting_id = enable_save_game_compatability
+	}
 }
 
 # Callback handler for cmf_on_callback.
