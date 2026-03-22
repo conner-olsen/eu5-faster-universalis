@@ -1,0 +1,3 @@
+- Neues Mod-Menü, integriert in das Community Mod Framework
+- Neue Anpassungsoptionen mit Schaltern zur Steuerung der Armee-/Flottengeschwindigkeit sowie der Möglichkeit, Entfernungen mitten im Spiel vorzunehmen.
+- Verbesserte Spielstand-Kompatibilität mit einem manuellen Schalter für den Fall, dass die automatische Erkennung fehlschlägt.

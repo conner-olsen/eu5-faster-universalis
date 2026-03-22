@@ -1,0 +1,3 @@
+- Nowe menu modyfikacji zintegrowane z Community Mod Framework
+- Nowe opcje personalizacji z przełącznikami do kontrolowania prędkości armii/floty oraz możliwością usuwania elementów w trakcie rozgrywki
+- Poprawiona kompatybilność z zapisami gry z ręcznym przełącznikiem na wypadek, gdy automatyczne wykrywanie zawiedzie

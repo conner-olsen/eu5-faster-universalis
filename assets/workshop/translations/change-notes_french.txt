@@ -1,0 +1,3 @@
+- Nouveau menu de mod intégré au Community Mod Framework
+- Nouvelles options de personnalisation, avec des commutateurs pour contrôler la vitesse des armées/flottes, et la possibilité de lancer les suppressions en cours de partie.
+- Compatibilité des sauvegardes améliorée avec un basculement manuel lorsque la détection automatique échoue.

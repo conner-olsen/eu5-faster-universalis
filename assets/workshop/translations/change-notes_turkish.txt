@@ -1,0 +1,3 @@
+- Community Mod Framework ile entegre yeni mod menüsü
+- Ordu/donanma hızını kontrol etmek için ayarlar ve oyun ortasında kaldırma işlemlerini çalıştırma imkanı sunan yeni özelleştirme seçenekleri
+- Otomatik tespitin başarısız olduğu durumlar için manuel bir ayar düğmesi ile iyileştirilmiş kayıtlı oyun uyumluluğu

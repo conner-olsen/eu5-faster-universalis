@@ -1,0 +1,3 @@
+- Nuevo menú de mod integrado con el Community Mod Framework
+- Nuevas opciones de personalización, con interruptores para controlar la velocidad del ejército/armada y la capacidad de ejecutar eliminaciones a mitad de la partida.
+- Compatibilidad de partidas guardadas mejorada con un interruptor manual para cuando la detección automática falle.

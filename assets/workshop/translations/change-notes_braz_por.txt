@@ -1,0 +1,3 @@
+- Novo menu de mod integrado ao Community Mod Framework
+- Novas opções de personalização, com seletores para controlar a velocidade do exército/marinha e a capacidade de realizar remoções no meio da partida.
+- Compatibilidade de save game aprimorada com um seletor manual para casos em que a detecção automática falhar
