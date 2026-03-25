@@ -1,3 +1,6 @@
-- Nuevo menú de mod integrado con el Community Mod Framework
-- Nuevas opciones de personalización, con interruptores para controlar la velocidad del ejército/armada y la capacidad de ejecutar eliminaciones a mitad de la partida.
-- Compatibilidad de partidas guardadas mejorada con un interruptor manual para cuando la detección automática falle.
+[b]La v1.5.0 ya está disponible:[/b]
+- [b]Nuevo menú del mod[/b] integrado con el Community Mod Framework
+- [b]Nuevas opciones de personalización[/b] con selectores para controlar la velocidad del ejército/armada y la posibilidad de ejecutar eliminaciones a mitad de partida
+- [b]Compatibilidad de partidas guardadas mejorada[/b] con una mejor detección de archivos de guardado y un selector manual para cuando la detección automática falle
+
+Ten en cuenta que ahora deberás suscribirte al [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3692202776]Community Mod Framework[/url] y activar ambos mods.

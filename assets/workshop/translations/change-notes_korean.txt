@@ -1,3 +1,6 @@
-- Community Mod Framework와 통합된 새로운 모드 메뉴
-- 육군/해군 속도 조절 토글 및 게임 도중 제거 기능을 실행할 수 있는 새로운 사용자 지정 옵션
-- 자동 감지 실패 시를 위한 수동 토글이 추가되어 개선된 세이브 게임 호환성
+[b]v1.5.0 버전이 출시되었습니다:[/b]
+- Community Mod Framework와 통합된 [b]새로운 모드 메뉴[/b]
+- 육군/해군 속도 조절용 토글 및 게임 진행 중 제거 기능을 실행할 수 있는 [b]새로운 커스터마이징 옵션[/b]
+- 향상된 세이브 파일 감지 및 자동 감지 실패 시를 위한 수동 토글 기능을 통한 [b]세이브 파일 호환성 개선[/b]
+
+이제 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3692202776]Community Mod Framework[/url]를 구독하고 두 모드를 모두 활성화해야 합니다.

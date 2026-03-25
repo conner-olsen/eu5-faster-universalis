@@ -1,3 +1,6 @@
-- Nowe menu modyfikacji zintegrowane z Community Mod Framework
-- Nowe opcje personalizacji z przełącznikami do kontrolowania prędkości armii/floty oraz możliwością usuwania elementów w trakcie rozgrywki
-- Poprawiona kompatybilność z zapisami gry z ręcznym przełącznikiem na wypadek, gdy automatyczne wykrywanie zawiedzie
+[b]Wersja 1.5.0 została wydana:[/b]
+- [b]Nowe menu moda[/b] zintegrowane z Community Mod Framework
+- [b]Nowe opcje personalizacji[/b] z przełącznikami kontrolującymi prędkość armii/floty oraz możliwością usuwania elementów w trakcie rozgrywki
+- [b]Poprawiona kompatybilność zapisów gry[/b] dzięki lepszemu wykrywaniu plików zapisu oraz ręcznemu przełącznikowi na wypadek błędu automatycznego wykrywania
+
+Uwaga: od teraz wymagana jest subskrypcja [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3692202776]Community Mod Framework[/url] i aktywacja obu modów.

@@ -1,3 +1,6 @@
-- 接入了 Community Mod Framework 的全新模组菜单
-- 全新的自定义选项，包含陆军/海军速度控制开关，并支持在游戏中途执行移除操作。
-- 改进了存档兼容性，并为自动检测失败的情况增加了手动切换开关。
+[b]v1.5.0 现已发布：[/b]
+- [b]全新模组菜单[/b] 已整合至 Community Mod Framework
+- [b]全新自定义选项[/b] 包含陆军/海军速度控制开关，并支持在游戏进行中执行移除操作
+- [b]改进存档兼容性[/b] 优化了存档检测功能，并增加了自动检测失败时的手动切换开关
+
+注意：你现在需要订阅 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3692202776]Community Mod Framework[/url] 并同时启用这两个模组。
