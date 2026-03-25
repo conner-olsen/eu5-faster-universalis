@@ -1,8 +1,8 @@
-﻿# Revert to vanilla
-TRY_REPLACE:fum_save_game_compatability = {
-	requires_real = no
-	hide_effects = yes
-	potential_trigger = {
-		always = no
-	}
-}
+﻿# # Revert to vanilla
+# TRY_REPLACE:fum_save_game_compatability = {
+# 	requires_real = no
+# 	hide_effects = yes
+# 	potential_trigger = {
+# 		always = no
+# 	}
+# }
