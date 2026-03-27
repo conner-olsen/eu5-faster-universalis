@@ -82,7 +82,7 @@ fum_remove_location = {
 			fum_can_remove_location = yes
 		}
 		every_buildings_in_location = {
-			change_building_level = -10
+			change_building_level = -100
 		}
 		if = {
 			limit = {
@@ -102,7 +102,7 @@ fum_remove_location_and_pops = {
 			fum_can_remove_location = yes
 		}
 		every_buildings_in_location = {
-			change_building_level = -10
+			change_building_level = -100
 		}
 		if = {
 			limit = {
