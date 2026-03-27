@@ -1,15 +1,15 @@
-﻿fum_save_game_compatability = {
-	requires_real = no
-	hide_effects = yes
-	potential_trigger = {
-		AND = {
-			has_global_variable_map = cmm
-			"global_variable_map(cmm|flag:fum__enable_save_game_compatability)" = 1
-		}
-	}
-	# army_movement_speed = 13
-	navy_movement_speed = 13
-}
+﻿# fum_save_game_compatability = {
+# 	requires_real = no
+# 	hide_effects = yes
+# 	potential_trigger = {
+# 		AND = {
+# 			has_global_variable_map = cmm
+# 			"global_variable_map(cmm|flag:fum__enable_save_game_compatability)" = 1
+# 		}
+# 	}
+# 	army_movement_speed = 13
+# 	navy_movement_speed = 13
+# }
 
 INJECT:country_base_values = {
 	country_child_education = 1.57

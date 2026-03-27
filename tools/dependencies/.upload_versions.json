@@ -1,8 +1,8 @@
 {
   "entries": {
-    "main:release": "1.5.1",
-    "submod:fusm.daily.tick": "1.1.5",
-    "submod:fusm.halfday.tick": "1.1.6",
+    "main:release": "1.5.2",
+    "submod:fusm.daily.tick": "1.1.6",
+    "submod:fusm.halfday.tick": "1.1.7",
     "submod:fusm.hourly.tick": "1.1.4"
   },
   "version": 1

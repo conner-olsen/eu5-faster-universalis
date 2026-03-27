@@ -58,8 +58,8 @@
 # Its possible vanilla is only using half the ticks for movement,
 # then this could be a rounding error of 11.75%.
 NUnit = {
-	ARMY_MOVEMENT_SPEED = 1.69 # 0.13
-	NAVY_MOVEMENT_SPEED = 6.5 # 0.5
+	ARMY_MOVEMENT_SPEED = 3.055 # 0.13
+	NAVY_MOVEMENT_SPEED = 11.75 # 0.5
 	# LAND_MORALE = 3.0
 	# NAVAL_MORALE = 3.0
 }
