@@ -131,24 +131,12 @@ fum_register_cmf_mod = {
 
 	# Other (other) Tab
 	## General (general) Group
-	if = {
-		limit = { NOT = { has_global_variable = is_fum_game } }
-		cmm_register_global_bool_setting = {
-			mod_id = fum
-			setting_id = enable_save_game_compatability
-			tab_id = other
-			group_id = general
-			default_value = 1
-		}
-	}
-	else = {
-		cmm_register_global_bool_setting = {
-			mod_id = fum
-			setting_id = enable_save_game_compatability
-			tab_id = other
-			group_id = general
-			default_value = 0
-		}
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = enable_save_game_compatability
+		tab_id = other
+		group_id = general
+		default_value = 1
 	}
 	cmm_set_no_reset = {
 		mod_id = fum
