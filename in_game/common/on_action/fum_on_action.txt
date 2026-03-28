@@ -5,7 +5,7 @@
 on_game_start = {
 	on_actions = {
 		delay = { days =  1 }
-		fum_game_setup
+		fum_game_setup = yes
 	}
 }
 
