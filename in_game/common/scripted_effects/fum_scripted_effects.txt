@@ -71,7 +71,7 @@ fum_remove_and_disable_sub_continent = {
 				years = -1
 				mode = add
 			}
-			fum_remove_location_and_pops = yes
+			fum_disable_location = yes
 		}
 	}
 }
@@ -92,6 +92,18 @@ fum_remove_location = {
 				abandon_location = prev
 			}
 		}
+	}
+}
+
+
+fum_disable_location = {
+	if = {
+		limit = {
+			fum_can_remove_location = yes
+		}
+		fum_remove_location_and_pops = yes
+		change_development = -100
+		change_location_rank = location_rank:rural_settlement
 	}
 }
 

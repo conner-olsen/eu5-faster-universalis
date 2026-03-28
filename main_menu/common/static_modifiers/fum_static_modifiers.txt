@@ -6,4 +6,5 @@
 	local_population_growth = -1
 	cap_maximum_population_growth_at_zero = yes
 	local_migration_attraction = -10
+	local_monthly_prosperity = -10
 }
