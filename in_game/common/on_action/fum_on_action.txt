@@ -5,11 +5,10 @@
 on_game_start = {
 	on_actions = {
 		delay = { days =  1 }
-		fum_game_setup = yes
+		fum_game_setup
 	}
 }
 
-#noinspection ParadoxScriptUnresolvedExpression
 fum_game_setup = {
 	effect = {
 		remove_from_global_variable_map = {
