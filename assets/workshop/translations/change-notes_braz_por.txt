@@ -1,6 +1,1 @@
-[b]v1.5.0 já está disponível:[/b]
-- [b]Novo menu de mod[/b] integrado ao Community Mod Framework
-- [b]Novas opções de personalização[/b] com seletores para controlar a velocidade do exército/marinha e a capacidade de executar remoções no meio da partida
-- [b]Melhoria na compatibilidade de saves[/b] com melhor detecção de jogos salvos e um seletor manual para quando a detecção automática falhar
-
-Note que agora você precisará se inscrever no [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3692202776]Community Mod Framework[/url] e ativar ambos os mods.
+- Remover mais de localizações desativadas quando a recolonização está desativada.

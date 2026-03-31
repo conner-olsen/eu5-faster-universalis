@@ -1,6 +1,1 @@
-[b]La v1.5.0 est désormais disponible :[/b]
-- [b]Nouveau menu de mod[/b] intégré au Community Mod Framework
-- [b]Nouvelles options de personnalisation[/b] avec des interrupteurs pour contrôler la vitesse de l'armée/marine, et la possibilité d'exécuter des suppressions en cours de partie
-- [b]Compatibilité des sauvegardes améliorée[/b] avec une meilleure détection des sauvegardes et un interrupteur manuel en cas d'échec de la détection automatique
-
-Notez que vous devrez désormais vous abonner au [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3692202776]Community Mod Framework[/url] et activer les deux mods.
+- Supprime davantage des emplacements désactivés lorsque la recolonisation est désactivée

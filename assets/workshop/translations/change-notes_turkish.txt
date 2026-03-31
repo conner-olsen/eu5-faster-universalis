@@ -1,6 +1,1 @@
-[b]v1.5.0 yayınlandı:[/b]
-- Community Mod Framework ile entegre edilmiş [b]yeni mod menüsü[/b]
-- Ordu/donanma hızını kontrol etmek için seçenekler ve oyun ortasında kaldırma işlemlerini yürütme özelliği sunan [b]yeni özelleştirme seçenekleri[/b]
-- Daha iyi kayıtlı oyun algılama ve otomatik algılama başarısız olduğunda manuel müdahale imkanı ile [b]iyileştirilmiş kayıtlı oyun uyumluluğu[/b]
-
-Not: Artık [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3692202776]Community Mod Framework[/url] moduna abone olmanız ve her iki modu da etkinleştirmeniz gerekmektedir.
+- Yeniden kolonileştirme devre dışı bırakıldığında devre dışı bırakılmış konumlardan daha fazlasını kaldırır.

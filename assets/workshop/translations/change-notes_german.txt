@@ -1,6 +1,1 @@
-[b]v1.5.0 wurde veröffentlicht:[/b]
-- [b]Neues Mod-Menü[/b], integriert in das Community Mod Framework
-- [b]Neue Anpassungsoptionen[/b] mit Schaltern zur Steuerung der Armee-/Flottengeschwindigkeit sowie der Möglichkeit, Entfernungen von Elementen mitten im Spiel vorzunehmen
-- [b]Verbesserte Spielstand-Kompatibilität[/b] mit optimierter Spielstand-Erkennung und einem manuellen Schalter für Fälle, in denen die automatische Erkennung fehlschlägt
-
-Hinweis: Du musst nun das [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3692202776]Community Mod Framework[/url] abonnieren und beide Mods aktivieren.
+- Entferne mehr von deaktivierten Standorten, wenn die Rekolonisierung deaktiviert ist.
