@@ -2,9 +2,8 @@
 	on_actions = { fum_clear_situations }
 }
 
-on_game_start = {
+on_game_start_after_lobby = {
 	on_actions = {
-		delay = { days =  1 }
 		fum_game_setup
 	}
 }
