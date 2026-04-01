@@ -1,9 +1,10 @@
-﻿# Speed Watcher — if the game speed drops below the mod range, reset to mod speed 1.
+﻿# Speed Watcher — catch the 8-14 dead zone (between vanilla and mod ranges) and reset to mod speed 1.
+# Vanilla range (1-7) and mod range (15-21) are handled natively by the speed bar GUI.
 widget = {
 	name = "fum_speed_watcher"
 	size = { 0 0 }
 	visible_at_creation = no
-	visible = "[And(IsGameSpeedEqualOrGreaterThan('(int32)1'), Not(IsGameSpeedEqualOrGreaterThan('(int32)15')))]"
+	visible = "[And(IsGameSpeedEqualOrGreaterThan('(int32)8'), Not(IsGameSpeedEqualOrGreaterThan('(int32)15')))]"
 
 	state = {
 		name = _show
