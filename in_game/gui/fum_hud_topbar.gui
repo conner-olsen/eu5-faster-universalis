@@ -375,6 +375,7 @@ template speed_bar {
 			use_global_input_instance = yes
 			on_input_action_shortcut = "[OnDecreaseGameSpeed]"
 			input_action = "decrease_speed"
+			enabled = "[IsGameSpeedEqualOrGreaterThan('(int32)16')]"
 			tooltip_enabled = no
 		}
 
