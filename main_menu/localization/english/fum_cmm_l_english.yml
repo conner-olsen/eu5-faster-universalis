@@ -27,6 +27,14 @@
  fum__apply_performance_settings_desc: "Will apply all the selecting settings."
  fum__apply_performance_settings_text: "Apply"
 
+ ## Character Culling (character_culling) Group
+ fum__performance__character_culling_name: "Character Culling"
+ fum__character_culling_name: "Enable Character Culling"
+ fum__character_culling_desc: "Periodically removes the lowest-stat characters from each nation to improve performance. Characters in the crown estate, cabinet ministers, generals, admirals, and those with special traits are protected."
+ fum__max_characters_per_nation_name: "Max Characters Per Nation"
+ fum__max_characters_per_nation_desc: "The maximum number of characters each nation can have. Excess characters with the lowest stats will be removed every 4 years."
+ fum__max_characters_per_nation_format: "[CMMV('fum__max_characters_per_nation')]"
+
  # QoL (qol) Tab
  fum__qol_name: "QoL"
  ## Speeds (speeds) Group
@@ -71,4 +79,7 @@
  fum__army_movement_speed: "fum__army_movement_speed"
  fum__navy_movement_speed: "fum__navy_movement_speed"
  fum__battle_length: "fum__battle_length"
+ fum__performance__character_culling: "fum__performance__character_culling"
+ fum__character_culling: "fum__character_culling"
+ fum__max_characters_per_nation: "fum__max_characters_per_nation"
  fum__enable_save_game_compatability: "fum__enable_save_game_compatability"

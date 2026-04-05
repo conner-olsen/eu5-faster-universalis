@@ -1,5 +1,14 @@
 ﻿four_yearly_country_pulse = {
-	on_actions = { fum_clear_situations }
+	on_actions = { fum_clear_situations fum_character_culling }
+}
+
+fum_character_culling = {
+	trigger = {
+		has_global_variable = fum__character_culling_setting
+	}
+	effect = {
+		fum_cull_characters = yes
+	}
 }
 
 on_game_start_after_lobby = {

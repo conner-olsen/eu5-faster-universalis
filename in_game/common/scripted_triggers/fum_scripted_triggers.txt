@@ -7,3 +7,14 @@
 		}
 	}
 }
+
+# Root scope: character. Returns yes if the character should not be culled.
+fum_is_protected_character = {
+	OR = {
+		has_estate = estate_type:crown_estate
+		in_cabinet = yes
+		is_general = yes
+		is_admiral = yes
+		has_trait = architectural_visionary
+	}
+}

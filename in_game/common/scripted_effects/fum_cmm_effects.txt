@@ -69,6 +69,34 @@ fum_register_cmf_mod = {
 		group_id = removals
 	}
 
+	## Character Culling (character_culling) Group
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = character_culling
+		tab_id = performance
+		group_id = character_culling
+		default_value = 0
+	}
+	cmm_sync_bool_alias = {
+		setting = fum__character_culling
+		alias = fum__character_culling_setting
+	}
+
+	cmm_register_global_slider_setting = {
+		mod_id = fum
+		setting_id = max_characters_per_nation
+		tab_id = performance
+		group_id = character_culling
+		default_value = 100
+		min_value = 10
+		max_value = 300
+		step_value = 10
+	}
+	cmm_sync_setting_alias = {
+		setting = fum__max_characters_per_nation
+		alias = fum__max_characters_per_nation
+	}
+
 	# QoL (qol) Tab
 	## Speeds (speeds) Group
 	cmm_register_global_slider_setting = {
@@ -189,6 +217,19 @@ fum_handle_cmf_callback = {
 		}
 		flag:fum__apply_performance_settings = {
 			fum_apply_performance_settings = yes
+		}
+		## Character Culling (character_culling) Group
+		flag:fum__character_culling = {
+			cmm_sync_bool_alias = {
+				setting = fum__character_culling
+				alias = fum__character_culling_setting
+			}
+		}
+		flag:fum__max_characters_per_nation = {
+			cmm_sync_setting_alias = {
+				setting = fum__max_characters_per_nation
+				alias = fum__max_characters_per_nation
+			}
 		}
 		# QoL (qol) Tab
 		## Speeds (speeds) Group
