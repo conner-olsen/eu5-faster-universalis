@@ -7,7 +7,7 @@ fum_register_cmf_mod = {
 		setting_id = sop_removal
 		tab_id = performance
 		group_id = removals
-		default_value = 0
+		default_value = 1
 	}
 	cmm_sync_bool_alias = {
 		setting = fum__sop_removal
