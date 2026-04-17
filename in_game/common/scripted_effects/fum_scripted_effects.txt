@@ -153,26 +153,15 @@ fum_cull_characters = {
 
 	if = {
 		limit = { var:fum_to_cull > 0 }
-		while = {
-			limit = {
-				var:fum_to_cull > 0
-				any_character = {
-					fum_is_protected_character = no
-				}
+		ordered_character = {
+			order_by = {
+				value = total_abilities
+				multiply = -1
 			}
-			ordered_character = {
-				order_by = {
-					value = total_abilities
-					multiply = -1
-				}
-				max = 1
-				limit = { fum_is_protected_character = no }
-				save_scope_as = fum_char_to_cull
-			}
-			kill_character = {
-				target = scope:fum_char_to_cull
-			}
-			change_variable = { name = fum_to_cull subtract = 1 }
+			max = var:fum_to_cull
+			check_range_bounds = no
+			limit = { fum_is_protected_character = no }
+			kill_character = this
 		}
 	}
 	remove_variable = fum_to_cull
