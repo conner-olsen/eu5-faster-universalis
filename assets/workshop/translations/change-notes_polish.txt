@@ -1,1 +1,1 @@
-- Usuwa więcej z wyłączonych lokacji, gdy rekolonizacja jest wyłączona
+- [b]Nowa optymalizacja redukcji postaci (Character Culling)[/b] z konfigurowalną maksymalną liczbą postaci na naród. Co 4 lata postacie o najniższych statystykach są usuwane. Ministrowie, generałowie, admirałowie, posiadacze dóbr koronnych oraz postacie z wybranymi cechami specjalnymi są chronieni.

@@ -1,1 +1,1 @@
-- Yeniden kolonileştirme devre dışı bırakıldığında devre dışı bırakılmış konumlardan daha fazlasını kaldırır.
+- [b]Yeni Karakter Ayıklama optimizasyonu[/b], ulus başına yapılandırılabilir maksimum karakter sayısı ile. Her 4 yılda bir, en düşük istatistikli karakterler kaldırılır. Kabine bakanları, generaller, amiraller, mülk sahipleri ve birkaç özel nitelikli karakter korunur.

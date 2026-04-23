@@ -1,1 +1,1 @@
-- Supprime davantage des emplacements désactivés lorsque la recolonisation est désactivée
+- [b]Nouvelle optimisation de suppression des personnages[/b] avec un nombre maximum de personnages par nation configurable. Tous les 4 ans, les personnages ayant les statistiques les plus basses sont supprimés. Les ministres du cabinet, les généraux, les amiraux, les détenteurs de domaines de la couronne et certains personnages dotés de traits spéciaux sont protégés.

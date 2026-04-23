@@ -1,1 +1,1 @@
-- Se elimina más de las ubicaciones deshabilitadas cuando la recolonización está desactivada
+- [b]Nueva optimización de eliminación de personajes[/b] con un máximo configurable de personajes por nación. Cada 4 años, se eliminan los personajes con las estadísticas más bajas. Los ministros del gabinete, generales, almirantes, poseedores de tierras de la corona y algunos personajes con rasgos especiales están protegidos.
