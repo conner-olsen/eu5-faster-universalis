@@ -23,15 +23,10 @@ upload_change_notes_by_default = true # Should running upload.py upload change n
 upload_submods_by_default = true # Should running upload.py upload all submods from submods/? You can also use -s/--submods instead.
 workshop_dev_name = "" # Optional: override dev mod name for upload.py -d/--dev
 
-### Optional submod upload mapping (used with upload.py --submods) ###
-[[submods]]
-mod_id = "fusm.daily.tick"
-workshop_id = 3662933683
+### GUI Update ###
+game_directory = "" # Path to EU5 game directory (e.g. "C:/Steam/steamapps/common/Europa Universalis V/game"). Auto-detected if empty.
 
-[[submods]]
-mod_id = "fusm.hourly.tick"
-workshop_id = 3662938575
-
-[[submods]]
-mod_id = "fusm.halfday.tick"
-workshop_id = 3677315887
+### Optional submod upload mapping (used with upload.py -s/--submods) ###
+# [[submods]]
+# mod_id = "your_submod_id"
+# workshop_id = 0
