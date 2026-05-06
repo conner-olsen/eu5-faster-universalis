@@ -167,6 +167,22 @@ fum_cull_characters = {
 	remove_variable = fum_to_cull
 }
 
+fum_apply_meritocracy_spread = {
+	every_country = {
+		every_owned_location = {
+			limit = {
+				any_neighbor_location = {
+					OR = {
+						sub_continent = sub_continent:east_asia
+						sub_continent = sub_continent:south_asia
+					}
+				}
+			}
+			change_institution_progress = { type = institution:meritocracy value = 100 }
+		}
+	}
+}
+
 fum_apply_performance_settings = {
 	if = {
 		limit = { has_global_variable = fum__sop_removal_setting }

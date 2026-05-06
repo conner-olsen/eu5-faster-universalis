@@ -2,6 +2,25 @@
 	on_actions = { fum_clear_situations fum_character_culling }
 }
 
+yearly_country_pulse = {
+	on_actions = { fum_meritocracy_spread }
+}
+
+# Gives max meritocracy progress to every owned location bordering the east_asia or
+# south_asia sub-continents. Only runs in europe-centric mode, where Asia is wiped
+# and meritocracy can no longer spawn naturally. Fires once at >= 1390.
+fum_meritocracy_spread = {
+	trigger = {
+		has_global_variable = fum__europe_centric_setting
+		NOT = { has_global_variable = fum_meritocracy_spread_done }
+		current_year >= 1390
+	}
+	effect = {
+		set_global_variable = fum_meritocracy_spread_done
+		fum_apply_meritocracy_spread = yes
+	}
+}
+
 fum_character_culling = {
 	trigger = {
 		has_global_variable = fum__character_culling_setting
