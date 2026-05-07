@@ -1,4 +1,5 @@
-﻿l_english:
+﻿#noinspection ALL
+l_english:
  # Correct Occupation Length
  OCCUPATION_X_DAYS_LEFT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y] day(s) left"
  OCCUPATION_X_DAYS_LEFT_SHORT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y]d"
@@ -23,3 +24,6 @@
  CONSTRUCTION_DURATION_DAYS: "[Multiply_int32(Construction.GetDurationInDays, '(int32)2')]$DAYS_SHORT_LOC$"
  CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE: "[Multiply_int32(Construction.GetDurationInDays, '(int32)2')]$DAYS_SHORT_LOC$ #L (+[Subtract_int32(Construction.CountAllInLocation, '(int32)1')])#!"
  SPECIFIC_CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE: "[Multiply_int32(Construction.GetDurationInDaysIncludingQueue, '(int32)2')]$DAYS_SHORT_LOC$ #L (+[Subtract_int32(Construction.CountAllInLocation, '(int32)1')])#!"
+ # Location Ranks:
+ FOUND_city_effect: "Granting the Rights for [LOCATION.GetName] to become a city will cost $COST$ and take [Multiply_int32('(int32)$TIME$', '(int32)2')|Y] days."
+ FOUND_town_effect: "Founding a town in [LOCATION.GetName] will cost $COST$ and take [Multiply_int32('(int32)$TIME$', '(int32)2')|Y] days."

@@ -1,0 +1,1 @@
+- [b]Neue Optimierung zur Charakter-Entfernung (Character Culling)[/b] mit einer konfigurierbaren maximalen Anzahl an Charakteren pro Nation. Alle 4 Jahre werden die Charaktere mit den niedrigsten Werten entfernt. Kabinettminister, Generäle, Admirale, Inhaber von Krongütern und einige Charaktere mit speziellen Merkmalen sind geschützt.

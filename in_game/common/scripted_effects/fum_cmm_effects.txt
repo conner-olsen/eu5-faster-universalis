@@ -1,0 +1,270 @@
+﻿# Root scope: country.
+fum_register_cmf_mod = {
+	# Performance (performance) Tab
+	## Removals (removals) Group
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = sop_removal
+		tab_id = performance
+		group_id = removals
+		default_value = 1
+	}
+	cmm_sync_bool_alias = {
+		setting = fum__sop_removal
+		alias = fum__sop_removal_setting
+	}
+
+	cmm_register_global_dropdown_setting = {
+		mod_id = fum
+		setting_id = nation_removal
+		tab_id = performance
+		group_id = removals
+		default_index = 1
+		option_count = 4
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__nation_removal
+		index = 2
+		alias = fum__remove_low_importance_setting
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__nation_removal
+		index = 3
+		alias = fum__europe_centric_setting
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__nation_removal
+		index = 4
+		alias = fum__asia_centric_setting
+	}
+
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = block_recolonization
+		tab_id = performance
+		group_id = removals
+		default_value = 0
+	}
+	cmm_sync_bool_alias = {
+		setting = fum__block_recolonization
+		alias = fum_block_recolonization_setting
+	}
+
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = pop_removal
+		tab_id = performance
+		group_id = removals
+		default_value = 0
+	}
+	cmm_sync_bool_alias = {
+		setting = fum__pop_removal
+		alias = fum__pop_removal_setting
+	}
+
+	cmm_register_global_button_setting = {
+		mod_id = fum
+		setting_id = apply_performance_settings
+		tab_id = performance
+		group_id = removals
+	}
+
+	## Character Culling (character_culling) Group
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = character_culling
+		tab_id = performance
+		group_id = character_culling
+		default_value = 0
+	}
+	cmm_sync_bool_alias = {
+		setting = fum__character_culling
+		alias = fum__character_culling_setting
+	}
+
+	cmm_register_global_slider_setting = {
+		mod_id = fum
+		setting_id = max_characters_per_nation
+		tab_id = performance
+		group_id = character_culling
+		default_value = 200
+		min_value = 10
+		max_value = 300
+		step_value = 10
+	}
+	cmm_sync_setting_alias = {
+		setting = fum__max_characters_per_nation
+		alias = fum__max_characters_per_nation
+	}
+
+	# QoL (qol) Tab
+	## Speeds (speeds) Group
+	cmm_register_global_slider_setting = {
+		mod_id = fum
+		setting_id = army_movement_speed
+		tab_id = qol
+		group_id = speeds
+		default_value = 0
+		min_value = -100
+		max_value = 100
+		step_value = 1
+	}
+	cmm_sync_setting_alias = {
+		setting = fum__army_movement_speed
+		alias = fum__army_movement_speed
+	}
+
+	cmm_register_global_slider_setting = {
+		mod_id = fum
+		setting_id = navy_movement_speed
+		tab_id = qol
+		group_id = speeds
+		default_value = 0
+		min_value = -100
+		max_value = 100
+		step_value = 1
+	}
+	cmm_sync_setting_alias = {
+		setting = fum__navy_movement_speed
+		alias = fum__navy_movement_speed
+	}
+
+	cmm_register_global_dropdown_setting = {
+		mod_id = fum
+		setting_id = battle_length
+		tab_id = qol
+		group_id = speeds
+		default_index = 3
+		option_count = 4
+	}
+	cmm_sync_setting_alias = {
+		setting = fum__battle_length
+		alias = fum__battle_length
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__battle_length
+		index = 1
+		alias = fum__battle_length_vanilla
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__battle_length
+		index = 2
+		alias = fum__half_battle_length
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__battle_length
+		index = 4
+		alias = fum__double_battle_length
+	}
+
+	# Other (other) Tab
+	## General (general) Group
+	cmm_register_global_bool_setting = {
+		mod_id = fum
+		setting_id = enable_save_game_compatability
+		tab_id = other
+		group_id = general
+		default_value = 1
+	}
+	cmm_set_no_reset = {
+		mod_id = fum
+		setting_id = enable_save_game_compatability
+	}
+}
+
+# Callback handler for cmf_on_callback.
+# var:cmf_callback is the flag of the setting, alert, or action bar element that was interacted with.
+# Scope: country
+fum_handle_cmf_callback = {
+	switch = {
+		trigger = var:cmf_callback
+		# Performance (performance) Tab
+		## Removals (removals) Group
+		flag:fum__sop_removal = {
+			cmm_sync_bool_alias = {
+				setting = fum__sop_removal
+				alias = fum__sop_removal_setting
+			}
+		}
+		flag:fum__nation_removal = {
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__nation_removal
+				index = 2
+				alias = fum__remove_low_importance_setting
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__nation_removal
+				index = 3
+				alias = fum__europe_centric_setting
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__nation_removal
+				index = 4
+				alias = fum__asia_centric_setting
+			}
+		}
+		flag:fum__block_recolonization = {
+			cmm_sync_bool_alias = {
+				setting = fum__block_recolonization
+				alias = fum_block_recolonization_setting
+			}
+		}
+		flag:fum__pop_removal = {
+			cmm_sync_bool_alias = {
+				setting = fum__pop_removal
+				alias = fum__pop_removal_setting
+			}
+		}
+		flag:fum__apply_performance_settings = {
+			fum_apply_performance_settings = yes
+		}
+		## Character Culling (character_culling) Group
+		flag:fum__character_culling = {
+			cmm_sync_bool_alias = {
+				setting = fum__character_culling
+				alias = fum__character_culling_setting
+			}
+		}
+		flag:fum__max_characters_per_nation = {
+			cmm_sync_setting_alias = {
+				setting = fum__max_characters_per_nation
+				alias = fum__max_characters_per_nation
+			}
+		}
+		# QoL (qol) Tab
+		## Speeds (speeds) Group
+		flag:fum__army_movement_speed = {
+			cmm_sync_setting_alias = {
+				setting = fum__army_movement_speed
+				alias = fum__army_movement_speed
+			}
+		}
+		flag:fum__navy_movement_speed = {
+			cmm_sync_setting_alias = {
+				setting = fum__navy_movement_speed
+				alias = fum__navy_movement_speed
+			}
+		}
+		flag:fum__battle_length = {
+			cmm_sync_setting_alias = {
+				setting = fum__battle_length
+				alias = fum__battle_length
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__battle_length
+				index = 1
+				alias = fum__battle_length_vanilla
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__battle_length
+				index = 2
+				alias = fum__half_battle_length
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__battle_length
+				index = 4
+				alias = fum__double_battle_length
+			}
+		}
+	}
+}

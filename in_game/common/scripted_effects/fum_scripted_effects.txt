@@ -12,7 +12,7 @@
 
 fum_europe_centric_effect = {
 	if = {
-		limit = { has_game_rule = fum_recolonization_blocked_setting }
+		limit = { has_global_variable = fum_block_recolonization_setting }
 		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = yes }
 		sub_continent:south_asia = { fum_remove_and_disable_sub_continent = yes }
 		sub_continent:south_east_asia = { fum_remove_and_disable_sub_continent = yes }
@@ -30,7 +30,7 @@ fum_europe_centric_effect = {
 
 fum_asia_centric_effect = {
 	if = {
-		limit = { has_game_rule = fum_recolonization_blocked_setting }
+		limit = { has_global_variable = fum_block_recolonization_setting }
 		sub_continent:western_europe = { fum_remove_and_disable_sub_continent = yes }
 		sub_continent:eastern_europe = { fum_remove_and_disable_sub_continent = yes }
 		sub_continent:north_africa = { fum_remove_and_disable_sub_continent = yes }
@@ -71,7 +71,7 @@ fum_remove_and_disable_sub_continent = {
 				years = -1
 				mode = add
 			}
-			fum_remove_location_and_pops = yes
+			fum_disable_location = yes
 		}
 	}
 }
@@ -82,7 +82,7 @@ fum_remove_location = {
 			fum_can_remove_location = yes
 		}
 		every_buildings_in_location = {
-			change_building_level = -10
+			change_building_level = -100
 		}
 		if = {
 			limit = {
@@ -95,6 +95,18 @@ fum_remove_location = {
 	}
 }
 
+
+fum_disable_location = {
+	if = {
+		limit = {
+			fum_can_remove_location = yes
+		}
+		fum_remove_location_and_pops = yes
+		change_development = -100
+		change_location_rank = location_rank:rural_settlement
+	}
+}
+
 # Regardless of pop removal settings, disabled regions should have their pops removed.
 fum_remove_location_and_pops = {
 	if = {
@@ -102,7 +114,7 @@ fum_remove_location_and_pops = {
 			fum_can_remove_location = yes
 		}
 		every_buildings_in_location = {
-			change_building_level = -10
+			change_building_level = -100
 		}
 		if = {
 			limit = {
@@ -128,5 +140,68 @@ fum_remove_unowned_pops = {
 				destroy_pop = this
 			}
 		}
+	}
+}
+
+# Root scope: country. Culls the lowest-stat unprotected characters down to the max.
+fum_cull_characters = {
+	set_variable = { name = fum_to_cull value = 0 }
+	every_character = {
+		prev = { change_variable = { name = fum_to_cull add = 1 } }
+	}
+	change_variable = { name = fum_to_cull subtract = global_var:fum__max_characters_per_nation }
+
+	if = {
+		limit = { var:fum_to_cull > 0 }
+		ordered_character = {
+			order_by = {
+				value = total_abilities
+				multiply = -1
+			}
+			max = var:fum_to_cull
+			check_range_bounds = no
+			limit = { fum_is_protected_character = no }
+			kill_character = this
+		}
+	}
+	remove_variable = fum_to_cull
+}
+
+fum_apply_meritocracy_spread = {
+	every_country = {
+		every_owned_location = {
+			limit = {
+				any_neighbor_location = {
+					OR = {
+						sub_continent = sub_continent:east_asia
+						sub_continent = sub_continent:south_asia
+					}
+				}
+			}
+			change_institution_progress = { type = institution:meritocracy value = 100 }
+		}
+	}
+}
+
+fum_apply_performance_settings = {
+	if = {
+		limit = { has_global_variable = fum__sop_removal_setting }
+		fum_remove_sop_effect = yes
+	}
+	if = {
+		limit = { has_global_variable = fum__europe_centric_setting }
+		fum_europe_centric_effect = yes
+	}
+	if = {
+		limit = { has_global_variable = fum__asia_centric_setting }
+		fum_asia_centric_effect = yes
+	}
+	if = {
+		limit = { has_global_variable = fum__remove_low_importance_setting }
+		fum_remove_low_importance_nations_effect = yes
+	}
+	if = {
+		limit = { has_global_variable = fum__pop_removal_setting }
+		fum_remove_unowned_pops = yes
 	}
 }

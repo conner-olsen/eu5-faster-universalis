@@ -28,6 +28,7 @@ NAI = {
 	AI_PERFORMANCE_ESTATE_PRIVILEGES_UNUSED_TAX_MONTHS_BETWEEN_UPDATES = 4 # 2 # Number of months between each AI update to change estate privileges
 	AI_PERFORMANCE_SCHOLARS_MONTHS_BETWEEN_UPDATES = 12 # 6 #Number of months between each AI update to change religion scholars
 	AI_PERFORMANCE_TRADE_PROFIT_PER_WEIGHT_CUTOFF = 0.6 # 0.5 # If expected profit from a trade route is less than this amount per merchant capacity used we skip it
+	AI_PERFORMANCE_TRADE_RANGE_SCALE_CUTOFF = 1.0 # 1.5 # If distance to market is more than country trade range times this we skip it
 
 	AI_PERFORMANCE_PATHFIND_DISTANCE_THRESHOLD = 50 # 100 # distance threshold for less accurate pathfind to save performance for ai, smaller threshold saves more performance
 
@@ -42,6 +43,7 @@ NAI = {
 
 	AI_DEFAULT_COUNTRY_INTERACTION_FREQUENCY = 61 # 30 # default number of days between ai checking each country interaction
 	AI_DEFAULT_CHARACTER_INTERACTION_FREQUENCY = 361 # 180 # default number of days between ai checking each character interaction
+	AI_LOAN_CHECK_DAYS = 7 # 3 # how often each country checks whether to repay loans or declare bankruptcy
 
 	MAXIMUM_ALLOWED_NUMBER_OF_EACH_OBJECTIVE = 10 # 20 # How many objectives (e.g. carpet siege area) of a certain type the AI can have at once for performance reasons
 	CARPET_SIEGE_SEARCH_DEPTHS = { # How far away will units look when carpet sieging
@@ -55,11 +57,6 @@ NAI = {
 NPortrait = {
 	MAX_PORTRAIT_GENERATION_DEPTH = 4 # 8 # When generating someone's portrait, generate up to this many generations of missing portraits
 	WEIGHT_UPDATE_YEAR_INTERVAL = 6 # 3 # Years in between portrait updating their current weight towards their target weight
-}
-
-NPop = {
-	PERFORMANCE_UPDATE_DEMANDS_MIN = 0 # We try to update all pop demands within a year, but this sets a minimum of pops per day
-	PERFORMANCE_UPDATE_DEMANDS_MAX = 50 # 100 # We try to update all pop demands within a year, but this sets a maximum of pops per day
 }
 
 NMarket = {

@@ -5,8 +5,8 @@ NGame = {
 }
 
 NUnit = {
-	ARMY_MOVEMENT_SPEED = 0.43 # 0.13
-	NAVY_MOVEMENT_SPEED = 1.65 # 0.5
+	ARMY_MOVEMENT_SPEED = 0.76 # 0.13
+	NAVY_MOVEMENT_SPEED = 2.93 # 0.5
 }
 
 NCombat = {

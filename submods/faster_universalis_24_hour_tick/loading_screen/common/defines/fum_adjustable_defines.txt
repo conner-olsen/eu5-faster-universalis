@@ -1,6 +1,7 @@
 ﻿NGame = {
 	HOUR_TICK = 24 # 2 # In vanilla, there is 2-hour ticks, and 12-ticks a day. FU has 23.5x less ticks.
 	MORNING_OFFSET = 0 # 8 # This is only a visual offset change, does not change the number of ticks.
+	GAME_SPEED_FOR_MULTI_PLAYERS_WARS = 17 # 3 # Vanilla speed 3 equivalent in mod range (15-21)
 
 	GAME_SPEED_TICKS = {	# how many seconds should an hour take in every game speed
 		2.3
@@ -53,8 +54,8 @@
 }
 
 NUnit = {
-	ARMY_MOVEMENT_SPEED = 0.86 # 0.13
-	NAVY_MOVEMENT_SPEED = 3.31 # 0.5
+	ARMY_MOVEMENT_SPEED = 1.52 # 0.13
+	NAVY_MOVEMENT_SPEED = 5.87 # 0.5
 }
 
 NCombat = {

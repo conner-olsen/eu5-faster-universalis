@@ -1,46 +1,51 @@
 ﻿four_yearly_country_pulse = {
-	on_actions = { fum_clear_situations }
+	on_actions = { fum_clear_situations fum_character_culling }
 }
 
-on_game_start = {
+yearly_country_pulse = {
+	on_actions = { fum_meritocracy_spread }
+}
+
+# Gives max meritocracy progress to every owned location bordering the east_asia or
+# south_asia sub-continents. Only runs in europe-centric mode, where Asia is wiped
+# and meritocracy can no longer spawn naturally. Fires once at >= 1390.
+fum_meritocracy_spread = {
+	trigger = {
+		has_global_variable = fum__europe_centric_setting
+		NOT = { has_global_variable = fum_meritocracy_spread_done }
+		current_year >= 1390
+	}
+	effect = {
+		set_global_variable = fum_meritocracy_spread_done
+		fum_apply_meritocracy_spread = yes
+	}
+}
+
+fum_character_culling = {
+	trigger = {
+		has_global_variable = fum__character_culling_setting
+	}
+	effect = {
+		fum_cull_characters = yes
+	}
+}
+
+on_game_start_after_lobby = {
 	on_actions = {
-		delay = { days =  1 }
 		fum_game_setup
 	}
 }
 
 fum_game_setup = {
 	effect = {
-		set_global_variable = is_fum_game
-		if = {
-			limit = {
-				has_game_rule = fum_remove_sop_countries_setting
-			}
-			fum_remove_sop_effect = yes
+		remove_from_global_variable_map = {
+			name = cmm
+			key = flag:fum__enable_save_game_compatability
 		}
-		if = {
-			limit = {
-				has_game_rule = fum_europe_europe_centric_setting
-			}
-			fum_europe_centric_effect = yes
-		}
-		if = {
-			limit = {
-				has_game_rule = fum_asia_centric_setting
-			}
-			fum_asia_centric_effect = yes
-		}
-		if = {
-			limit = {
-				has_game_rule = fum_remove_low_importance_setting
-			}
-			fum_remove_low_importance_nations_effect = yes
-		}
-		if = {
-			limit = {
-				has_game_rule = fum_remove_unowned_pops_setting
-			}
-			fum_remove_unowned_pops = yes
+		add_to_global_variable_map = {
+			name = cmm
+			key = flag:fum__enable_save_game_compatability
+			value = 0
 		}
 	}
 }
@@ -50,8 +55,9 @@ fum_clear_situations = {
 		is_ai = no
 		is_situation_active = situation:great_pestilence
 		or = {
-			has_game_rule = fum_europe_europe_centric_setting
-			has_game_rule = fum_asia_centric_setting
+			has_global_variable = fum__remove_low_importance_setting
+			has_global_variable = fum__europe_centric_setting
+			has_global_variable = fum__asia_centric_setting
 		}
 	}
 	effect = {

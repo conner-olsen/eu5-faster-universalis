@@ -1,0 +1,23 @@
+﻿fum_army_speed_multiplier = {
+	if = {
+		limit = {
+			has_global_variable = fum__army_movement_speed
+		}
+		value = global_var:fum__army_movement_speed
+	}
+	else = {
+		value = 0
+	}
+}
+
+fum_navy_speed_multiplier = {
+	if = {
+		limit = {
+			has_global_variable = fum__navy_movement_speed
+		}
+		value = global_var:fum__navy_movement_speed
+	}
+	else = {
+		value = 0
+	}
+}

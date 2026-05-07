@@ -3,4 +3,6 @@
 .DS_Store
 .env
 __pycache__/
-assets/images/workshop-nation-removals.psd
+local/
+launch.json
+*.local.*
