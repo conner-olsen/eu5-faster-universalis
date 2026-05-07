@@ -188,7 +188,7 @@ template speed_bar {
 						parentanchor = center
 
 						onpressed = "[OnPause]"
-						visible = "[IsGamePaused]"
+						visible = "[IsGameUserPaused]"
 						enabled = "[CanUnpause]"
 
 						tooltipwidget = {
@@ -206,7 +206,25 @@ template speed_bar {
 						parentanchor = center
 
 						onpressed = "[OnPause]"
-						visible = "[Not(IsGamePaused)]"
+						visible = "[And(Not(IsGameUserPaused), IsGameSystemPaused)]"
+						enabled = "[CanPause]"
+
+						tooltipwidget = {
+							LeftClickButtonTooltip = {
+								blockoverride "onclick_text" { text = "[GetKeepGamePausedTooltip]" }
+							}
+						}
+
+						texture = "gfx/interface/buttons/flats/square_button_semipause.dds"
+						using = pausebutton_texture_overlay
+					}
+
+					button = {
+						size = { 30 30 }
+						parentanchor = center
+
+						onpressed = "[OnPause]"
+						visible = "[And(Not(IsGameUserPaused), Not(IsGameSystemPaused))]"
 						enabled = "[CanPause]"
 
 						tooltipwidget = {
