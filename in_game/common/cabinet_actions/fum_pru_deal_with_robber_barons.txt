@@ -1,81 +1,26 @@
 ﻿# Duration must be a clean multiple of HOUR_TICK or completion can land between ticks and stall. 705 days = 360 * 47-hour ticks.
-REPLACE:pru_deal_with_robber_barons = {
-	icon = turmoil_in_brandenburg
-	potential = {
+INJECT:pru_deal_with_robber_barons = {
+	allow = {
 		any_province = {
 			has_province_modifier = PRU_robber_barons
 		}
 	}
-	ability = mil
-	allow_multiple = yes
 
-	min = 0
-
-	select_trigger = {
-		looking_for_a = province
-		source = actor
-		target_flag = target
-		name = "integrate_province_select_province"
-		none_available_msg_key = "integrate_province_no_provinces"
-		column = {
-			data = name
-		}
-		column = {
-			data = control
-		}
-		visible = {
-			has_province_modifier = PRU_robber_barons
-			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = pru_deal_with_robber_barons interaction_target = target } }
-		}
-		map_color = {
-			lerp = {
-				min_color = define:NMapColors|MAP_COLOR_LOW
-				max_color = define:NMapColors|MAP_COLOR_HIGH
-				factor = local_control
+	# Stamps expected-end year+month (start + 2y2m) and target-province reference on the actor country. fum_robber_barons_stall_check (monthly_country_pulse) reads these to detect a stalled action whose engine completion-tick was missed and removes the modifier; that flips is_finished true and the action ends via on_deactivate. Buffer is 2 months because days = 705 is ~25 days short of a calendar 2 years. Per-country (not per-province) because at most one such action runs per country.
+	on_activate = {
+		if = {
+			limit = { exists = scope:target }
+			scope:actor = {
+				set_variable = { name = fum_pru_robber_barons_target value = scope:target }
+				set_variable = { name = fum_pru_robber_barons_months value = 0 }
 			}
 		}
 	}
 
-	on_fully_activated = {
-		if ={
-			limit = {
-				exists = scope:target
-			}
-			scope:target = {
-				remove_province_modifier = PRU_robber_barons
-			}
+	on_deactivate = {
+		scope:actor = {
+			remove_variable = fum_pru_robber_barons_target
+			remove_variable = fum_pru_robber_barons_months
 		}
-		else = {
-			custom_tooltip = remove_PRU_robber_barons_modifier
-		}
-	}
-
-	is_finished = {
-		NOT = {
-			scope:target = {
-				has_province_modifier = PRU_robber_barons
-			}
-		}
-	}
-
-	progress = {
-		cabinet_action:pru_deal_with_robber_barons = {
-			value = "implementation_progress_percentage(scope:actor)"
-		}
-	}
-
-	days = 705
-
-	province_modifier = {
-		local_max_control = 0.25
-		local_monthly_control = 0.01
-	}
-
-	map_marker = {
-		show_for_owner = yes
-	}
-
-	ai_will_do = {
-		value = 1000	#the AI should ALWAYS do this
 	}
 }

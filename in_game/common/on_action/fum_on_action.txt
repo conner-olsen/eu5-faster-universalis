@@ -6,6 +6,38 @@ yearly_country_pulse = {
 	on_actions = { fum_meritocracy_spread }
 }
 
+monthly_country_pulse = {
+	on_actions = {
+		fum_iterate_robber_barons
+		fum_stop_robber_barons
+	}
+}
+
+fum_iterate_robber_barons = {
+	trigger = {
+		has_variable = fum_pru_robber_barons_months
+	}
+	effect = {
+		change_variable = {
+			name = fum_pru_robber_barons_months
+			add = 1
+		}
+	}
+}
+
+# Stop robber barons on correct date
+fum_stop_robber_barons = {
+	trigger = {
+		has_variable = fum_pru_robber_barons_months
+		var:fum_pru_robber_barons_months >= 21
+	}
+	effect = {
+		var:fum_pru_robber_barons_target ?= {
+			remove_province_modifier = PRU_robber_barons
+		}
+	}
+}
+
 # Gives max meritocracy progress to every owned location bordering the east_asia or
 # south_asia sub-continents. Only runs in europe-centric mode, where Asia is wiped
 # and meritocracy can no longer spawn naturally. Fires once at >= 1390.
