@@ -1,0 +1,81 @@
+﻿# Duration must be a clean multiple of HOUR_TICK or completion can land between ticks and stall. 705 days = 360 * 47-hour ticks.
+REPLACE:pru_deal_with_robber_barons = {
+	icon = turmoil_in_brandenburg
+	potential = {
+		any_province = {
+			has_province_modifier = PRU_robber_barons
+		}
+	}
+	ability = mil
+	allow_multiple = yes
+
+	min = 0
+
+	select_trigger = {
+		looking_for_a = province
+		source = actor
+		target_flag = target
+		name = "integrate_province_select_province"
+		none_available_msg_key = "integrate_province_no_provinces"
+		column = {
+			data = name
+		}
+		column = {
+			data = control
+		}
+		visible = {
+			has_province_modifier = PRU_robber_barons
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = pru_deal_with_robber_barons interaction_target = target } }
+		}
+		map_color = {
+			lerp = {
+				min_color = define:NMapColors|MAP_COLOR_LOW
+				max_color = define:NMapColors|MAP_COLOR_HIGH
+				factor = local_control
+			}
+		}
+	}
+
+	on_fully_activated = {
+		if ={
+			limit = {
+				exists = scope:target
+			}
+			scope:target = {
+				remove_province_modifier = PRU_robber_barons
+			}
+		}
+		else = {
+			custom_tooltip = remove_PRU_robber_barons_modifier
+		}
+	}
+
+	is_finished = {
+		NOT = {
+			scope:target = {
+				has_province_modifier = PRU_robber_barons
+			}
+		}
+	}
+
+	progress = {
+		cabinet_action:pru_deal_with_robber_barons = {
+			value = "implementation_progress_percentage(scope:actor)"
+		}
+	}
+
+	days = 705
+
+	province_modifier = {
+		local_max_control = 0.25
+		local_monthly_control = 0.01
+	}
+
+	map_marker = {
+		show_for_owner = yes
+	}
+
+	ai_will_do = {
+		value = 1000	#the AI should ALWAYS do this
+	}
+}
