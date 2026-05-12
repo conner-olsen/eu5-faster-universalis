@@ -40,13 +40,7 @@ types construction_marker_types {
 					parentanchor = center
 					# using = bg_circle_piechart # Vanilla
 					background = { # FUM: Inline faster background
-						texture = "gfx/interface/buttons/bg_button.dds"
-						block "inside_color" {
-							modify_texture = {
-								using = color_bg_blue_texture
-								blend_mode = multiply
-							}
-						}
+						texture = "gfx/interface/buttons/flats/fum_construction_marker_background.dds"
 					}
 					block "piechart_size" {
 						size = { 90% 90% }
