@@ -41,6 +41,7 @@ types construction_marker_types {
 					# using = bg_circle_piechart # Vanilla
 					background = { # FUM: Inline faster background
 						texture = "gfx/interface/buttons/flats/fum_construction_marker_background.dds"
+						margin = {2 2}
 					}
 					block "piechart_size" {
 						size = { 90% 90% }
