@@ -32,6 +32,7 @@ types construction_marker_types {
 				using = layoutpolicy_expanding
 				allow_outside = yes
 
+				# FUM: Commented out (no idea what it does)
 				blockoverride "marker_bg_circle_extra_modifiers" {
 					using = marker_construction_side_color
 				}
@@ -147,7 +148,11 @@ construction_marker = {
 		position = { 10 10 }
 
 		icon = {
-			using = bg_circle_piechart
+			# using = bg_circle_piechart
+			background = { # FUM: Inline faster background
+				texture = "gfx/interface/buttons/flats/fum_construction_marker_background.dds"
+				margin = {2 2}
+			}
 			size = { 100% 100% }
 			texture = "[GetEstateIcon(Construction.GetEstateType)]"
 		}
