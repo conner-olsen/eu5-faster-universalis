@@ -33,9 +33,9 @@ types construction_marker_types {
 				allow_outside = yes
 
 				# FUM: Commented out (no idea what it does)
-				blockoverride "marker_bg_circle_extra_modifiers" {
-					using = marker_construction_side_color
-				}
+				# blockoverride "marker_bg_circle_extra_modifiers" {
+				# 	using = marker_construction_side_color
+				# }
 
 				piechart = {
 					parentanchor = center
