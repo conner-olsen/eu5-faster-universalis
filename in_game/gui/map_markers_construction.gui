@@ -26,7 +26,6 @@
 
 types construction_marker_types {
 	type construction_marker = widget {
-		# max_update_rate = 9999 # FUM: throttle data updates
 		hbox = {
 			margin_bottom = 2
 			widget = {
@@ -79,8 +78,7 @@ types construction_marker_types {
 								TooltipTextBlock = {
 									visible = "[Not(CanShowConstructionCancellationDialog(Construction.Self))]"
 									blockoverride "text" {
-										# text = "[GetConstructionBuildingOwner(Construction.Self)]" # Vanilla:
-										text = "[GetVariableSystem.Get(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)))]" # FUM: read cached owner
+										text = "[GetConstructionBuildingOwner(Construction.Self)]"
 									}
 								}
 							}
@@ -138,19 +136,6 @@ construction_marker = {
 	datacontext = "[BuildingConstructionMarker.GetConstruction]"
 	allow_outside = yes
 
-	# FUM: per-instance cache (wait/apply chain like smart_taxes - apply's on_finish only evaluates after scope is established)
-	state = {
-		name = fum_constr_cache_wait
-		trigger_on_create = yes
-		next = fum_constr_cache_apply
-		on_finish = "[PdxGuiWidget.TriggerAnimation('fum_constr_cache_apply')]"
-	}
-	state = {
-		name = fum_constr_cache_apply
-		duration = 0.1
-		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)), GetConstructionBuildingOwner(Construction.Self))]"
-	}
-
 	widget = {
 		visible = "[Construction.IsBuiltByEstate]"
 		size = { 25 25 }
@@ -176,19 +161,6 @@ construction_marker = {
 	size = { 50 50 }
 	position = { 0 2 }
 	datacontext = "[ArmyConstructionMarker.GetConstruction]"
-
-	# FUM: per-instance cache - no IsForeign for army/navy/conquistador (their Construction has no Building)
-	state = {
-		name = fum_constr_cache_wait
-		trigger_on_create = yes
-		next = fum_constr_cache_apply
-		on_finish = "[PdxGuiWidget.TriggerAnimation('fum_constr_cache_apply')]"
-	}
-	state = {
-		name = fum_constr_cache_apply
-		duration = 0.1
-		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)), GetConstructionBuildingOwner(Construction.Self))]"
-	}
 }
 
 ### NAVY CONSTRUCTION
@@ -197,19 +169,6 @@ construction_marker = {
 	size = { 50 50 }
 	position = { 0 2 }
 	datacontext = "[NavyConstructionMarker.GetConstruction]"
-
-	# FUM: per-instance cache - no IsForeign for army/navy/conquistador
-	state = {
-		name = fum_constr_cache_wait
-		trigger_on_create = yes
-		next = fum_constr_cache_apply
-		on_finish = "[PdxGuiWidget.TriggerAnimation('fum_constr_cache_apply')]"
-	}
-	state = {
-		name = fum_constr_cache_apply
-		duration = 0.1
-		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)), GetConstructionBuildingOwner(Construction.Self))]"
-	}
 }
 
 ### CONQUISTADOR CONSTRUCTION
@@ -218,18 +177,5 @@ construction_marker = {
 	size = { 50 50 }
 	position = { 0 2 }
 	datacontext = "[ConquistadorConstructionMarker.GetConstruction]"
-
-	# FUM: per-instance cache - no IsForeign for army/navy/conquistador
-	state = {
-		name = fum_constr_cache_wait
-		trigger_on_create = yes
-		next = fum_constr_cache_apply
-		on_finish = "[PdxGuiWidget.TriggerAnimation('fum_constr_cache_apply')]"
-	}
-	state = {
-		name = fum_constr_cache_apply
-		duration = 0.1
-		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)), GetConstructionBuildingOwner(Construction.Self))]"
-	}
 }
 
