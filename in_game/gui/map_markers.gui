@@ -79,7 +79,7 @@ template marker_country_side_color {
 template marker_siege_side_color {
 	modify_texture = {
 		using = color_grey_texture
-		
+
 		block "blocked_neutral_siege_alpha" {
 			alpha = 0.35
 		}
@@ -162,6 +162,7 @@ window = {
 	size = { 100% 100% }
 	layer = map_marker
 
+	max_update_rate = 9999 # FUM: throttle data updates
 	alwaystransparent = yes
 	filter_mouse = none
 
@@ -279,7 +280,7 @@ widget = {
 					frame = "[CoatOfArmsWrapper.GetFrame('(int32)56','(int32)56')]"
 					framesize = "[CoatOfArmsWrapper.GetFrameSizeOrFallback('(int32)56','(int32)56','(float)1.0')]"
 				}
-				
+
 				blockoverride "click" {}
 				blockoverride "double_click" {}
 			}
@@ -503,117 +504,117 @@ template unit_marker_item_unit_strength {
 			size = { 100% 100% }
 			name = "unit_marker_for_army"
 			visible = "[And(UnitMarkerItem.IsPlayer, Unit.IsArmy)]"
-			
+
 			tagtooltip_enabled = yes
 			tooltip = "[UnitMarkerItem.GetTooltip]"
 			contextmenu_widget = {
 				UnitMarkerContextMenu = {}
 			}
-	
+
 			action_tooltip = {
 				click_type = left
 				click_mode = single
-	
+
 				visible = "[UnitMarkerItem.IsPlayer]"
 				title = "UNIT_CLICK_TOOLTIP_LEFT_CLICK"
 				on_action = "[UnitMarkerItem.OnClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
-	
+
 				visible = "[And(And(Not(UnitMarkerItem.RightClickToJoin),Not(UnitMarkerItem.RightClickToChase)), UnitMarkerItem.IsPlayer)]"
 				cursor = "unit_menu"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK"
 				on_action = "[PdxGuiWidget.ToggleContextMenu]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_transport"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, UnitMarkerItem.GetUnit.IsNavy)]"
 				title = "EMBARK_ACTION"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_movement" # TODO: "unit_join"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, Not(UnitMarkerItem.GetUnit.IsNavy))]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_JOIN"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_chasing"
-	
+
 				visible = "[UnitMarkerItem.RightClickToChase]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_CHASE"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
 		}
-	
+
 		unit_marker_navy_button = {
 			size = { 100% 100% }
 			visible = "[And(UnitMarkerItem.IsPlayer, Not(Unit.IsArmy))]"
-			
+
 			tagtooltip_enabled = yes
 			tooltip = "[UnitMarkerItem.GetTooltip]"
 			contextmenu_widget = {
 				UnitMarkerContextMenu = {}
 			}
-	
+
 			action_tooltip = {
 				click_type = left
 				click_mode = single
-	
+
 				visible = "[UnitMarkerItem.IsPlayer]"
 				title = "UNIT_CLICK_TOOLTIP_LEFT_CLICK"
 				on_action = "[UnitMarkerItem.OnClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
-	
+
 				visible = "[And(And(Not(UnitMarkerItem.RightClickToJoin),Not(UnitMarkerItem.RightClickToChase)), UnitMarkerItem.IsPlayer)]"
 				cursor = "unit_menu"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK"
 				on_action = "[PdxGuiWidget.ToggleContextMenu]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_transport"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, UnitMarkerItem.GetUnit.IsNavy)]"
 				title = "EMBARK_ACTION"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_movement" # TODO: "unit_join"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, Not(UnitMarkerItem.GetUnit.IsNavy))]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_JOIN"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_chasing"
-	
+
 				visible = "[UnitMarkerItem.RightClickToChase]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_CHASE"
 				on_action = "[UnitMarkerItem.OnRightClick]"
@@ -635,63 +636,63 @@ template unit_marker_item_unit_strength {
 				downframe = 5
 				disableframe = 5
 			}
-			
+
 			tagtooltip_enabled = yes
 			tooltip = "[UnitMarkerItem.GetTooltip]"
 			contextmenu_widget = {
 				UnitMarkerContextMenu = {}
 			}
-	
+
 			action_tooltip = {
 				click_type = left
 				click_mode = single
-	
+
 				visible = "[UnitMarkerItem.IsPlayer]"
 				title = "UNIT_CLICK_TOOLTIP_LEFT_CLICK"
 				on_action = "[UnitMarkerItem.OnClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
-	
+
 				visible = "[And(And(Not(UnitMarkerItem.RightClickToJoin),Not(UnitMarkerItem.RightClickToChase)), UnitMarkerItem.IsPlayer)]"
 				cursor = "unit_menu"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK"
 				on_action = "[PdxGuiWidget.ToggleContextMenu]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_transport"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, UnitMarkerItem.GetUnit.IsNavy)]"
 				title = "EMBARK_ACTION"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_movement" # TODO: "unit_join"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, Not(UnitMarkerItem.GetUnit.IsNavy))]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_JOIN"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_chasing"
-	
+
 				visible = "[UnitMarkerItem.RightClickToChase]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_CHASE"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
 		}
-	
+
 		unit_marker_navy_button = {
 			size = { 100% 100% }
 			visible = "[Not(Unit.IsArmy)]"
@@ -701,57 +702,57 @@ template unit_marker_item_unit_strength {
 				downframe = 4
 				disableframe = 3
 			}
-			
+
 			tagtooltip_enabled = yes
 			tooltip = "[UnitMarkerItem.GetTooltip]"
 			contextmenu_widget = {
 				UnitMarkerContextMenu = {}
 			}
-	
+
 			action_tooltip = {
 				click_type = left
 				click_mode = single
-	
+
 				visible = "[UnitMarkerItem.IsPlayer]"
 				title = "UNIT_CLICK_TOOLTIP_LEFT_CLICK"
 				on_action = "[UnitMarkerItem.OnClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
-	
+
 				visible = "[And(And(Not(UnitMarkerItem.RightClickToJoin),Not(UnitMarkerItem.RightClickToChase)), UnitMarkerItem.IsPlayer)]"
 				cursor = "unit_menu"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK"
 				on_action = "[PdxGuiWidget.ToggleContextMenu]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_transport"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, UnitMarkerItem.GetUnit.IsNavy)]"
 				title = "EMBARK_ACTION"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_movement" # TODO: "unit_join"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, Not(UnitMarkerItem.GetUnit.IsNavy))]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_JOIN"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_chasing"
-	
+
 				visible = "[UnitMarkerItem.RightClickToChase]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_CHASE"
 				on_action = "[UnitMarkerItem.OnRightClick]"
@@ -773,63 +774,63 @@ template unit_marker_item_unit_strength {
 			# 	downframe = 3
 			# 	disableframe = 3
 			# }
-			
+
 			tagtooltip_enabled = yes
 			tooltip = "[UnitMarkerItem.GetTooltip]"
 			contextmenu_widget = {
 				UnitMarkerContextMenu = {}
 			}
-	
+
 			action_tooltip = {
 				click_type = left
 				click_mode = single
-	
+
 				visible = "[UnitMarkerItem.IsPlayer]"
 				title = "UNIT_CLICK_TOOLTIP_LEFT_CLICK"
 				on_action = "[UnitMarkerItem.OnClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
-	
+
 				visible = "[And(And(Not(UnitMarkerItem.RightClickToJoin),Not(UnitMarkerItem.RightClickToChase)), UnitMarkerItem.IsPlayer)]"
 				cursor = "unit_menu"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK"
 				on_action = "[PdxGuiWidget.ToggleContextMenu]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_transport"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, UnitMarkerItem.GetUnit.IsNavy)]"
 				title = "EMBARK_ACTION"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_movement" # TODO: "unit_join"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, Not(UnitMarkerItem.GetUnit.IsNavy))]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_JOIN"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_chasing"
-	
+
 				visible = "[UnitMarkerItem.RightClickToChase]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_CHASE"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
 		}
-	
+
 		button = {
 			size = { 100% 100% }
 			visible = "[Not(Unit.IsArmy)]"
@@ -839,57 +840,57 @@ template unit_marker_item_unit_strength {
 			# 	downframe = 5
 			# 	disableframe = 5
 			# }
-			
+
 			tagtooltip_enabled = yes
 			tooltip = "[UnitMarkerItem.GetTooltip]"
 			contextmenu_widget = {
 				UnitMarkerContextMenu = {}
 			}
-	
+
 			action_tooltip = {
 				click_type = left
 				click_mode = single
-	
+
 				visible = "[UnitMarkerItem.IsPlayer]"
 				title = "UNIT_CLICK_TOOLTIP_LEFT_CLICK"
 				on_action = "[UnitMarkerItem.OnClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
-	
+
 				visible = "[And(And(Not(UnitMarkerItem.RightClickToJoin),Not(UnitMarkerItem.RightClickToChase)), UnitMarkerItem.IsPlayer)]"
 				cursor = "unit_menu"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK"
 				on_action = "[PdxGuiWidget.ToggleContextMenu]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_transport"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, UnitMarkerItem.GetUnit.IsNavy)]"
 				title = "EMBARK_ACTION"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_movement" # TODO: "unit_join"
-	
+
 				visible = "[And(UnitMarkerItem.RightClickToJoin, Not(UnitMarkerItem.GetUnit.IsNavy))]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_JOIN"
 				on_action = "[UnitMarkerItem.OnRightClick]"
 			}
-	
+
 			action_tooltip = {
 				click_type = right
 				click_mode = single
 				cursor = "unit_chasing"
-	
+
 				visible = "[UnitMarkerItem.RightClickToChase]"
 				title = "UNIT_CLICK_TOOLTIP_RIGHT_CLICK_CHASE"
 				on_action = "[UnitMarkerItem.OnRightClick]"
@@ -901,7 +902,7 @@ template unit_marker_item_unit_strength {
 	widget = {
 		size = {100% 100%}
 		visible = "[UnitMarkerItem.IsSelectedOrHighlighted]"
-		
+
 		icon = {
 			size = {100% 100%}
 			visible = "[And(UnitMarkerItem.IsPlayer, Unit.IsArmy)]"
@@ -928,7 +929,7 @@ template unit_marker_item_unit_strength {
 template unit_marker_item_commander {
 	visible = "[UnitMarkerItem.HasLeaderFrame]"
 	# block "unit_commander_size" {
-		size = { 33 @unit_marker_frame_height }	
+		size = { 33 @unit_marker_frame_height }
 	# }
 
 	background = {
@@ -951,7 +952,7 @@ template unit_marker_item_commander {
 
 	button = {
 		size = { 100% 100% }
-		
+
 		tagtooltip_enabled = yes
 		tooltip = "[UnitMarkerItem.GetTooltip]"
 		contextmenu_widget = {
@@ -1105,38 +1106,38 @@ template unit_marker_item_modifiers {
 					blockoverride "concept_link" {
 						text = "[transport_capacity|e]"
 					}
-					
+
 					lowpriotextcontext = "TRANSPORT_CAPACITY_SIMPLE"
 
 				}
 			}
-	
+
 			icon = {
 				texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
 				size = { 75% 75% }
 				parentanchor = center
 				color = { 0 0 0 1 }
 			}
-	
+
 			piechart = {
 				parentanchor = center
 				position = {0 0}
 				size = { 75% 75% }
 				using = piechart_angles
-	
+
 				icon = {
 					parentanchor = center
 					size = { 75% 75% }
 					texture = "gfx/interface/icons/unit_actions/select_transport.dds"
 					texture_density = 2
 				}
-	
+
 				pieslice_no_highlight = {
 					texture = "gfx/interface/pie_charts/pie_chart_alpha_80_green.dds"
 					value = "[UnitMarkerItem.GetUnit.GetUsedTransportCapacityPercentage]"
 					color = { 1 1 1 1 }
 				}
-	
+
 				pieslice_no_highlight = {
 					texture = "gfx/interface/pie_charts/pie_chart_alpha_80_red.dds"
 					value = "[Subtract_float('(float)1.0', UnitMarkerItem.GetUnit.GetUsedTransportCapacityPercentage)]"
@@ -1145,7 +1146,7 @@ template unit_marker_item_modifiers {
 			}
 		}
 	}
-	
+
 	widget = {
 		visible = "[GreaterThan_CFixedPoint(UnitMarkerItem.GetBlockadedPercent, '(CFixedPoint)0')]"
 		block "item_container_size" {
@@ -1160,20 +1161,20 @@ template unit_marker_item_modifiers {
 			}
 			piechart = {
 				visible = "[GreaterThan_CFixedPoint(UnitMarkerItem.GetBlockadedPercent, '(CFixedPoint)0')]"
-	
+
 				parentanchor = center
 				position = {0 0}
 				size = { 75% 75% }
-	
+
 				using = piechart_angles
-	
+
 				icon = {
 					texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
 					size = { 75% 75% }
 					parentanchor = center
 					color = { 0 0 0 1 }
 				}
-	
+
 				pieslice_no_highlight = {
 					texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
 					value = "[Subtract_float('(float)100.0', FixedPointToFloat(UnitMarkerItem.GetBlockadedPercent))]"
@@ -1181,7 +1182,7 @@ template unit_marker_item_modifiers {
 					alpha = 0.8
 					alwaystransparent = yes
 				}
-	
+
 				pieslice_no_highlight = {
 					texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
 					value = "[UnitMarkerItem.GetBlockadedPercent]"
@@ -1189,7 +1190,7 @@ template unit_marker_item_modifiers {
 					alpha = 0.8
 					alwaystransparent = yes
 				}
-	
+
 				icon = {
 					parentanchor = center
 					size = { 75% 75% }
@@ -1197,14 +1198,14 @@ template unit_marker_item_modifiers {
 					texture_density = 2
 					alpha = 1
 				}
-				
+
 				datacontext = "[UnitMarkerItem.GetUnit]"
 				tooltipwidget = {
 					using = UnitBlockade_tooltip
 				}
 			}
 		}
-	}	
+	}
 
 	widget = {
 		visible = "[UnitMarkerItem.IsPlayer]"
@@ -1274,7 +1275,7 @@ template unit_marker_item_modifiers {
 					texture_density = 2
 					alpha = 1
 				}
-				
+
 				datacontext = "[UnitMarkerItem.GetUnit]"
 				tooltipwidget = {
 					using = UnitFood_tooltip
@@ -1310,7 +1311,7 @@ template unit_marker_item_modifiers {
 			block "item_modifiers_size" {
 				size = { 22 22 }
 			}
-			
+
 			button = {
 				parentanchor = center
 				position = {0 0}
@@ -1327,15 +1328,15 @@ template unit_marker_item_modifiers {
 						blockoverride "title_text" {
 							text = "[UnitMarkerItem.GetMilitaryObjectiveGroup.GetObjective.GetName]"
 						}
-	
+
 						blockoverride "concept_link" {
 							text = "[military_objectives|e]"
 						}
-						
+
 						lowpriotextcontext = "[UnitMarkerItem.GetMilitaryObjectiveGroup.GetObjective.GetTooltip]"
-	
+
 					}
-				}	
+				}
 				onmousehierarchyenter = "[UnitMarkerItem.GetMilitaryObjectiveGroup.SetHighlight(PdxGuiWidget.AccessSelf)]"
 				effectname = "NoHighlight"
 			}
@@ -1354,7 +1355,7 @@ template unit_marker_item_modifiers {
 			block "item_modifiers_size" {
 				size = { 22 22 }
 			}
-			
+
 			datacontext = "[UnitMarkerItem.GetUnit]"
 			tooltipwidget = {
 				ContextualTooltipType = {
@@ -1372,7 +1373,7 @@ template unit_marker_item_modifiers {
 					blockoverride "concept_link" {
 						text = [disease|e]
 					}
-					
+
 					blockoverride "tooltip_content" {
 						TooltipRowList = {
 							textcontext = "UNIT_PRESENCES_LABEL"
@@ -1406,7 +1407,7 @@ template unit_marker_item_modifiers {
 											color = { 1 1 1 0.2 }
 											alwaystransparent = yes
 										}
-										
+
 										pieslice_no_highlight = {
 											texture = "gfx/interface/pie_charts/pie_chart_alpha_80_red.dds"
 											value = "[FixedPointToFloat(Unit.GetDiseasePresence(Disease.Self))]"
@@ -1492,7 +1493,7 @@ template unit_marker_item_modifiers {
 											color = { 1 1 1 0.2 }
 											alwaystransparent = yes
 										}
-										
+
 										pieslice_no_highlight = {
 											texture = "gfx/interface/pie_charts/pie_chart_alpha_80_green.dds"
 											value = "[FixedPointToFloat(Unit.GetDiseaseResistance(Disease.Self))]"
@@ -1546,8 +1547,8 @@ template unit_marker_item_modifiers {
 						}
 					}
 				}
-			}	
-		
+			}
+
 			icon = {
 				parentanchor = center
 				size = { 75% 75% }
@@ -1587,9 +1588,9 @@ template unit_marker_item_modifiers {
 						blockoverride "concept_link" {
 							text = [army|e]
 						}
-							
+
 						blockoverride "tooltip_content" {
-							TooltipStringPairList = { 
+							TooltipStringPairList = {
 								textcontext = "MOVEMENT_LOCKED"
 							}
 						}
@@ -1598,7 +1599,7 @@ template unit_marker_item_modifiers {
 			}
 		}
 	}
-	
+
 	widget = {
 		visible = "[UnitMarkerItem.IsLargeEnoughForMovementSpeedImpact]"
 		tooltipwidget = {
@@ -1610,14 +1611,14 @@ template unit_marker_item_modifiers {
 					}
 				}
 				blockoverride "title_text" {
-			
+
 					text = "SLOW_SPEED_T"
 				}
 
 				blockoverride "concept_link" {
 					text = "[frontage|e]"
 				}
-				
+
 				blockoverride "tooltip_content" {
 
 					TooltipStringPairList = {
@@ -1636,7 +1637,7 @@ template unit_marker_item_modifiers {
 			block "item_modifiers_size" {
 				size = { 22 22 }
 			}
-			
+
 			icon = {
 				parentanchor = center
 				size = { 75% 75% }
@@ -1680,14 +1681,14 @@ template unit_marker_item_modifiers {
 							TooltipStringPairList = {
 								textcontext = "[TitleDescTooltip.GetDesc]"
 							}
-					
+
 							vbox = {
 								visible = "[UnitMarkerItem.HasAttritionHistory]"
-								
+
 								layoutpolicy_horizontal = expanding
 								textcontext = "[UnitMarkerItem.GetAttritionHistoryTooltip]"
 								ontextcontextchanged = "[SetTitleDescTooltipFromTextContext(PdxGuiWidget.AccessSelf)]"
-					
+
 								TooltipStringPairList = {
 									textcontext = "[TitleDescTooltip.GetDesc]"
 								}
@@ -1711,7 +1712,7 @@ template unit_marker_item_modifiers {
 			block "item_modifiers_size" {
 				size = { 22 22 }
 			}
-			
+
 			icon = {
 				parentanchor = center
 				position = {0 0}
@@ -1726,15 +1727,15 @@ template unit_marker_item_modifiers {
 								texture = "gfx/interface/mapitems/stuck_in_ice.dds"
 							}
 						}
-	
+
 						blockoverride "concept_link" {
 							text = "[navy|e]"
 						}
-						
+
 						lowpriotextcontext = "STUCK_IN_ICE_SIMPLE"
-	
+
 					}
-				}	
+				}
 			}
 		}
 	}
@@ -1751,7 +1752,7 @@ template unit_marker_item_modifiers {
 			block "item_modifiers_size" {
 				size = { 30 30 }
 			}
-			
+
 			icon = {
 				parentanchor = center
 				position = {0 0}
@@ -1765,13 +1766,13 @@ template unit_marker_item_modifiers {
 								texture = "[UnitMarkerItem.GetActiveAbilityIcon]"
 							}
 						}
-	
+
 						blockoverride "concept_link" {
 							raw_text = "[unit_ability|e]"
 						}
-						
+
 						lowpriotextcontext = "[UnitMarkerItem.GetActiveAbilityTooltip]"
-	
+
 					}
 				}
 			}
@@ -1811,7 +1812,7 @@ template unit_marker_item_modifiers {
 						blockoverride "concept_link" {
 							text = "[SelectLocalization( UnitMarkerItem.GetUnit.IsNavy, 'NAVY_HIDDEN_CONCEPT', 'ARMY_HIDDEN_CONCEPT' )]"
 						}
-						
+
 						lowpriotextcontext = "[SelectLocalization( UnitMarkerItem.GetUnit.IsNavy, 'NAVY_HIDDEN_SIMPLE_TOOLTIP', 'ARMY_HIDDEN_SIMPLE_TOOLTIP' )]"
 
 					}
@@ -1837,7 +1838,7 @@ template unit_marker_item_modifiers {
 						blockoverride "concept_link" {
 							text = "[SelectLocalization( UnitMarkerItem.GetUnit.IsNavy, 'NAVY_HIDDEN_CONCEPT', 'ARMY_HIDDEN_CONCEPT' )]"
 						}
-						
+
 						lowpriotextcontext = "[SelectLocalization( UnitMarkerItem.GetUnit.IsNavy, 'NAVY_HIDDEN_SIMPLE_TOOLTIP', 'ARMY_HIDDEN_SIMPLE_TOOLTIP' )]"
 
 					}
@@ -1862,7 +1863,7 @@ template unit_marker_item_modifiers {
 						blockoverride "concept_link" {
 							text = "[SelectLocalization( UnitMarkerItem.GetUnit.IsNavy, 'NAVY_HIDDEN_CONCEPT', 'ARMY_HIDDEN_CONCEPT' )]"
 						}
-						
+
 						lowpriotextcontext = "[SelectLocalization( UnitMarkerItem.GetUnit.IsNavy, 'NAVY_HIDDEN_SIMPLE_TOOLTIP', 'ARMY_HIDDEN_SIMPLE_TOOLTIP' )]"
 
 					}
@@ -1898,13 +1899,13 @@ template unit_marker_item_modifiers_small_zoom {
 								texture = "gfx/interface/mapitems/exiles.dds"
 							}
 						}
-	
+
 						blockoverride "concept_link" {
 							raw_text = "[exile|e]"
 						}
-						
+
 						lowpriotextcontext = "IS_EXILED_TT"
-	
+
 					}
 				}
 			}
@@ -1937,15 +1938,15 @@ template unit_marker_item_modifiers_small_zoom {
 								texture = "gfx/interface/mapitems/retreating.dds"
 							}
 						}
-		
+
 						blockoverride "concept_link" {
 							text = "[modifier|e]"
 						}
-						
+
 						lowpriotextcontext = "UNIT_IS_RETREAT_TT"
-		
+
 					}
-				}	
+				}
 			}
 		}
 	}
@@ -1986,7 +1987,7 @@ template unit_marker_item_unit_banners {
 					alpha = 0.5
 				}
 			}
-			
+
 			icon = {
 				size = { 90% 90% }
 				texture = "gfx/interface/icons/flat_icons/unit_selection_shield.dds"
@@ -2050,7 +2051,7 @@ template unit_marker_item_unit_banners {
 # template unit_marker_morale_flag_template {
 # 	parentanchor = center
 # 	datacontext = "[Unit.GetCountry]"
-	
+
 # 	blockoverride "click" {
 # 		onclick = "[UnitMarkerItem.OnFlagClick]"
 # 	}
@@ -2079,7 +2080,7 @@ types unit_marker_types {
 		circular_widget_button = {
 			parentanchor = top
 			size = { 57 57 }
-			
+
 			background = {
 				texture = "gfx/interface/buttons/bg_button.dds"
 				texture_density = 2
@@ -2199,7 +2200,7 @@ types unit_marker_types {
 				title = "GO_TO_SIEGE"
 				on_action = "[SelectLocation(Siege.GetLocation)]"
 			}
-			
+
 			onmousehierarchyenter = "[PdxGuiWidget.SetHighlightLocation(Siege.GetLocation)]"
 
 			text_single = {
@@ -2212,7 +2213,7 @@ types unit_marker_types {
 
 				text = "[Siege.GetFallChance|2%]"
 			}
-			
+
 			text_single = {
 				visible = "[Siege.IsTooFewMen]"
 
@@ -2282,7 +2283,7 @@ types unit_marker_types {
 
 	type unit_marker_item_unit_info = widget {
 		block "unit_marker_item_unit_info_size" {
-			layoutpolicy_horizontal = expanding 
+			layoutpolicy_horizontal = expanding
 			size = {-1 @unit_marker_frame_height}
 		}
 
@@ -2290,16 +2291,16 @@ types unit_marker_types {
 			layoutpolicy_horizontal = expanding
 			ignoreinvisible = yes
 			spacing = -5
-			
+
 			# widget = { using = unit_marker_item_total_units }
 			# widget = { size = { 0 @unit_marker_morale_progressbar_size } }
 			widget = {
 				visible = "[And(Not(Unit.IsArmy), UnitMarkerItem.IsTransporting)]"
 				using = unit_marker_item_transport
 			}
-			widget = { 
+			widget = {
 				# using = bg_unit_marker_item_unit_strength
-				using = unit_marker_item_unit_strength 
+				using = unit_marker_item_unit_strength
 			}
 		}
 	}
@@ -2377,7 +2378,7 @@ types unit_marker_types {
 		tooltipwidget = {
 			using = CombatSubUnitArray_tooltip
 		}
-	
+
 		background = {
 			texture = "gfx/interface/icons/flat_icons/battle/base.dds"
 			texture_density = 2
@@ -2470,7 +2471,7 @@ widget = {
 				visible = "[UnitMarker.ShouldBeShownFullWidth]"
 				widgetanchor = vcenter|left
 				parentanchor = center
-			}		
+			}
 
 			unit_maker_siege_banner = {
 				position = { @[20 - unit_marker_siege_banner_short_offset] 0 }
@@ -2523,7 +2524,7 @@ widget = {
 									spacing = 2
 
 									expand = {}
-									
+
 									unit_marker_compass = {}
 
 									widget = {
@@ -2533,24 +2534,24 @@ widget = {
 											hbox = {
 												widget = {
 													size = { 26 26 }
-			
+
 													# Has General
 													button = {
 														visible = "[UnitMarkerItem.HasLeaderFrame]"
-			
+
 														size = { 26 26 }
-			
+
 														framesize = { 32 32 }
 														frame = "[UnitMarkerItem.GetLeaderFrame]"
-			
+
 														texture = "gfx/interface/mapitems/commander_rank.dds"
 														texture_density = 2
-			
+
 														action_tooltip = {
 															title = "SHOW_CHARACTER"
 															on_action = "[UnitMarkerItem.OnLeaderClick]"
 														}
-														
+
 														datacontext = "[UnitMarkerItem.GetUnit.GetCommander]"
 														tooltipwidget = {
 															using = Character_tooltip
@@ -2575,7 +2576,7 @@ widget = {
 									country_flag_small = {
 										datacontext = "[Unit.GetCountry]"
 										size = { 40 28 }
-	
+
 										blockoverride "click" {
 											onclick = "[UnitMarkerItem.OnFlagClick]"
 										}
@@ -2584,7 +2585,7 @@ widget = {
 											ondoubleclick = "[UnitMarkerItem.OnRightClick]"
 										}
 									}
-									
+
 									vbox = {
 										using = layoutpolicy_expanding
 										margin_bottom = 4
@@ -2664,7 +2665,7 @@ widget = {
 									blockoverride "unit_transport_size" {
 										size = { 28 28 }
 									}
-									
+
 									blockoverride "item_unit_text_object" {
 										hbox = {
 											margin_left = 10
@@ -2673,7 +2674,7 @@ widget = {
 											country_flag_small = {
 												datacontext = "[Unit.GetCountry]"
 												size = { 38 26 }
-			
+
 												blockoverride "click" {
 													onclick = "[UnitMarkerItem.OnFlagClick]"
 												}
@@ -2689,7 +2690,7 @@ widget = {
 												margin_bottom = 4
 
 												expand = {}
-		
+
 												text_single = {
 													layoutpolicy_horizontal = expanding
 													autoresize = yes
@@ -2745,7 +2746,7 @@ widget = {
 						visible = "[Not(UnitMarkerItem.GetUnit.IsArmy)]"
 						allow_outside = yes
 						margin_right = 5
-						
+
 						# Full width
 						unit_marker_item_layout = {
 							using = layoutpolicy_expanding
@@ -2765,7 +2766,7 @@ widget = {
 									spacing = 2
 
 									expand = {}
-									
+
 									unit_marker_compass = {}
 
 									widget = {
@@ -2775,24 +2776,24 @@ widget = {
 											hbox = {
 												widget = {
 													size = { 26 26 }
-			
+
 													# Has General
 													button = {
 														visible = "[UnitMarkerItem.HasLeaderFrame]"
-			
+
 														size = { 26 26 }
-			
+
 														framesize = { 32 32 }
 														frame = "[UnitMarkerItem.GetLeaderFrame]"
-			
+
 														texture = "gfx/interface/mapitems/commander_rank.dds"
 														texture_density = 2
-			
+
 														action_tooltip = {
 															title = "SHOW_CHARACTER"
 															on_action = "[UnitMarkerItem.OnLeaderClick]"
 														}
-														
+
 														datacontext = "[UnitMarkerItem.GetUnit.GetCommander]"
 														tooltipwidget = {
 															using = Character_tooltip
@@ -2856,7 +2857,7 @@ widget = {
 									country_flag_small = {
 										datacontext = "[Unit.GetCountry]"
 										size = { 42 29 }
-	
+
 										blockoverride "click" {
 											onclick = "[UnitMarkerItem.OnFlagClick]"
 										}
@@ -2865,7 +2866,7 @@ widget = {
 											ondoubleclick = "[UnitMarkerItem.OnRightClick]"
 										}
 									}
-									
+
 								}
 							}
 
@@ -2909,7 +2910,7 @@ widget = {
 									blockoverride "unit_transport_size" {
 										size = { 28 28 }
 									}
-									
+
 									blockoverride "item_unit_text_object" {
 										hbox = {
 											margin_left = 4
@@ -2921,7 +2922,7 @@ widget = {
 												margin_bottom = 4
 
 												expand = {}
-		
+
 												text_single = {
 													layoutpolicy_horizontal = expanding
 													autoresize = yes
@@ -2959,7 +2960,7 @@ widget = {
 											country_flag_small = {
 												datacontext = "[Unit.GetCountry]"
 												size = { 38 26 }
-			
+
 												blockoverride "click" {
 													onclick = "[UnitMarkerItem.OnFlagClick]"
 												}
@@ -3028,30 +3029,30 @@ template combat_side_marker {
 						texture_density = 2
 						spriteType = corneredstretched
 						spriteBorder = { 20 20 }
-				
+
 						modify_texture = {
 							using = color_bg_blue_texture
 						}
-				
+
 						modify_texture = {
 							using = overlay_striped_texture
 							blend_mode = overlay
 							alpha = 0.2
 						}
 					}
-		
+
 					icon = {
 						visible = "[GreaterThan_int32(CombatSide.GetLeaderFrame,'(int32)0')]"
 						parentanchor = center
 						position = {0 0}
 						size = { 26 26 }
-		
+
 						framesize = { 32 32 }
 						frame = "[CombatSide.GetLeaderFrame]"
-		
+
 						texture = "gfx/interface/mapitems/commander_rank.dds"
 						texture_density = 2
-							
+
 					}
 				}
 			}
@@ -3080,7 +3081,7 @@ template combat_side_marker {
 					margin_top = -2
 					margin_bottom = -2
 					block "combat_side_marker_mirror" {}
-			
+
 					modify_texture = {
 						using = overlay_cloth_texture
 						blend_mode = overlay
@@ -3088,7 +3089,7 @@ template combat_side_marker {
 					}
 					using = graphical_culture_pattern
 				}
-			
+
 				background = {
 					using = marker_unit_side_color
 					visible ="[Not(Unit.IsArmy)]"
@@ -3103,7 +3104,7 @@ template combat_side_marker {
 					margin_top = -2
 					margin_bottom = -2
 					block "combat_side_marker_mirror" {}
-			
+
 					modify_texture = {
 						using = overlay_cloth_texture
 						blend_mode = overlay
@@ -3117,7 +3118,7 @@ template combat_side_marker {
 					block "combat_side_marker_orientation" {
 						margin_right = 28
 					}
-					
+
 					vbox = {
 						using = layoutpolicy_expanding
 						margin_bottom = 4
@@ -3155,7 +3156,7 @@ template combat_side_marker {
 									spriteborder = { 12 0 }
 									value = "[CombatSide.GetMoralePercent]"
 								}
-								
+
 							}
 						}
 					}
@@ -3283,7 +3284,7 @@ widget = {
 			spriteType = corneredstretched
 			spriteBorder = {65 65}
 			margin_bottom = 45
-	
+
 			modify_texture = {
 				using = color_red_texture
 			}
@@ -3359,7 +3360,7 @@ widget = {
 				# 		texture = "gfx/interface/colors/progress_blue.dds"
 				# 		alpha = 0.9
 				# 		blend_mode = multiply
-				# 	}	
+				# 	}
 				# }
 
 				# blockoverride "combatside_banner_icon" {
@@ -3403,11 +3404,11 @@ widget = {
 					title = "CLICK_ACTION_UNIT_MOVE_TO_BATTLE"
 					on_action = "[CombatMarker.OnRightClick]"
 				}
-	
+
 				hbox = {
 					margin = { 5 0 }
 					spacing = 2
-	
+
 					vbox = {
 						spacing = 2
 						datacontext = "[Combat.GetAttacker]"
@@ -3421,10 +3422,10 @@ widget = {
 							datacontext = "[CombatSide.GetRight]"
 						}
 					}
-	
+
 					widget = {
 						size = { 20 20 }
-	
+
 						icon = {
 							size = { 100% 100% }
 							parentanchor = center
@@ -3437,7 +3438,7 @@ widget = {
 							}
 						}
 					}
-	
+
 					vbox = {
 						spacing = 2
 						datacontext = "[Combat.GetDefender]"
@@ -3577,13 +3578,13 @@ container = {
 				texture = "[GetBuildingIcon(Location.GetBestFortBuilding.GetType)]"
 				size = { 30 30 }
 				onmousehierarchyenter = "[PdxGuiWidget.SetHighlightFort(Location.Self)]"
-	
+
 				glow = {
 					glow_radius = 2
 					color = {0.0 0.0 0.0 1.0}
 					alpha = 0.5
 				}
-	
+
 				tooltipwidget = {
 					using = Garrison_tooltip
 				}
@@ -3627,7 +3628,7 @@ container = {
 widget = {
 	name = "port_marker"
 	allow_outside = yes
-	
+
 	button = {
 		widgetanchor = center
 		size = { 30 30 }
@@ -3646,13 +3647,13 @@ widget = {
 				color = {0.0 0.0 0.0 1.0}
 			}
 		}
-		
+
 		icon = {
 			parentanchor = center
 			size = { 102% 102% }
 			texture = "gfx/interface/icons/flat_icons/geopolitics/maritime_presence.dds"
 		}
-		
+
 		action_tooltip = {
 			click_type = right
 			click_mode = single
@@ -3669,7 +3670,7 @@ widget = {
 					icon = {
 						using = tooltip_title_icon_size
 						texture = "gfx/interface/icons/flat_icons/geopolitics/maritime_presence.dds"
-		
+
 						glow = {
 							name = "drop_shadow"
 							glow_radius = 3
@@ -3678,15 +3679,15 @@ widget = {
 						}
 					}
 				}
-		
+
 				blockoverride "title_text" {
 					text = "PORT_TOOLTIP_NEW"
 				}
-		
+
 				blockoverride "concept_link" {
-					text = "[port|e]" 
+					text = "[port|e]"
 				}
-		
+
 				blockoverride "tooltip_content" {
 					TooltipTextBlock = {
 						blockoverride "text" {
@@ -3752,11 +3753,11 @@ widget = {
 							layoutpolicy_horizontal = expanding
 							text = "[location_modifier|e]"
 						}
-	
+
 						icon = {
 							size = { 25 25 }
 							texture = "[Location.GetSpecificBaseModifier.GetModifier.GetIcon]"
-	
+
 							glow = {
 								glow_radius = 3
 								color = {0.0 0.0 0.0 1.0}
@@ -3796,7 +3797,7 @@ widget = {
 	icon = {
 		using = bg_circle
 		parentanchor = center
-		visible = "[DynastyMarker.IsRegency]"				
+		visible = "[DynastyMarker.IsRegency]"
 		size = { 20 20 }
 		texture = "gfx/interface/icons/character_roles/regent.dds"
 	}
@@ -3810,7 +3811,7 @@ widget = {
 ### Supply depot
 widget = {
 	name = "supply_depot_marker"
-	allow_outside = yes	
+	allow_outside = yes
 	datacontext = "[SupplyDepotMarker.GetLocation.GetSupplyDepot]"
 	tooltipwidget = {
 		using = SupplyDepot_tooltip
@@ -3922,7 +3923,7 @@ widget = {
 				lowpriotextcontext = "[FortFlipRestoreMarker.GetTooltip]"
 			}
 		}
-		
+
 		button = {
 			parentanchor = center
 			allow_outside = yes
@@ -4172,7 +4173,7 @@ widget = {
 		tooltip_offset = { 20 20 }
 
 		datacontext = "[CabinetActionMarker.GetCabinet]"
-		
+
 		action_tooltip = {
 			click_type = left
 			click_mode = single
@@ -4183,14 +4184,14 @@ widget = {
 
 		action_tooltip = {
 			click_type = right
-			click_mode = single			
+			click_mode = single
 			conditions = "[MakeItFailIfLoc(Not(IsChangeCabinetActionTargetEnabled(Cabinet.Self)), 'CANNOT_CABINET_ACTION_SIDEMENU_RMB')]"
 			title = "CABINET_ACTION_SIDEMENU_RMB"
 			visible = "[IsChangeCabinetActionTargetVisible(Cabinet.Self)]"
 			enabled = "[IsChangeCabinetActionTargetEnabled(Cabinet.Self)]"
 			on_action = "[ChangeCabinetActionTarget(Cabinet.Self)]"
 		}
-	}	
+	}
 }
 
 ### BlockedVision Marker
@@ -4201,7 +4202,7 @@ widget = {
 	position = { 0 2 }
 
 	# using = bg_circle_piechart
-	tooltipwidget = {		
+	tooltipwidget = {
 		ContextualTooltipType = {
 			blockoverride "title_icon" {
 				icon = {
@@ -4215,15 +4216,15 @@ widget = {
 			blockoverride "concept_link" {
 				text = [fow|e]
 			}
-				
+
 			blockoverride "tooltip_content" {
-				TooltipStringPairList = { 
+				TooltipStringPairList = {
 					textcontext = "[BlockedVisionMarker.GetTooltip]"
 				}
 			}
-		}			
+		}
 	}
-	
+
 	tooltip_offset = { 20 20 }
 
 	button = {
@@ -4240,7 +4241,7 @@ widget = {
 			name = "drop_shadow"
 			glow_radius = 3
 			color = {0.0 0.0 0.0 1.0}
-			alpha = 0.5  
+			alpha = 0.5
 		}
 		texture_density = 2
 
@@ -4348,7 +4349,7 @@ widget = {
 	widgetanchor = left
 	position = { 0 2 }
 
-	tooltipwidget = {		
+	tooltipwidget = {
 		ContextualTooltipType = {
 			blockoverride "title_icon" {
 				icon = {
@@ -4363,9 +4364,9 @@ widget = {
 			blockoverride "concept_link" {
 				text = [corridor|e]
 			}
-				
+
 			blockoverride "tooltip_content" {
-				TooltipScrolledRowList = { 
+				TooltipScrolledRowList = {
 					blockoverride "block_title" {
 						text = "[DesertConnectionMarker.GetTooltip]"
 					}
@@ -4373,9 +4374,9 @@ widget = {
 					textcontext = "[DesertConnectionMarker.GetConnectedLocationNames]"
 				}
 			}
-		}			
+		}
 	}
-	
+
 	tooltip_offset = { 20 20 }
 
 	button = {
@@ -4392,12 +4393,12 @@ widget = {
 			name = "drop_shadow"
 			glow_radius = 3
 			color = {0.0 0.0 0.0 1.0}
-			alpha = 0.5  
+			alpha = 0.5
 		}
 		texture_density = 2
 
-		onmousehierarchyenter = "[DesertConnectionMarker.HighlightConnections]"	
-		onmousehierarchyleave = "[DesertConnectionMarker.ClearHighlightedConnections]"	
+		onmousehierarchyenter = "[DesertConnectionMarker.HighlightConnections]"
+		onmousehierarchyleave = "[DesertConnectionMarker.ClearHighlightedConnections]"
 	}
 }
 
@@ -4445,7 +4446,7 @@ widget = {
 			name = "drop_shadow"
 			glow_radius = 3
 			color = {0.0 0.0 0.0 1.0}
-			alpha = 0.5  
+			alpha = 0.5
 		}
 		texture_density = 2
 
@@ -4468,7 +4469,7 @@ widget = {
 			on_action = "[OpenLateralViewWithParams('expansion', 'low_tab = colonisation')]"
 		}
 
-		tooltipwidget = {		
+		tooltipwidget = {
 			ContextualTooltipType = {
 				blockoverride "title_icon" {
 					icon = {
@@ -4483,9 +4484,9 @@ widget = {
 				blockoverride "concept_link" {
 					text = [colonial_charter|e]
 				}
-					
+
 				blockoverride "tooltip_content" {
-					TooltipScrolledRowList = { 
+					TooltipScrolledRowList = {
 						textcontext = "[ColonyCharterMarker.GetTooltip]"
 					}
 				}
@@ -4543,7 +4544,7 @@ widget = {
 		block "button_size" {
 			size = { 100% 100% }
 		}
-		
+
 		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCountry(BuildingSpyNetworkMarker.GetCountry)]"
 		tooltipwidget = {
 			using = spy_network_tooltip
@@ -4560,7 +4561,7 @@ widget = {
 			title = "TAB_TOOLTIP_DIPLOMACY_LEFT_CLICK"
 			on_action = "[BuildingSpyNetworkMarker.OnClick]"
 		}
-		
+
 		action_tooltip = {
 			click_type = right
 			click_mode = single
@@ -4803,7 +4804,7 @@ widget = {
 			title = "OPEN_COUNTRY_PANEL"
 			on_action = "[CurryingFavorsMarker.OnClick]"
 		}
-		
+
 		action_tooltip = {
 			click_type = right
 			title = "CANCEL_CURRY_FAVORSTITLE"

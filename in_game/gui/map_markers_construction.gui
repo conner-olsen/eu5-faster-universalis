@@ -26,7 +26,7 @@
 
 types construction_marker_types {
 	type construction_marker = widget {
-		max_update_rate = 9999 # FUM: throttle data updates
+		# max_update_rate = 9999 # FUM: throttle data updates
 		hbox = {
 			margin_bottom = 2
 			widget = {
