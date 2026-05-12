@@ -1,0 +1,56 @@
+﻿template bg_circle_piechart {
+	# background = {
+	# 	texture = "gfx/interface/buttons/round_button_alt.dds"
+	# 	texture_density = 2
+	# 	# block "other_margins" {
+	# 	margin = {2 2}
+	# 	# }
+	# 	margin_bottom = 3
+	# 	modify_texture = {
+	# 		using = color_dark_blue_texture
+	# 		blend_mode = multiply
+	# 	}
+	# 	block "bg_circle_piechart_shadow" {}
+	# }
+	#
+	# background = {
+	# 	texture = "gfx/interface/buttons/round_button_alt.dds"
+	# 	texture_density = 2
+	# 	# block "other_margins" {
+	# 	margin = {2 2}
+	# 	# }
+	# 	block "frame_color" {
+	# 		modify_texture = {
+	# 			using = color_bronze_texture
+	# 			blend_mode = multiply
+	# 		}
+	# 		modify_texture = {
+	# 			using = color_gold_texture
+	# 			# blend_mode = multiply
+	# 			alpha = 0.3
+	# 		}
+	# 	}
+	# }
+	#
+	# background = {
+	# 	texture = "gfx/interface/buttons/bg_button.dds"
+	# 	texture_density = 2
+	# 	margin = {1 1}
+	# 	block "inside_color" {
+	# 		modify_texture = {
+	# 			using = color_bg_blue_texture
+	# 			blend_mode = multiply
+	# 		}
+	# 	}
+	#
+	# 	modify_texture = {
+	# 		using = overlay_paper_03
+	# 	}
+	# }
+
+	# FUM: Faster Merged Background
+	background = { # FUM: Inline faster background
+		texture = "gfx/interface/buttons/flats/fum_construction_marker_background.dds"
+		margin = {2 2}
+	}
+}
