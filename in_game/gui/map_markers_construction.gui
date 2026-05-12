@@ -26,6 +26,7 @@
 
 types construction_marker_types {
 	type construction_marker = widget {
+		max_update_rate = 9999 # FUM: throttle data updates
 		hbox = {
 			margin_bottom = 2
 			widget = {
@@ -116,7 +117,7 @@ types construction_marker_types {
 					visible = "[Construction.GetBuilding.GetType.IsForeign]"
 					datacontext = "[Construction.GetBuilding.GetOwner]"
 				}
-				
+
 				icon = {
 					visible = "[Construction.IsStalled]"
 					size = { 50% 50% }
