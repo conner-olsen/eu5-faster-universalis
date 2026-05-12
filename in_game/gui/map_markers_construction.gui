@@ -77,9 +77,11 @@ types construction_marker_types {
 
 							blockoverride "building_owner" {
 								TooltipTextBlock = {
-									visible = "[Not(CanShowConstructionCancellationDialog(Construction.Self))]"
+									# Vanilla: visible = "[Not(CanShowConstructionCancellationDialog(Construction.Self))]"
+									visible = "[EqualTo_string(GetVariableSystem.Get(Concatenate('fum_constr_can_cancel_', ToString_int32(Construction.GetID))), 'no')]" # FUM: read cached can-cancel
 									blockoverride "text" {
-										text = "[GetConstructionBuildingOwner(Construction.Self)]"
+										# Vanilla: text = "[GetConstructionBuildingOwner(Construction.Self)]"
+										text = "[GetVariableSystem.Get(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)))]" # FUM: read cached owner
 									}
 								}
 							}
@@ -87,7 +89,8 @@ types construction_marker_types {
 					}
 					block "construction_marker_left_action" {
 						action_tooltip = {
-							visible = "[CanShowConstructionType(Construction.Self)]"
+							# Vanilla: visible = "[CanShowConstructionType(Construction.Self)]"
+							visible = "[EqualTo_string(GetVariableSystem.Get(Concatenate('fum_constr_can_show_type_', ToString_int32(Construction.GetID))), 'yes')]" # FUM: read cached can-show-type
 							click_type = left
 							click_mode = single
 							title = "SHOW_CONSTRUCTION_TYPE"
@@ -95,14 +98,16 @@ types construction_marker_types {
 						}
 					}
 					action_tooltip = {
-						visible = "[CanShowConstructionCancellationDialog(Construction.Self)]"
+						# Vanilla: visible = "[CanShowConstructionCancellationDialog(Construction.Self)]"
+						visible = "[EqualTo_string(GetVariableSystem.Get(Concatenate('fum_constr_can_cancel_', ToString_int32(Construction.GetID))), 'yes')]" # FUM: read cached can-cancel
 						click_type = right
 						click_mode = single
 						title = "CANCEL_CONSTRUCTION"
 						on_action = "[ShowConstructionCancellationDialog(Construction.Self, '(bool)no')]"
 					}
 					action_tooltip = {
-						visible = "[CanShowConstructionCancellationDialog(Construction.Self)]"
+						# Vanilla: visible = "[CanShowConstructionCancellationDialog(Construction.Self)]"
+						visible = "[EqualTo_string(GetVariableSystem.Get(Concatenate('fum_constr_can_cancel_', ToString_int32(Construction.GetID))), 'yes')]" # FUM: read cached can-cancel
 						click_type = right
 						click_mode = single
 						click_modifier = shift
@@ -114,7 +119,8 @@ types construction_marker_types {
 				country_flag_small = {
 					size = { 19 12 }
 					parentanchor = bottom|right
-					visible = "[Construction.GetBuilding.GetType.IsForeign]"
+					# Vanilla: visible = "[Construction.GetBuilding.GetType.IsForeign]"
+					visible = "[EqualTo_string(GetVariableSystem.Get(Concatenate('fum_constr_is_foreign_', ToString_int32(Construction.GetID))), 'yes')]" # FUM: read cached is-foreign
 					datacontext = "[Construction.GetBuilding.GetOwner]"
 				}
 
@@ -136,6 +142,22 @@ construction_marker = {
 	position = { 0 2 }
 	datacontext = "[BuildingConstructionMarker.GetConstruction]"
 	allow_outside = yes
+
+	# FUM: per-instance cache (wait/apply chain like smart_taxes - apply's on_finish only evaluates after scope is established)
+	state = {
+		name = fum_constr_cache_wait
+		trigger_on_create = yes
+		next = fum_constr_cache_apply
+		on_finish = "[PdxGuiWidget.TriggerAnimation('fum_constr_cache_apply')]"
+	}
+	state = {
+		name = fum_constr_cache_apply
+		duration = 0.1
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_can_show_type_', ToString_int32(Construction.GetID)), Select_CString(CanShowConstructionType(Construction.Self), 'yes', 'no'))]"
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_can_cancel_', ToString_int32(Construction.GetID)), Select_CString(CanShowConstructionCancellationDialog(Construction.Self), 'yes', 'no'))]"
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_is_foreign_', ToString_int32(Construction.GetID)), Select_CString(Construction.GetBuilding.GetType.IsForeign, 'yes', 'no'))]"
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)), GetConstructionBuildingOwner(Construction.Self))]"
+	}
 
 	widget = {
 		visible = "[Construction.IsBuiltByEstate]"
@@ -162,6 +184,21 @@ construction_marker = {
 	size = { 50 50 }
 	position = { 0 2 }
 	datacontext = "[ArmyConstructionMarker.GetConstruction]"
+
+	# FUM: per-instance cache - no IsForeign for army/navy/conquistador (their Construction has no Building)
+	state = {
+		name = fum_constr_cache_wait
+		trigger_on_create = yes
+		next = fum_constr_cache_apply
+		on_finish = "[PdxGuiWidget.TriggerAnimation('fum_constr_cache_apply')]"
+	}
+	state = {
+		name = fum_constr_cache_apply
+		duration = 0.1
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_can_show_type_', ToString_int32(Construction.GetID)), Select_CString(CanShowConstructionType(Construction.Self), 'yes', 'no'))]"
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_can_cancel_', ToString_int32(Construction.GetID)), Select_CString(CanShowConstructionCancellationDialog(Construction.Self), 'yes', 'no'))]"
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)), GetConstructionBuildingOwner(Construction.Self))]"
+	}
 }
 
 ### NAVY CONSTRUCTION
@@ -170,6 +207,21 @@ construction_marker = {
 	size = { 50 50 }
 	position = { 0 2 }
 	datacontext = "[NavyConstructionMarker.GetConstruction]"
+
+	# FUM: per-instance cache - no IsForeign for army/navy/conquistador
+	state = {
+		name = fum_constr_cache_wait
+		trigger_on_create = yes
+		next = fum_constr_cache_apply
+		on_finish = "[PdxGuiWidget.TriggerAnimation('fum_constr_cache_apply')]"
+	}
+	state = {
+		name = fum_constr_cache_apply
+		duration = 0.1
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_can_show_type_', ToString_int32(Construction.GetID)), Select_CString(CanShowConstructionType(Construction.Self), 'yes', 'no'))]"
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_can_cancel_', ToString_int32(Construction.GetID)), Select_CString(CanShowConstructionCancellationDialog(Construction.Self), 'yes', 'no'))]"
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)), GetConstructionBuildingOwner(Construction.Self))]"
+	}
 }
 
 ### CONQUISTADOR CONSTRUCTION
@@ -178,4 +230,20 @@ construction_marker = {
 	size = { 50 50 }
 	position = { 0 2 }
 	datacontext = "[ConquistadorConstructionMarker.GetConstruction]"
+
+	# FUM: per-instance cache - no IsForeign for army/navy/conquistador
+	state = {
+		name = fum_constr_cache_wait
+		trigger_on_create = yes
+		next = fum_constr_cache_apply
+		on_finish = "[PdxGuiWidget.TriggerAnimation('fum_constr_cache_apply')]"
+	}
+	state = {
+		name = fum_constr_cache_apply
+		duration = 0.1
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_can_show_type_', ToString_int32(Construction.GetID)), Select_CString(CanShowConstructionType(Construction.Self), 'yes', 'no'))]"
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_can_cancel_', ToString_int32(Construction.GetID)), Select_CString(CanShowConstructionCancellationDialog(Construction.Self), 'yes', 'no'))]"
+		on_finish = "[GetVariableSystem.Set(Concatenate('fum_constr_owner_', ToString_int32(Construction.GetID)), GetConstructionBuildingOwner(Construction.Self))]"
+	}
 }
+
