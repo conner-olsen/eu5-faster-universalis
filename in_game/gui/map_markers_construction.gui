@@ -25,8 +25,7 @@
 }
 
 types construction_marker_types {
-	# Vanilla: type construction_marker = widget {
-	type construction_marker = container { # FUM: container instead of widget
+	type construction_marker = widget {
 		hbox = {
 			margin_bottom = 2
 			widget = {
