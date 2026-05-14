@@ -4,7 +4,7 @@
   "version" : "1.1.9",
   "game_id" : "eu5",
   "picture" : null,
-  "supported_game_version" : "1.1.*",
+  "supported_game_version" : "1.2.*",
   "short_description" : "Changes Faster Universalis to use 12-hour tick which is faster than vanilla, while still displaying damage numbers.",
   "tags" : [ "Utilities" ],
   "relationships" : [
