@@ -51,7 +51,7 @@ NAI = {
 		5 4 3 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 # 10 8 6 5 4 3 2 2 2 2 1 1 1 1 1 1 1 1 # First (biggest) units looks 10 steps away, smaller units get less allowance. This is important for performance. If they don't find anything, they get moved to logistics to get them somewhere near
 	}
 
-	AI_AVOID_ATTRITION_MAX_PATH_FIND_DISTANCE = 50 # 100 # further distance can cost more performance
+	AI_AVOID_ATTRITION_MAX_PATH_FIND_DISTANCE = 7 # 7 # further distance can cost more performance
 	AI_NUM_EXPANSION_TARGETS = 10 # 20 # AI will evaluate war against the top AI_NUM_EXPANSION_TARGETS targets, more is worse performance but possibly can find more attack targets
 }
 
