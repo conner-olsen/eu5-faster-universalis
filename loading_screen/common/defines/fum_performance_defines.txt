@@ -27,9 +27,9 @@ NAI = {
 	AI_PERFORMANCE_ESTATE_PRIVILEGES_MONTHS_BETWEEN_UPDATES = 24 # 12 # Number of months between each AI update to change estate privileges
 	AI_PERFORMANCE_ESTATE_PRIVILEGES_UNUSED_TAX_MONTHS_BETWEEN_UPDATES = 4 # 2 # Number of months between each AI update to change estate privileges
 	AI_PERFORMANCE_SCHOLARS_MONTHS_BETWEEN_UPDATES = 12 # 6 #Number of months between each AI update to change religion scholars
-	AI_PERFORMANCE_TRADE_PROFIT_PER_WEIGHT_CUTOFF = 0.5 # 0.5 # If expected profit from a trade route is less than this amount per merchant capacity used we skip it
-	AI_PERFORMANCE_TRADE_RANGE_SCALE_CUTOFF = 1.5 # 1.5 # If distance to market is more than country trade range times this we skip it
-	TRADE_MARKETS_PER_DAY = 2 # 1 # Max number of HandleTradesFromMarket calls per country per daily tick; remaining markets are deferred to the next day
+	# AI_PERFORMANCE_TRADE_PROFIT_PER_WEIGHT_CUTOFF = 0.5 # 0.5 # If expected profit from a trade route is less than this amount per merchant capacity used we skip it
+	# AI_PERFORMANCE_TRADE_RANGE_SCALE_CUTOFF = 1.5 # 1.5 # If distance to market is more than country trade range times this we skip it
+	# TRADE_MARKETS_PER_DAY = 2 # 1 # Max number of HandleTradesFromMarket calls per country per daily tick; remaining markets are deferred to the next day
 
 	AI_PERFORMANCE_PATHFIND_DISTANCE_THRESHOLD = 50 # 100 # distance threshold for less accurate pathfind to save performance for ai, smaller threshold saves more performance
 
@@ -37,7 +37,7 @@ NAI = {
 	AI_PERFORMANCE_NAVAL_NODE_LIMIT_PER_DISTANCE = 2 # 3 # AI allowed pathfind node depth based on map distance for naval
 	AI_PERFORMANCE_NODE_LIMIT_BASE = 50 # 100 # each pathfind is allowed at least this many node expansions
 	AI_PERFORMANCE_ATTACH_UNIT_MAX_DISTANCE = 100 # 200 # maximum distance AI allied units are allowed to travel to attach, shorter number saves more performance on pathfinding
-	AI_PERFORMANCE_TRADE_ATTEMPT_PER_GOOD = 4 # 5 # number of attempts AI will do per good per market when looking for profitable import/exports before giving up
+	# AI_PERFORMANCE_TRADE_ATTEMPT_PER_GOOD = 4 # 5 # number of attempts AI will do per good per market when looking for profitable import/exports before giving up
 	AI_PERFORMANCE_EXPORT_PRICE_DIFF = 0.5 # 0.65 # if price ratio between base and max possible is at least this value for a certain good, it will skip it when trading (0-1)
 	AI_PERFORMANCE_SAMPLE_SIZE = 2 # 3 #cutting down on colonial charter tests
 	AI_PERFORMANCE_TECH_QUEUE_SIZE = 10 # 5 # how many techs AI queue at once, higher number is better performance but makes AI slower to react to changes
@@ -51,7 +51,7 @@ NAI = {
 		5 4 3 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 # 10 8 6 5 4 3 2 2 2 2 1 1 1 1 1 1 1 1 # First (biggest) units looks 10 steps away, smaller units get less allowance. This is important for performance. If they don't find anything, they get moved to logistics to get them somewhere near
 	}
 
-	AI_AVOID_ATTRITION_MAX_PATH_FIND_DISTANCE = 50 # 100 # further distance can cost more performance
+	AI_AVOID_ATTRITION_MAX_PATH_FIND_DISTANCE = 7 # 7 # further distance can cost more performance
 	AI_NUM_EXPANSION_TARGETS = 10 # 20 # AI will evaluate war against the top AI_NUM_EXPANSION_TARGETS targets, more is worse performance but possibly can find more attack targets
 }
 
