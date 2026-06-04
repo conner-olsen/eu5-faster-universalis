@@ -11,14 +11,7 @@
             name = "create_playset_editbox"
             layoutpolicy_horizontal = expanding
             layoutpolicy_vertical = fixed
-            tooltipwidget = {
-
-                LeftClickButtonTooltip = {
-                    blockoverride "onclick_text" {
-                        text = "MODS_GUI_PLAYSET_LABEL_TOOLTIP"
-                    }
-                }
-            }
+            tooltipwidget = { LeftClickButtonTooltip = { blockoverride "onclick_text" { text = "MODS_GUI_PLAYSET_LABEL_TOOLTIP" } } }
 
             blockoverride "editbox_label" {
                 text = "MODS_GUI_PLAYSET_LABEL"
