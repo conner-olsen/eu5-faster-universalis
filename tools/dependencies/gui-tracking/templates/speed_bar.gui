@@ -1,3 +1,6 @@
+# vanilla: in_game/gui/hud_topbar.gui
+# mod: in_game/gui/fum_hud_topbar.gui
+
 template speed_bar {
 	hbox = {
 		using = layoutpolicy_expanding
