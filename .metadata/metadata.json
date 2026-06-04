@@ -19,7 +19,14 @@
             "display_name": "Community Mod Framework",
             "resource_type": "mod",
             "version": "2.*"
-        }
+        },
+		{
+			"rel_type": "dependency",
+			"id": "glorp.ui",
+			"display_name": "Glorp UI",
+			"resource_type": "mod",
+			"version": "1.*"
+		}
     ],
     "game_custom_data": {}
 }
