@@ -1,4 +1,4 @@
-﻿# Duration must be a clean multiple of HOUR_TICK or completion can land between ticks and stall. 705 days = 360 * 47-hour ticks.
+﻿# INJECT adds a per-target stall timer to vanilla's action. on_activate stamps a month counter on the target province; fum_iterate_robber_barons / fum_stop_robber_barons (monthly_country_pulse) increment it and force-remove PRU_robber_barons once it passes the threshold, covering the case where the engine's date-based completion is missed under FUM tick rates. Counter is per-province so several simultaneous actions each track their own target.
 INJECT:pru_deal_with_robber_barons = {
 	allow = {
 		any_province = {
@@ -6,21 +6,21 @@ INJECT:pru_deal_with_robber_barons = {
 		}
 	}
 
-	# Stamps expected-end year+month (start + 2y2m) and target-province reference on the actor country. fum_robber_barons_stall_check (monthly_country_pulse) reads these to detect a stalled action whose engine completion-tick was missed and removes the modifier; that flips is_finished true and the action ends via on_deactivate. Buffer is 2 months because days = 705 is ~25 days short of a calendar 2 years. Per-country (not per-province) because at most one such action runs per country.
 	on_activate = {
 		if = {
 			limit = { exists = scope:target }
-			scope:actor = {
-				set_variable = { name = fum_pru_robber_barons_target value = scope:target }
+			scope:target = {
 				set_variable = { name = fum_pru_robber_barons_months value = 0 }
 			}
 		}
 	}
 
 	on_deactivate = {
-		scope:actor = {
-			remove_variable = fum_pru_robber_barons_target
-			remove_variable = fum_pru_robber_barons_months
+		if = {
+			limit = { exists = scope:target }
+			scope:target = {
+				remove_variable = fum_pru_robber_barons_months
+			}
 		}
 	}
 }
