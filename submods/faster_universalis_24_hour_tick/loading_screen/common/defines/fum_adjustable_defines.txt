@@ -68,6 +68,7 @@ NCombat = {
 	INITIATIVE_BASE_CHANCE = 0.45 # 0.1	# base chance each tick
 	INITIATIVE_CHANCE_EACH = 0.09 # 0.02 # Chance to engage per point of initiative
 	INITIATIVE_CHANCE_HOURS = 0.04 # 0.01 # Chance to engage per hour passed (adds with INITIATIVE_CHANCE_EACH) # FUM-Note: Barely matters
+	INITIATIVE_CHANCE_MAX = 0.45 # 0.1 # Cap on the initiative-derived part of engage chance, before base/hours add
 	COMBAT_SPEED_SCALE = 0.22 # 0.05
 	BASE_MORALE_DAMAGE = 4.54 # 1.0
 }
