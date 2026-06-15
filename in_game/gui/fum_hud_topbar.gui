@@ -270,16 +270,15 @@ template speed_bar {
 					button = {
 						size = { 30 30 }
 						parentanchor = center
-
-						onpressed = "[OnPause]"
+						name = "play_game" #name used as identifiyer for widget_churn_benchmark tests
+						action_tooltip = {
+							title = "[GetResumeTooltip]"
+							on_action = "[OnPause]"
+						}
 						visible = "[IsGameUserPaused]"
 						enabled = "[CanUnpause]"
 
-						tooltipwidget = {
-							LeftClickButtonTooltip = {
-								blockoverride "onclick_text" { text = "[GetResumeTooltip]" }
-							}
-						}
+						tooltipwidget = { BasicFunctionalTooltip = {} }
 
 						texture = "gfx/interface/buttons/flats/square_button_play.dds"
 						using = pausebutton_texture_overlay
@@ -288,16 +287,16 @@ template speed_bar {
 					button = {
 						size = { 30 30 }
 						parentanchor = center
+						name = "semipause_game" #name used as identifiyer for widget_churn_benchmark tests
 
-						onpressed = "[OnPause]"
+						action_tooltip = {
+							title = "[GetKeepGamePausedTooltip]"
+							on_action = "[OnPause]"
+						}
 						visible = "[And(Not(IsGameUserPaused), IsGameSystemPaused)]"
 						enabled = "[CanPause]"
 
-						tooltipwidget = {
-							LeftClickButtonTooltip = {
-								blockoverride "onclick_text" { text = "[GetKeepGamePausedTooltip]" }
-							}
-						}
+						tooltipwidget = { BasicFunctionalTooltip = {} }
 
 						texture = "gfx/interface/buttons/flats/square_button_semipause.dds"
 						using = pausebutton_texture_overlay
@@ -306,16 +305,15 @@ template speed_bar {
 					button = {
 						size = { 30 30 }
 						parentanchor = center
-
-						onpressed = "[OnPause]"
+						name = "pause_game" #name used as identifiyer for widget_churn_benchmark tests
+						action_tooltip = {
+							title = "[GetPauseTooltip]"
+							on_action = "[OnPause]"
+						}
 						visible = "[And(Not(IsGameUserPaused), Not(IsGameSystemPaused))]"
 						enabled = "[CanPause]"
 
-						tooltipwidget = {
-							LeftClickButtonTooltip = {
-								blockoverride "onclick_text" { text = "[GetPauseTooltip]" }
-							}
-						}
+						tooltipwidget = { BasicFunctionalTooltip = {} }
 
 						texture = "gfx/interface/buttons/flats/square_button_pause.dds"
 						using = pausebutton_texture_overlay
@@ -354,7 +352,7 @@ template speed_bar {
 					text = "CURRENT_DATE"
 					using = Font_Type_Flavor
 					using = Font_Size_Medium
-					align = center|nobaseline
+					align = right|nobaseline
 					default_format = "#color_white"
 					tooltipwidget = {
 						ContextualTooltipType = {
