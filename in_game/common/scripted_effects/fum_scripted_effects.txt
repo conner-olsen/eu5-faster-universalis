@@ -143,10 +143,11 @@ fum_remove_unowned_pops = {
 	}
 }
 
-# Root scope: country. Culls the lowest-stat unprotected characters down to the max.
+# Root scope: country. Culls the lowest-stat unprotected adults down to the max.
 fum_cull_characters = {
 	set_variable = { name = fum_to_cull value = 0 }
 	every_character = {
+		limit = { is_adult = yes }
 		prev = { change_variable = { name = fum_to_cull add = 1 } }
 	}
 	change_variable = { name = fum_to_cull subtract = global_var:fum__max_characters_per_nation }

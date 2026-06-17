@@ -30,9 +30,9 @@
  ## Character Culling (character_culling) Group
  fum__performance__character_culling_name: "Character Culling"
  fum__character_culling_name: "Enable Character Culling"
- fum__character_culling_desc: "Periodically removes the lowest-stat characters from each nation to improve performance. Characters in the crown estate, cabinet ministers, generals, admirals, and those with special traits are protected."
+ fum__character_culling_desc: "Periodically removes the lowest-stat adult characters from each nation to improve performance. Children, characters in the crown estate, cabinet ministers, generals, admirals, and those with special traits are protected."
  fum__max_characters_per_nation_name: "Max Characters Per Nation"
- fum__max_characters_per_nation_desc: "The maximum number of characters each nation can have. Excess characters with the lowest stats will be removed every 4 years."
+ fum__max_characters_per_nation_desc: "The maximum number of adult characters each nation can have. Excess adults with the lowest stats are removed every 4 years. Children are exempt."
  fum__max_characters_per_nation_format: "[CMMV('fum__max_characters_per_nation')]"
 
  # QoL (qol) Tab
