@@ -11,8 +11,9 @@
         "Fixes",
         "Overhaul",
         "Gameplay",
-        "Map"
-    ],
+        "Map",
+		"1.3"
+	],
     "relationships": [
         {
             "rel_type": "dependency",
