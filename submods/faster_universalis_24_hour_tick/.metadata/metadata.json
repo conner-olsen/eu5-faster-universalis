@@ -5,6 +5,7 @@
   "game_id" : "eu5",
   "picture" : null,
   "supported_game_version" : "1.3.*",
+  "fum_last_updated_game_version" : "1.3.6",
   "short_description" : "Changes Faster Universalis to use a more standard 24 hour (daily) tick as seen in other daily tick mods.",
   "tags" : [ "Utilities" ],
   "relationships" : [
