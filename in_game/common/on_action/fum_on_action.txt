@@ -15,12 +15,19 @@ monthly_country_pulse = {
 
 fum_iterate_robber_barons = {
 	trigger = {
-		has_variable = fum_pru_robber_barons_months
+		any_province = {
+			has_variable = fum_pru_robber_barons_months
+		}
 	}
 	effect = {
-		change_variable = {
-			name = fum_pru_robber_barons_months
-			add = 1
+		every_province = {
+			limit = {
+				has_variable = fum_pru_robber_barons_months
+			}
+			change_variable = {
+				name = fum_pru_robber_barons_months
+				add = 1
+			}
 		}
 	}
 }
@@ -28,11 +35,17 @@ fum_iterate_robber_barons = {
 # Stop robber barons on correct date
 fum_stop_robber_barons = {
 	trigger = {
-		has_variable = fum_pru_robber_barons_months
-		var:fum_pru_robber_barons_months >= 21
+		any_province = {
+			has_variable = fum_pru_robber_barons_months
+			var:fum_pru_robber_barons_months >= 21
+		}
 	}
 	effect = {
-		var:fum_pru_robber_barons_target ?= {
+		every_province = {
+			limit = {
+				has_variable = fum_pru_robber_barons_months
+				var:fum_pru_robber_barons_months >= 21
+			}
 			remove_province_modifier = PRU_robber_barons
 		}
 	}

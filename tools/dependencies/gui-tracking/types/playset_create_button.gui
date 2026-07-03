@@ -1,3 +1,6 @@
+﻿# vanilla: main_menu/gui/mods_gui/mods_gui.gui
+# mod: main_menu/gui/cmf_dependency_check.gui
+
 	type playset_create_button = vbox {
 		layoutpolicy_horizontal = expanding
 

@@ -1,17 +1,19 @@
 {
     "name": "Faster Universalis Dev",
     "id": "faster.universalis.dev",
-    "version": "1.6.4",
+    "version": "1.7.2",
     "game_id": "eu5",
-    "supported_game_version": "1.2.*",
+    "supported_game_version": "1.3.*",
+    "fum_last_updated_game_version": "1.3.6",
     "short_description": "Improves EU5 performance without any effect on gameplay or graphical quality.",
     "tags": [
         "Utilities",
         "Fixes",
         "Overhaul",
         "Gameplay",
-        "Map"
-    ],
+        "Map",
+		"1.3"
+	],
     "relationships": [
         {
             "rel_type": "dependency",
@@ -19,7 +21,14 @@
             "display_name": "Community Mod Framework",
             "resource_type": "mod",
             "version": "2.*"
-        }
+        },
+		{
+			"rel_type": "dependency",
+			"id": "glorp.ui",
+			"display_name": "Glorp UI",
+			"resource_type": "mod",
+			"version": "1.*"
+		}
     ],
     "game_custom_data": {}
 }

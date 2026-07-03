@@ -1,3 +1,6 @@
+﻿# vanilla: main_menu/gui/frontend_mainview.gui
+# mod: main_menu/gui/cmf_dependency_check.gui
+
 	type FrontEndNews = widget {
 		size = { 100% 100% }
 
