@@ -1,4 +1,5 @@
 ﻿#noinspection ALL
-# Correct Upgrade Time
-INJECT:city = { build_time = 365 }
-INJECT:town = { build_time = 183 }
+# Correct Upgrade Time: half vanilla build_time (in_game/common/location_ranks/00_default.txt), the ~2-day tick skips days that advance no construction
+INJECT:megalopolis = { build_time = 913 } # 1825
+INJECT:city = { build_time = 365 } # 730
+INJECT:town = { build_time = 183 } # 365
