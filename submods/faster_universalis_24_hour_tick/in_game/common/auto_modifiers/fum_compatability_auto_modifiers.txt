@@ -10,3 +10,7 @@
 # 	army_movement_speed = 6.63
 # 	navy_movement_speed = 6.63
 # }
+
+INJECT:country_base_values = {
+	land_morale_movement_cost = 0.012 # Vanilla 0.001 (country_base_values, in_game/common/auto_modifiers/country.txt:215) x 12 tick ratio
+}
