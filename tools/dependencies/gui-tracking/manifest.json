@@ -1,5 +1,68 @@
 {
   "definitions": {
+    "constant:in_game/gui/map_markers.gui:in_game/gui/map_markers.gui:unit_marker_frame_height": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers.gui",
+      "name": "unit_marker_frame_height",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_frame_height.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "constant:in_game/gui/map_markers.gui:in_game/gui/map_markers.gui:unit_marker_frame_text_margin": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers.gui",
+      "name": "unit_marker_frame_text_margin",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_frame_text_margin.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "constant:in_game/gui/map_markers.gui:in_game/gui/map_markers.gui:unit_marker_item_height": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers.gui",
+      "name": "unit_marker_item_height",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_item_height.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "constant:in_game/gui/map_markers.gui:in_game/gui/map_markers.gui:unit_marker_item_width": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers.gui",
+      "name": "unit_marker_item_width",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_item_width.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "constant:in_game/gui/map_markers.gui:in_game/gui/map_markers.gui:unit_marker_morale_progressbar_size": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers.gui",
+      "name": "unit_marker_morale_progressbar_size",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_morale_progressbar_size.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "constant:in_game/gui/map_markers_city.gui:in_game/gui/map_markers_city.gui:city_marker_fort_icon_size": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers_city.gui",
+      "name": "city_marker_fort_icon_size",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers_city/in_game__gui__map_markers_city/city_marker_fort_icon_size.gui",
+      "vanilla_file": "in_game/gui/map_markers_city.gui"
+    },
+    "constant:in_game/gui/map_markers_city.gui:in_game/gui/map_markers_city.gui:city_marker_icon_size": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers_city.gui",
+      "name": "city_marker_icon_size",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers_city/in_game__gui__map_markers_city/city_marker_icon_size.gui",
+      "vanilla_file": "in_game/gui/map_markers_city.gui"
+    },
+    "template:MapMarkerFlags": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers_city.gui",
+      "namespace": null,
+      "tracking_path": "tools/dependencies/gui-tracking/templates/MapMarkerFlags.gui",
+      "vanilla_file": "in_game/gui/map_markers_city.gui"
+    },
+    "template:bg_circle_piechart": {
+      "base_widget": null,
+      "mod_file": "main_menu/gui/shared/fum_backgrounds.gui",
+      "namespace": null,
+      "tracking_path": "tools/dependencies/gui-tracking/templates/bg_circle_piechart.gui",
+      "vanilla_file": "main_menu/gui/shared/backgrounds.gui"
+    },
     "template:speed_bar": {
       "base_widget": null,
       "mod_file": "in_game/gui/fum_hud_topbar.gui",
@@ -14,12 +77,222 @@
       "tracking_path": "tools/dependencies/gui-tracking/types/FrontEndNews.gui",
       "vanilla_file": "main_menu/gui/frontend_mainview.gui"
     },
+    "type:construction_marker": {
+      "base_widget": "widget",
+      "mod_file": "in_game/gui/fum_map_markers_construction.gui",
+      "namespace": "construction_marker_types",
+      "tracking_path": "tools/dependencies/gui-tracking/types/construction_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers_construction.gui"
+    },
+    "type:location_rank_icon": {
+      "base_widget": "widget",
+      "mod_file": "in_game/gui/map_markers_city.gui",
+      "namespace": "map_marker_city",
+      "tracking_path": "tools/dependencies/gui-tracking/types/location_rank_icon.gui",
+      "vanilla_file": "in_game/gui/map_markers_city.gui"
+    },
+    "type:marker_rank_icon": {
+      "base_widget": "icon",
+      "mod_file": "in_game/gui/map_markers_city.gui",
+      "namespace": "map_marker_city",
+      "tracking_path": "tools/dependencies/gui-tracking/types/marker_rank_icon.gui",
+      "vanilla_file": "in_game/gui/map_markers_city.gui"
+    },
     "type:playset_create_button": {
       "base_widget": "vbox",
       "mod_file": "main_menu/gui/cmf_dependency_check.gui",
       "namespace": "cmf_dependency_auto_enable",
       "tracking_path": "tools/dependencies/gui-tracking/types/playset_create_button.gui",
       "vanilla_file": "main_menu/gui/mods_gui/mods_gui.gui"
+    },
+    "widget:annexation_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/annexation_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:blocked_vision_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/blocked_vision_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:building_spy_network_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/building_spy_network_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:cabinet_action_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/cabinet_action_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:city_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers_city.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/city_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers_city.gui"
+    },
+    "widget:colony_charter_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/colony_charter_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:combat_imminent_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/combat_imminent_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:combat_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/combat_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:create_casus_belli_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/create_casus_belli_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:currying_favors_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/currying_favors_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:desert_connection_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/desert_connection_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:dynasty_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/dynasty_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:flip_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/flip_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:fort_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "container",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/fort_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:holy_site_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/holy_site_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:import_export_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/import_export_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:improve_opinion_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/improve_opinion_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:inactive_widgets_storage": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "window",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/inactive_widgets_storage.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:map_marker_layer": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "window",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/map_marker_layer.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:market_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/market_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:parliament_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/parliament_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:port_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/port_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:raw_goods_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/raw_goods_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:supply_depot_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/supply_depot_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:toll_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "container",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/toll_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:unit_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/unit_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "widget:winter_blocked_marker": {
+      "base_widget": null,
+      "mod_file": "in_game/gui/map_markers.gui",
+      "namespace": "widget",
+      "tracking_path": "tools/dependencies/gui-tracking/widgets/winter_blocked_marker.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
     }
   },
   "version": 1

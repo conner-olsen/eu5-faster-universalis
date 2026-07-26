@@ -1,0 +1,13 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+window = {
+	name = "map_marker_layer" # Referenced from code
+	size = { 100% 100% }
+	layer = map_marker
+
+	alwaystransparent = yes
+	filter_mouse = none
+
+	using = Animation_Show_Hide_UI
+}

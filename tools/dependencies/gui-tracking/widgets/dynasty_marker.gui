@@ -1,0 +1,28 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "dynasty_marker"
+	max_update_rate = 9999 # FUM: Throttle data updates
+	allow_outside = yes
+	datacontext = "[DynastyMarker]"
+
+	dynasty_shield_mid = {
+		parentanchor = center
+		visible = "[Not(Or(DynastyMarker.IsRegency, DynastyMarker.IsLowborn))]"
+		datacontext = "[DynastyMarker.GetDynasty]"
+	}
+
+	icon = {
+		using = bg_circle
+		parentanchor = center
+		visible = "[DynastyMarker.IsRegency]"				
+		size = { 20 20 }
+		texture = "gfx/interface/icons/character_roles/regent.dds"
+	}
+
+	lowborn_coat_of_arms = {
+		visible = "[DynastyMarker.IsLowborn]"
+		parentanchor = center
+	}
+}

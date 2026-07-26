@@ -1,0 +1,93 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "annexation_marker"
+	max_update_rate = 9999 # FUM: Throttle data updates
+	size = { 40 40 }
+	widgetanchor = left
+	position = { 0 2 }
+
+	using = bg_circle_piechart
+
+	datacontext = "[AnnexationMarker.GetCountry]"
+	tooltip_enabled = "[Country.IsBeingAnnexed]"
+	tooltipwidget = {
+		using = Annexation_tooltip
+	}
+
+	tooltip_offset = { 20 20 }
+
+	piechart = {
+		parentanchor = center
+		size = { 90% 90% }
+		using = piechart_angles
+		visible = "[Country.GetDiplomacy.IsBeingAnnexedStalled]"
+
+		icon = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			size = { 97% 97% }
+			parentanchor = center
+			color = { 0.45 0.59  0.67 1 }
+			alpha = 0.3
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[AnnexationMarker.GetProgress]"
+			color = { 0.5 0.5 0.5 1 }
+			alpha = 0.8
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[Subtract_float('(float)100.0', AnnexationMarker.GetProgress)]"
+			color = { 1 1 1 0 }
+		}
+	}
+
+	piechart = {
+		parentanchor = center
+		size = { 90% 90% }
+		using = piechart_angles
+		visible = "[Not(Country.GetDiplomacy.IsBeingAnnexedStalled)]"
+
+		icon = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			size = { 97% 97% }
+			parentanchor = center
+			color = { 0.45 0.59  0.67 1 }
+			alpha = 0.3
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[AnnexationMarker.GetProgress]"
+			color = { 0.3 0.8 0.3 1 }
+			alpha = 0.8
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[Subtract_float('(float)100.0', AnnexationMarker.GetProgress)]"
+			color = { 1 1 1 0 }
+		}
+	}
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+
+		tooltip_enabled = no
+		texture = "gfx/interface/icons/outliner/categories/annexation.dds"
+		texture_density = 2
+
+		onclick = "[AnnexationMarker.OnClick]"
+		onrightclick = "[AnnexationMarker.OnRightClick]"
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCountry(AnnexationMarker.GetCountry)]"
+	}
+}

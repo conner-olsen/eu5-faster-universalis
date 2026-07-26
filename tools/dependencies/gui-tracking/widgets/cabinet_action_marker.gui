@@ -1,0 +1,76 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "cabinet_action_marker"
+	max_update_rate = 9999 # FUM: Throttle data updates
+	size = { 40 40 }
+	widgetanchor = left
+	position = { 0 2 }
+
+	using = bg_circle_piechart
+
+	datacontext = "[CabinetActionMarker.GetCabinet]"
+
+	piechart = {
+		parentanchor = center
+		size = { 90% 90% }
+		using = piechart_angles
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[CabinetActionMarker.GetProgress]"
+			color = { 0.01 0.6 0.9 1 }
+			alwaystransparent = yes
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[Subtract_float('(float)100.0', CabinetActionMarker.GetProgress)]"
+			color = { 0.0 0.1 0.0 1 }
+			alwaystransparent = yes
+		}
+	}
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+
+		size = { 22 22 }
+		align = center|nobaseline
+		texture = "[GetCabinetActionIcon(Cabinet.GetAction)]"
+		texture_density = 2
+
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCabinetActionTarget(CabinetActionMarker.GetCabinet)]"
+
+		tooltipwidget = {
+			using = action_progress_tooltip
+		}
+
+		tooltip_offset = { 20 20 }
+
+		datacontext = "[CabinetActionMarker.GetCabinet]"
+		
+		action_tooltip = {
+			click_type = left
+			click_mode = single
+
+			title = "CABINET_ACTION_SIDEMENU"
+			on_action = "[SelectCabinetAction(Cabinet.Self, '(bool)no')]"
+		}
+
+		action_tooltip = {
+			click_type = right
+			click_mode = single			
+			conditions = "[MakeItFailIfLoc(Not(IsChangeCabinetActionTargetEnabled(Cabinet.Self)), 'CANNOT_CABINET_ACTION_SIDEMENU_RMB')]"
+			title = "CABINET_ACTION_SIDEMENU_RMB"
+			visible = "[IsChangeCabinetActionTargetVisible(Cabinet.Self)]"
+			enabled = "[IsChangeCabinetActionTargetEnabled(Cabinet.Self)]"
+			on_action = "[ChangeCabinetActionTarget(Cabinet.Self)]"
+		}
+	}	
+}

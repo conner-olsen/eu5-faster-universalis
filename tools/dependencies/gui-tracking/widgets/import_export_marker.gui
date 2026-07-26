@@ -1,0 +1,160 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "import_export_marker"
+	max_update_rate = 9999 # FUM: Throttle data updates
+	position = { 0 -56 }
+	widgetanchor = center
+	size = { 160 70 }
+	alwaystransparent = no
+
+	background = {
+		using = Background_Area
+		shaderfile = "gfx/FX/pdxgui_default.shader"
+	}
+
+	text_single = {
+		parentanchor = top|hcenter
+		widgetanchor = top|hcenter
+		datacontext = "[ImportExportMarker.GetPossibleItem]"
+		text = "POSSIBLE_TRADE_POTENTIAL_PROFIT"
+	}
+
+	hbox = {
+		button = {
+			size = { 22 22 }
+			texture = "[GetGoodsIcon(ImportExportMarker.GetPossibleItem.GetGoods)]"
+			datacontext = "[ImportExportMarker.GetPossibleItem.GetGoods]"
+			datacontext = "[ImportExportMarker.GetLocation.GetOwner]"
+			datacontext = "[ImportExportMarker.GetLocation.GetMarket]"
+			onclick = "[ShowGoods(ImportExportMarker.GetPossibleItem.GetGoods)]"
+			tooltipwidget = {
+				using = SpecificGoodsMarket_tooltip
+			}
+		}
+
+		vbox = {
+			text_single = {
+				size = { 40 20 }
+				autoresize = no
+				align = center|nobaseline
+				using = Font_Size_Small
+				text = "[ImportExportMarker.GetPossibleItem.GetDesiredMerchantCapacity|2]"
+			}
+
+			ranged_slider = {
+				size = { 100 14 }
+				direction = horizontal
+				#set value first or setting the min/max/mincap/maxcap changes the existing value from 0 to something inside the min/max/mincap/maxcap values
+				value = "[ImportExportMarker.GetPossibleItem.GetDefault]"
+				min = 0
+				max = "[ImportExportMarker.GetPossibleItem.GetMaxMerchantCapacity]"
+				mincap = 0
+				maxcap = "[ImportExportMarker.GetPossibleItem.GetMaxMerchantCapacity]"
+				step = "[ImportExportMarker.GetPossibleItem.GetStep]"
+				wheelstep = "[ImportExportMarker.GetPossibleItem.GetStep]"
+				onvaluechanged = "[ImportExportMarker.GetPossibleItem.OnChanged]"
+
+				track = {
+					button = {
+						texture = "gfx/interface/progressbars/slider_default_bg.dds"
+						alpha = 0.5
+						enabled = no
+						texture_density = 2
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+					}
+				}
+
+				track_range = { # Avalible progress
+					button = {
+						texture = "gfx/interface/progressbars/slider_default_bg.dds"
+						texture_density = 2
+						using = color_progress_blue
+						alpha = 0.3
+						spriteType = Corneredstretched
+						spriteborder = { 10 0 }
+
+						effectname = "NoHighlight"
+					}
+				}
+
+				track_highlight = { # Active Progress
+					button = {
+						texture = "gfx/interface/progressbars/progress_bar_blue_alt.dds"
+						texture_density = 2
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						effectname = "NoHighlight"
+					}
+				}
+
+				slider = {
+					ui_direction_button = {
+
+						size = { 14 14 }
+						blockoverride "button_texture" {
+							texture = "gfx/interface/buttons/flats/slider.dds"
+						}
+
+						glow = {
+							name = "drop_shadow"
+							glow_radius = 3
+							color = {0.0 0.0 0.0 1.0}
+							alpha = 0.5
+						}
+					}
+				}
+
+				dec_button = {
+					ui_direction_button = {
+						size = { 14 14 }
+						blockoverride "button_texture" {
+							texture = "gfx/interface/buttons/flats/minus_button.dds"
+						}
+						using = bg_circle
+					}
+				}
+
+				inc_button = {
+					ui_direction_button = {
+						size = { 14 14 }
+						blockoverride "button_texture" {
+							texture = "gfx/interface/buttons/flats/plus_button.dds"
+						}
+						using = bg_circle
+					}
+				}
+			}
+		}
+
+		ui_direction_button = {
+			size = { 22 22 }
+			using = bg_circle
+			visible = "[ImportExportMarker.GetPossibleItem.IsExport]"
+			enabled = "[ImportExportMarker.GetPossibleItem.CanStart]"
+			tooltip = "[ImportExportMarker.GetPossibleItem.GetStartInfo]"
+			onclick = "[ImportExportMarker.GetPossibleItem.Start]"
+			onmousehierarchyenter = "[ImportExportMarker.GetPossibleItem.EnableHighlight('(bool)yes')]"
+			onmousehierarchyleave = "[ImportExportMarker.GetPossibleItem.EnableHighlight('(bool)no')]"
+			blockoverride "button_texture" {
+				texture = "gfx/interface/buttons/flats/export.dds"
+			}
+		}
+
+		ui_direction_button = {
+			size = { 22 22 }
+			using = bg_circle
+			visible = "[Not(ImportExportMarker.GetPossibleItem.IsExport)]"
+			enabled = "[ImportExportMarker.GetPossibleItem.CanStart]"
+			tooltip = "[ImportExportMarker.GetPossibleItem.GetStartInfo]"
+			onclick = "[ImportExportMarker.GetPossibleItem.Start]"
+			onmousehierarchyenter = "[ImportExportMarker.GetPossibleItem.EnableHighlight('(bool)yes')]"
+			onmousehierarchyleave = "[ImportExportMarker.GetPossibleItem.EnableHighlight('(bool)no')]"
+			blockoverride "button_texture" {
+				texture = "gfx/interface/buttons/flats/import.dds"
+			}
+		}
+	}
+}

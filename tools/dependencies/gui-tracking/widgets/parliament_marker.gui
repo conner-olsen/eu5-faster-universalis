@@ -1,0 +1,73 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "parliament_marker"
+	max_update_rate = 9999 # FUM: Throttle data updates
+	using = bg_circle_piechart
+
+	size = { 50 50 }
+	position = { 0 2 }
+
+	visible = "[ParliamentMarker.IsVisible]"
+
+	piechart = {
+		parentanchor = center
+		block "piechart_size" {
+			size = { 90% 90% }
+		}
+		using = piechart_angles
+
+		pieslice_no_highlight = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[ParliamentMarker.GetCountry.GetGovernment.GetParliament.GetParliamentDurationProgress]"
+			color = { 0.01 0.6 0.9 1 }
+			alwaystransparent = yes
+		}
+
+		pieslice_no_highlight = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[Subtract_float('(float)1.0', FixedPointToFloat(ParliamentMarker.GetCountry.GetGovernment.GetParliament.GetParliamentDurationProgress))]"
+			color = { 0.0 0.1 0.1 1 }
+			alwaystransparent = yes
+		}
+	}
+
+	button = {
+		visible = "[ParliamentMarker.IsPlayerParliament]"
+		parentanchor = center
+		allow_outside = yes
+		block "button_size" {
+			size = { 55% 55% }
+		}
+		texture = "gfx/interface/icons/flat_icons/parliament.dds"
+		texture_density = 2
+
+		tooltipwidget = {
+			using = ParliamentInSession_tooltip
+		}
+
+		action_tooltip = {
+			click_type = left
+			click_mode = single
+			title = "AUTOMATED_SYSTEM_PARLIAMENT_CLICK"
+			on_action = "[OpenLateralViewWithParams('government', 'tabcontent = parliament')]"
+		}
+	}
+
+	button = {
+		visible = "[Not(ParliamentMarker.IsPlayerParliament)]"
+		parentanchor = center
+		allow_outside = yes
+		block "button_size" {
+			size = { 55% 55% }
+		}
+		texture = "gfx/interface/icons/flat_icons/parliament.dds"
+		texture_density = 2
+
+		tooltipwidget = {
+			using = HostileParliamentInSession_tooltip
+			# using = ParliamentInSession_tooltipdd
+		}
+	}
+}

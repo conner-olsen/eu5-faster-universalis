@@ -1,0 +1,55 @@
+﻿# vanilla: in_game/gui/map_markers_city.gui
+# mod: in_game/gui/map_markers_city.gui
+
+	type marker_rank_icon = icon {
+		allow_outside = yes
+		size = "[CityMarker.GetRankSize]"
+		texture = "[CityMarker.GetLocation.GetRankIcon]"
+		datacontext = "[CityMarker.GetLocation]"
+		tooltipwidget = {
+			using = location_rank_tooltip
+		}
+
+		widgetanchor = center
+		parentanchor = center
+
+		flowcontainer = {
+			parentanchor = vcenter|left
+			widgetanchor = vcenter|right
+			ignoreinvisible = yes
+
+			datacontext = "[CityMarker.GetLocation.GetOwner]"
+
+			flowcontainer = {
+				visible = "[MapMarkerFlagsVisible]"
+				ignoreinvisible = yes
+
+				using = MapMarkerFlags
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = vcenter|right
+			widgetanchor = vcenter|left
+			position = { 2 0 }
+			ignoreinvisible = yes
+
+			text_single = {
+				text = "[CityMarker.GetLocation.GetNameWithNoTooltip|U]"
+				snap_to_pixels = no
+				default_format = "#map_city_label_capital"
+				align = nobaseline
+
+				visible = "[CityMarker.ShouldBeShownAsCapital]"
+			}
+
+			text_single = {
+				text = "[CityMarker.GetLocation.GetNameWithNoTooltip|U]"
+				snap_to_pixels = no
+				default_format = "#map_city_label"
+				align = nobaseline
+
+				visible = "[CityMarker.ShouldBeShownAsCity]"
+			}
+		}
+	}

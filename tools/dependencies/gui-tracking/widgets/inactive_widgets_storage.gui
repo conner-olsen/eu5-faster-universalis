@@ -1,0 +1,12 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+window = {
+	name = "inactive_widgets_storage" # Referenced from code
+	size = { 100% 100% }
+	layer = map_marker
+
+	alwaystransparent = yes
+	visible = no
+	max_update_rate = -2 # Don't update data properties.
+}

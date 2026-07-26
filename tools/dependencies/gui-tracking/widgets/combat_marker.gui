@@ -1,0 +1,207 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "combat_marker"
+	allow_outside = yes
+	position = { 0 -3 }
+
+	button = {
+		visible = "[Or(CombatMarker.ShouldBeShownFullWidth, And(CombatMarker.ShouldBeShownShortWidth, Not(CombatMarker.ShouldBeShownVerySmallSize)))]"
+		datacontext = "[CombatMarker.GetCombat]"
+		tooltipwidget = {
+			using = Combat_tooltip
+		}
+		parentanchor = center
+		allow_outside = yes
+		onclick = "[CombatMarker.OnClick]"
+		onrightclick = "[CombatMarker.OnRightClick]"
+
+		action_tooltip = {
+			click_type = right
+			click_mode = single
+			visible = "[HasAnyUnitsSelected]"
+			title = "CLICK_ACTION_UNIT_MOVE_TO_BATTLE"
+			on_action = "[CombatMarker.OnRightClick]"
+		}
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightLocation(CombatMarker.GetLocation)]"
+
+		background = {
+			texture = "gfx/interface/component_tiles/map_markers/map_marker_glow.dds"
+			texture_density = 2
+			spriteType = corneredstretched
+			spriteBorder = {65 65}
+			margin_bottom = 45
+	
+			modify_texture = {
+				using = color_red_texture
+			}
+		}
+		background = {
+			texture = "gfx/interface/component_tiles/map_markers/map_marker_shadow.dds"
+			texture_density = 2
+			spriteType = corneredstretched
+			spriteBorder = {35 35}
+			margin_bottom = 15
+			blend_mode = multiply
+			alpha = 0.5
+		}
+
+		hbox = {
+			resizeparent = yes
+			hbox = {
+				datacontext = "[CombatMarker.GetCombat.GetAttacker]"
+				allow_outside = yes
+
+				using = combat_side_marker
+				blockoverride "combat_side_marker_params" { righttoleft = yes }
+				blockoverride "combat_side_marker_mirror" {mirror = horizontal}
+				blockoverride "combat_side_marker_army_margin" {
+					margin_left = -3
+					margin_right = -11
+				}
+				blockoverride "combat_side_marker_navy_margin" {
+					margin_left = -8
+					margin_right = -4
+				}
+				# blockoverride "combatside_banner_params" {
+				# 	modify_texture = {
+				# 		using = color_red_texture
+				# 		alpha = 0.9
+				# 		blend_mode = multiply
+				# 	}
+				# }
+
+				# blockoverride "combatside_banner_icon" {
+				# 	texture = "gfx/interface/icons/flat_icons/power_projection.dds"
+				# 	texture_density = 2
+
+				# 	modify_texture = {
+				# 		using = color_white_texture
+				# 		alpha = 0.2
+				# 	}
+
+				# 	modify_texture = {
+				# 		using = color_red_texture
+				# 		alpha = 1
+				# 	}
+				# }
+			}
+
+			hbox = {
+				datacontext = "[CombatMarker.GetCombat.GetDefender]"
+				allow_outside = yes
+
+				using = combat_side_marker
+				blockoverride "combat_side_marker_orientation" {
+					righttoleft = yes
+					margin_left = 28
+				}
+				blockoverride "combat_side_penalty_anchor"{
+					parentanchor = right|vcenter
+				}
+				# blockoverride "combat_side_bg_orientation" {mirror = horizontal}
+				blockoverride "combat_side_marker_params" { righttoleft = no }
+				blockoverride "combat_side_marker_morale_mirror" {}
+				# blockoverride "combatside_banner_params" {
+				# 	modify_texture = {
+				# 		texture = "gfx/interface/colors/progress_blue.dds"
+				# 		alpha = 0.9
+				# 		blend_mode = multiply
+				# 	}	
+				# }
+
+				# blockoverride "combatside_banner_icon" {
+				# 	texture = "gfx/interface/icons/flat_icons/military_flat_icon.dds"
+				# 	texture_density = 2
+
+				# 	modify_texture = {
+				# 		using = color_white_texture
+				# 		alpha = 0.2
+				# 	}
+
+				# 	modify_texture = {
+				# 		texture = "gfx/interface/colors/progress_blue.dds"
+				# 		alpha = 1
+				# 	}
+				# }
+			}
+		}
+
+		widget = {
+			size = { 58 48 }
+			position = {0 16}
+			parentanchor = center
+
+			using = bg_card_header_01_military
+			blockoverride "header_military_extra" {
+				alpha = 1
+				margin = { -1 -3 }
+			}
+
+			battle_center_button = {
+				size = { 68 66 }
+				parentanchor = center
+				using = goto_battle_action
+				onrightclick = "[CombatMarker.OnRightClick]"
+
+				action_tooltip = {
+					click_type = right
+					click_mode = single
+					visible = "[HasAnyUnitsSelected]"
+					title = "CLICK_ACTION_UNIT_MOVE_TO_BATTLE"
+					on_action = "[CombatMarker.OnRightClick]"
+				}
+	
+				hbox = {
+					margin = { 5 0 }
+					spacing = 2
+	
+					vbox = {
+						spacing = 2
+						datacontext = "[Combat.GetAttacker]"
+						unit_marker_battle_side_flank = {
+							datacontext = "[CombatSide.GetLeft]"
+						}
+						unit_marker_battle_side_flank = {
+							datacontext = "[CombatSide.GetCenter]"
+						}
+						unit_marker_battle_side_flank = {
+							datacontext = "[CombatSide.GetRight]"
+						}
+					}
+	
+					widget = {
+						size = { 20 20 }
+	
+						icon = {
+							size = { 100% 100% }
+							parentanchor = center
+							texture = "[GetConceptTexture('battle')]"
+							glow = {
+								name = "drop_shadow"
+								glow_radius = 3
+								color = {0.0 0.0 0.0 1.0}
+								alpha = 0.3
+							}
+						}
+					}
+	
+					vbox = {
+						spacing = 2
+						datacontext = "[Combat.GetDefender]"
+						unit_marker_battle_side_flank = {
+							datacontext = "[CombatSide.GetRight]"
+						}
+						unit_marker_battle_side_flank = {
+							datacontext = "[CombatSide.GetCenter]"
+						}
+						unit_marker_battle_side_flank = {
+							datacontext = "[CombatSide.GetLeft]"
+						}
+					}
+				}
+			}
+		}
+	}
+}

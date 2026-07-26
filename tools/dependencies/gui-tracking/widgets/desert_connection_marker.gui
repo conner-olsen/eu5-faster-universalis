@@ -1,0 +1,63 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "desert_connection_marker"
+	max_update_rate = 9999 # FUM: Throttle data updates
+
+	size = { 25 25}
+	widgetanchor = left
+	position = { 0 2 }
+
+	tooltipwidget = {		
+		ContextualTooltipType = {
+			blockoverride "title_icon" {
+				icon = {
+					texture = "gfx/interface/mapitems/desert_connector.dds"
+					using = tooltip_title_icon_size
+				}
+			}
+			blockoverride "title_text" {
+				text = "DESERT_CONNECTOR_TOOLTIP"
+			}
+
+			blockoverride "concept_link" {
+				text = [corridor|e]
+			}
+				
+			blockoverride "tooltip_content" {
+				TooltipScrolledRowList = { 
+					blockoverride "block_title" {
+						text = "[DesertConnectionMarker.GetTooltip]"
+					}
+
+					textcontext = "[DesertConnectionMarker.GetConnectedLocationNames]"
+				}
+			}
+		}			
+	}
+	
+	tooltip_offset = { 20 20 }
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+
+		tooltip_enabled = no
+		texture = "gfx/interface/mapitems/desert_connector.dds"
+		glow = {
+			name = "drop_shadow"
+			glow_radius = 3
+			color = {0.0 0.0 0.0 1.0}
+			alpha = 0.5  
+		}
+		texture_density = 2
+
+		onmousehierarchyenter = "[DesertConnectionMarker.HighlightConnections]"	
+		onmousehierarchyleave = "[DesertConnectionMarker.ClearHighlightedConnections]"	
+	}
+}

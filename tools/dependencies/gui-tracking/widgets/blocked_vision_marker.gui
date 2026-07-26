@@ -1,0 +1,58 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "blocked_vision_marker"
+	max_update_rate = 9999 # FUM: Throttle data updates
+	size = { 20 20 }
+	widgetanchor = left
+	position = { 0 2 }
+
+	# using = bg_circle_piechart
+	tooltipwidget = {		
+		ContextualTooltipType = {
+			blockoverride "title_icon" {
+				icon = {
+					texture = "gfx/interface/mapitems/hidden_from_land.dds"
+					using = tooltip_title_icon_size
+				}
+			}
+			blockoverride "title_text" {
+					text = "BLOCKED_VISION_TOOLTIP_TEXT"
+			}
+			blockoverride "concept_link" {
+				text = [fow|e]
+			}
+				
+			blockoverride "tooltip_content" {
+				TooltipStringPairList = { 
+					textcontext = "[BlockedVisionMarker.GetTooltip]"
+				}
+			}
+		}			
+	}
+	
+	tooltip_offset = { 20 20 }
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+
+		tooltip_enabled = no
+		texture = "gfx/interface/mapitems/hidden_from_land.dds"
+		glow = {
+			name = "drop_shadow"
+			glow_radius = 3
+			color = {0.0 0.0 0.0 1.0}
+			alpha = 0.5  
+		}
+		texture_density = 2
+
+		onclick = "[SelectLocation(BlockedVisionMarker.GetLocation)]"
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightLocation(BlockedVisionMarker.GetLocation)]"
+	}
+}

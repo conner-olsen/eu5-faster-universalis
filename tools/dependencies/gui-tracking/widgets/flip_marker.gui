@@ -1,0 +1,74 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "flip_marker"
+	max_update_rate = 9999 # FUM: Throttle data updates
+	allow_outside = yes
+	position = { 0 0 }
+
+	widget = {
+		size = { 30 30 }
+		widgetanchor = center
+
+		using = bg_circle_piechart
+		blockoverride "marker_bg_circle_extra_modifiers" {
+			modify_texture = {
+				using = color_light_green_texture
+				alpha = 0.3
+			}
+		}
+
+		tooltipwidget = {
+			SimpleContextualRowTooltipType = {
+				blockoverride "title_icon" {
+					icon = {
+						texture = "gfx/interface/icons/location_icons/garrison.dds"
+						using = tooltip_title_icon_size
+					}
+				}
+				blockoverride "concept_link" {
+					text = "[controller|e]"
+				}
+
+				lowpriotextcontext = "[FortFlipRestoreMarker.GetTooltip]"
+			}
+		}
+		
+		button = {
+			parentanchor = center
+			allow_outside = yes
+
+			block "button_size" {
+				size = { 18 18 }
+			}
+
+			tooltip_enabled = no
+			texture = "gfx/interface/icons/location_icons/garrison.dds"
+			texture_density = 2
+
+			onclick = "[SelectLocation(FortFlipRestoreMarker.GetLocation)]"
+			onmousehierarchyenter = "[PdxGuiWidget.SetHighlightLocation(FortFlipRestoreMarker.GetLocation)]"
+		}
+
+		piechart = {
+			parentanchor = center
+			size = { 26 26 }
+			using = piechart_angles
+
+			pieslice_no_highlight = {
+				texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+				value = "[FortFlipRestoreMarker.GetProgress]"
+				color = { 0.01 0.9 0.2 1 }
+				alwaystransparent = yes
+			}
+
+			pieslice_no_highlight = {
+				texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+				value = "[Subtract_float('(float)100.0', FortFlipRestoreMarker.GetProgress)]"
+				color = { 0.0 0.1 0.0 1 }
+				alwaystransparent = yes
+			}
+		}
+	}
+}

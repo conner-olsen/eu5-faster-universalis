@@ -1,0 +1,82 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "improve_opinion_marker"
+	max_update_rate = 9999 # FUM: Throttle data updates
+	size = { 40 40 }
+	widgetanchor = left
+	position = { 0 2 }
+
+	using = bg_circle_piechart
+
+	piechart = {
+		parentanchor = center
+		size = { 90% 90% }
+		using = piechart_angles
+
+		icon = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			size = { 97% 97% }
+			parentanchor = center
+			color = { 0.45 0.59  0.67 1 }
+			alpha = 0.3
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[ImproveOpinionMarker.GetProgress]"
+			color = { 0.3 0.8 0.3 1 }
+			alpha = 0.8
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[Subtract_float('(float)100.0', ImproveOpinionMarker.GetProgress)]"
+			color = { 1 1 1 0 }
+		}
+
+		icon = {
+			texture = "gfx/interface/icons/flat_icons/foreigncountry/opinion.dds"
+			size = { 70% 70% }
+			parentanchor = center
+		}
+	}
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCountry(ImproveOpinionMarker.GetCountry)]"
+
+		action_tooltip = {
+			click_type = left
+			click_mode = single
+			title = "TAB_TOOLTIP_DIPLOMACY_LEFT_CLICK"
+			on_action = "[ImproveOpinionMarker.OnClick]"
+		}
+
+		action_tooltip = {
+			click_type = right
+			click_mode = single
+			title = "CANCEL_IMPROVE_RELATIONTITLE"
+			on_action = "[ImproveOpinionMarker.OnRightClick]"
+			conditions = "[ImproveOpinionMarker.GetRightClickConditions]"
+			enabled = "[ImproveOpinionMarker.IsRightClickEnabled]"
+		}
+
+		tooltipwidget = {
+			using = improve_opinion_tooltip
+			blockoverride "improve_opinion_tooltip_countrycontext" {
+				datacontext = "[ImproveOpinionMarker.GetCountry]"
+			}
+			blockoverride "improve_opinion_tooltip_textcontext" {
+				textcontext = "[ImproveOpinionMarker.GetTooltip]"
+			}
+		}
+	}
+}
