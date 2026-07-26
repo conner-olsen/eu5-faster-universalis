@@ -12,5 +12,5 @@
 # }
 
 INJECT:country_base_values = {
-	land_morale_movement_cost = 0.006 # Vanilla 0.001 (country_base_values, in_game/common/auto_modifiers/country.txt:215) x 6 tick ratio
+	land_morale_movement_cost = 0.006 # Vanilla 0.001 (country_base_values, in_game/common/auto_modifiers/country.txt:216) x 6 tick ratio
 }

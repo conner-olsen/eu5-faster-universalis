@@ -14,7 +14,7 @@
 INJECT:country_base_values = {
 	country_child_education = 1.57
 	global_construction_speed = 1.57
-	land_morale_movement_cost = 0.0235 # Vanilla 0.001 (country_base_values, in_game/common/auto_modifiers/country.txt:215) x 23.5 tick ratio
+	land_morale_movement_cost = 0.0235 # Vanilla 0.001 (country_base_values, in_game/common/auto_modifiers/country.txt:216) x 23.5 tick ratio
 	regiment_recruit_speed = 1
 	ship_build_speed = 1.1
 }
