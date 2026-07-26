@@ -53,11 +53,7 @@
 	}
 }
 
-# Theoretically it should be 23.5x multiplier on vanilla.
-# However testing shows its not the case.
-# A 13x multiplier had the most accurate results.
-# Its possible vanilla is only using half the ticks for movement,
-# then this could be a rounding error of 11.75%.
+# 23.5x the vanilla per-tick speeds to match vanilla distance per in-game day.
 NUnit = {
 	ARMY_MOVEMENT_SPEED = 3.055 # 0.13
 	NAVY_MOVEMENT_SPEED = 11.75 # 0.5
