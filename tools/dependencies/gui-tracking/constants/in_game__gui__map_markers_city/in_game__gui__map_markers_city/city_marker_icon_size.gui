@@ -1,0 +1,4 @@
+# vanilla: in_game/gui/map_markers_city.gui
+# mod: in_game/gui/map_markers_city.gui
+
+@city_marker_icon_size = 20

@@ -1,0 +1,95 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "create_casus_belli_marker"
+	size = { 40 40 }
+	widgetanchor = left
+	position = { 0 2 }
+
+	using = bg_circle_piechart
+
+	piechart = {
+		parentanchor = center
+		size = { 90% 90% }
+		using = piechart_angles
+
+		icon = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			size = { 97% 97% }
+			parentanchor = center
+			color = { 0.45 0.59  0.67 1 }
+			alpha = 0.3
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[CreateCasusBelliMarker.GetProgress]"
+			color = { 0.3 0.8 0.3 1 }
+			alpha = 0.8
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[Subtract_float('(float)100.0', CreateCasusBelliMarker.GetProgress)]"
+			color = { 1 1 1 0 }
+		}
+
+		icon = {
+			texture = "gfx/interface/icons/flat_icons/declare_war/casus_belli.dds"
+			size = { 70% 70% }
+			parentanchor = center
+		}
+	}
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCountry(CreateCasusBelliMarker.GetCountry)]"
+
+		action_tooltip = {
+			click_type = left
+			click_mode = single
+			title = "TAB_TOOLTIP_DIPLOMACY_LEFT_CLICK"
+			on_action = "[CreateCasusBelliMarker.OnClick]"
+		}
+
+		action_tooltip = {
+			click_type = right
+			click_mode = single
+			title = "CANCEL_CREATE_CASUS_BELLI_TITLE"
+			on_action = "[CreateCasusBelliMarker.OnRightClick]"
+			conditions = "[CreateCasusBelliMarker.GetRightClickConditions]"
+			enabled = "[CreateCasusBelliMarker.IsRightClickEnabled]"
+		}
+
+		tooltipwidget = {
+			ContextualTooltipType = {
+				blockoverride "title_icon" {
+					icon = {
+						texture = "gfx/interface/icons/flat_icons/declare_war/casus_belli.dds"
+						using = tooltip_title_icon_size
+					}
+				}
+				blockoverride "title_text" {
+						text = "ENCYCLOPEDIA_PAGE_CASUS_BELLIS"
+				}
+				blockoverride "concept_link" {
+					text = "[casus_belli|e]"
+				}
+				blockoverride "tooltip_content" {
+					TooltipTextBlock = {
+						blockoverride "text" {
+							text = "[CreateCasusBelliMarker.GetTooltip]"
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,79 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "building_spy_network_marker"
+	size = { 40 40 }
+	widgetanchor = left
+	position = { 0 2 }
+
+	using = bg_circle_piechart
+
+	piechart = {
+		parentanchor = center
+		size = { 90% 90% }
+		using = piechart_angles
+
+		icon = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			size = { 97% 97% }
+			parentanchor = center
+			color = { 0.45 0.59  0.67 1 }
+			alpha = 0.3
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[BuildingSpyNetworkMarker.GetProgress]"
+			color = { 0.3 0.8 0.3 1 }
+			alpha = 0.8
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[Subtract_float('(float)100.0', BuildingSpyNetworkMarker.GetProgress)]"
+			color = { 1 1 1 0 }
+		}
+
+		icon = {
+			using = spy_network_texture
+			size = { 70% 70% }
+			parentanchor = center
+		}
+	}
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+		
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCountry(BuildingSpyNetworkMarker.GetCountry)]"
+		tooltipwidget = {
+			using = spy_network_tooltip
+			blockoverride "spy_network_tooltip_countrycontext" {
+				datacontext = "[BuildingSpyNetworkMarker.GetCountry]"
+			}
+			blockoverride "spy_network_tooltip_textcontext" {
+				textcontext = "[BuildingSpyNetworkMarker.GetTooltip]"
+			}
+		}
+		action_tooltip = {
+			click_type = left
+			click_mode = single
+			title = "TAB_TOOLTIP_DIPLOMACY_LEFT_CLICK"
+			on_action = "[BuildingSpyNetworkMarker.OnClick]"
+		}
+		
+		action_tooltip = {
+			click_type = right
+			click_mode = single
+			title = "CANCEL_BUILD_SPYNETWORKTITLE"
+			on_action = "[BuildingSpyNetworkMarker.OnRightClick]"
+			conditions = "[BuildingSpyNetworkMarker.GetRightClickConditions]"
+			enabled = "[BuildingSpyNetworkMarker.IsRightClickEnabled]"
+		}
+	}
+}

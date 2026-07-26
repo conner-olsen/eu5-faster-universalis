@@ -1,0 +1,32 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+container = {
+	name = "toll_marker"
+	allow_outside = yes
+
+	datacontext = "[TollMarker.GetLocation]"
+	button = {
+		parentanchor = center
+		texture = "[GetConceptTexture('sound_toll')]"
+		size = { 30 30 }
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightLocation(Location.GetSoundTollController)]"
+
+		glow = {
+			glow_radius = 2
+			color = {0.0 0.0 0.0 1.0}
+			alpha = 0.5
+		}
+
+		tooltipwidget = {
+			using = SoundTollLocationTooltip
+		}
+
+		action_tooltip = {
+			click_type = left
+			click_mode = single
+			title = "GO_TO_LOCATION"
+			on_action = "[ShowLocation(Location.GetSoundTollController)]"
+		}
+	}
+}

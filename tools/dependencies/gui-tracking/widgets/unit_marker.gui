@@ -1,0 +1,602 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "unit_marker"
+	allow_outside = yes
+	position = { 0 -2 }
+
+	widget = {
+		allow_outside = yes
+		parentanchor = center
+		visible = "[Not(TutorialHasVar('intro_hide_ui_7'))]"
+
+		# Siege banner
+		widget = {
+			visible = "[UnitMarker.HasSiege]"
+			datacontext = "[UnitMarker.GetLeadingUnit]"
+			datacontext = "[UnitMarker.GetSiege]"
+
+			parentanchor = right|vcenter
+			widgetanchor = left|vcenter
+			allow_outside = yes
+
+			unit_maker_siege_banner = {
+				visible = "[UnitMarker.ShouldBeShownFullWidth]"
+				widgetanchor = vcenter|left
+				parentanchor = center
+			}		
+
+			unit_maker_siege_banner = {
+				position = { @[20 - unit_marker_siege_banner_short_offset] 0 }
+				visible = "[And(UnitMarker.ShouldBeShownShortWidth, Not(UnitMarker.ShouldBeShownSmallSize))]"
+				widgetanchor = vcenter|left
+				parentanchor = center
+			}
+		}
+
+		# Units list
+		fixedgridbox = {
+			name = "unit_items_grid"
+			addcolumn = @unit_marker_item_width
+			addrow = @unit_marker_item_height
+			datamodel_reuse_widgets = yes
+			allow_outside = yes
+
+			parentanchor = center
+			resizeparent = yes
+
+			datamodel = "[UnitMarker.GetUnits]"
+			item = {
+				widget = {
+					size = { @unit_marker_item_width @unit_marker_item_height }
+					datacontext = "[UnitMarkerItem.GetUnit]"
+					visible = "[Not(And(UnitMarkerItem.GetUnit.IsInTransport,Not(UnitMarkerItem.GetUnit.IsMoving)))]"
+					allow_outside = yes
+
+					#Army Marker
+					vbox = {
+						using = layoutpolicy_expanding
+						visible = "[UnitMarkerItem.GetUnit.IsArmy]"
+						allow_outside = yes
+
+						# Full width
+						unit_marker_item_layout = {
+							using = layoutpolicy_expanding
+							# spacing = -3
+							visible = "[UnitMarker.ShouldBeShownFullWidth]"
+							allow_outside = yes
+
+							widget = {
+								ignore_layout = yes
+								size = { 70 40 }
+								parentanchor = vcenter|left
+								widgetanchor = vcenter|right
+								position = { 12 5 }
+								allow_outside = yes
+								hbox = {
+									allow_outside = yes
+									spacing = 2
+
+									expand = {}
+									
+									unit_marker_compass = {}
+
+									widget = {
+										allow_outside = yes
+										using = unit_marker_item_commander
+										blockoverride "item_unit_commander_text_object" {
+											hbox = {
+												widget = {
+													size = { 26 26 }
+			
+													# Has General
+													button = {
+														visible = "[UnitMarkerItem.HasLeaderFrame]"
+			
+														size = { 26 26 }
+			
+														framesize = { 32 32 }
+														frame = "[UnitMarkerItem.GetLeaderFrame]"
+			
+														texture = "gfx/interface/mapitems/commander_rank.dds"
+														texture_density = 2
+			
+														action_tooltip = {
+															title = "SHOW_CHARACTER"
+															on_action = "[UnitMarkerItem.OnLeaderClick]"
+														}
+														
+														datacontext = "[UnitMarkerItem.GetUnit.GetCommander]"
+														tooltipwidget = {
+															using = Character_tooltip
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+
+							blockoverride "item_modifiers_size" {
+								size = { 28 28 }
+							}
+
+							blockoverride "item_unit_text_object" {
+								hbox = {
+									# margin_left = @[unit_marker_morale_progressbar_size * 0.6]
+									margin = {8 0}
+									margin_right = 7
+									hbox = {
+										spacing = -2
+										country_flag_small = {
+											datacontext = "[Unit.GetCountry]"
+											size = { 40 28 }
+		
+											blockoverride "click" {
+												onclick = "[UnitMarkerItem.OnFlagClick]"
+											}
+	
+											blockoverride "double_click" {
+												ondoubleclick = "[UnitMarkerItem.OnRightClick]"
+											}
+										}
+	
+										widget = {
+											size = { 8 26 }
+											allow_outside = yes
+	
+											unit_composition_bar = {
+												size = { 6 24 }
+											}
+	
+											icon = {
+												size = { 100% 100% }
+												texture = "gfx/interface/component_tiles/square_outline_alt.dds"
+												texture_density = 2
+												spriteType = corneredstretched
+												spriteBorder = { 20 20 }
+												modify_texture = {
+													using = color_super_dark_brown_texture
+													blend_mode = multiply
+												}
+											}
+										}
+									}
+									
+									vbox = {
+										using = layoutpolicy_expanding
+										margin_bottom = 4
+
+										expand = {}
+
+										text_single = {
+											layoutpolicy_horizontal = expanding
+											autoresize = no
+											size = {-1 20}
+											align = center|nobaseline
+											text = "[UnitMarkerItem.GetLabel]"
+										}
+										
+										widget = {
+											layoutpolicy_horizontal = expanding
+											size = { -1 5 }
+											progressbar = {
+												visible = "[Unit.HasMaximumMaintenance]"
+												size = { 100% 5 }
+												using = progress_bar_green_alt
+												value = "[UnitMarkerItem.GetAverageMoralePercent]"
+												tooltipwidget = {
+													using = UnitMorale_tooltip
+												}
+											}
+											progressbar = {
+												visible = "[Not(Unit.HasMaximumMaintenance)]"
+												size = { 100% 5 }
+												progresstexture = "gfx/interface/progressbars/progress_bar_yellow.dds"
+												noprogresstexture = "gfx/interface/progressbars/progress_black.dds"
+												texture_density = 2
+												spriteType = Corneredstretched
+												spriteborder = { 12 0 }
+												value = "[UnitMarkerItem.GetAverageMoralePercent]"
+												tooltipwidget = {
+													using = UnitMorale_tooltip
+												}
+											}
+										}
+									}
+								}
+							}
+
+							blockoverride "item_unit_transport_text_object" {
+								text_single = {
+									size = { 100% 100% }
+									autoresize = no
+									align = center|nobaseline
+									text = "[UnitMarkerItem.GetTransportedTroops]"
+								}
+							}
+						}
+
+						# Short width
+						widget = {
+							visible = "[And(UnitMarker.ShouldBeShownShortWidth, Not(UnitMarker.ShouldBeShownVerySmallSize))]"
+							size = { @[unit_marker_item_width * unit_marker_item_short_factor] @unit_marker_item_height }
+
+							vbox = {
+								# hbox = {
+								# 	layoutpolicy_horizontal = expanding
+								# 	spacing = 2
+								# 	using = unit_marker_item_modifiers_small_zoom
+								# 	expand = {}
+								# }
+
+								unit_marker_item_unit_info = {
+									unit_marker_compass = {
+										size = { 18 18 }
+										position = { -8 4 }
+									}
+
+									blockoverride "unit_marker_item_unit_info_size"{
+										layoutpolicy_horizontal = expanding
+										size = {-1 @unit_marker_frame_height}
+									}
+									blockoverride "item_modifiers_size" {
+										size = { 22 22 }
+										position = { 0 2 }
+									}
+									blockoverride "unit_transport_size" {
+										size = { 28 28 }
+									}
+									
+									blockoverride "item_unit_text_object" {
+										hbox = {
+											margin_left = 10
+											margin_right = 7
+
+											country_flag_small = {
+												datacontext = "[Unit.GetCountry]"
+												size = { 38 26 }
+			
+												blockoverride "click" {
+													onclick = "[UnitMarkerItem.OnFlagClick]"
+												}
+
+												blockoverride "double_click" {
+													ondoubleclick = "[UnitMarkerItem.OnRightClick]"
+												}
+											}
+
+											vbox = {
+												using = layoutpolicy_expanding
+												minimumsize = {12 -1}
+												margin_bottom = 4
+
+												expand = {}
+		
+												text_single = {
+													layoutpolicy_horizontal = expanding
+													autoresize = yes
+													fontsize = 12
+													maximumsize = {-1 20}
+													align = center|nobaseline
+													text = "[UnitMarkerItem.GetLabel]"
+												}
+												widget = {
+													layoutpolicy_horizontal = expanding
+													size = { -1 5 }
+													progressbar = {
+														visible = "[Unit.HasMaximumMaintenance]"
+														size = { 100% 5 }
+														using = progress_bar_green_alt
+														value = "[UnitMarkerItem.GetAverageMoralePercent]"
+														tooltipwidget = {
+															using = UnitMorale_tooltip
+														}
+													}
+													progressbar = {
+														visible = "[Not(Unit.HasMaximumMaintenance)]"
+														size = { 100% 5 }
+														using = progress_bar_goldish
+														value = "[UnitMarkerItem.GetAverageMoralePercent]"
+														tooltipwidget = {
+															using = UnitMorale_tooltip
+														}
+													}
+												}
+											}
+										}
+									}
+
+									blockoverride "item_unit_transport_text_object" {
+										text_single = {
+											size = { 100% 100% }
+											autoresize = no
+											align = center|nobaseline
+											text = "[UnitMarkerItem.GetTransportedTroops]"
+										}
+									}
+								}
+
+								expand = {}
+							}
+						}
+					}
+
+					#Navy Marker
+					vbox = {
+						using = layoutpolicy_expanding
+						visible = "[Not(UnitMarkerItem.GetUnit.IsArmy)]"
+						allow_outside = yes
+						margin_right = 5
+						
+						# Full width
+						unit_marker_item_layout = {
+							using = layoutpolicy_expanding
+							spacing = -3
+							visible = "[UnitMarker.ShouldBeShownFullWidth]"
+							allow_outside = yes
+
+							widget = {
+								ignore_layout = yes
+								size = { 70 40 }
+								parentanchor = vcenter|left
+								widgetanchor = vcenter|right
+								position = { 4 5 }
+								allow_outside = yes
+								hbox = {
+									allow_outside = yes
+									spacing = 2
+
+									expand = {}
+									
+									unit_marker_compass = {}
+
+									widget = {
+										allow_outside = yes
+										using = unit_marker_item_commander
+										blockoverride "item_unit_commander_text_object" {
+											hbox = {
+												widget = {
+													size = { 26 26 }
+			
+													# Has General
+													button = {
+														visible = "[UnitMarkerItem.HasLeaderFrame]"
+			
+														size = { 26 26 }
+			
+														framesize = { 32 32 }
+														frame = "[UnitMarkerItem.GetLeaderFrame]"
+			
+														texture = "gfx/interface/mapitems/commander_rank.dds"
+														texture_density = 2
+			
+														action_tooltip = {
+															title = "SHOW_CHARACTER"
+															on_action = "[UnitMarkerItem.OnLeaderClick]"
+														}
+														
+														datacontext = "[UnitMarkerItem.GetUnit.GetCommander]"
+														tooltipwidget = {
+															using = Character_tooltip
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+
+							blockoverride "item_modifiers_size" {
+								size = { 28 28 }
+							}
+
+							blockoverride "item_unit_text_object" {
+								hbox = {
+									# margin_left = @[unit_marker_morale_progressbar_size * 0.6]
+									margin = {4 0}
+									margin_right = 8
+									margin_bottom = 2
+									vbox = {
+										using = layoutpolicy_expanding
+										margin_bottom = 2
+
+										expand = {}
+
+										text_single = {
+											layoutpolicy_horizontal = expanding
+											autoresize = no
+											size = {-1 20}
+											align = center|nobaseline
+											text = "[UnitMarkerItem.GetLabel]"
+										}
+										widget = {
+											layoutpolicy_horizontal = expanding
+											size = { -1 5 }
+											progressbar = {
+												parentanchor = right
+												visible = "[Unit.HasMaximumMaintenance]"
+												size = { 100% 5 }
+												using = progress_bar_green_alt
+												value = "[UnitMarkerItem.GetAverageMoralePercent]"
+												tooltipwidget = {
+													using = UnitMorale_tooltip
+												}
+											}
+											progressbar = {
+												parentanchor = right
+												visible = "[Not(Unit.HasMaximumMaintenance)]"
+												size = { 100% 5 }
+												using = progress_bar_goldish
+												value = "[UnitMarkerItem.GetAverageMoralePercent]"
+												tooltipwidget = {
+													using = UnitMorale_tooltip
+												}
+											}
+										}
+									}
+
+									hbox = {
+										spacing = -2
+	
+										widget = {
+											size = { 8 26 }
+											allow_outside = yes
+	
+											unit_composition_bar = {
+												size = { 6 26 }
+											}
+	
+											icon = {
+												size = { 100% 100% }
+												texture = "gfx/interface/component_tiles/square_outline_alt.dds"
+												texture_density = 2
+												spriteType = corneredstretched
+												spriteBorder = { 20 20 }
+												modify_texture = {
+													using = color_super_dark_brown_texture
+													blend_mode = multiply
+												}
+											}
+										}
+
+										country_flag_small = {
+											datacontext = "[Unit.GetCountry]"
+											size = { 42 29 }
+		
+											blockoverride "click" {
+												onclick = "[UnitMarkerItem.OnFlagClick]"
+											}
+	
+											blockoverride "double_click" {
+												ondoubleclick = "[UnitMarkerItem.OnRightClick]"
+											}
+										}
+									}
+								}
+							}
+
+							blockoverride "item_unit_transport_text_object" {
+								text_single = {
+									size = { 100% 100% }
+									autoresize = no
+									align = center|nobaseline
+									text = "[UnitMarkerItem.GetTransportedTroops]"
+								}
+							}
+						}
+
+						# Short width
+						widget = {
+							visible = "[And(UnitMarker.ShouldBeShownShortWidth, Not(UnitMarker.ShouldBeShownVerySmallSize))]"
+							size = { @[unit_marker_item_width * unit_marker_item_short_factor] @unit_marker_item_height }
+
+							vbox = {
+								# hbox = {
+								# 	layoutpolicy_horizontal = expanding
+								# 	spacing = 2
+								# 	using = unit_marker_item_modifiers_small_zoom
+								# 	expand = {}
+								# }
+
+								unit_marker_item_unit_info = {
+									unit_marker_compass = {
+										size = { 18 18 }
+										position = { -8 4 }
+									}
+
+									blockoverride "unit_marker_item_unit_info_size"{
+										layoutpolicy_horizontal = expanding
+										size = {-1 @unit_marker_frame_height}
+									}
+									blockoverride "item_modifiers_size" {
+										size = { 22 22 }
+										position = { 0 2 }
+									}
+									blockoverride "unit_transport_size" {
+										size = { 28 28 }
+									}
+									
+									blockoverride "item_unit_text_object" {
+										hbox = {
+											margin_left = 4
+											margin_right = 7
+
+											vbox = {
+												using = layoutpolicy_expanding
+												minimumsize = {12 -1}
+												margin_bottom = 4
+
+												expand = {}
+		
+												text_single = {
+													layoutpolicy_horizontal = expanding
+													autoresize = yes
+													fontsize = 12
+													maximumsize = {-1 20}
+													align = center|nobaseline
+													text = "[UnitMarkerItem.GetLabel]"
+												}
+												widget = {
+													layoutpolicy_horizontal = expanding
+													size = { -1 5 }
+													progressbar = {
+														visible = "[Unit.HasMaximumMaintenance]"
+														parentanchor = right
+														size = { 100% 5 }
+														using = progress_bar_green_alt
+														value = "[UnitMarkerItem.GetAverageMoralePercent]"
+														tooltipwidget = {
+															using = UnitMorale_tooltip
+														}
+													}
+													progressbar = {
+														visible = "[Not(Unit.HasMaximumMaintenance)]"
+														parentanchor = right
+														size = { 100% 5 }
+														using = progress_bar_goldish
+														value = "[UnitMarkerItem.GetAverageMoralePercent]"
+														tooltipwidget = {
+															using = UnitMorale_tooltip
+														}
+													}
+												}
+											}
+
+											country_flag_small = {
+												datacontext = "[Unit.GetCountry]"
+												size = { 38 26 }
+			
+												blockoverride "click" {
+													onclick = "[UnitMarkerItem.OnFlagClick]"
+												}
+
+												blockoverride "double_click" {
+													ondoubleclick = "[UnitMarkerItem.OnRightClick]"
+												}
+											}
+										}
+									}
+
+									blockoverride "item_unit_transport_text_object" {
+										text_single = {
+											size = { 100% 100% }
+											autoresize = no
+											align = center|nobaseline
+											text = "[UnitMarkerItem.GetTransportedTroops]"
+										}
+									}
+								}
+
+								expand = {}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

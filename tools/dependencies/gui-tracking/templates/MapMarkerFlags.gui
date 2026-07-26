@@ -1,0 +1,94 @@
+# vanilla: in_game/gui/map_markers_city.gui
+# mod: in_game/gui/map_markers_city.gui
+
+template MapMarkerFlags
+{
+	country_flag_small = {
+		name = "controller_flag_country_capital"
+		# size = { 24 16 }
+		tooltip_enabled = no
+		datacontext = "[CityMarker.GetLocation.GetController]"
+
+		blockoverride "click" {
+			onclick = "[CityMarker.OnClick]"
+		}
+
+		blockoverride "double_click" {}
+		visible = "[And(CityMarker.ShouldShowOccupationFlag, CityMarker.GetLocation.IsCapital)]"
+	}
+
+	country_flag_very_small = {
+		name = "controller_flag_province_capital"
+		# size = { 24 16 }
+		tooltip_enabled = no
+		datacontext = "[CityMarker.GetLocation.GetController]"
+
+		blockoverride "click" {
+			onclick = "[CityMarker.OnClick]"
+		}
+
+		blockoverride "double_click" {}
+		visible = "[And3(CityMarker.ShouldShowOccupationFlag, CityMarker.GetLocation.IsProvinceCapital, Not(CityMarker.GetLocation.IsCapital))]"
+	}
+
+	country_flag_mini = {
+		# size = { 24 16 }
+		tooltip_enabled = no
+		datacontext = "[CityMarker.GetLocation.GetController]"
+
+		blockoverride "click" {
+			onclick = "[CityMarker.OnClick]"
+		}
+
+		blockoverride "double_click" {}
+		visible = "[And3(CityMarker.ShouldShowOccupationFlag, Not(CityMarker.GetLocation.IsProvinceCapital), Not(CityMarker.GetLocation.IsCapital))]"
+	}
+
+	country_flag_small_plus = {
+		# size = { 24 16 }
+		tooltip_enabled = no
+
+		blockoverride "click" {
+			onclick = "[CityMarker.OnClick]"
+		}
+
+		blockoverride "double_click" {}
+		visible = "[And(GreaterThanOrEqualTo_int32(CityMarker.GetLocation.GetOwner.GetRank.GetLevelNumber, '(int32)4'), CityMarker.ShouldBeShownAsCapital)]"
+	}
+
+	country_flag_small = {
+		# size = { 24 16 }
+		tooltip_enabled = no
+
+		blockoverride "click" {
+			onclick = "[CityMarker.OnClick]"
+		}
+
+		blockoverride "double_click" {}
+		visible = "[And(EqualTo_int32(CityMarker.GetLocation.GetOwner.GetRank.GetLevelNumber, '(int32)3'), CityMarker.ShouldBeShownAsCapital)]"
+	}
+
+	country_flag_very_small = {
+		# size = { 24 16 }
+		tooltip_enabled = no
+
+		blockoverride "click" {
+			onclick = "[CityMarker.OnClick]"
+		}
+
+		blockoverride "double_click" {}
+		visible = "[And(EqualTo_int32(CityMarker.GetLocation.GetOwner.GetRank.GetLevelNumber, '(int32)2'), CityMarker.ShouldBeShownAsCapital)]"
+	}
+
+	country_flag_mini = {
+		size = { 24 16 }
+		tooltip_enabled = no
+
+		blockoverride "click" {
+			onclick = "[CityMarker.OnClick]"
+		}
+
+		blockoverride "double_click" {}
+		visible = "[And(LessThanOrEqualTo_int32(CityMarker.GetLocation.GetOwner.GetRank.GetLevelNumber, '(int32)1'), CityMarker.ShouldBeShownAsCapital)]"
+	}
+}

@@ -1,0 +1,94 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "combat_imminent_marker"
+	allow_outside = yes
+	widget = {
+		size = { 40 40 }
+		parentanchor = center
+
+		tooltip_offset = { 10 0 }
+		tooltipwidget = {
+			ContextualTooltipType = {
+				blockoverride "title_icon" {
+					icon = {
+						using = tooltip_title_icon_size
+						texture = "[CombatImminentMarker.GetIconTexture]"
+
+						glow = {
+							name = "drop_shadow"
+							glow_radius = 3
+							color = {0.0 0.0 0.0 1.0}
+							alpha = 0.3
+						}
+					}
+				}
+
+				blockoverride "title_button" {
+					hint_button = {
+						action_tooltip = {
+							title = "OPEN_HINT"
+							on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_battle')]"
+						}
+					}
+				}
+
+				blockoverride "title_text" {
+					text = "COMBAT_IMMINENT_TITLE"
+				}
+
+				blockoverride "concept_link" {
+					text = "[combat|e]"
+				}
+
+				blockoverride "tooltip_content" {
+					TooltipTextBlock = {
+						blockoverride "text" {
+							text = "[CombatImminentMarker.GetTooltipHeader]"
+						}
+					}
+					TooltipRowList = {
+						blockoverride "block_title" {
+							text = "COMBAT_IMMINENT_OUTCOME_TITLE"
+						}
+						textcontext = "[CombatImminentMarker.GetTooltipOutcome]"
+					}
+					TooltipRowList = {
+						blockoverride "block_title" {
+							text = "COMBAT_IMMINENT_BOTH_SIDES_TITLE"
+						}
+						textcontext = "COMBAT_IMMINENT_BOTH_SIDES"
+					}
+					TooltipRowList = {
+						blockoverride "block_title" {
+							text = "COMBAT_IMMINENT_OUR_BENEFITS"
+						}
+						textcontext = "COMBAT_IMMINENT_OUR_BENEFITS_TEXT"
+					}
+					TooltipRowList = {
+						blockoverride "block_title" {
+							text = "COMBAT_IMMINENT_THEIR_BENEFITS"
+						}
+						textcontext = "COMBAT_IMMINENT_THEIR_BENEFITS_TEXT"
+					}
+				}
+			}
+		}
+
+		button = {
+			parentanchor = center
+			allow_outside = yes
+
+			block "button_size" {
+				size = { 100% 100% }
+			}
+
+			tooltip_enabled = no
+			texture = "[CombatImminentMarker.GetIconTexture]"
+
+			onclick = "[SelectLocation(CombatImminentMarker.GetLocation)]"
+			onmousehierarchyenter = "[PdxGuiWidget.SetHighlightLocation(CombatImminentMarker.GetLocation)]"
+		}
+	}
+}

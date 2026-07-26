@@ -1,0 +1,35 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "holy_site_marker"
+	allow_outside = yes
+	size = { 40 40 }
+	position = { 0 0 }
+
+	icon = {
+		parentanchor = center
+		size = { 40 40 }
+		texture = "gfx/interface/icons/location_icons/holy_sites.dds"
+		texture_density = 2
+
+		tooltipwidget = {
+			container = {
+				alwaystransparent = no
+				datacontext = "[HolySiteMarker.GetLocation]"
+				using = HolySitesLocation_Tooltip
+			}
+		}
+	}
+
+	text_single = {
+		datacontext = "[HolySiteMarker.GetLocation]"
+		visible = "[LessThanOrEqualTo_int32(GetZoomStep, '(int32)7')]"
+		parentanchor = right|vcenter
+		position = { 4 0 }
+		snap_to_pixels = no
+		default_format = "#high"
+		text = "[GetDataModelSize(Location.GetHolySites)]"
+		using = Font_Size_Medium
+	}
+}

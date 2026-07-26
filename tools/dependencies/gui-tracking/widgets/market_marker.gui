@@ -1,0 +1,73 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "market_marker"
+	allow_outside = yes
+
+	icon = {
+		allow_outside = yes
+		size = { 20 20 }
+		texture = "[MarketMarker.GetLocation.GetRankIcon]"
+
+		widgetanchor = center
+		parentanchor = center
+
+		tooltip = "[MarketMarker.GetTooltip]"
+
+		flowcontainer = {
+			widgetanchor = right
+			country_flag = {
+				name = "country_flag"
+				parentanchor = top|hcenter
+				size = { 24 16 }
+				tooltip_enabled = no
+				datacontext = "[MarketMarker.GetLocation.GetOwner]"
+
+				blockoverride "flag" {
+					datacontext = "[GetCountryCoatOfArms(MarketMarker.GetLocation.GetOwner.Self)]"
+					texture = "[CoatOfArmsWrapper.GetTexture('(int32)56','(int32)56')]"
+					frame = "[CoatOfArmsWrapper.GetFrame('(int32)56','(int32)56')]"
+					framesize = "[CoatOfArmsWrapper.GetFrameSizeOrFallback('(int32)56','(int32)56','(float)1.0')]"
+				}
+				
+				blockoverride "click" {}
+				blockoverride "double_click" {}
+			}
+		}
+
+		flowcontainer = {
+			widgetanchor = right
+
+			country_flag = {
+				size = { 24 16 }
+				name = "country_flag"
+				parentanchor = top|hcenter
+				tooltip_enabled = no
+				datacontext = "[MarketMarker.GetLocation.GetOwner]"
+
+				blockoverride "flag" {
+					datacontext = "[GetCountryCoatOfArms(MarketMarker.GetLocation.GetOwner.Self)]"
+					texture = "[CoatOfArmsWrapper.GetTexture('(int32)56','(int32)56')]"
+					frame = "[CoatOfArmsWrapper.GetFrame('(int32)56','(int32)56')]"
+					framesize = "[CoatOfArmsWrapper.GetFrameSizeOrFallback('(int32)56','(int32)56','(float)1.0')]"
+				}
+
+				blockoverride "click" {}
+				blockoverride "double_click" {}
+			}
+		}
+
+		flowcontainer = {
+			position = { 22 0 }
+			ignoreinvisible = yes
+			text_single = {
+				text = "[MarketMarker.GetLocation.GetNameWithNoTooltip|U]"
+				snap_to_pixels = no
+				default_format = "#map_city_label_capital"
+				tooltip = "[MarketMarker.GetTooltip]"
+
+			}
+		}
+	}
+}

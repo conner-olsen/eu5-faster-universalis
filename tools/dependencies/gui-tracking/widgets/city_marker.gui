@@ -1,0 +1,105 @@
+# vanilla: in_game/gui/map_markers_city.gui
+# mod: in_game/gui/map_markers_city.gui
+
+widget = {
+	name = "city_marker"
+	allow_outside = yes
+	
+	widget = {
+		parentanchor = center
+		allow_outside = yes
+		
+		visible = "[CityMarker.ShowDetailsOrHasWarFort]"
+		size = { @city_marker_icon_size @city_marker_icon_size }
+
+		widget = {
+			parentanchor = left|vcenter
+			widgetanchor = right|vcenter
+
+			hbox = {
+				margin = { 0 0 }
+				minimumsize = { -1 @city_marker_icon_size }
+				set_parent_size_to_minimum = yes
+				visible = "[CityMarker.ShouldShowOccupationFlag]"
+				datacontext = "[CityMarker.GetLocation.GetController]"
+				country_flag_small = {
+					visible = "[MapMarkerFlagsVisible]"
+				}
+			}
+		}
+
+		widget = {
+			parentanchor = left|vcenter
+			widgetanchor = left|vcenter
+
+			background = {
+				visible = "[CityMarker.ShowDetails]"
+				using = simple_paper_card_texture
+				alpha = 0.5
+				margin = { 0 -2 }
+				margin_right = 8
+				mirror = horizontal
+
+				modify_texture = {
+					using = color_bg_blue_texture
+				}
+			}
+
+			hbox = {
+				minimumsize = { -1 @city_marker_icon_size }
+				set_parent_size_to_minimum = yes
+				ignoreinvisible = yes
+				spacing = 2
+
+				location_rank_icon = {
+					datacontext = "[CityMarker.GetLocation]"
+				}
+
+				hbox = {
+					tooltipwidget = {
+						ContextualTooltipType = {
+							blockoverride "title_icon" {
+								icon = {
+									texture = "[GetBuildingIcon(CityMarker.GetLocation.GetBestFortBuilding.GetType)]"
+									using = tooltip_title_icon_size
+								}
+							}
+							blockoverride "title_text" {
+									text = "FORT_LEVEL"
+							}
+							blockoverride "concept_link" {
+								text = "[fort|e]"
+							}
+							blockoverride "tooltip_content" {
+								TooltipStringPairList = {
+									textcontext = "[CityMarker.GetLocation.GetDescriptionFor('fort_level')]"	
+								}
+							}
+						}
+					}
+
+					icon = {
+						alwaystransparent = no
+						onmousehierarchyenter = "[PdxGuiWidget.SetHighlightFort(CityMarker.GetLocation)]"
+						visible = "[And(CityMarker.GetLocation.HasAnyFort, CityMarker.IsFortSettingEnabled)]"
+						texture = "gfx/interface/icons/map_modes/fort_level_icon.dds"
+						size = { @city_marker_fort_icon_size @city_marker_fort_icon_size }
+					}
+				}
+				
+				text_single = {
+					visible = "[CityMarker.ShowDetails]"
+					text = "[CityMarker.GetLocation.GetNameWithNoTooltip|U]"
+					snap_to_pixels = yes
+					fontsize = 12
+					align = nobaseline
+					default_format = "#map_city_label"
+				}
+			}
+		}
+	}
+
+	marker_rank_icon = {
+		visible = "[CityMarker.GetRankVisible]"
+	}
+}

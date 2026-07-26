@@ -1,0 +1,93 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "currying_favors_marker"
+	size = { 40 40 }
+	widgetanchor = left
+	position = { 0 2 }
+
+	using = bg_circle_piechart
+
+	piechart = {
+		parentanchor = center
+		size = { 90% 90% }
+		using = piechart_angles
+
+		icon = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			size = { 97% 97% }
+			parentanchor = center
+			color = { 0.45 0.59  0.67 1 }
+			alpha = 0.3
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[CurryingFavorsMarker.GetProgress]"
+			color = { 0.3 0.8 0.3 1 }
+			alpha = 0.8
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[Subtract_float('(float)100.0', CurryingFavorsMarker.GetProgress)]"
+			color = { 1 1 1 0 }
+		}
+
+		icon = {
+			using = favors_texture
+			size = { 70% 70% }
+			parentanchor = center
+		}
+	}
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCountry(CurryingFavorsMarker.GetCountry)]"
+
+		action_tooltip = {
+			click_type = left
+			title = "OPEN_COUNTRY_PANEL"
+			on_action = "[CurryingFavorsMarker.OnClick]"
+		}
+		
+		action_tooltip = {
+			click_type = right
+			title = "CANCEL_CURRY_FAVORSTITLE"
+			on_action = "[CurryingFavorsMarker.OnRightClick]"
+			conditions = "[CurryingFavorsMarker.GetRightClickConditions]"
+			enabled = "[CurryingFavorsMarker.IsRightClickEnabled]"
+		}
+
+		tooltipwidget = {
+			ContextualTooltipType = {
+				blockoverride "title_icon" {
+					icon = {
+						texture = "gfx/interface/icons/flat_icons/foreigncountry/favors.dds"
+						using = tooltip_title_icon_size
+					}
+				}
+				blockoverride "title_text" {
+						text = "DIPLOMACY_CURRYNG_FAVORS"
+				}
+				blockoverride "concept_link" {
+					text = "[favors|e]"
+				}
+				blockoverride "tooltip_content" {
+					TooltipTextBlock = {
+						blockoverride "text" {
+							text = "[CurryingFavorsMarker.GetTooltip]"
+						}
+					}
+				}
+			}
+		}
+	}
+}

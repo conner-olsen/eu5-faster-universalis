@@ -1,0 +1,53 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "winter_blocked_marker"
+	size = { 20 20 }
+	widgetanchor = left
+	position = { 0 2 }
+
+	tooltipwidget = {
+		ContextualTooltipType = {
+			blockoverride "title_icon" {
+				icon = {
+					texture = "gfx/interface/mapitems/stuck_in_ice.dds"
+					using = tooltip_title_icon_size
+				}
+			}
+			blockoverride "title_text" {
+					text = "WINTER_BLOCKED_TOOLTIP_TEXT"
+			}
+
+			blockoverride "tooltip_content" {
+				TooltipStringPairList = {
+					textcontext = "[WinterBlockedMarker.GetTooltip]"
+				}
+			}
+		}
+	}
+
+	tooltip_offset = { 20 20 }
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+
+		tooltip_enabled = no
+		texture = "gfx/interface/mapitems/stuck_in_ice.dds"
+		glow = {
+			name = "drop_shadow"
+			glow_radius = 3
+			color = {0.0 0.0 0.0 1.0}
+			alpha = 0.5
+		}
+		texture_density = 2
+
+		onclick = "[SelectLocation(WinterBlockedMarker.GetLocation)]"
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightLocation(WinterBlockedMarker.GetLocation)]"
+	}
+}

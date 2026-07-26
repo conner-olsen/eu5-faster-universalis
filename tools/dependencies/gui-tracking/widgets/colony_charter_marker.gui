@@ -1,0 +1,94 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "colony_charter_marker"
+	size = { 40 40 }
+	widgetanchor = left
+	position = { 0 2 }
+
+	using = bg_circle_piechart
+
+	piechart = {
+		parentanchor = center
+		size = { 90% 90% }
+		using = piechart_angles
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[ColonyCharterMarker.GetProgress]"
+			color = { 0.01 0.6 0.9 1 }
+			alwaystransparent = yes
+		}
+
+		pieslice = {
+			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
+			value = "[Subtract_float('(float)100.0', ColonyCharterMarker.GetProgress)]"
+			color = { 0.0 0.1 0.0 1 }
+			alwaystransparent = yes
+		}
+	}
+
+	button = {
+		parentanchor = center
+		allow_outside = yes
+
+		block "button_size" {
+			size = { 100% 100% }
+		}
+
+		size = { 22 22 }
+		align = center|nobaseline
+		texture = "gfx/interface/mapitems/colonial_charter.dds"
+		glow = {
+			name = "drop_shadow"
+			glow_radius = 3
+			color = {0.0 0.0 0.0 1.0}
+			alpha = 0.5  
+		}
+		texture_density = 2
+
+		onmousehierarchyenter = "[ColonyCharterMarker.HighlightCharter]"
+		onmousehierarchyleave = "[ColonyCharterMarker.ClearHighlightedCharter]"
+
+		tooltip_offset = { 20 20 }
+
+		action_tooltip = {
+			click_type = left
+			click_mode = single
+			title = "GO_TO_COLONY"
+			on_action = "[ShowProvinceDefinition(ColonyCharterMarker.GetLocation.GetProvinceDefinition)]"
+		}
+
+		action_tooltip = {
+			click_type = right
+			click_mode = single
+			title = "AUTOMATED_SYSTEM_COLONIES_CLICK"
+			on_action = "[OpenLateralViewWithParams('expansion', 'low_tab = colonisation')]"
+		}
+
+		tooltipwidget = {		
+			ContextualTooltipType = {
+				blockoverride "title_icon" {
+					icon = {
+						texture = "gfx/interface/mapitems/colonial_charter.dds"
+						using = tooltip_title_icon_size
+					}
+				}
+				blockoverride "title_text" {
+					text = "COLONIAL_PROGRESS_POT_HEADER"
+				}
+
+				blockoverride "concept_link" {
+					text = [colonial_charter|e]
+				}
+					
+				blockoverride "tooltip_content" {
+					TooltipScrolledRowList = { 
+						textcontext = "[ColonyCharterMarker.GetTooltip]"
+					}
+				}
+			}
+		}
+	}
+}

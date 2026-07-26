@@ -1,0 +1,85 @@
+# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+widget = {
+	name = "raw_goods_marker"
+	allow_outside = yes
+	size = "[Min_CVector2f(Multiply_CVector2f(GetInverseZoom2, '(CVector2f)9333, 9333'), '(CVector2f)85, 85')]"
+
+	datacontext = "[RawGoodsMarker]"
+	datacontext = "[RawGoodsMarker.GetLocation]"
+	datacontext = "[RawGoodsMarker.GetLocation.GetRawMaterial]"
+	datacontext = "[RawGoodsMarker.GetLocation.GetMarket]"
+
+	button = {
+		size = { 75% 75% }
+		parentanchor = center
+		texture = "[GetGoodsIcon(Location.GetRawMaterial.Self)]"
+		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightGoods(Location.GetRawMaterial.Self)]"
+		tooltipwidget = {
+			using = SpecificGoodsMarket_tooltip
+		}
+		action_tooltip = {
+			click_type = left
+			click_mode = single
+			title = "OPEN_GOOD_PANEL"
+			on_action = "[ShowGoods(Location.GetRawMaterial.Self)]"
+		}
+	}
+
+	button = {
+		visible = "[Location.HasSpecificBaseModifier]"
+		parentanchor = bottom|right
+		position = { 0	0 }
+		size = { 50% 50% }
+		icon = {
+			size = { 100% 100% }
+			texture = "[Location.GetSpecificBaseModifier.GetModifier.GetIcon]"
+			onmousehierarchyenter = "[PdxGuiWidget.SetHighlightGoods(Location.GetRawMaterial.Self)]"
+			glow = {
+				glow_radius = 3
+				color = {0.0 0.0 0.0 1.0}
+				alpha = 0.5
+			}
+		}
+
+		tooltipwidget = {
+			using = SpecificGoodsMarket_tooltip
+			blockoverride "good_details_extra_info" {
+				TooltipListBase = {
+					TooltipManualTableField = { # SPECIFIC MODIFIERS
+						tooltipwidget = {
+							using = raw_good_location_modifier_tooltip
+						}
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							text = "[location_modifier|e]"
+						}
+	
+						icon = {
+							size = { 25 25 }
+							texture = "[Location.GetSpecificBaseModifier.GetModifier.GetIcon]"
+	
+							glow = {
+								glow_radius = 3
+								color = {0.0 0.0 0.0 1.0}
+								alpha = 0.5
+							}
+						}
+						text_single = {
+							text = "[Location.GetSpecificBaseModifier.GetName|L]"
+							fontsize = 15
+							using = FontDefaultColor
+						}
+					}
+				}
+			}
+		}
+		# action_tooltip = {
+		# 	click_type = left
+		# 	click_mode = single
+		# 	title = "OPEN_GOOD_PANEL"
+		# 	on_action = "[ShowGoods(Location.GetRawMaterial.Self)]"
+		# }
+	}
+}
