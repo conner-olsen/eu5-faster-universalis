@@ -1,0 +1,4 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+@unit_marker_siege_banner_short_offset = @[unit_marker_item_width * unit_marker_item_short_factor_inv]

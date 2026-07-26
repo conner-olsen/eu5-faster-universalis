@@ -1,0 +1,4 @@
+﻿# vanilla: in_game/gui/map_markers.gui
+# mod: in_game/gui/map_markers.gui
+
+@unit_marker_item_short_factor = 0.8

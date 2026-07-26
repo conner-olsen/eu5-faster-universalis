@@ -21,6 +21,20 @@
       "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_item_height.gui",
       "vanilla_file": "in_game/gui/map_markers.gui"
     },
+    "constant:in_game/gui/map_markers.gui:in_game/gui/map_markers.gui:unit_marker_item_short_factor": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers.gui",
+      "name": "unit_marker_item_short_factor",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_item_short_factor.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "constant:in_game/gui/map_markers.gui:in_game/gui/map_markers.gui:unit_marker_item_short_factor_inv": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers.gui",
+      "name": "unit_marker_item_short_factor_inv",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_item_short_factor_inv.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
     "constant:in_game/gui/map_markers.gui:in_game/gui/map_markers.gui:unit_marker_item_width": {
       "kind": "constant",
       "mod_file": "in_game/gui/map_markers.gui",
@@ -33,6 +47,13 @@
       "mod_file": "in_game/gui/map_markers.gui",
       "name": "unit_marker_morale_progressbar_size",
       "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_morale_progressbar_size.gui",
+      "vanilla_file": "in_game/gui/map_markers.gui"
+    },
+    "constant:in_game/gui/map_markers.gui:in_game/gui/map_markers.gui:unit_marker_siege_banner_short_offset": {
+      "kind": "constant",
+      "mod_file": "in_game/gui/map_markers.gui",
+      "name": "unit_marker_siege_banner_short_offset",
+      "tracking_path": "tools/dependencies/gui-tracking/constants/in_game__gui__map_markers/in_game__gui__map_markers/unit_marker_siege_banner_short_offset.gui",
       "vanilla_file": "in_game/gui/map_markers.gui"
     },
     "constant:in_game/gui/map_markers_city.gui:in_game/gui/map_markers_city.gui:city_marker_fort_icon_size": {
