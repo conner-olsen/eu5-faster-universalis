@@ -56,12 +56,18 @@ fum_remove_low_importance_nations_effect = {
 
 fum_remove_sub_continent = {
 	every_location_in_sub_continent = {
+		limit = {
+			is_land = yes
+		}
 		fum_remove_location = yes
 	}
 }
 
 fum_remove_and_disable_sub_continent = {
 	every_location_in_sub_continent = {
+		limit = {
+			is_land = yes
+		}
 		if = {
 			limit = {
 				fum_can_remove_location = yes
@@ -80,6 +86,9 @@ fum_remove_location = {
 	if = {
 		limit = {
 			fum_can_remove_location = yes
+		}
+		every_unit_in_location = {
+			destroy_unit = yes
 		}
 		every_buildings_in_location = {
 			change_building_level = -100
@@ -112,6 +121,9 @@ fum_remove_location_and_pops = {
 	if = {
 		limit = {
 			fum_can_remove_location = yes
+		}
+		every_unit_in_location = {
+			destroy_unit = yes
 		}
 		every_buildings_in_location = {
 			change_building_level = -100
