@@ -13,8 +13,8 @@
 # 	FLAT_MAP_DETAIL_COAST_TILES = 150 # 300
 # }
 #
-NMapMarker = {
-	MAP_MARKER_FULL_UPDATE_FREQUENCY = 1000 # 1
+# NMapMarker = {
+	# MAP_MARKER_FULL_UPDATE_FREQUENCY = 1000 # 1
 	# MAP_MARKER_SETTLEMENT_SIZE = { 10.0 10.0 }
 	# MAP_MARKER_TOWN_SIZE = { 13.0 13.0 }
 	# MAP_MARKER_CITY_SIZE = { 18.0 18.0 }
@@ -26,7 +26,7 @@ NMapMarker = {
 	# CITY_MARKER_WEIGHT_CEILING_FOR_NOT_PLAYER_CAPITAL =	19		# At what zoom level do we kill everything but your capital
 	#
 	# CITY_MARKER_RANK_ZOOM_THRESHOLD = 7
-}
+# }
 
 # NUnitGraphics = {
 	# UNIT_ICON_SHORT_VARIANT_AT_ZOOM_STEP = 9
