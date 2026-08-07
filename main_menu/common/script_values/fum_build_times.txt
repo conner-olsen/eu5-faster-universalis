@@ -1,0 +1,69 @@
+﻿# Vanilla times (main_menu/common/script_values/default_values.txt:1094-1199) scaled by 24/47.
+# A 47-hour tick spans ~1.96 days but only ever processes one day of progress.
+
+# Buildings
+guild_build_time = 186 # 365
+workshop_build_time = 186 # 365
+manufactory_build_time = 230 # 450
+mills_build_time = 373 # 730
+
+merchant_build_time = 92 # 180
+plantation_build_time = 92 # 180
+
+estate_build_time = 61 # 120
+
+cultural_building_time = 186 # 365
+large_cultural_building_time = 373 # 730
+religious_building_time = 186 # 365
+large_religious_building_time = 373 # 730
+
+bank_office_build_time = 186 # 365
+trade_post_build_time = 186 # 365
+colonise_build_time = 186 # 365
+trade_company_headquarters_time = 186 # 365
+trade_company_build_time = 92 # 180
+
+rural_build_time = 186 # 365
+village_build_time = 186 # 365
+generic_town_build_time = 186 # 365
+
+super_fast_temporary_house = 15 # 30
+
+small_port_building_time = 186 # 365
+medium_port_building_time = 373 # 730
+large_port_building_time = 373 # 730
+huge_port_building_time = 932 # 1825
+
+soldier_building = 186 # 365
+medium_soldier_building = 186 # 365
+big_soldier_building = 373 # 730
+
+government_build_time = 186 # 365
+infrastructure_build_time = 186 # 365
+
+small_capital_build_time = 186 # 365
+large_capital_build_time = 373 # 730
+
+market_build_time = 186 # 365
+
+small_fort_building = 186 # 365
+medium_fort_building = 373 # 730
+large_fort_building = 551 # 1080
+
+huge_unique_build_time = 932 # 1825
+
+pirate_build_time = 92 # 180
+
+generic_event_building = 46 # 90
+
+# Regiments
+standard_inf_recruitment_time = 15 # 30
+standard_cav_recruitment_time = 23 # 45
+standard_art_recruitment_time = 31 # 60
+standard_aux_recruitment_time = 15 # 30
+
+# Ships
+galley_build_time = 186 # 365
+light_ship_build_time = 186 # 365
+heavy_ship_build_time = 373 # 730
+transport_build_time = 186 # 365
