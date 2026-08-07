@@ -157,7 +157,7 @@ widget = {
 					frame = "[CoatOfArmsWrapper.GetFrame('(int32)56','(int32)56')]"
 					framesize = "[CoatOfArmsWrapper.GetFrameSizeOrFallback('(int32)56','(int32)56','(float)1.0')]"
 				}
-				
+
 				blockoverride "click" {}
 				blockoverride "double_click" {}
 			}
@@ -236,7 +236,7 @@ widget = {
 				visible = "[UnitMarker.ShouldBeShownFullWidth]"
 				widgetanchor = vcenter|left
 				parentanchor = center
-			}		
+			}
 
 			unit_maker_siege_banner = {
 				position = { @[20 - unit_marker_siege_banner_short_offset] 0 }
@@ -290,7 +290,7 @@ widget = {
 									spacing = 2
 
 									expand = {}
-									
+
 									unit_marker_compass = {}
 
 									widget = {
@@ -300,24 +300,24 @@ widget = {
 											hbox = {
 												widget = {
 													size = { 26 26 }
-			
+
 													# Has General
 													button = {
 														visible = "[UnitMarkerItem.HasLeaderFrame]"
-			
+
 														size = { 26 26 }
-			
+
 														framesize = { 32 32 }
 														frame = "[UnitMarkerItem.GetLeaderFrame]"
-			
+
 														texture = "gfx/interface/mapitems/commander_rank.dds"
 														texture_density = 2
-			
+
 														action_tooltip = {
 															title = "SHOW_CHARACTER"
 															on_action = "[UnitMarkerItem.OnLeaderClick]"
 														}
-														
+
 														datacontext = "[UnitMarkerItem.GetUnit.GetCommander]"
 														tooltipwidget = {
 															using = Character_tooltip
@@ -344,24 +344,24 @@ widget = {
 										country_flag_small = {
 											datacontext = "[Unit.GetCountry]"
 											size = { 40 28 }
-		
+
 											blockoverride "click" {
 												onclick = "[UnitMarkerItem.OnFlagClick]"
 											}
-	
+
 											blockoverride "double_click" {
 												ondoubleclick = "[UnitMarkerItem.OnRightClick]"
 											}
 										}
-	
+
 										widget = {
 											size = { 8 26 }
 											allow_outside = yes
-	
+
 											unit_composition_bar = {
 												size = { 6 24 }
 											}
-	
+
 											icon = {
 												size = { 100% 100% }
 												texture = "gfx/interface/component_tiles/square_outline_alt.dds"
@@ -375,7 +375,7 @@ widget = {
 											}
 										}
 									}
-									
+
 									vbox = {
 										using = layoutpolicy_expanding
 										margin_bottom = 4
@@ -389,7 +389,7 @@ widget = {
 											align = center|nobaseline
 											text = "[UnitMarkerItem.GetLabel]"
 										}
-										
+
 										widget = {
 											layoutpolicy_horizontal = expanding
 											size = { -1 5 }
@@ -460,7 +460,7 @@ widget = {
 									blockoverride "unit_transport_size" {
 										size = { 28 28 }
 									}
-									
+
 									blockoverride "item_unit_text_object" {
 										hbox = {
 											margin_left = 10
@@ -469,7 +469,7 @@ widget = {
 											country_flag_small = {
 												datacontext = "[Unit.GetCountry]"
 												size = { 38 26 }
-			
+
 												blockoverride "click" {
 													onclick = "[UnitMarkerItem.OnFlagClick]"
 												}
@@ -485,7 +485,7 @@ widget = {
 												margin_bottom = 4
 
 												expand = {}
-		
+
 												text_single = {
 													layoutpolicy_horizontal = expanding
 													autoresize = yes
@@ -541,7 +541,7 @@ widget = {
 						visible = "[Not(UnitMarkerItem.GetUnit.IsArmy)]"
 						allow_outside = yes
 						margin_right = 5
-						
+
 						# Full width
 						unit_marker_item_layout = {
 							using = layoutpolicy_expanding
@@ -561,7 +561,7 @@ widget = {
 									spacing = 2
 
 									expand = {}
-									
+
 									unit_marker_compass = {}
 
 									widget = {
@@ -571,24 +571,24 @@ widget = {
 											hbox = {
 												widget = {
 													size = { 26 26 }
-			
+
 													# Has General
 													button = {
 														visible = "[UnitMarkerItem.HasLeaderFrame]"
-			
+
 														size = { 26 26 }
-			
+
 														framesize = { 32 32 }
 														frame = "[UnitMarkerItem.GetLeaderFrame]"
-			
+
 														texture = "gfx/interface/mapitems/commander_rank.dds"
 														texture_density = 2
-			
+
 														action_tooltip = {
 															title = "SHOW_CHARACTER"
 															on_action = "[UnitMarkerItem.OnLeaderClick]"
 														}
-														
+
 														datacontext = "[UnitMarkerItem.GetUnit.GetCommander]"
 														tooltipwidget = {
 															using = Character_tooltip
@@ -652,15 +652,15 @@ widget = {
 
 									hbox = {
 										spacing = -2
-	
+
 										widget = {
 											size = { 8 26 }
 											allow_outside = yes
-	
+
 											unit_composition_bar = {
 												size = { 6 26 }
 											}
-	
+
 											icon = {
 												size = { 100% 100% }
 												texture = "gfx/interface/component_tiles/square_outline_alt.dds"
@@ -677,11 +677,11 @@ widget = {
 										country_flag_small = {
 											datacontext = "[Unit.GetCountry]"
 											size = { 42 29 }
-		
+
 											blockoverride "click" {
 												onclick = "[UnitMarkerItem.OnFlagClick]"
 											}
-	
+
 											blockoverride "double_click" {
 												ondoubleclick = "[UnitMarkerItem.OnRightClick]"
 											}
@@ -730,7 +730,7 @@ widget = {
 									blockoverride "unit_transport_size" {
 										size = { 28 28 }
 									}
-									
+
 									blockoverride "item_unit_text_object" {
 										hbox = {
 											margin_left = 4
@@ -742,7 +742,7 @@ widget = {
 												margin_bottom = 4
 
 												expand = {}
-		
+
 												text_single = {
 													layoutpolicy_horizontal = expanding
 													autoresize = yes
@@ -780,7 +780,7 @@ widget = {
 											country_flag_small = {
 												datacontext = "[Unit.GetCountry]"
 												size = { 38 26 }
-			
+
 												blockoverride "click" {
 													onclick = "[UnitMarkerItem.OnFlagClick]"
 												}
@@ -844,7 +844,7 @@ widget = {
 			spriteType = corneredstretched
 			spriteBorder = {65 65}
 			margin_bottom = 45
-	
+
 			modify_texture = {
 				using = color_red_texture
 			}
@@ -920,7 +920,7 @@ widget = {
 				# 		texture = "gfx/interface/colors/progress_blue.dds"
 				# 		alpha = 0.9
 				# 		blend_mode = multiply
-				# 	}	
+				# 	}
 				# }
 
 				# blockoverride "combatside_banner_icon" {
@@ -964,11 +964,11 @@ widget = {
 					title = "CLICK_ACTION_UNIT_MOVE_TO_BATTLE"
 					on_action = "[CombatMarker.OnRightClick]"
 				}
-	
+
 				hbox = {
 					margin = { 5 0 }
 					spacing = 2
-	
+
 					vbox = {
 						spacing = 2
 						datacontext = "[Combat.GetAttacker]"
@@ -982,10 +982,10 @@ widget = {
 							datacontext = "[CombatSide.GetRight]"
 						}
 					}
-	
+
 					widget = {
 						size = { 20 20 }
-	
+
 						icon = {
 							size = { 100% 100% }
 							parentanchor = center
@@ -998,7 +998,7 @@ widget = {
 							}
 						}
 					}
-	
+
 					vbox = {
 						spacing = 2
 						datacontext = "[Combat.GetDefender]"
@@ -1114,7 +1114,7 @@ widget = {
 ### FORT ICON (and province capitals) in tactical map mode
 container = {
 	name = "fort_marker"
-	max_update_rate = 9999 # FUM: Throttle data updates
+	# max_update_rate = 9999 # FUM: Throttle data updates
 	allow_outside = yes
 
 	datacontext = "[FortMarker.GetLocation]"
@@ -1139,13 +1139,13 @@ container = {
 				texture = "[GetBuildingIcon(Location.GetBestFortBuilding.GetType)]"
 				size = { 30 30 }
 				onmousehierarchyenter = "[PdxGuiWidget.SetHighlightFort(Location.Self)]"
-	
+
 				glow = {
 					glow_radius = 2
 					color = {0.0 0.0 0.0 1.0}
 					alpha = 0.5
 				}
-	
+
 				tooltipwidget = {
 					using = Garrison_tooltip
 				}
@@ -1191,7 +1191,7 @@ widget = {
 	name = "port_marker"
 	max_update_rate = 9999 # FUM: Throttle data updates
 	allow_outside = yes
-	
+
 	button = {
 		widgetanchor = center
 		size = { 30 30 }
@@ -1204,7 +1204,7 @@ widget = {
 			size = { 120% 120% }
 			texture = "gfx/interface/buttons/flats/fum_port_marker.dds"
 		}
-		
+
 		action_tooltip = {
 			click_type = right
 			click_mode = single
@@ -1221,7 +1221,7 @@ widget = {
 					icon = {
 						using = tooltip_title_icon_size
 						texture = "gfx/interface/icons/flat_icons/geopolitics/maritime_presence.dds"
-		
+
 						glow = {
 							name = "drop_shadow"
 							glow_radius = 3
@@ -1230,15 +1230,15 @@ widget = {
 						}
 					}
 				}
-		
+
 				blockoverride "title_text" {
 					text = "PORT_TOOLTIP_NEW"
 				}
-		
+
 				blockoverride "concept_link" {
-					text = "[port|e]" 
+					text = "[port|e]"
 				}
-		
+
 				blockoverride "tooltip_content" {
 					TooltipTextBlock = {
 						blockoverride "text" {
@@ -1307,11 +1307,11 @@ widget = {
 							layoutpolicy_horizontal = expanding
 							text = "[location_modifier|e]"
 						}
-	
+
 						icon = {
 							size = { 25 25 }
 							texture = "[Location.GetSpecificBaseModifier.GetModifier.GetIcon]"
-	
+
 							glow = {
 								glow_radius = 3
 								color = {0.0 0.0 0.0 1.0}
@@ -1352,7 +1352,7 @@ widget = {
 	icon = {
 		using = bg_circle
 		parentanchor = center
-		visible = "[DynastyMarker.IsRegency]"				
+		visible = "[DynastyMarker.IsRegency]"
 		size = { 20 20 }
 		texture = "gfx/interface/icons/character_roles/regent.dds"
 	}
@@ -1366,8 +1366,8 @@ widget = {
 ### Supply depot
 widget = {
 	name = "supply_depot_marker"
-	max_update_rate = 9999 # FUM: Throttle data updates
-	allow_outside = yes	
+	# max_update_rate = 9999 # FUM: Throttle data updates
+	allow_outside = yes
 	datacontext = "[SupplyDepotMarker.GetLocation.GetSupplyDepot]"
 	tooltipwidget = {
 		using = SupplyDepot_tooltip
@@ -1480,7 +1480,7 @@ widget = {
 				lowpriotextcontext = "[FortFlipRestoreMarker.GetTooltip]"
 			}
 		}
-		
+
 		button = {
 			parentanchor = center
 			allow_outside = yes
@@ -1732,7 +1732,7 @@ widget = {
 		tooltip_offset = { 20 20 }
 
 		datacontext = "[CabinetActionMarker.GetCabinet]"
-		
+
 		action_tooltip = {
 			click_type = left
 			click_mode = single
@@ -1743,14 +1743,14 @@ widget = {
 
 		action_tooltip = {
 			click_type = right
-			click_mode = single			
+			click_mode = single
 			conditions = "[MakeItFailIfLoc(Not(IsChangeCabinetActionTargetEnabled(Cabinet.Self)), 'CANNOT_CABINET_ACTION_SIDEMENU_RMB')]"
 			title = "CABINET_ACTION_SIDEMENU_RMB"
 			visible = "[IsChangeCabinetActionTargetVisible(Cabinet.Self)]"
 			enabled = "[IsChangeCabinetActionTargetEnabled(Cabinet.Self)]"
 			on_action = "[ChangeCabinetActionTarget(Cabinet.Self)]"
 		}
-	}	
+	}
 }
 
 ### BlockedVision Marker
@@ -1762,7 +1762,7 @@ widget = {
 	position = { 0 2 }
 
 	# using = bg_circle_piechart
-	tooltipwidget = {		
+	tooltipwidget = {
 		ContextualTooltipType = {
 			blockoverride "title_icon" {
 				icon = {
@@ -1776,15 +1776,15 @@ widget = {
 			blockoverride "concept_link" {
 				text = [fow|e]
 			}
-				
+
 			blockoverride "tooltip_content" {
-				TooltipStringPairList = { 
+				TooltipStringPairList = {
 					textcontext = "[BlockedVisionMarker.GetTooltip]"
 				}
 			}
-		}			
+		}
 	}
-	
+
 	tooltip_offset = { 20 20 }
 
 	button = {
@@ -1801,7 +1801,7 @@ widget = {
 			name = "drop_shadow"
 			glow_radius = 3
 			color = {0.0 0.0 0.0 1.0}
-			alpha = 0.5  
+			alpha = 0.5
 		}
 		texture_density = 2
 
@@ -1964,7 +1964,7 @@ widget = {
 	widgetanchor = left
 	position = { 0 2 }
 
-	tooltipwidget = {		
+	tooltipwidget = {
 		ContextualTooltipType = {
 			blockoverride "title_icon" {
 				icon = {
@@ -1979,9 +1979,9 @@ widget = {
 			blockoverride "concept_link" {
 				text = [corridor|e]
 			}
-				
+
 			blockoverride "tooltip_content" {
-				TooltipScrolledRowList = { 
+				TooltipScrolledRowList = {
 					blockoverride "block_title" {
 						text = "[DesertConnectionMarker.GetTooltip]"
 					}
@@ -1989,9 +1989,9 @@ widget = {
 					textcontext = "[DesertConnectionMarker.GetConnectedLocationNames]"
 				}
 			}
-		}			
+		}
 	}
-	
+
 	tooltip_offset = { 20 20 }
 
 	button = {
@@ -2008,12 +2008,12 @@ widget = {
 			name = "drop_shadow"
 			glow_radius = 3
 			color = {0.0 0.0 0.0 1.0}
-			alpha = 0.5  
+			alpha = 0.5
 		}
 		texture_density = 2
 
-		onmousehierarchyenter = "[DesertConnectionMarker.HighlightConnections]"	
-		onmousehierarchyleave = "[DesertConnectionMarker.ClearHighlightedConnections]"	
+		onmousehierarchyenter = "[DesertConnectionMarker.HighlightConnections]"
+		onmousehierarchyleave = "[DesertConnectionMarker.ClearHighlightedConnections]"
 	}
 }
 
@@ -2062,7 +2062,7 @@ widget = {
 			name = "drop_shadow"
 			glow_radius = 3
 			color = {0.0 0.0 0.0 1.0}
-			alpha = 0.5  
+			alpha = 0.5
 		}
 		texture_density = 2
 
@@ -2085,7 +2085,7 @@ widget = {
 			on_action = "[OpenLateralViewWithParams('expansion', 'low_tab = colonisation')]"
 		}
 
-		tooltipwidget = {		
+		tooltipwidget = {
 			ContextualTooltipType = {
 				blockoverride "title_icon" {
 					icon = {
@@ -2100,9 +2100,9 @@ widget = {
 				blockoverride "concept_link" {
 					text = [colonial_charter|e]
 				}
-					
+
 				blockoverride "tooltip_content" {
-					TooltipScrolledRowList = { 
+					TooltipScrolledRowList = {
 						textcontext = "[ColonyCharterMarker.GetTooltip]"
 					}
 				}
@@ -2161,7 +2161,7 @@ widget = {
 		block "button_size" {
 			size = { 100% 100% }
 		}
-		
+
 		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCountry(BuildingSpyNetworkMarker.GetCountry)]"
 		tooltipwidget = {
 			using = spy_network_tooltip
@@ -2178,7 +2178,7 @@ widget = {
 			title = "TAB_TOOLTIP_DIPLOMACY_LEFT_CLICK"
 			on_action = "[BuildingSpyNetworkMarker.OnClick]"
 		}
-		
+
 		action_tooltip = {
 			click_type = right
 			click_mode = single
@@ -2424,7 +2424,7 @@ widget = {
 			title = "OPEN_COUNTRY_PANEL"
 			on_action = "[CurryingFavorsMarker.OnClick]"
 		}
-		
+
 		action_tooltip = {
 			click_type = right
 			title = "CANCEL_CURRY_FAVORSTITLE"

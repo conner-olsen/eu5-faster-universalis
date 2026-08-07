@@ -146,7 +146,7 @@ types map_marker_city {
 			}
 		}
 	}
-	
+
 	type location_rank_icon = widget {
 		block "icon_size" {
 			size =  { @city_marker_icon_size @city_marker_icon_size }
@@ -190,13 +190,13 @@ types map_marker_city {
 
 widget = {
 	name = "city_marker"
-	max_update_rate = 9999 # FUM: Throttle data updates
+	# max_update_rate = 9999 # FUM: Throttle data updates
 	allow_outside = yes
-	
+
 	widget = {
 		parentanchor = center
 		allow_outside = yes
-		
+
 		visible = "[CityMarker.ShowDetailsOrHasWarFort]"
 		size = { @city_marker_icon_size @city_marker_icon_size }
 
@@ -259,7 +259,7 @@ widget = {
 							}
 							blockoverride "tooltip_content" {
 								TooltipStringPairList = {
-									textcontext = "[CityMarker.GetLocation.GetDescriptionFor('fort_level')]"	
+									textcontext = "[CityMarker.GetLocation.GetDescriptionFor('fort_level')]"
 								}
 							}
 						}
@@ -273,7 +273,7 @@ widget = {
 						size = { @city_marker_fort_icon_size @city_marker_fort_icon_size }
 					}
 				}
-				
+
 				text_single = {
 					visible = "[CityMarker.ShowDetails]"
 					text = "[CityMarker.GetLocation.GetNameWithNoTooltip|U]"
