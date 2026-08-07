@@ -7,7 +7,7 @@
  fum__performance_name: "Performance"
  ## Removals (removals) Group
  fum__performance__removals_name: "Removals"
- fum__sop_removal_name: "Remove Pop-Based Countries"
+ fum__sop_removal_name: "Remove Society of Pops"
  fum__sop_removal_desc: "Removes all SOPs. "
  fum__nation_removal_name: "Nation Removal"
  fum__nation_removal_desc: "Removes nations based on the specified setting, hover over the dropdown for details."
@@ -22,7 +22,7 @@
  fum__block_recolonization_name: "Block Recolonization"
  fum__block_recolonization_desc: "Will delete the pops in and prevent recolonization of all disabled subcontinents when used with Europe Centric, or Asia Centric settings. Will not block colonization or remove pops of never colonized subcontinents such as South America."
  fum__pop_removal_name: "Remove Unowned Pops"
- fum__pop_removal_desc: "Delete pops from locations without owners (including pop-based countries). Better performance, but will make colonization faster, as there will be no local populations. This stacks with nation removal."
+ fum__pop_removal_desc: "Delete pops from locations without owners (including Society of Pops). Better performance, but will make colonization faster, as there will be no local populations. This stacks with nation removal."
  fum__apply_performance_settings_name: "Apply Performance Settings"
  fum__apply_performance_settings_desc: "Will apply all the selecting settings."
  fum__apply_performance_settings_text: "Apply"
