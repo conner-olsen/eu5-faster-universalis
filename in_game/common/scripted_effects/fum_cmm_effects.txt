@@ -224,12 +224,14 @@ fum_handle_cmf_callback = {
 				setting = fum__army_movement_speed
 				alias = fum__army_movement_speed
 			}
+			fum_refresh_all_corrections = yes
 		}
 		flag:fum__navy_movement_speed = {
 			cmm_sync_setting_alias = {
 				setting = fum__navy_movement_speed
 				alias = fum__navy_movement_speed
 			}
+			fum_refresh_all_corrections = yes
 		}
 		flag:fum__battle_length = {
 			cmm_sync_setting_alias = {
@@ -251,6 +253,7 @@ fum_handle_cmf_callback = {
 				index = 4
 				alias = fum__double_battle_length
 			}
+			fum_refresh_all_corrections = yes
 		}
 	}
 }

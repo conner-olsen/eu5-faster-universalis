@@ -3,7 +3,19 @@
 }
 
 yearly_country_pulse = {
-	on_actions = { fum_meritocracy_spread }
+	on_actions = { fum_meritocracy_spread fum_refresh_corrections_yearly }
+}
+
+fum_refresh_corrections_yearly = {
+	effect = {
+		fum_refresh_corrections = yes
+	}
+}
+
+fum_refresh_corrections_sweep = {
+	effect = {
+		fum_refresh_all_corrections = yes
+	}
 }
 
 monthly_country_pulse = {
@@ -77,21 +89,13 @@ fum_character_culling = {
 
 on_game_start_after_lobby = {
 	on_actions = {
-		fum_game_setup
+		fum_refresh_corrections_sweep
 	}
 }
 
-fum_game_setup = {
-	effect = {
-		remove_from_global_variable_map = {
-			name = cmm
-			key = flag:fum__enable_save_game_compatability
-		}
-		add_to_global_variable_map = {
-			name = cmm
-			key = flag:fum__enable_save_game_compatability
-			value = 0
-		}
+on_game_load_after_lobby = {
+	on_actions = {
+		fum_refresh_corrections_sweep
 	}
 }
 

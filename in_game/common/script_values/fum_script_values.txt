@@ -1,23 +1,203 @@
-﻿fum_army_speed_multiplier = {
+﻿fum_army_speed_delta = {
 	if = {
 		limit = {
 			has_global_variable = fum__army_movement_speed
 		}
 		value = global_var:fum__army_movement_speed
+		divide = 100
 	}
 	else = {
 		value = 0
 	}
 }
 
-fum_navy_speed_multiplier = {
+fum_navy_speed_delta = {
 	if = {
 		limit = {
 			has_global_variable = fum__navy_movement_speed
 		}
 		value = global_var:fum__navy_movement_speed
+		divide = 100
 	}
 	else = {
 		value = 0
+	}
+}
+
+### Combat Speed ###
+# Note to those who don't understand where these values come from:
+# In vanilla, the ticks are bi-hourly
+# Thus there are 12 bi-hourly ticks a day.
+# I am using 47 hour ticks, which would be 23.5x less ticks.
+# Option 3 is the mod default and needs no correction, so it falls through to 0.
+fum_battle_length_delta = {
+	if = {
+		limit = {
+			has_global_variable = fum__battle_length_vanilla
+		}
+		value = 5.17
+	}
+	else_if = {
+		limit = {
+			has_global_variable = fum__half_battle_length
+		}
+		value = 1
+	}
+	else_if = {
+		limit = {
+			has_global_variable = fum__double_battle_length
+		}
+		value = -0.5
+	}
+	else = {
+		value = 0
+	}
+}
+
+# One accessor per corrected modifier, read by that modifier's auto modifier through scales_with
+# and subtracted back out by fum_refresh_correction. The fallback is the correction a country with
+# no other sources needs, covering countries the refresh sweep never reaches such as rebels.
+fum_corr_country_child_education_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_country_child_education
+		}
+		value = var:fum_corr_country_child_education
+	}
+	else = {
+		value = fum_day_skip_delta
+	}
+}
+
+fum_corr_land_morale_movement_cost_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_land_morale_movement_cost
+		}
+		value = var:fum_corr_land_morale_movement_cost
+	}
+	else = {
+		value = fum_tick_ratio_delta
+		multiply = 0.001 # Vanilla country_base_values (in_game/common/auto_modifiers/country.txt:216)
+	}
+}
+
+fum_corr_army_movement_speed_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_army_movement_speed
+		}
+		value = var:fum_corr_army_movement_speed
+	}
+	else = {
+		value = fum_army_speed_delta
+	}
+}
+
+fum_corr_navy_movement_speed_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_navy_movement_speed
+		}
+		value = var:fum_corr_navy_movement_speed
+	}
+	else = {
+		value = fum_navy_speed_delta
+	}
+}
+
+fum_corr_naval_damage_done_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_naval_damage_done
+		}
+		value = var:fum_corr_naval_damage_done
+	}
+	else = {
+		value = fum_battle_length_delta
+	}
+}
+
+fum_corr_army_heavy_infantry_power_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_army_heavy_infantry_power
+		}
+		value = var:fum_corr_army_heavy_infantry_power
+	}
+	else = {
+		value = fum_battle_length_delta
+	}
+}
+
+fum_corr_army_light_infantry_power_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_army_light_infantry_power
+		}
+		value = var:fum_corr_army_light_infantry_power
+	}
+	else = {
+		value = fum_battle_length_delta
+	}
+}
+
+fum_corr_army_heavy_cavalry_power_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_army_heavy_cavalry_power
+		}
+		value = var:fum_corr_army_heavy_cavalry_power
+	}
+	else = {
+		value = fum_battle_length_delta
+	}
+}
+
+fum_corr_army_light_cavalry_power_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_army_light_cavalry_power
+		}
+		value = var:fum_corr_army_light_cavalry_power
+	}
+	else = {
+		value = fum_battle_length_delta
+	}
+}
+
+fum_corr_army_artillery_power_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_army_artillery_power
+		}
+		value = var:fum_corr_army_artillery_power
+	}
+	else = {
+		value = fum_battle_length_delta
+	}
+}
+
+fum_corr_army_auxiliary_power_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_army_auxiliary_power
+		}
+		value = var:fum_corr_army_auxiliary_power
+	}
+	else = {
+		value = fum_battle_length_delta
+	}
+}
+
+fum_corr_combat_speed_modifier_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_combat_speed_modifier
+		}
+		value = var:fum_corr_combat_speed_modifier
+	}
+	else = {
+		value = fum_battle_length_delta
 	}
 }

@@ -1,0 +1,11 @@
+﻿# Both derived from HOUR_TICK (loading_screen/common/defines/fum_adjustable_defines.txt).
+
+# HOUR_TICK / 24 - 1. A 47-hour tick spans ~1.96 days but only ever processes one day of progress.
+fum_day_skip_delta = {
+	value = 0.95833
+}
+
+# HOUR_TICK / 2 - 1. Per-tick rates fire 23.5x less often than on vanilla's 2-hour tick.
+fum_tick_ratio_delta = {
+	value = 22.5
+}

@@ -1,0 +1,95 @@
+﻿# Each correction is applied as one unit of its modifier scaled by that modifier's accessor, which
+# fum_refresh_correction keeps at the value that multiplies the country's other sources for it.
+fum_child_education_correction = {
+	requires_real = no
+	hide_effects = yes
+	country_child_education = 1
+	scales_with = fum_corr_country_child_education_value
+}
+
+fum_land_morale_movement_cost_correction = {
+	requires_real = no
+	hide_effects = yes
+	land_morale_movement_cost = 1
+	scales_with = fum_corr_land_morale_movement_cost_value
+}
+
+fum_army_speed_correction = {
+	requires_real = no
+	hide_effects = yes
+	army_movement_speed = 1
+	scales_with = fum_corr_army_movement_speed_value
+}
+
+fum_navy_speed_correction = {
+	requires_real = no
+	hide_effects = yes
+	navy_movement_speed = 1
+	scales_with = fum_corr_navy_movement_speed_value
+}
+
+fum_naval_damage_done_correction = {
+	requires_real = no
+	hide_effects = yes
+	naval_damage_done = 1
+	scales_with = fum_corr_naval_damage_done_value
+}
+
+fum_army_heavy_infantry_power_correction = {
+	requires_real = no
+	hide_effects = yes
+	army_heavy_infantry_power = 1
+	scales_with = fum_corr_army_heavy_infantry_power_value
+}
+
+fum_army_light_infantry_power_correction = {
+	requires_real = no
+	hide_effects = yes
+	army_light_infantry_power = 1
+	scales_with = fum_corr_army_light_infantry_power_value
+}
+
+fum_army_heavy_cavalry_power_correction = {
+	requires_real = no
+	hide_effects = yes
+	army_heavy_cavalry_power = 1
+	scales_with = fum_corr_army_heavy_cavalry_power_value
+}
+
+fum_army_light_cavalry_power_correction = {
+	requires_real = no
+	hide_effects = yes
+	army_light_cavalry_power = 1
+	scales_with = fum_corr_army_light_cavalry_power_value
+}
+
+fum_army_artillery_power_correction = {
+	requires_real = no
+	hide_effects = yes
+	army_artillery_power = 1
+	scales_with = fum_corr_army_artillery_power_value
+}
+
+fum_army_auxiliary_power_correction = {
+	requires_real = no
+	hide_effects = yes
+	army_auxiliary_power = 1
+	scales_with = fum_corr_army_auxiliary_power_value
+}
+
+fum_combat_speed_correction = {
+	requires_real = no
+	hide_effects = yes
+	combat_speed_modifier = 1
+	scales_with = fum_corr_combat_speed_modifier_value
+}
+
+# Initiative is a point count feeding a linear engage chance (INITIATIVE_CHANCE_EACH, "chance to
+# engage per point of initiative"), so a flat addition leaves every other source worth what it was.
+fum_battle_initiative_adjustment = {
+	requires_real = no
+	hide_effects = yes
+	army_initiative = 1
+	navy_initiative = 1
+	scales_with = fum_battle_length_delta
+}

@@ -1,0 +1,8 @@
+﻿# Vanilla tick rate, so neither correction applies.
+fum_day_skip_delta = {
+	value = 0
+}
+
+fum_tick_ratio_delta = {
+	value = 0
+}

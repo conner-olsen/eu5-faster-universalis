@@ -218,3 +218,70 @@ fum_apply_performance_settings = {
 		fum_remove_unowned_pops = yes
 	}
 }
+
+fum_refresh_all_corrections = {
+	every_country = {
+		fum_refresh_corrections = yes
+	}
+}
+
+# Root scope: country.
+fum_refresh_corrections = {
+	fum_refresh_correction = { MODIFIER = country_child_education BASE = 1 DELTA = fum_day_skip_delta }
+	fum_refresh_correction = { MODIFIER = land_morale_movement_cost BASE = 0 DELTA = fum_tick_ratio_delta }
+	fum_refresh_correction = { MODIFIER = army_movement_speed BASE = 1 DELTA = fum_army_speed_delta }
+	fum_refresh_correction = { MODIFIER = navy_movement_speed BASE = 1 DELTA = fum_navy_speed_delta }
+	fum_refresh_correction = { MODIFIER = naval_damage_done BASE = 1 DELTA = fum_battle_length_delta }
+	fum_refresh_correction = { MODIFIER = army_heavy_infantry_power BASE = 1 DELTA = fum_battle_length_delta }
+	fum_refresh_correction = { MODIFIER = army_light_infantry_power BASE = 1 DELTA = fum_battle_length_delta }
+	fum_refresh_correction = { MODIFIER = army_heavy_cavalry_power BASE = 1 DELTA = fum_battle_length_delta }
+	fum_refresh_correction = { MODIFIER = army_light_cavalry_power BASE = 1 DELTA = fum_battle_length_delta }
+	fum_refresh_correction = { MODIFIER = army_artillery_power BASE = 1 DELTA = fum_battle_length_delta }
+	fum_refresh_correction = { MODIFIER = army_auxiliary_power BASE = 1 DELTA = fum_battle_length_delta }
+	fum_refresh_correction = { MODIFIER = combat_speed_modifier BASE = 1 DELTA = fum_battle_length_delta }
+}
+
+# Recomputes fum_corr_$MODIFIER$ as $DELTA$ x ($BASE$ + the country's other $MODIFIER$ sources) so
+# the correction multiplies them instead of shifting them. $BASE$ is 1 where the engine applies the
+# modifier as (1 + sum) and 0 where the sum is the whole quantity. modifier:$MODIFIER$ includes the
+# correction already applied, which is whatever fum_corr_$MODIFIER$_value currently returns.
+# Dropping the variable at a zero delta keeps a setting the player left off out of the save.
+# Root scope: country.
+fum_refresh_correction = {
+	set_local_variable = {
+		name = fum_delta
+		value = $DELTA$
+	}
+	if = {
+		limit = { local_var:fum_delta = 0 }
+		if = {
+			limit = { has_variable = fum_corr_$MODIFIER$ }
+			remove_variable = fum_corr_$MODIFIER$
+		}
+	}
+	else = {
+		set_local_variable = {
+			name = fum_others
+			value = modifier:$MODIFIER$
+		}
+		change_local_variable = {
+			name = fum_others
+			subtract = fum_corr_$MODIFIER$_value
+		}
+		change_local_variable = {
+			name = fum_others
+			add = $BASE$
+		}
+		change_local_variable = {
+			name = fum_others
+			max = 0
+		}
+		set_variable = {
+			name = fum_corr_$MODIFIER$
+			value = {
+				value = local_var:fum_others
+				multiply = local_var:fum_delta
+			}
+		}
+	}
+}

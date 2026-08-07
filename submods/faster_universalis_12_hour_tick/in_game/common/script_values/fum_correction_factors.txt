@@ -1,0 +1,9 @@
+﻿# A tick never spans more than a day at this rate, so no day ticks are skipped.
+fum_day_skip_delta = {
+	value = 0
+}
+
+# HOUR_TICK / 2 - 1. Per-tick rates fire 6x less often than on vanilla's 2-hour tick.
+fum_tick_ratio_delta = {
+	value = 5
+}
