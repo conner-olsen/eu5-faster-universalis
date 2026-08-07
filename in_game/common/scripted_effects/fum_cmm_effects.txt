@@ -156,20 +156,6 @@ fum_register_cmf_mod = {
 		index = 4
 		alias = fum__double_battle_length
 	}
-
-	# Other (other) Tab
-	## General (general) Group
-	cmm_register_global_bool_setting = {
-		mod_id = fum
-		setting_id = enable_save_game_compatability
-		tab_id = other
-		group_id = general
-		default_value = 1
-	}
-	cmm_set_no_reset = {
-		mod_id = fum
-		setting_id = enable_save_game_compatability
-	}
 }
 
 # Callback handler for cmf_on_callback.

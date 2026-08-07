@@ -1,6 +1,5 @@
 ﻿l_english:
  # Modifiers:
- AUTO_MODIFIER_NAME_fum_save_game_compatability: "Save Game Compatibility"
  AUTO_MODIFIER_NAME_fum_vanilla_battle_length_adjustment: "Vanilla Battle Length"
  AUTO_MODIFIER_NAME_fum_double_battle_length_adjustment: "Double Combat Speed Adjustment"
  AUTO_MODIFIER_NAME_fum_half_battle_length_adjustment: "50% Combat Speed Adjustment"
