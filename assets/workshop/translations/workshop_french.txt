@@ -5,76 +5,77 @@ Universalis Plus Rapide / Faster Universalis
 
 [quote]
 [h1]Aperçu :[/h1]
-Améliore considérablement la vitesse de jeu et la fréquence des ticks tout en préservant l'équilibre et le gameplay de la version vanilla.
+Améliore considérablement la vitesse de jeu et la fréquence des ticks tout en préservant l'équilibre et le gameplay vanilla.
 
 [h1]Caractéristiques :[/h1]
 [olist]
- [*][b]Vitesse de jeu plus rapide de 100% + :[/b] En vitesse 7, le temps devrait s'écouler environ deux fois plus vite qu'en vanilla, avec une amélioration encore plus marquée sur les vitesses inférieures.
+ [*][b]Vitesse de jeu plus de 100 % plus rapide :[/b] À la vitesse 7, le temps devrait s'écouler environ deux fois plus vite qu'en vanilla, avec une amélioration encore plus marquée aux vitesses inférieures.
   [list]
-   [*]Réalisé grâce à des dizaines de modifications de "defines" trop nombreuses pour être listées ici.
-   [*]Suppression des ticks horaires (va encore plus loin, le mod de base utilisant des ticks de 1,9 jour (47 heures). Mais cela peut être ajusté via les [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submods disponibles ici.[/url])
-   [*]Affichage des nombres de dégâts pendant les batailles sans ticks horaires !
-   [*]Le combat, la vitesse de déplacement, ainsi que la fréquence de mise à jour du jeu et de l'IA ont tous été ajustés pour que les résultats et l'équilibre du jeu soient identiques à la version vanilla. Vous ne devriez remarquer aucune différence à part la vitesse accrue.
+   [*]Réalisé grâce à des dizaines de modifications des « defines » qui seraient trop nombreuses pour être listées ici.
+   [*]Suppression des ticks horaires (et va même au-delà, le mod de base utilisant des ticks de 1,9 jour (47 heures). Mais cela peut être ajusté via les [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submods disponibles ici.[/url])
+   [*]Affichage des chiffres de dégâts pendant les batailles sans ticks horaires !
+   [*]Le combat, la vitesse de mouvement, la fréquence de mise à jour du jeu et de l'IA ont tous été ajustés pour que les résultats et l'équilibre du jeu soient identiques à la version vanilla. Vous ne devriez remarquer aucune différence à part la vitesse accrue.
   [/list]
- [*][b]Paramètres d'optimisation des performances optionnels dans le menu du mod :[/b]
+ [*][b]Marqueurs de carte optimisés :[/b] Réduit le coût d'affichage et de mise à jour des marqueurs de carte pour un meilleur FPS.
+ [*][b]Paramètres d'optimisation de performance optionnels dans le menu du mod :[/b]
   [list]
-   [*][b]Suppression des nations basées sur les Pops :[/b] Supprime toutes les nations basées sur le système de populations (Pops).
-   [*][b]Suppressions de régions :[/b] Centré sur l'Europe, Centré sur l'Asie, et Suppression des régions de faible importance. Consultez les captures d'écran de la page du mod pour voir le rendu de chaque option.
+   [*][b]Supprimer la Société des Pops :[/b] Supprime toutes les Sociétés des Pops.
+   [*][b]Suppression de régions :[/b] Centré sur l'Europe, Centré sur l'Asie et Nations à faible impact. Consultez les captures d'écran de la page du mod pour voir le résultat.
     [list]
-     [*][b]Suppression des régions de faible importance :[/b] Supprime les petites nations dans les régions ayant peu de chances d'interaction, comme les petites nations insulaires du Pacifique — détails complets dans les descriptions des paramètres.
-     [*][b]Centré sur l'Europe :[/b] Effectivement une partie limitée à l'Europe, supprimant les régions lointaines telles que l'Asie de l'Est, l'Indonésie et l'Océanie.
-     [*][b]Centré sur l'Asie :[/b] Effectivement une partie limitée à l'Asie, supprimant les régions lointaines telles que l'Europe et l'Afrique de l'Ouest.
+     [*][b]Nations à faible impact :[/b] Supprime les petites nations dans les régions ayant peu de chances d'interaction, comme les petites nations insulaires du Pacifique - détails complets dans les descriptions des paramètres.
+     [*][b]Centré sur l'Europe :[/b] Essentiellement une partie limitée à l'Europe, supprimant les régions éloignées telles que l'Asie de l'Est, l'Indonésie et l'Océanie.
+     [*][b]Centré sur l'Asie :[/b] Essentiellement une partie limitée à l'Asie, supprimant les régions éloignées telles que l'Europe et l'Afrique de l'Ouest.
     [/list]
-   [*][b]Suppression des Pops sans propriétaire :[/b] Supprime les pops dans les lieux non possédés. Se cumule avec la suppression de nations.
-   [*][b]Bloquer la recolonisation :[/b] Si activé avec les suppressions "Centré sur l'Europe" ou "Centré sur l'Asie", empêche la recolonisation des régions supprimées. Désactiver cette option peut créer une expérience intéressante de ruée vers la recolonisation du vieux monde perdu.
-   [*][b]Élagage des personnages :[/b] Tous les 4 ans, supprime les personnages adultes ayant les statistiques les plus basses de chaque nation, jusqu'à un maximum configurable. Les enfants, ministres du cabinet, généraux, amiraux, personnages du domaine de la couronne et certains personnages dotés de traits spéciaux (ex : visionnaire architectural) sont protégés.
+   [*][b]Supprimer les Pops sans propriétaire :[/b] Supprime les pops dans les lieux non possédés. Se cumule avec la suppression de nations.
+   [*][b]Bloquer la recolonisation :[/b] Si activé avec les suppressions centrées sur l'Europe ou l'Asie, empêche la recolonisation des régions supprimées. Désactiver cette option peut créer une expérience intéressante de course à la recolonisation du vieux monde perdu.
+   [*][b]Élagage des personnages :[/b] Tous les 4 ans, supprime les personnages adultes ayant les statistiques les plus basses de chaque nation jusqu'à un maximum configurable. Les enfants, ministres du cabinet, généraux, amiraux, personnages du domaine royal et certains personnages avec des traits spéciaux (ex : visionnaire architectural) sont protégés.
   [/list]
  [*][b]Paramètres de réglage de la vitesse dans le menu du mod :[/b]
   [list]
-   [*][b]Vitesse de déplacement de l'armée :[/b] Permet d'ajuster la vitesse de déplacement des armées.
-   [*][b]Vitesse de déplacement de la marine :[/b] Permet d'ajuster la vitesse de déplacement des navires.
-   [*][b]Durée des batailles :[/b] Permet d'ajuster la durée des batailles (alors que les pertes et les résultats restent identiques à la version vanilla).
+   [*][b]Vitesse de mouvement de l'armée :[/b] Vous permet d'ajuster la vitesse de mouvement des armées.
+   [*][b]Vitesse de mouvement de la marine :[/b] Vous permet d'ajuster la vitesse de mouvement des navires.
+   [*][b]Durée des batailles :[/b] Vous permet d'ajuster la durée des batailles (alors que les pertes/résultats restent identiques à la vanilla).
   [/list]
  [*][b]Ajustements mineurs de confort (QoL) :[/b]
   [list]
-   [*][b]Temps d'expiration des événements MP doublé[/b]
+   [*][b]Doublement du temps d'expiration des événements en multijoueur (MP)[/b]
   [/list]
 [/olist]
 
-À titre de référence, lors de mes tests, "Daily Ticks" en vitesse 7 augmentait la vitesse de jeu d'environ 13 %, alors que, comme le montre la vidéo de la page Steam, Faster Universalis, sans aucune optimisation optionnelle activée, a augmenté la vitesse de jeu d'environ 100 % sur une sauvegarde vanilla en fin de partie. Avec les optimisations optionnelles activées, telles que l'élagage des nations basées sur les Pops et les régions centrées sur l'Europe, vous pouvez constater des améliorations de plus de 200 %.
+À titre indicatif, lors de mes tests, Daily Ticks en vitesse 7 a augmenté la vitesse de jeu d'environ 13 %, alors que, comme le montre la vidéo de la page Steam, Faster Universalis sans aucune optimisation optionnelle activée a augmenté la vitesse d'environ 100 % sur une sauvegarde vanilla en fin de partie. Avec les optimisations optionnelles activées, telles que l'élagage des nations basé sur les Pops et les régions centrées sur l'Europe, vous pouvez constater des améliorations de plus de 200 %.
 
 [h1]Prévu / À venir :[/h1]
 [olist]
- [*][b]Optimisation continue des performances :[/b] Je continuerai à optimiser le mod au fur et à mesure que je trouverai de nouvelles opportunités.
- [*][b]Options de réglages graphiques :[/b] Je travaille également sur l'amélioration des performances de rendu/FPS, qui sera publiée dans une future mise à jour. Pour l'instant, je n'ai réussi qu'à obtenir une augmentation de 13 % des FPS. (Si vous le souhaitez, vous pouvez décommenter mes defines graphiques en cours de travail, mais ils ne sont pas activés par défaut actuellement.) Notez que si vous êtes limité par votre processeur (CPU-bound), vous pourriez tout de même constater un gain de FPS dès maintenant. De plus, vous verrez un boost de FPS en utilisant l'un des paramètres de performance optionnels dans certaines scènes, car il y aura moins d'éléments à afficher.
+ [*][b]Optimisation continue des performances :[/b] Je continuerai à optimiser le mod pour les performances à mesure que je trouverai de nouvelles opportunités.
+ [*][b]Options de réglages graphiques :[/b] Je travaille également sur l'amélioration des performances de rendu/FPS, qui sera publiée dans une future mise à jour. Pour l'instant, je n'ai réussi qu'une augmentation de 13 % des FPS. (Si vous le souhaitez, vous pouvez décommenter mes defines graphiques en cours de travail (WIP), mais ils ne sont pas activés par défaut actuellement.) Notez que si vous êtes limité par votre processeur (CPU-bound), vous pourriez tout de même constater un gain de FPS dès maintenant. Et vous verrez une augmentation des FPS en utilisant l'un des paramètres de performance optionnels dans certaines scènes, car il y aura moins d'éléments à afficher.
 [/olist]
 
 [h1]Journal des modifications :[/h1]
-Consultez les [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Notes de mise à jour sur la page du workshop[/url].
+Consultez les [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Notes de changement sur la page du workshop[/url].
 
 [h1]Compatibilité :[/h1]
 [list]
- [*]Supporte la v1.3
+ [*]Prend en charge la v1.3
  [*]Compatible avec le mode Ironman et les succès.
- [*]Entièrement compatible avec les sauvegardes en cours.
- [*]Ne doit pas être utilisé avec un autre mod modifiant les ticks, comme "Daily Ticks".
- [*]À charger après GlorpUI ou tout mod modifiant la barre supérieure (je ne modifie que les vitesses de jeu elles-mêmes, cela n'écrasera donc pas d'autres changements).
- [*]Si vous rencontrez des problèmes, essayez d'abord de placer le mod tout en bas de l'ordre de chargement.
- [*]Je pourrai ajouter des patchs de compatibilité sur demande.
+ [*]Entièrement compatible avec les sauvegardes existantes.
+ [*]Ne doit pas être utilisé avec d'autres mods modifiant les ticks, comme Daily Ticks.
+ [*]À charger après GlorpUI ou tout mod modifiant la barre supérieure (je ne modifie que les vitesses de jeu elles-mêmes, cela n'écrasera donc pas les autres modifications).
+ [*]Si vous rencontrez des problèmes, veuillez d'abord essayer de placer le mod tout en bas de l'ordre de chargement.
+ [*]Je pourrais ajouter des patchs de compatibilité sur demande.
 [/list]
 
-Le mod devrait fonctionner avec n'importe quel autre mod qui ne modifie pas le taux de tick (ex: Daily Ticks).
+Le mod devrait fonctionner avec n'importe quel autre mod qui ne modifie pas la fréquence des ticks (ex : Daily Ticks).
 
-Il peut y avoir un problème potentiel avec le mod principal et tout mod utilisant un déclencheur spécifique à un jour précis, mais je n'ai actuellement connaissance d'aucun mod faisant cela ou présentant des problèmes.
+Il peut y avoir un problème potentiel entre le mod principal et tout mod utilisant un déclencheur (trigger) spécifique à un jour donné, mais je n'ai connaissance d'aucun mod faisant cela ou présentant des problèmes actuellement.
 
-[h1]Notes supplémentaires :[/h1]
-Veuillez signaler tout problème ou résultat qui ne correspondrait pas au comportement vanilla ou attendu si cela se produit.
+[h1]Notes additionnelles :[/h1]
+Veuillez signaler tout problème ou résultat ne correspondant pas au comportement vanilla ou attendu s'ils surviennent.
 
-En plus de la section des commentaires, vous pouvez également poser vos questions, signaler des bugs ou faire des suggestions dans le canal [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis du serveur discord de la communauté EU5[/url]. Et si vous êtes intéressé par le développement de ce mod ou de l'un de mes autres mods, vous pouvez me contacter ou m'ajouter sur Discord @arealconner. Toutes les contributions sont les bienvenues.
+En plus de la section des commentaires, vous pouvez également poser des questions, signaler des bugs ou faire des suggestions dans le [url=https://discord.gg/zeQ6x9wrPq]salon #faster-universalis du serveur Discord communautaire EU5[/url]. Et si vous souhaitez participer au développement de ce mod ou de l'un de mes autres mods, vous pouvez me mentionner ou m'ajouter sur Discord @arealconner. Toutes les contributions sont les bienvenues.
 
 Les versions source et de développement du mod sont disponibles sur [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub.[/url]
 
  [h1]Important :[/h1]
- Vous [b]devez[/b] désactiver le paramètre "Vitesse du jeu lorsqu'une unité sélectionnée entre en combat", sinon le temps s'arrêtera lors de la visualisation d'une bataille.
+ Vous [b]devez[/b] désactiver le paramètre « Vitesse du jeu lorsqu'une unité sélectionnée entre en combat », sinon le temps s'arrêtera lors de l'observation d'une bataille.
 [/quote]
 

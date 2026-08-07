@@ -7,7 +7,7 @@
  fum__performance_name: "Performans"
  ## Removals (removals) Group
  fum__performance__removals_name: "Kaldırılanlar"
- fum__sop_removal_name: "Nüfus Tabanlı Ülkeleri Kaldır"
+ fum__sop_removal_name: "Nüfus Toplumunu Kaldır"
  fum__sop_removal_desc: "Tüm SOP'ları kaldırır."
  fum__nation_removal_name: "Ulus Kaldırma"
  fum__nation_removal_desc: "Belirlenen ayara göre ülkeleri kaldırır, detaylar için açılır menünün üzerine gelin."
@@ -22,7 +22,7 @@
  fum__block_recolonization_name: "Yeniden Kolonileştirmeyi Engelle"
  fum__block_recolonization_desc: "Avrupa Merkezli veya Asya Merkezli ayarlarıyla birlikte kullanıldığında, devre dışı bırakılan tüm alt kıtalardaki popları silecek ve buraların yeniden kolonize edilmesini önleyecektir. Güney Amerika gibi hiç kolonize edilmemiş alt kıtaların poplarını kaldırmayacak veya kolonizasyonunu engellemeyecektir."
  fum__pop_removal_name: "Sahipsiz Nüfusları Kaldır"
- fum__pop_removal_desc: "Sahibi olmayan konumlardaki nüfusları (nüfus tabanlı ülkeler dahil) siler. Daha iyi performans sağlar ancak yerel nüfus olmayacağı için kolonileşmeyi hızlandırır. Bu özellik, ülke kaldırma ile birleşir."
+ fum__pop_removal_desc: "Sahibi olmayan konumlardaki (Society of Pops dâhil) nüfusları siler. Daha iyi performans sağlar ancak yerel nüfus kalmayacağı için kolonizasyonu hızlandırır. Bu seçenek, devlet kaldırma ile birleşir."
  fum__apply_performance_settings_name: "Performans Ayarlarını Uygula"
  fum__apply_performance_settings_desc: "Seçilen tüm ayarlar uygulanacak."
  fum__apply_performance_settings_text: "Uygula"
@@ -32,7 +32,7 @@
  ## Speeds (speeds) Group
  fum__qol__speeds_name: "Hızlar"
  fum__army_movement_speed_name: "Ordu Hareket Hızı"
- fum__army_movement_speed_desc: "Ordu hareket hızını değiştirir. %0 vanilya değeridir."
+ fum__army_movement_speed_desc: "Ordu hareket hızını değiştirir. %0 vanilladır. \n\nDEBUG OKUMASI\nkaydırıcı küresel değişkeni: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_speed_setting')]\ndüz. ordu hızı: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_army_movement_speed')]\nordu_hareket_hızı: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_movement_speed')]\ndüz. çocuk eğt: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_country_child_education')]\nülke_çocuk_eğitimi: [GetPlayer.MakeScope.ScriptValue('fum_dbg_child_education')]\ndüz. moral maliyeti: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_land_morale_movement_cost')]\nkara_moral_hareket_maliyeti: [GetPlayer.MakeScope.ScriptValue('fum_dbg_land_morale_movement_cost')]\ndüz. piyade gücü: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_army_heavy_infantry_power')]\nordu_ağır_piyade_gücü: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_heavy_infantry_power')]\nordu_inisiyatifi: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_initiative')]"
  fum__army_movement_speed_format: "%[CMMV('fum__army_movement_speed')]"
  fum__navy_movement_speed_name: "Donanma Hareket Hızı"
  fum__navy_movement_speed_desc: "Donanma hareket hızını değiştirir. %0 vanilla değeridir."
@@ -49,20 +49,14 @@
  fum__battle_length_option_4_desc: "Muharebeler varsayılan ayardan iki kat daha uzun sürecek."
 
  # Other (other) Tab
- fum__other_name: "Diğer"
  ## General (general) Group
- fum__other__general_name: "Genel"
- fum__enable_save_game_compatability_name: "Kayıtlı Oyun Uyumluluğunu Etkinleştir"
- fum__enable_save_game_compatability_desc: "Etkinleştirildiğinde mod, mevcut kayıtlı oyunlarla uyumluluk sağlamak için düzeltmeler yapacaktır. Mod, bu ayarı otomatik olarak yapmaya çalışacaktır. Ancak oyuna Faster Universalis ile başladıysanız devre dışı olduğundan; mevcut bir oyunu yüklediyseniz etkin olduğundan emin olun."
 
  # Optional: self-referencing flag keys to suppress IDE warnings (safe to remove if you want)
  fum: "fum"
  fum__performance: "fum__performance"
  fum__qol: "fum__qol"
- fum__other: "fum__other"
  fum__performance__removals: "fum__performance__removals"
  fum__qol__speeds: "fum__qol__speeds"
- fum__other__general: "fum__other__general"
  fum__sop_removal: "fum__sop_removal"
  fum__nation_removal: "fum__nation_removal"
  fum__block_recolonization: "fum__block_recolonization"
@@ -71,7 +65,6 @@
  fum__army_movement_speed: "fum__army_movement_speed"
  fum__navy_movement_speed: "fum__navy_movement_speed"
  fum__battle_length: "fum__battle_length"
- fum__enable_save_game_compatability: "fum__enable_save_game_compatability"
  fum__performance__character_culling_name: "Karakter Ayıklama"
  fum__character_culling_name: "Karakter Ayıklamayı Etkinleştir"
  fum__character_culling_desc: "Performansı artırmak için her ülkedeki en düşük istatistikli yetişkin karakterleri periyodik olarak kaldırır. Çocuklar, hanedan mülkündeki karakterler, kabine bakanları, generaller, amiraller ve özel niteliklere sahip olanlar korunur."

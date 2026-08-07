@@ -7,7 +7,7 @@
  fum__performance_name: "性能"
  ## Removals (removals) Group
  fum__performance__removals_name: "移除项"
- fum__sop_removal_name: "移除基于人口的国家"
+ fum__sop_removal_name: "移除人口社会"
  fum__sop_removal_desc: "移除所有 SOP。"
  fum__nation_removal_name: "国家移除"
  fum__nation_removal_desc: "根据所选设置移除国家，将鼠标悬停在下拉菜单上以查看详情。"
@@ -22,7 +22,7 @@
  fum__block_recolonization_name: "禁止重新殖民"
  fum__block_recolonization_desc: "在使用“以欧洲为中心”或“以亚洲为中心”设置时，将清除所有已禁用次大陆的人口并防止其被重新殖民。不会阻止从未被殖民的次大陆（如南美洲）的殖民或移除其中的人口。"
  fum__pop_removal_name: "移除无主人口"
- fum__pop_removal_desc: "删除无主地（包括基于人口的国家）的人口。这能提高性能，但由于没有当地人口，殖民速度会变快。此项效果可与移除国家叠加。"
+ fum__pop_removal_desc: "删除无主地区（包括人口社会）的人口。提高性能，但由于没有当地人口，殖民速度会变快。此效果可与移除国家叠加。"
  fum__apply_performance_settings_name: "应用性能设置"
  fum__apply_performance_settings_desc: "将应用所有选定设置。"
  fum__apply_performance_settings_text: "应用"
@@ -32,7 +32,7 @@
  ## Speeds (speeds) Group
  fum__qol__speeds_name: "速度"
  fum__army_movement_speed_name: "陆军移动速度"
- fum__army_movement_speed_desc: "调整陆军移动速度。0% 为原版数值。"
+ fum__army_movement_speed_desc: "改变陆军移动速度。0% 为原版。\n\n调试读数\n滑块全局变量: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_speed_setting')]\n陆军速度修正: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_army_movement_speed')]\narmy_movement_speed: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_movement_speed')]\n子女教育修正: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_country_child_education')]\ncountry_child_education: [GetPlayer.MakeScope.ScriptValue('fum_dbg_child_education')]\n士气消耗修正: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_land_morale_movement_cost')]\nland_morale_movement_cost: [GetPlayer.MakeScope.ScriptValue('fum_dbg_land_morale_movement_cost')]\n步兵战斗力修正: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_army_heavy_infantry_power')]\narmy_heavy_infantry_power: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_heavy_infantry_power')]\narmy_initiative: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_initiative')]"
  fum__army_movement_speed_format: "[CMMV('fum__army_movement_speed')]%"
  fum__navy_movement_speed_name: "海军移动速度"
  fum__navy_movement_speed_desc: "更改海军移动速度。0% 为原版数值。"
@@ -49,20 +49,14 @@
  fum__battle_length_option_4_desc: "战斗持续时间将是默认设置的两倍。"
 
  # Other (other) Tab
- fum__other_name: "其他"
  ## General (general) Group
- fum__other__general_name: "常规"
- fum__enable_save_game_compatability_name: "启用存档兼容性"
- fum__enable_save_game_compatability_desc: "启用后，本模组将进行修正以兼容现有的存档。模组将尝试自动设置此项。然而，如果您是在启用 Faster Universalis 的情况下开始的新游戏，请确保将其禁用；如果您加载的是现有存档，请确保将其启用。"
 
  # Optional: self-referencing flag keys to suppress IDE warnings (safe to remove if you want)
  fum: "fum"
  fum__performance: "fum__performance"
  fum__qol: "fum__qol"
- fum__other: "fum__other"
  fum__performance__removals: "fum__performance__removals"
  fum__qol__speeds: "fum__qol__speeds"
- fum__other__general: "fum__other__general"
  fum__sop_removal: "fum__sop_removal"
  fum__nation_removal: "fum__nation_removal"
  fum__block_recolonization: "fum__block_recolonization"
@@ -71,7 +65,6 @@
  fum__army_movement_speed: "fum__army_movement_speed"
  fum__navy_movement_speed: "fum__navy_movement_speed"
  fum__battle_length: "fum__battle_length"
- fum__enable_save_game_compatability: "fum__enable_save_game_compatability"
  fum__performance__character_culling_name: "角色剔除"
  fum__character_culling_name: "启用角色剔除"
  fum__character_culling_desc: "定期从每个国家中移除属性最低的成年角色以提升性能。儿童、王室成员、内阁大臣、陆军将领、海军将领以及拥有特殊特质的角色将受到保护。"

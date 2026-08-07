@@ -5,76 +5,77 @@ Szybsza Universalis / Faster Universalis
 
 [quote]
 [h1]Przegląd:[/h1]
-Radykalnie poprawia prędkość gry i częstotliwość ticków (tick rate), zachowując przy tym balans i rozgrywkę z wersji vanilla.
+Drastycznie poprawia szybkość gry/częstotliwość ticków (tick rate), zachowując przy tym balans i rozgrywkę z wersji vanilla.
 
 [h1]Funkcje:[/h1]
 [olist]
- [*][b]O 100%+ szybsza rozgrywka:[/b] Przy prędkości 7 czas powinien płynąć około dwa razy szybciej niż w vanilli, a na niższych prędkościach poprawa jest jeszcze większa.
+ [*][b]Szybkość gry większa o ponad 100%:[/b] Na prędkości 7 czas powinien płynąć około dwukrotnie szybciej niż w wersji vanilla, a na niższych prędkościach poprawa jest jeszcze wyraźniejsza.
   [list]
-   [*]Osiągnięte poprzez dziesiątki zmian w plikach "defines", których jest zbyt wiele, by je tu wymienić.
-   [*]Usunięto ticki godzinowe (i pójście o krok dalej: podstawowa wersja moda używa ticków co 1,9 dnia (47 godzin). Można to jednak dostosować za pomocą [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submodów dostępnych tutaj.[/url])
-   [*]Liczby obrażeń podczas bitew bez ticków godzinowych!
-   [*]Walka, prędkość ruchu, częstotliwość aktualizacji gry i SI zostały dostosowane tak, aby wszystkie wyniki i balans gry były identyczne z wersją vanilla. Nie powinieneś zauważyć żadnej różnicy poza wyższą prędkością.
+   [*]Osiągnięto to dzięki dziesiątkom zmian w plikach defines, których jest zbyt wiele, by je tu wymienić.
+   [*]Usunięto ticki godzinowe (idąc dalej: podstawowa wersja moda używa ticków co 1,9 dnia (47 godzin). Można to jednak dostosować za pomocą [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]submodów dostępnych tutaj.[/url])
+   [*]Liczby obrażeń podczas bitwy bez ticków godzinowych!
+   [*]Walka, prędkość ruchu oraz częstotliwość aktualizacji gry i AI zostały dostosowane tak, aby wszystkie wyniki i balans gry były identyczne z wersją vanilla. Nie powinieneś zauważyć żadnej różnicy poza wyższą prędkością.
   [/list]
+ [*][b]Zoptymalizowane znaczniki mapy:[/b] Zmniejsza koszt renderowania i aktualizowania znaczników mapy dla lepszej wydajności FPS.
  [*][b]Opcjonalne ustawienia optymalizacji wydajności w menu moda:[/b]
   [list]
-   [*][b]Usuwanie narodów opartych na populacji (Pops):[/b] Usuwa wszystkie narody oparte na populacji.
-   [*][b]Usuwanie regionów:[/b] Skupienie na Europie, Skupienie na Azji oraz Usuwanie regionów o niskim znaczeniu. Zobacz zrzuty ekranu na stronie moda, aby sprawdzić, jak każdy z nich wygląda.
+   [*][b]Usuń Society of Pops:[/b] Usuwa wszystkie Society of Pops.
+   [*][b]Usuwanie regionów:[/b] Koncentracja na Europie, Koncentracja na Azji oraz Narody o niskim wpływie. Zobacz zrzuty ekranu na stronie moda, aby zobaczyć, jak wygląda każdy z wariantów.
     [list]
-     [*][b]Usuwanie regionów o niskim znaczeniu:[/b] Usuwa mniejsze narody w regionach o niskiej szansie na interakcję, takie jak małe wyspiarskie narody na Pacyfiku – pełne szczegóły w opisach ustawień.
-     [*][b]Skupienie na Europie:[/b] W praktyce gra tylko w Europie, usuwająca odległe regiony, takie jak Azja Wschodnia, Indonezja i Oceania.
-     [*][b]Skupienie na Azji:[/b] W praktyce gra tylko w Azji, usuwająca odległe regiony, takie jak Europa i Afryka Zachodnia.
+     [*][b]Narody o niskim wpływie:[/b] Usuwa mniejsze narody w regionach o małej szansie na interakcję, takich jak małe państwa wyspiarskie na Pacyfiku – pełne szczegóły w opisach ustawień.
+     [*][b]Koncentracja na Europie:[/b] Skutecznie ogranicza grę tylko do Europy, usuwając odległe regiony, takie jak Azja Wschodnia, Indonezja i Oceania.
+     [*][b]Koncentracja na Azji:[/b] Skutecznie ogranicza grę tylko do Azji, usuwając odległe regiony, takie jak Europa i Afryka Zachodnia.
     [/list]
-   [*][b]Usuwanie populacji z nieposiadanych terytoriów:[/b] Usuwa popy w nieposiadanych lokacjach. Kumuluje się z usuwaniem narodów.
-   [*][b]Blokada rekolonizacji:[/b] Jeśli opcja jest włączona wraz z usuwaniem regionów (Skupienie na Europie lub Azji), zapobiega ponownej kolonizacji usuniętych regionów. Wyłączenie tego może stworzyć interesujące doświadczenie wyścigu o ponowną kolonizację utraconego starego świata.
-   [*][b]Czyszczenie postaci (Character Culling):[/b] Co 4 lata usuwa dorosłe postacie o najniższych statystykach z każdego narodu, aż do osiągnięcia konfigurowalnego maksimum. Dzieci, ministrowie gabinetu, generałowie, admirałowie, postacie z domeny królewskiej oraz kilka postaci ze specjalnymi cechami (np. wizjoner architektury) są chronieni.
+   [*][b]Usuń nieposiadane popy:[/b] Usuwa popy w nieposiadanych lokacjach. Łączy się z opcją usuwania narodów.
+   [*][b]Blokada rekolonizacji:[/b] Jeśli włączone wraz z usuwaniem regionów (Europa lub Azja), zapobiega ponownej kolonizacji usuniętych obszarów. Wyłączenie tej opcji może stworzyć ciekawą sytuację „wyścigu” o ponowną kolonizację utraconego starego świata.
+   [*][b]Czyszczenie postaci (Character Culling):[/b] Co 4 lata usuwa dorosłe postacie o najniższych statystykach z każdego narodu do konfigurowalnego maksimum. Dzieci, ministrowie, generałowie, admirałowie, postacie z majątków koronnych oraz postacie ze specjalnymi cechami (np. wizjoner architektoniczny) są chronieni.
   [/list]
  [*][b]Ustawienia dostosowania prędkości w menu moda:[/b]
   [list]
-   [*][b]Prędkość ruchu armii:[/b] Pozwala dostosować prędkość ruchu armii.
-   [*][b]Prędkość ruchu floty:[/b] Pozwala dostosować prędkość ruchu floty.
-   [*][b]Długość bitwy:[/b] Pozwala dostosować czas trwania bitew (podczas gdy straty i wyniki pozostają takie same jak w vanilli).
+   [*][b]Prędkość ruchu armii:[/b] Pozwala dostosować prędkość ruchu wojsk lądowych.
+   [*][b]Prędkość ruchu floty:[/b] Pozwala dostosować prędkość ruchu marynarki wojennej.
+   [*][b]Długość bitwy:[/b] Pozwala dostosować, jak długo trwają bitwy (podczas gdy straty i wyniki pozostają takie same jak w vanilla).
   [/list]
- [*][b]Drobne usprawnienia QoL:[/b]
+ [*][b]Drobne poprawki komfortu gry (QoL):[/b]
   [list]
-   [*][b]Podwojony czas wygaśnięcia wydarzeń w trybie wieloosobowym[/b]
+   [*][b]Dwukrotnie wydłużony czas wygasania wydarzeń MP[/b]
   [/list]
 [/olist]
 
-Dla odniesienia: w moich testach Daily Ticks na prędkości 7 zwiększyły prędkość gry o około 13%, podczas gdy film na stronie Steam pokazuje, że Faster Universalis bez włączonych opcjonalnych optymalizacji zwiększył prędkość gry o około 100% na zapisie z późnej fazy gry vanilla. Przy włączonych opcjonalnych optymalizacjach, takich jak czyszczenie narodów opartych na populacji i regiony skupione na Europie, można zauważyć poprawę o ponad 200%.
+Dla porównania, w moich testach mod Daily Ticks na prędkości 7 zwiększył szybkość gry o około 13%, podczas gdy – jak pokazuje film na stronie Steam – Faster Universalis bez żadnych opcjonalnych optymalizacji zwiększył szybkość o około 100% na zapisie z późnej fazy gry w wersji vanilla. Przy włączonych opcjonalnych optymalizacjach, takich jak usuwanie narodów na podstawie popów i regiony skoncentrowane na Europie, można zauważyć poprawę o ponad 200%.
 
-[h1]Planowane/Wkrótce:[/h1]
+[h1]Planowane / Nadchodzące:[/h1]
 [olist]
- [*][b]Dalsza optymalizacja wydajności:[/b] Będę nadal optymalizować moda pod kątem wydajności w miarę znajdowania nowych możliwości.
- [*][b]Opcje poprawek graficznych:[/b] Pracowałem również nad poprawą wydajności renderowania/FPS, co zostanie udostępnione w przyszłej aktualizacji. Na ten moment udało mi się osiągnąć jedynie 13% wzrostu FPS. (Jeśli chcesz, możesz odkomentować moje eksperymentalne parametry graficzne (WIP), ale obecnie nie są one domyślnie włączone). Pamiętaj, że jeśli ogranicza Cię procesor (CPU-bound), nadal możesz obecnie zauważyć wzrost FPS. Odczujesz go również korzystając z dowolnych opcjonalnych ustawień wydajności w określonych sceneriach, ponieważ będzie mniej obiektów do renderowania.
+ [*][b]Dalsza optymalizacja wydajności:[/b] Będę kontynuował optymalizację moda, w miarę znajdowania kolejnych możliwości.
+ [*][b]Opcje poprawek graficznych:[/b] Pracowałem również nad poprawą wydajności renderowania/FPS, co zostanie wydane w przyszłej aktualizacji. Na ten moment udało mi się uzyskać jedynie 13% wzrostu FPS. (Jeśli chcesz, możesz odkomentować moje robocze defines grafiki, ale obecnie nie są one domyślnie włączone). Pamiętaj, że jeśli Twoim wąskim gardłem jest procesor (CPU-bound), nadal możesz odczuć wzrost FPS już teraz. Zauważysz go również przy użyciu dowolnych opcjonalnych ustawień wydajności w określonych scenach, ponieważ będzie mniej obiektów do renderowania.
 [/olist]
 
-[h1]Lista zmian:[/h1]
+[h1]Dziennik zmian:[/h1]
 Zobacz [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Change Notes na stronie warsztatu[/url].
 
 [h1]Kompatybilność:[/h1]
 [list]
- [*]Obsługuje wersję v1.3
+ [*]Wspiera wersję v1.3
  [*]Kompatybilny z trybem Ironman i osiągnięciami.
- [*]W pełni kompatybilny z zapisanymi grami.
- [*]Nie należy go używać z żadnym innym modem zmieniającym ticki, takim jak Daily Ticks.
+ [*]W pełni kompatybilny z zapisami gry.
+ [*]Nie powinien być używany z żadnym innym modem zmieniającym ticki, takim jak Daily Ticks.
  [*]Ładuj po GlorpUI lub dowolnym modzie edytującym górny pasek (edytuję tylko same prędkości gry, więc nie nadpisze to innych zmian).
- [*]Jeśli napotkasz jakiekolwiek problemy, najpierw spróbuj umieścić mod na samym dole kolejności ładowania.
+ [*]Jeśli napotkasz jakiekolwiek problemy, spróbuj najpierw umieścić mod na samym dole kolejności ładowania.
  [*]Mogę dodać patche kompatybilności na prośbę użytkowników.
 [/list]
 
-Mod powinien działać z każdym innym modem, który nie zmienia częstotliwości ticków (np. Daily Ticks).
+Mod powinien współpracować z każdym innym modem, który nie zmienia częstotliwości ticków (np. Daily Ticks).
 
-Może wystąpić potencjalny problem z głównym modem i jakimkolwiek modem używającym wyzwalaczy (triggers) przypisanych do konkretnych dni, ale obecnie nie znam żadnych modów, które to robią lub mają jakiekolwiek problemy.
+Istnieje potencjalny problem między głównym modem a dowolnym modem używającym wyzwalaczy (triggers) opartych na konkretnym dniu, ale obecnie nie znam żadnych modów, które to robią lub sprawiają problemy.
 
 [h1]Dodatkowe uwagi:[/h1]
-Proszę zgłaszać wszelkie problemy lub wyniki, które nie pasują do vanilli/oczekiwanego zachowania, jeśli takowe wystąpią.
+Prosimy o zgłaszanie wszelkich problemów lub wyników, które nie zgadzają się z wersją vanilla/oczekiwanym zachowaniem.
 
-Oprócz sekcji komentarzy, możesz również zadawać pytania, zgłaszać błędy lub składać sugestie na [url=https://discord.gg/zeQ6x9wrPq]kanale #faster-universalis na serwerze Discord społeczności EU5[/url]. A jeśli jesteś zainteresowany dołączeniem do prac nad tym lub innym z moich modów, możesz mnie oznaczyć lub dodać na Discordzie: @arealconner. Wszystkie formy pomocy są mile widziane.
+Poza sekcją komentarzy, możesz również zadawać pytania, zgłaszać błędy lub przesyłać sugestie na [url=https://discord.gg/zeQ6x9wrPq]kanale #faster-universalis na serwerze Discord społeczności EU5[/url]. A jeśli jesteś zainteresowany współtworzeniem tego lub innego z moich modów, możesz do mnie napisać lub dodać mnie na Discordzie: @arealconner. Każdy wkład jest mile widziany.
 
-Źródło i wersje deweloperskie moda są dostępne na [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHubie.[/url]
+Kod źródłowy i wersje deweloperskie moda są dostępne na [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHubie.[/url]
 
  [h1]Ważne:[/h1]
- [b]Musisz[/b] wyłączyć ustawienie "Game Speed When a selected Unit enters Combat" (Prędkość gry, gdy wybrana jednostka rozpoczyna walkę), w przeciwnym razie czas zatrzyma się podczas podglądu bitwy.
+ [b]Musisz[/b] wyłączyć ustawienie „Game Speed When a selected Unit enters Combat” (Prędkość gry, gdy wybrana jednostka wchodzi do walki), w przeciwnym razie czas zatrzyma się podczas podglądu bitwy.
 [/quote]
 

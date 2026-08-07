@@ -7,7 +7,7 @@
  fum__performance_name: "Performances"
  ## Removals (removals) Group
  fum__performance__removals_name: "Suppressions"
- fum__sop_removal_name: "Supprimer les pays basés sur les populations"
+ fum__sop_removal_name: "Supprimer la Société des populations"
  fum__sop_removal_desc: "Supprime tous les SOP."
  fum__nation_removal_name: "Suppression des nations"
  fum__nation_removal_desc: "Supprime les nations selon le paramètre spécifié ; survolez le menu déroulant pour plus de détails."
@@ -22,7 +22,7 @@
  fum__block_recolonization_name: "Bloquer la recolonisation"
  fum__block_recolonization_desc: "Supprimera les populations et empêchera la recolonisation de tous les sous-continents désactivés lors de l'utilisation des paramètres Europe Centrique ou Asie Centrique. Ne bloquera pas la colonisation et ne supprimera pas les populations des sous-continents n'ayant jamais été colonisés, comme l'Amérique du Sud."
  fum__pop_removal_name: "Supprimer les populations sans propriétaire"
- fum__pop_removal_desc: "Supprime les populations des localisations sans propriétaire (y compris les pays basés sur les populations). Améliore les performances, mais accélère la colonisation en raison de l'absence de populations locales. Se cumule avec la suppression des nations."
+ fum__pop_removal_desc: "Supprime les pops des lieux sans propriétaire (y compris les Sociétés de Pops). Améliore les performances, mais accélérera la colonisation car il n'y aura plus de populations locales. Se cumule avec la suppression de nations."
  fum__apply_performance_settings_name: "Appliquer les paramètres de performance"
  fum__apply_performance_settings_desc: "Appliquera tous les paramètres sélectionnés."
  fum__apply_performance_settings_text: "Appliquer"
@@ -32,7 +32,7 @@
  ## Speeds (speeds) Group
  fum__qol__speeds_name: "Vitesses"
  fum__army_movement_speed_name: "Vitesse de déplacement des armées"
- fum__army_movement_speed_desc: "Modifie la vitesse de déplacement des armées. 0 % correspond au jeu de base."
+ fum__army_movement_speed_desc: "Modifie la vitesse de déplacement des armées. 0 % correspond au jeu de base. \n\nAFFICHAGE DEBUG\nvar globale curseur : [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_speed_setting')]\nvitesse armée corr : [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_army_movement_speed')]\narmy_movement_speed : [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_movement_speed')]\néd. enfant corr : [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_country_child_education')]\ncountry_child_education : [GetPlayer.MakeScope.ScriptValue('fum_dbg_child_education')]\ncoût moral corr : [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_land_morale_movement_cost')]\nland_morale_movement_cost : [GetPlayer.MakeScope.ScriptValue('fum_dbg_land_morale_movement_cost')]\npuissance infanterie corr : [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_army_heavy_infantry_power')]\narmy_heavy_infantry_power : [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_heavy_infantry_power')]\narmy_initiative : [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_initiative')]"
  fum__army_movement_speed_format: "[CMMV('fum__army_movement_speed')]%"
  fum__navy_movement_speed_name: "Vitesse de déplacement de la flotte"
  fum__navy_movement_speed_desc: "Modifie la vitesse de déplacement navale. 0 % correspond au jeu de base."
@@ -49,20 +49,14 @@
  fum__battle_length_option_4_desc: "Les batailles dureront deux fois plus longtemps que le paramètre par défaut."
 
  # Other (other) Tab
- fum__other_name: "Autres"
  ## General (general) Group
- fum__other__general_name: "Général"
- fum__enable_save_game_compatability_name: "Activer la compatibilité des sauvegardes"
- fum__enable_save_game_compatability_desc: "Lorsqu'il est activé, le mod effectuera des corrections pour assurer la compatibilité avec les sauvegardes existantes. Le mod tentera de configurer cela automatiquement. Cependant, si vous avez commencé la partie avec Faster Universalis, assurez-vous qu'il est désactivé ; si vous avez chargé une sauvegarde existante, assurez-vous qu'il est activé."
 
  # Optional: self-referencing flag keys to suppress IDE warnings (safe to remove if you want)
  fum: "fum"
  fum__performance: "fum__performance"
  fum__qol: "fum__qol"
- fum__other: "fum__other"
  fum__performance__removals: "fum__performance__removals"
  fum__qol__speeds: "fum__qol__speeds"
- fum__other__general: "fum__other__general"
  fum__sop_removal: "fum__sop_removal"
  fum__nation_removal: "fum__nation_removal"
  fum__block_recolonization: "fum__block_recolonization"
@@ -71,7 +65,6 @@
  fum__army_movement_speed: "fum__army_movement_speed"
  fum__navy_movement_speed: "fum__navy_movement_speed"
  fum__battle_length: "fum__battle_length"
- fum__enable_save_game_compatability: "fum__enable_save_game_compatability"
  fum__performance__character_culling_name: "Élagage des personnages"
  fum__character_culling_name: "Activer l'élimination des personnages"
  fum__character_culling_desc: "Supprime périodiquement les personnages adultes ayant les statistiques les plus faibles de chaque nation pour améliorer les performances. Les enfants, les personnages du domaine royal, les ministres du cabinet, les généraux, les amiraux et ceux possédant des traits spéciaux sont protégés."
