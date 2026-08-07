@@ -1,0 +1,69 @@
+﻿fum_dbg_army_speed_setting = {
+	if = {
+		limit = { has_global_variable = fum__army_movement_speed }
+		value = global_var:fum__army_movement_speed
+	}
+	else = {
+		value = -999
+	}
+}
+
+fum_dbg_corr_army_movement_speed = {
+	if = {
+		limit = { has_variable = fum_corr_army_movement_speed }
+		value = var:fum_corr_army_movement_speed
+	}
+	else = {
+		value = -999
+	}
+}
+
+fum_dbg_corr_country_child_education = {
+	if = {
+		limit = { has_variable = fum_corr_country_child_education }
+		value = var:fum_corr_country_child_education
+	}
+	else = {
+		value = -999
+	}
+}
+
+fum_dbg_corr_land_morale_movement_cost = {
+	if = {
+		limit = { has_variable = fum_corr_land_morale_movement_cost }
+		value = var:fum_corr_land_morale_movement_cost
+	}
+	else = {
+		value = -999
+	}
+}
+
+fum_dbg_corr_army_heavy_infantry_power = {
+	if = {
+		limit = { has_variable = fum_corr_army_heavy_infantry_power }
+		value = var:fum_corr_army_heavy_infantry_power
+	}
+	else = {
+		value = -999
+	}
+}
+
+fum_dbg_army_movement_speed = {
+	value = modifier:army_movement_speed
+}
+
+fum_dbg_child_education = {
+	value = modifier:country_child_education
+}
+
+fum_dbg_land_morale_movement_cost = {
+	value = modifier:land_morale_movement_cost
+}
+
+fum_dbg_army_heavy_infantry_power = {
+	value = modifier:army_heavy_infantry_power
+}
+
+fum_dbg_army_initiative = {
+	value = modifier:army_initiative
+}

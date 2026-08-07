@@ -40,7 +40,7 @@
  ## Speeds (speeds) Group
  fum__qol__speeds_name: "Speeds"
  fum__army_movement_speed_name: "Army Movement Speed"
- fum__army_movement_speed_desc: "Changes army movement speed. 0% is vanilla. "
+ fum__army_movement_speed_desc: "Changes army movement speed. 0% is vanilla. \n\nDEBUG READOUT\nslider global var: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_speed_setting')]\ncorr army speed: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_army_movement_speed')]\narmy_movement_speed: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_movement_speed')]\ncorr child ed: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_country_child_education')]\ncountry_child_education: [GetPlayer.MakeScope.ScriptValue('fum_dbg_child_education')]\ncorr morale cost: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_land_morale_movement_cost')]\nland_morale_movement_cost: [GetPlayer.MakeScope.ScriptValue('fum_dbg_land_morale_movement_cost')]\ncorr infantry power: [GetPlayer.MakeScope.ScriptValue('fum_dbg_corr_army_heavy_infantry_power')]\narmy_heavy_infantry_power: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_heavy_infantry_power')]\narmy_initiative: [GetPlayer.MakeScope.ScriptValue('fum_dbg_army_initiative')]"
  fum__army_movement_speed_format: "[CMMV('fum__army_movement_speed')]%"
  fum__navy_movement_speed_name: "Navy Movement Speed"
  fum__navy_movement_speed_desc: "Changes navy movement speed. 0% is vanilla. "
