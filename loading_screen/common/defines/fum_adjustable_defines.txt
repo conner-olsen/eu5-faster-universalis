@@ -92,17 +92,17 @@ NCombat = {
 }
 
 NCountry = {
-	# 180*(25/48)
-	PARLIAMENT_DURATION_DAYS = 94 # 180
+	# 180*(24/47)
+	PARLIAMENT_DURATION_DAYS = 92 # 180
 }
 
 NInternationalOrganization = {
-	# 365*(25/48)
-	PARLIAMENT_DURATION_DAYS = 190 # 365
+	# 365*(24/47)
+	PARLIAMENT_DURATION_DAYS = 186 # 365
 }
 
 NCharacter = {
-	# 170*(1/0.48)
-	PREGNANCY_CHANCE = 354	 # 170	#1000 is diceroll
+	# 170*(47/24). Fewer day ticks fire, so the per-roll chance rises to keep the same rate per year.
+	PREGNANCY_CHANCE = 333	 # 170	#1000 is diceroll
 	# MONTHLY_STAT_INCREASE_CHANCE_FOR_CHILD = 55 # <= on 1d100
 }
