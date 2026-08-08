@@ -1,9 +1,9 @@
 ﻿l_japanese:
  STATIC_MODIFIER_NAME_fum_location_disabled_static_modifier: "FUM: ゲーム設定によりロケーションが無効化されています"
- AUTO_MODIFIER_NAME_fum_child_education_correction: "子女教育の修正"
- AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "移動士気コストの修正"
- AUTO_MODIFIER_NAME_fum_army_speed_correction: "陸軍の移動速度調整"
- AUTO_MODIFIER_NAME_fum_navy_speed_correction: "海軍の速度調整"
+ AUTO_MODIFIER_NAME_fum_child_education_correction: "後継者の教育の修正"
+ AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "陸軍の士気移動コストの補正"
+ AUTO_MODIFIER_NAME_fum_army_speed_correction: "陸軍移動速度の調整"
+ AUTO_MODIFIER_NAME_fum_navy_speed_correction: "海軍の移動速度調整"
  AUTO_MODIFIER_NAME_fum_naval_damage_done_correction: "戦闘期間の調整"
  AUTO_MODIFIER_NAME_fum_army_heavy_infantry_power_correction: "戦闘期間の調整"
  AUTO_MODIFIER_NAME_fum_army_light_infantry_power_correction: "戦闘期間の調整"

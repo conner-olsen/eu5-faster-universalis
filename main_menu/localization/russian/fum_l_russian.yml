@@ -1,9 +1,9 @@
 ﻿l_russian:
  STATIC_MODIFIER_NAME_fum_location_disabled_static_modifier: "FUM: Локация отключена настройкой игры"
- AUTO_MODIFIER_NAME_fum_child_education_correction: "Исправление обучения детей"
- AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Корректировка затрат боевого духа на перемещение"
- AUTO_MODIFIER_NAME_fum_army_speed_correction: "Корректировка скорости армий"
- AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Корректировка скорости флота"
+ AUTO_MODIFIER_NAME_fum_child_education_correction: "Исправление обучения наследников"
+ AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Коррекция стоимости передвижения от боевого духа армии"
+ AUTO_MODIFIER_NAME_fum_army_speed_correction: "Корректировка скорости передвижения армий"
+ AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Корректировка скорости передвижения флота"
  AUTO_MODIFIER_NAME_fum_naval_damage_done_correction: "Корректировка длительности сражения"
  AUTO_MODIFIER_NAME_fum_army_heavy_infantry_power_correction: "Корректировка длительности сражений"
  AUTO_MODIFIER_NAME_fum_army_light_infantry_power_correction: "Регулировка длительности сражений"

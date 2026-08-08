@@ -1,9 +1,9 @@
 ﻿l_french:
  STATIC_MODIFIER_NAME_fum_location_disabled_static_modifier: "FUM : Lieu désactivé par un paramètre de jeu"
- AUTO_MODIFIER_NAME_fum_child_education_correction: "Correction de l'éducation de l'enfant"
- AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Correction du coût en moral de mouvement"
- AUTO_MODIFIER_NAME_fum_army_speed_correction: "Ajustement de la vitesse de l'armée"
- AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Ajustement de la vitesse navale"
+ AUTO_MODIFIER_NAME_fum_child_education_correction: "Correction de l'éducation des héritiers"
+ AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Correction du coût de mouvement du moral de l'armée"
+ AUTO_MODIFIER_NAME_fum_army_speed_correction: "Ajustement de la vitesse de déplacement des armées"
+ AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Ajustement de la vitesse de déplacement navale"
  AUTO_MODIFIER_NAME_fum_naval_damage_done_correction: "Ajustement de la durée des batailles"
  AUTO_MODIFIER_NAME_fum_army_heavy_infantry_power_correction: "Ajustement de la durée des batailles"
  AUTO_MODIFIER_NAME_fum_army_light_infantry_power_correction: "Ajustement de la durée des batailles"

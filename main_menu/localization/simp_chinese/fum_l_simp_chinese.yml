@@ -1,9 +1,9 @@
 ﻿l_simp_chinese:
  STATIC_MODIFIER_NAME_fum_location_disabled_static_modifier: "FUM：地点已按游戏设置禁用"
- AUTO_MODIFIER_NAME_fum_child_education_correction: "儿童教育修正"
- AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "移动士气消耗修正"
- AUTO_MODIFIER_NAME_fum_army_speed_correction: "陆军速度调整"
- AUTO_MODIFIER_NAME_fum_navy_speed_correction: "海军速度调整"
+ AUTO_MODIFIER_NAME_fum_child_education_correction: "继承人教育修正"
+ AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "陆军士气移动成本修正"
+ AUTO_MODIFIER_NAME_fum_army_speed_correction: "陆军移动速度调整"
+ AUTO_MODIFIER_NAME_fum_navy_speed_correction: "海军移动速度调整"
  AUTO_MODIFIER_NAME_fum_naval_damage_done_correction: "战斗时长调整"
  AUTO_MODIFIER_NAME_fum_army_heavy_infantry_power_correction: "战斗时长调整"
  AUTO_MODIFIER_NAME_fum_army_light_infantry_power_correction: "战斗长度调整"

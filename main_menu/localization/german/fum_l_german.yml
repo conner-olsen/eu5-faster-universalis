@@ -1,9 +1,9 @@
 ﻿l_german:
  STATIC_MODIFIER_NAME_fum_location_disabled_static_modifier: "FUM: Standort durch Spieleinstellung deaktiviert"
- AUTO_MODIFIER_NAME_fum_child_education_correction: "Korrektur der Kindererziehung"
- AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Korrektur der Bewegungsmoralkosten"
- AUTO_MODIFIER_NAME_fum_army_speed_correction: "Anpassung der Armeegeschwindigkeit"
- AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Anpassung der Flottengeschwindigkeit"
+ AUTO_MODIFIER_NAME_fum_child_education_correction: "Korrektur der Erbenerziehung"
+ AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Korrektur der Armeemoral-Bewegungskosten"
+ AUTO_MODIFIER_NAME_fum_army_speed_correction: "Anpassung der Armeebewegungsgeschwindigkeit"
+ AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Anpassung der Marine-Bewegungsgeschwindigkeit"
  AUTO_MODIFIER_NAME_fum_naval_damage_done_correction: "Anpassung der Schlachtlänge"
  AUTO_MODIFIER_NAME_fum_army_heavy_infantry_power_correction: "Anpassung der Schlachtdauer"
  AUTO_MODIFIER_NAME_fum_army_light_infantry_power_correction: "Anpassung der Schlachtlänge"

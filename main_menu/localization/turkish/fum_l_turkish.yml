@@ -1,9 +1,9 @@
 ﻿l_turkish:
  STATIC_MODIFIER_NAME_fum_location_disabled_static_modifier: "FUM: Konum Oyun Ayarı Tarafından Devre Dışı Bırakıldı"
- AUTO_MODIFIER_NAME_fum_child_education_correction: "Çocuk Eğitimi Düzeltmesi"
- AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Hareket Moral Maliyeti Düzeltmesi"
- AUTO_MODIFIER_NAME_fum_army_speed_correction: "Ordu Hızı Ayarlaması"
- AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Donanma Hızı Ayarı"
+ AUTO_MODIFIER_NAME_fum_child_education_correction: "Varislerin Eğitimi Düzeltmesi"
+ AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Ordu Morali Hareket Maliyeti Düzeltmesi"
+ AUTO_MODIFIER_NAME_fum_army_speed_correction: "Ordu Hareket Hızı Ayarlaması"
+ AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Donanma Hareket Hızı Ayarı"
  AUTO_MODIFIER_NAME_fum_naval_damage_done_correction: "Muharebe Süresi Ayarlaması"
  AUTO_MODIFIER_NAME_fum_army_heavy_infantry_power_correction: "Muharebe Süresi Ayarı"
  AUTO_MODIFIER_NAME_fum_army_light_infantry_power_correction: "Muharebe Süresi Ayarı"
