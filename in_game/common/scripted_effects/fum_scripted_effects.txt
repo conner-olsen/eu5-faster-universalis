@@ -87,58 +87,38 @@ fum_remove_location = {
 		limit = {
 			fum_can_remove_location = yes
 		}
-		every_unit_in_location = {
-			destroy_unit = yes
+		fum_strip_location = yes
+	}
+}
+
+fum_strip_location = {
+	every_unit_in_location = {
+		destroy_unit = yes
+	}
+	every_buildings_in_location = {
+		change_building_level = -100
+	}
+	if = {
+		limit = {
+			has_owner = yes
 		}
-		every_buildings_in_location = {
-			change_building_level = -100
-		}
-		if = {
-			limit = {
-				has_owner = yes
-			}
-			owner = {
-				abandon_location = prev
-			}
+		owner = {
+			abandon_location = prev
 		}
 	}
 }
 
-
 fum_disable_location = {
-	if = {
-		limit = {
-			fum_can_remove_location = yes
-		}
-		fum_remove_location_and_pops = yes
-		change_development = -100
-		change_location_rank = location_rank:rural_settlement
-	}
+	fum_remove_location_and_pops = yes
+	change_development = -100
+	change_location_rank = location_rank:rural_settlement
 }
 
 # Regardless of pop removal settings, disabled regions should have their pops removed.
 fum_remove_location_and_pops = {
-	if = {
-		limit = {
-			fum_can_remove_location = yes
-		}
-		every_unit_in_location = {
-			destroy_unit = yes
-		}
-		every_buildings_in_location = {
-			change_building_level = -100
-		}
-		if = {
-			limit = {
-				has_owner = yes
-			}
-			owner = {
-				abandon_location = prev
-			}
-			every_pop = {
-				destroy_pop = this
-			}
-		}
+	fum_strip_location = yes
+	every_pop = {
+		destroy_pop = this
 	}
 }
 
