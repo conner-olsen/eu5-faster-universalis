@@ -1,9 +1,9 @@
 ﻿l_english:
  # Modifiers:
- AUTO_MODIFIER_NAME_fum_child_education_correction: "Child Education Correction"
- AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Movement Morale Cost Correction"
- AUTO_MODIFIER_NAME_fum_army_speed_correction: "Army Speed Adjustment"
- AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Navy Speed Adjustment"
+ AUTO_MODIFIER_NAME_fum_child_education_correction: "Education of Heirs Correction"
+ AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction: "Army Morale Movement Cost Correction"
+ AUTO_MODIFIER_NAME_fum_army_speed_correction: "Army Movement Speed Adjustment"
+ AUTO_MODIFIER_NAME_fum_navy_speed_correction: "Navy Movement Speed Adjustment"
  AUTO_MODIFIER_NAME_fum_naval_damage_done_correction: "Battle Length Adjustment"
  AUTO_MODIFIER_NAME_fum_army_heavy_infantry_power_correction: "Battle Length Adjustment"
  AUTO_MODIFIER_NAME_fum_army_light_infantry_power_correction: "Battle Length Adjustment"
