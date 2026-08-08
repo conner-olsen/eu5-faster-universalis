@@ -5,7 +5,7 @@
     "game_id": "eu5",
     "supported_game_version": "1.3.*",
     "fum_last_updated_game_version": "1.3.11",
-    "short_description": "Improves EU5 performance without any effect on gameplay or graphical quality.",
+    "short_description": "Improves EU5 performance while keeping vanilla balance, gameplay, and graphical quality.",
     "tags": [
         "Utilities",
         "Fixes",
