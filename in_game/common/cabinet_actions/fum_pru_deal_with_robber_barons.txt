@@ -1,4 +1,4 @@
-﻿# INJECT adds a per-target stall timer to vanilla's action. on_activate stamps a month counter on the target province; fum_iterate_robber_barons / fum_stop_robber_barons (monthly_country_pulse) increment it and force-remove PRU_robber_barons once it passes the threshold, covering the case where the engine's date-based completion is missed under FUM tick rates. Counter is per-province so several simultaneous actions each track their own target.
+﻿# Stall timer for a vanilla issue where the action's date-based completion is missed. We do not cause this, but I was gaslit into believing we did thus I fixed the vanilla bug.
 INJECT:pru_deal_with_robber_barons = {
 	allow = {
 		any_province = {

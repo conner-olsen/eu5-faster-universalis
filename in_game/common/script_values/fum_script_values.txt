@@ -30,6 +30,7 @@ fum_navy_speed_delta = {
 # Thus there are 12 bi-hourly ticks a day.
 # I am using 47 hour ticks, which would be 23.5x less ticks.
 # Option 3 is the mod default and needs no correction, so it falls through to 0.
+# The three per-option values are empirical; battle duration itself has never been measured.
 fum_battle_length_delta = {
 	if = {
 		limit = {

@@ -1,7 +1,7 @@
-﻿# Speed Watcher — remaps vanilla speeds (1-7) to mod speeds (15-21)
+﻿# Speed Watcher: remaps vanilla speeds (1-7) to mod speeds (15-21)
 # and catches the 8-14 dead zone.
 
-# Speed 1 → 15
+# Speed 1 to 15
 widget = {
 	name = "fum_speed_watcher_1"
 	size = { 0 0 }
@@ -14,7 +14,7 @@ widget = {
 	}
 }
 
-# Speed 2 → 16
+# Speed 2 to 16
 widget = {
 	name = "fum_speed_watcher_2"
 	size = { 0 0 }
@@ -27,7 +27,7 @@ widget = {
 	}
 }
 
-# Speed 3 → 17
+# Speed 3 to 17
 widget = {
 	name = "fum_speed_watcher_3"
 	size = { 0 0 }
@@ -40,7 +40,7 @@ widget = {
 	}
 }
 
-# Speed 4 → 18
+# Speed 4 to 18
 widget = {
 	name = "fum_speed_watcher_4"
 	size = { 0 0 }
@@ -53,7 +53,7 @@ widget = {
 	}
 }
 
-# Speed 5 → 19
+# Speed 5 to 19
 widget = {
 	name = "fum_speed_watcher_5"
 	size = { 0 0 }
@@ -66,7 +66,7 @@ widget = {
 	}
 }
 
-# Speed 6 → 20
+# Speed 6 to 20
 widget = {
 	name = "fum_speed_watcher_6"
 	size = { 0 0 }
@@ -79,7 +79,7 @@ widget = {
 	}
 }
 
-# Speed 7 → 21
+# Speed 7 to 21
 widget = {
 	name = "fum_speed_watcher_7"
 	size = { 0 0 }
@@ -92,7 +92,7 @@ widget = {
 	}
 }
 
-# Dead zone (8-14) → 15
+# Dead zone (8-14) to 15
 widget = {
 	name = "fum_speed_watcher_deadzone"
 	size = { 0 0 }

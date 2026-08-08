@@ -44,7 +44,7 @@ fum_iterate_robber_barons = {
 	}
 }
 
-# Stop robber barons on correct date
+# Fires 3 months under vanilla's 2 years, since at full speed up to 3 months can pass before it applies.
 fum_stop_robber_barons = {
 	trigger = {
 		any_province = {

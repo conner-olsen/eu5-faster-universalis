@@ -1,4 +1,6 @@
 ﻿#noinspection ALL
+# Day counts below are multiplied by 2 to read back as calendar days. A 47-hour tick spans
+# ~1.96 days but only ever processes one day of progress, so the engine's day counts run at 24/47.
 l_english:
  # Correct Occupation Length
  OCCUPATION_X_DAYS_LEFT: "[Multiply_int32('(int32)$VAL$', '(int32)2')|Y] day(s) left"
