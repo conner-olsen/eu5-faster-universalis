@@ -1114,7 +1114,6 @@ widget = {
 ### FORT ICON (and province capitals) in tactical map mode
 container = {
 	name = "fort_marker"
-	# max_update_rate = 9999 # FUM: Throttle data updates
 	allow_outside = yes
 
 	datacontext = "[FortMarker.GetLocation]"
@@ -1366,7 +1365,6 @@ widget = {
 ### Supply depot
 widget = {
 	name = "supply_depot_marker"
-	# max_update_rate = 9999 # FUM: Throttle data updates
 	allow_outside = yes
 	datacontext = "[SupplyDepotMarker.GetLocation.GetSupplyDepot]"
 	tooltipwidget = {

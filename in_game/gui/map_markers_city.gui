@@ -190,7 +190,6 @@ types map_marker_city {
 
 widget = {
 	name = "city_marker"
-	# max_update_rate = 9999 # FUM: Throttle data updates
 	allow_outside = yes
 
 	widget = {
