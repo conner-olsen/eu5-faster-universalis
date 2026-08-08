@@ -4,9 +4,10 @@ NGame = {
 	MORNING_OFFSET = 0 # 8
 }
 
+# 6x the vanilla per-tick speeds to match vanilla distance per in-game day.
 NUnit = {
-	ARMY_MOVEMENT_SPEED = 0.76 # 0.13
-	NAVY_MOVEMENT_SPEED = 2.93 # 0.5
+	ARMY_MOVEMENT_SPEED = 0.78 # 0.13
+	NAVY_MOVEMENT_SPEED = 3.0 # 0.5
 }
 
 NCombat = {
