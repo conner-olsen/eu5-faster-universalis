@@ -137,10 +137,6 @@ fum_register_cmf_mod = {
 		default_index = 3
 		option_count = 4
 	}
-	cmm_sync_setting_alias = {
-		setting = fum__battle_length
-		alias = fum__battle_length
-	}
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__battle_length
 		index = 1
@@ -234,10 +230,6 @@ fum_handle_cmf_callback = {
 			fum_refresh_all_corrections = yes
 		}
 		flag:fum__battle_length = {
-			cmm_sync_setting_alias = {
-				setting = fum__battle_length
-				alias = fum__battle_length
-			}
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__battle_length
 				index = 1
