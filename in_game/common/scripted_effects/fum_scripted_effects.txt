@@ -48,6 +48,15 @@ fum_asia_centric_effect = {
 	sub_continent:south_america = { fum_remove_sub_continent = yes }
 }
 
+fum_remove_east_asia_effect = {
+	if = {
+		limit = { has_global_variable = fum_block_recolonization_setting }
+		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = yes }
+	} else = {
+		sub_continent:east_asia = { fum_remove_sub_continent = yes }
+	}
+}
+
 fum_remove_low_importance_nations_effect = {
 	sub_continent:pacific_islands = { fum_remove_sub_continent = yes }
 	sub_continent:north_america = { fum_remove_sub_continent = yes }
@@ -192,6 +201,10 @@ fum_apply_performance_settings = {
 	if = {
 		limit = { has_global_variable = fum__remove_low_importance_setting }
 		fum_remove_low_importance_nations_effect = yes
+	}
+	if = {
+		limit = { has_global_variable = fum__remove_east_asia_setting }
+		fum_remove_east_asia_effect = yes
 	}
 	if = {
 		limit = { has_global_variable = fum__pop_removal_setting }

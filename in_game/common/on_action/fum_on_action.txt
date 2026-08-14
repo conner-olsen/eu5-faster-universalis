@@ -105,6 +105,7 @@ fum_clear_situations = {
 		is_situation_active = situation:great_pestilence
 		or = {
 			has_global_variable = fum__remove_low_importance_setting
+			has_global_variable = fum__remove_east_asia_setting
 			has_global_variable = fum__europe_centric_setting
 			has_global_variable = fum__asia_centric_setting
 		}

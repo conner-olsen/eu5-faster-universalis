@@ -20,7 +20,7 @@ fum_register_cmf_mod = {
 		tab_id = performance
 		group_id = removals
 		default_index = 1
-		option_count = 4
+		option_count = 5
 	}
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__nation_removal
@@ -30,11 +30,16 @@ fum_register_cmf_mod = {
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__nation_removal
 		index = 3
-		alias = fum__europe_centric_setting
+		alias = fum__remove_east_asia_setting
 	}
 	cmm_sync_dropdown_option_alias = {
 		setting = fum__nation_removal
 		index = 4
+		alias = fum__europe_centric_setting
+	}
+	cmm_sync_dropdown_option_alias = {
+		setting = fum__nation_removal
+		index = 5
 		alias = fum__asia_centric_setting
 	}
 
@@ -177,11 +182,16 @@ fum_handle_cmf_callback = {
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
 				index = 3
-				alias = fum__europe_centric_setting
+				alias = fum__remove_east_asia_setting
 			}
 			cmm_sync_dropdown_option_alias = {
 				setting = fum__nation_removal
 				index = 4
+				alias = fum__europe_centric_setting
+			}
+			cmm_sync_dropdown_option_alias = {
+				setting = fum__nation_removal
+				index = 5
 				alias = fum__asia_centric_setting
 			}
 		}
