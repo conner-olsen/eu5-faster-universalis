@@ -1253,7 +1253,7 @@ widget = {
 ### Raw Goods Marker
 widget = {
 	name = "raw_goods_marker"
-	max_update_rate = 9999 # FUM: Throttle data updates
+	# max_update_rate = 9999 # FUM: Throttle data updates
 	allow_outside = yes
 	size = "[Min_CVector2f(Multiply_CVector2f(GetInverseZoom2, '(CVector2f)9333, 9333'), '(CVector2f)85, 85')]"
 
