@@ -3,63 +3,24 @@
 }
 
 yearly_country_pulse = {
-	on_actions = { fum_meritocracy_spread fum_refresh_corrections_yearly }
+	on_actions = { fum_meritocracy_spread }
+}
+
+# CMF fires this once per human country, so one country does the sweep for everyone.
+cmf_yearly_human_country_pulse = {
+	on_actions = { fum_refresh_corrections_yearly }
 }
 
 fum_refresh_corrections_yearly = {
+	trigger = { is_host = yes }
 	effect = {
-		fum_refresh_corrections = yes
+		fum_refresh_all_corrections = yes
 	}
 }
 
 fum_refresh_corrections_sweep = {
 	effect = {
 		fum_refresh_all_corrections = yes
-	}
-}
-
-monthly_country_pulse = {
-	on_actions = {
-		fum_iterate_robber_barons
-		fum_stop_robber_barons
-	}
-}
-
-fum_iterate_robber_barons = {
-	trigger = {
-		any_province = {
-			has_variable = fum_pru_robber_barons_months
-		}
-	}
-	effect = {
-		every_province = {
-			limit = {
-				has_variable = fum_pru_robber_barons_months
-			}
-			change_variable = {
-				name = fum_pru_robber_barons_months
-				add = 1
-			}
-		}
-	}
-}
-
-# Fires 3 months under vanilla's 2 years, since at full speed up to 3 months can pass before it applies.
-fum_stop_robber_barons = {
-	trigger = {
-		any_province = {
-			has_variable = fum_pru_robber_barons_months
-			var:fum_pru_robber_barons_months >= 21
-		}
-	}
-	effect = {
-		every_province = {
-			limit = {
-				has_variable = fum_pru_robber_barons_months
-				var:fum_pru_robber_barons_months >= 21
-			}
-			remove_province_modifier = PRU_robber_barons
-		}
 	}
 }
 
