@@ -4,32 +4,33 @@ Schnelleres Universalis / Faster Universalis
 [i]You are on the DeepL-Generated German Page. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=$item-id$&l=english]Click here for the Native English Page.[/url][/i]
 
 [quote]
-[h1]Übersicht:[/h1]
-Verbessert die Spielgeschwindigkeit/Tickrate drastisch, während die Vanilla-Balance und das Gameplay beibehalten werden.
+[h1]Überblick:[/h1]
+Verbessert die Spielgeschwindigkeit/Tick-Rate drastisch unter Beibehaltung der Vanilla-Balance und des Gameplays.
 
 [h1]Features:[/h1]
 [olist]
- [*][b]Über 100 % schnellere Spielgeschwindigkeit:[/b] Auf Geschwindigkeit 7 sollte die Zeit etwa doppelt so schnell vergehen wie in der Vanilla-Version, bei niedrigeren Geschwindigkeiten ist die Verbesserung sogar noch deutlicher.
+ [*][b]100%+ schnellere Spielgeschwindigkeit:[/b] Auf Geschwindigkeit 7 sollte die Zeit etwa doppelt so schnell vergehen wie in Vanilla, bei niedrigeren Geschwindigkeiten ist die Verbesserung sogar noch deutlicher.
   [list]
-   [*]Erreicht durch Dutzende von Defines-Änderungen, die hier zu zahlreich wären, um sie alle aufzuführen.
-   [*]Stündliche Ticks wurden entfernt (die Mod geht noch weiter: die Basis-Mod verwendet 1,9-Tage-Ticks (47 Stunden), was jedoch über [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]hier verfügbare Submods angepasst werden kann.[/url])
-   [*]Schadenszahlen während Schlachten trotz fehlender stündlicher Ticks!
-   [*]Kampf, Bewegungsgeschwindigkeit sowie die Aktualisierungsfrequenz von Spiel & KI wurden so angepasst, dass alle Ergebnisse und die Spielbalance identisch mit der Vanilla-Version sein sollten. Außer der höheren Geschwindigkeit sollten Sie keinen Unterschied bemerken.
+   [*]Erreicht durch Dutzende von Änderungen an den Defines, die zu zahlreich sind, um sie hier alle aufzuführen.
+   [*]Stündliche Ticks wurden entfernt (und es geht noch weiter: Die Basis-Mod verwendet 1,9-Tage-Ticks (47 Stunden). Dies kann jedoch über [url=https://steamcommunity.com/workshop/filedetails/?id=3662955914]hier verfügbare Submods angepasst werden.[/url])
+   [*]Schadenszahlen während der Schlacht ohne stündliche Ticks!
+   [*]Kampf, Bewegungsgeschwindigkeit, Spiel- & KI-Update-Frequenz wurden so angepasst, dass alle Ergebnisse und die Spielbalance identisch mit Vanilla sein sollten. Sie sollten außer der höheren Geschwindigkeit keinen Unterschied bemerken.
   [/list]
- [*][b]Optimierte Kartenmarkierungen:[/b] Reduziert die Kosten für das Zeichnen und Aktualisieren von Kartenmarkierungen für bessere FPS.
- [*][b]Optimierte Interface-Elemente:[/b] Reduziert die Kosten für das Zeichnen gängiger Interface-Hintergründe für bessere FPS, ohne visuelle Änderungen.
- [*][b]Optionale Einstellungen zur Leistungsoptimierung im Mod-Menü:[/b]
+ [*][b]Optimierte Kartenmarkierungen:[/b] Reduziert den Aufwand beim Zeichnen und Aktualisieren von Kartenmarkierungen für bessere FPS.
+ [*][b]Optimierte Interface-Elemente:[/b] Reduziert den Aufwand beim Zeichnen gängiger Interface-Hintergründe für bessere FPS, ohne visuelle Veränderungen.
+ [*][b]Optionale Performance-Optimierungseinstellungen im Mod-Menü:[/b]
   [list]
    [*][b]Society of Pops entfernen:[/b] Löscht alle Society of Pops.
-   [*][b]Regionsentfernungen:[/b] Europa-zentriert, Asien-zentriert und Nationen mit geringem Einfluss. Schauen Sie sich die Screenshots auf der Mod-Seite an, um zu sehen, wie die jeweilige Option aussieht.
+   [*][b]Entfernung von Regionen:[/b] Europa-zentriert, Asien-zentriert, Ostasien und Nationen mit geringem Einfluss. Sehen Sie sich die Screenshots auf der Mod-Seite an, um zu sehen, wie die jeweiligen Optionen aussehen.
     [list]
-     [*][b]Nationen mit geringem Einfluss (Low Impact Nations):[/b] Löscht kleinere Nationen in Regionen mit geringer Interaktionswahrscheinlichkeit, wie z. B. kleine pazifische Inselstaaten – Details finden Sie in den Beschreibungen der Einstellungen.
-     [*][b]Europa-zentriert:[/b] Praktisch ein reines Europa-Spiel, bei dem weit entfernte Regionen wie Ostasien, Indonesien & Ozeanien entfernt werden.
-     [*][b]Asien-zentriert:[/b] Praktisch ein reines Asien-Spiel, bei dem weit entfernte Regionen wie Europa & Westafrika entfernt werden.
+     [*][b]Low Impact Nations:[/b] Löscht kleinere Nationen in Regionen mit geringer Interaktionswahrscheinlichkeit, wie z. B. kleine pazifische Inselnationen – Details finden Sie in den Einstellungsbeschreibungen.
+     [*][b]Ostasien:[/b] Löscht die Nationen des ostasiatischen Subkontinents.
+     [*][b]Europa-zentriert:[/b] Effektiv ein reines Europa-Spiel, wobei weit entfernte Regionen wie Ostasien, Indonesien und Ozeanien entfernt werden.
+     [*][b]Asien-zentriert:[/b] Effektiv ein reines Asien-Spiel, wobei weit entfernte Regionen wie Europa und Westafrika entfernt werden.
     [/list]
-   [*][b]Unbesetzte Pops entfernen:[/b] Löscht Pops an Orten, die keinem Besitzer gehören. Stapelbar mit der Nationenentfernung.
-   [*][b]Rekolonisierung blockieren:[/b] Wenn dies zusammen mit der Europa- oder Asien-zentrierten Entfernung aktiviert ist, wird die Rekolonisierung der entfernten Regionen verhindert. Das Deaktivieren dieser Option kann eine interessante Erfahrung schaffen, wenn der Wettlauf um die Rekolonisierung der verlorenen „Alten Welt“ beginnt.
-   [*][b]Charakterentfernung:[/b] Entfernt alle 4 Jahre erwachsene Charaktere mit den niedrigsten Werten in jeder Nation bis zu einem konfigurierbaren Maximum. Kinder, Kabinettsmitglieder, Generäle, Admirale, Kronbesitz-Charaktere und einige Charaktere mit speziellen Eigenschaften (z. B. architektonischer Visionär) sind geschützt.
+   [*][b]Unbesetzte Pops entfernen:[/b] Löscht Pops an Orten, die keinem Besitzer gehören. Kombinierbar mit der Entfernung von Nationen.
+   [*][b]Rekolonisierung blockieren:[/b] Wenn dies zusammen mit der Entfernung von Ostasien, Europa-zentriert oder Asien-zentriert aktiviert ist, wird eine Rekolonisierung der entfernten Regionen verhindert. Das Deaktivieren dieser Option kann eine interessante Erfahrung schaffen, wenn der Wettlauf um die Rekolonisierung der verlorenen „Alten Welt“ beginnt.
+   [*][b]Charakter-Entfernung:[/b] Entfernt alle 4 Jahre die erwachsenen Charaktere mit den niedrigsten Werten aus jeder Nation bis zu einem konfigurierbaren Maximum. Kinder, Kabinettsmitglieder, Generäle, Admirale, Kronbesitz-Charaktere und einige Charaktere mit speziellen Merkmalen (z. B. architektonischer Visionär) sind geschützt.
   [/list]
  [*][b]Einstellungen zur Geschwindigkeitsanpassung im Mod-Menü:[/b]
   [list]
@@ -43,15 +44,15 @@ Verbessert die Spielgeschwindigkeit/Tickrate drastisch, während die Vanilla-Bal
   [/list]
 [/olist]
 
-Als Referenz: In meinen Tests erhöhte „Daily Ticks“ auf Geschwindigkeit 7 die Spielgeschwindigkeit um etwa 13 %, während – wie das Video auf der Steam-Seite zeigt – Faster Universalis ohne aktivierte optionale Optimierungen die Spielgeschwindigkeit in einem Late-Game-Vanilla-Spielstand um etwa 100 % steigerte. Mit aktivierten optionalen Optimierungen, wie „Society of Pops entfernen“ und „Europa-zentriert“, sind Verbesserungen von über 200 % möglich.
+Als Referenz: In meinen Tests erhöhten Daily Ticks auf Geschwindigkeit 7 die Spielgeschwindigkeit um etwa 13 %, während Faster Universalis (wie im Video auf der Steam-Seite zu sehen) ohne aktivierte optionale Optimierungen die Spielgeschwindigkeit in einem Vanilla-Late-Game-Save um etwa 100 % steigerte. Mit aktivierten optionalen Optimierungen, wie „Remove Society of Pops“ und „Europe Centric“, können Verbesserungen von über 200 % erzielt werden.
 
 [h1]Geplant/Demnächst:[/h1]
 [olist]
- [*][b]Fortlaufende Leistungsoptimierung:[/b] Ich werde die Mod weiterhin auf Leistung optimieren, sobald ich neue Möglichkeiten finde.
- [*][b]Optionen für Grafik-Tweaks:[/b] Ich arbeite derzeit auch an der Verbesserung der Rendering-/FPS-Leistung, was in einem zukünftigen Update veröffentlicht wird. Stand jetzt konnte ich jedoch nur eine Steigerung der FPS um 13 % erreichen. (Wer möchte, kann meine in Arbeit befindlichen Grafik-Defines auskommentieren, sie sind jedoch standardmäßig nicht aktiviert.) Beachten Sie: Wenn Sie CPU-gebunden sind, können Sie bereits jetzt einen FPS-Schub bemerken. Zudem werden Sie bei Verwendung der optionalen Leistungseinstellungen in bestimmten Szenen einen FPS-Schub sehen, da weniger gerendert werden muss.
+ [*][b]Fortlaufende Performance-Optimierung:[/b] Ich werde die Mod weiterhin auf Leistung optimieren, sobald ich neue Möglichkeiten finde.
+ [*][b]Optionen für Grafik-Tweaks:[/b] Ich habe auch an der Verbesserung der Rendering-/FPS-Leistung gearbeitet, was in einem zukünftigen Update veröffentlicht wird. Bisher habe ich jedoch nur eine Steigerung der FPS um 13 % erreicht. (Wenn Sie möchten, können Sie meine WIP-Grafik-Defines einkommentieren, aber sie sind derzeit standardmäßig nicht aktiviert.) Beachten Sie, dass Sie, wenn Sie CPU-limitiert sind, bereits jetzt einen FPS-Schub bemerken können. Zudem werden Sie bei Verwendung der optionalen Performance-Einstellungen in bestimmten Szenen einen FPS-Schub sehen, da weniger gerendert werden muss.
 [/olist]
 
-[h1]Änderungsprotokoll:[/h1]
+[h1]Change Log:[/h1]
 Siehe die [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662193478]Change Notes auf der Workshop-Seite[/url].
 
 [h1]Kompatibilität:[/h1]
@@ -59,24 +60,24 @@ Siehe die [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3662
  [*]Unterstützt v1.3
  [*]Ironman- und Achievement-kompatibel.
  [*]Vollständig spielstandkompatibel.
- [*]Sollte nicht zusammen mit anderen Mods verwendet werden, die die Tickrate ändern (z. B. Daily Ticks).
- [*]Nach GlorpUI oder anderen Mods laden, die die Topbar bearbeiten (ich bearbeite nur die Spielgeschwindigkeiten selbst, daher werden andere Änderungen nicht überschrieben).
- [*]Falls Probleme auftreten, versuchen Sie bitte zuerst, die Mod an das Ende der Lade-Reihenfolge zu setzen.
- [*]Kompatibilitätspatches kann ich auf Anfrage hinzufügen.
+ [*]Sollte nicht mit anderen Mods verwendet werden, die die Tick-Rate ändern (z. B. Daily Ticks).
+ [*]Nach GlorpUI oder anderen Mods laden, die die obere Leiste bearbeiten (ich bearbeite nur die Spielgeschwindigkeiten selbst, daher werden andere Änderungen nicht überschrieben).
+ [*]Falls Probleme auftreten, versuchen Sie bitte zuerst, die Mod ans Ende der Ladereihenfolge zu setzen.
+ [*]Auf Anfrage füge ich eventuell Kompatibilitäts-Patches hinzu.
 [/list]
 
-Die Mod sollte mit jeder anderen Mod funktionieren, die nicht die Tickrate ändert (z. B. Daily Ticks).
+Die Mod sollte mit jeder anderen Mod funktionieren, die nicht die Tick-Rate ändert (z. B. Daily Ticks).
 
-Es kann ein potenzielles Problem zwischen der Haupt-Mod und Mods geben, die tagesabhängige Trigger verwenden, aber derzeit sind mir keine Mods bekannt, die dies tun oder Probleme verursachen.
+Es kann ein potenzielles Problem mit der Haupt-Mod und Mods geben, die tages-spezifische Trigger verwenden, aber derzeit sind mir keine Mods bekannt, die dies tun oder Probleme verursachen.
 
 [h1]Zusätzliche Hinweise:[/h1]
-Bitte melden Sie alle Probleme oder Ergebnisse, die nicht dem Vanilla-Verhalten/erwarteten Verhalten entsprechen, falls diese auftreten.
+Bitte melden Sie alle Probleme oder Ergebnisse, die nicht mit dem Vanilla- oder erwarteten Verhalten übereinstimmen, falls diese auftreten.
 
-Zusätzlich zum Kommentarbereich können Sie auch Fragen stellen, Bugs melden oder Vorschläge im [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis-Channel des EU5-Community-Discord-Servers[/url] machen. Und falls Sie Interesse daran haben, an der Entwicklung dieser oder einer meiner anderen Mods mitzuwirken, können Sie mich auf Discord unter @arealconner anpingen oder hinzufügen. Alle Beiträge sind willkommen.
+Zusätzlich zum Kommentarbereich können Sie auch Fragen stellen, Bugs melden oder Vorschläge im [url=https://discord.gg/zeQ6x9wrPq]#faster-universalis-Channel des EU5-Community-Discord-Servers[/url] machen. Wenn Sie daran interessiert sind, an der Entwicklung dieser oder einer meiner anderen Mods mitzuwirken, können Sie mich auf Discord unter @arealconner anpingen oder hinzufügen. Alle Beiträge sind willkommen.
 
 Die Quell- und Entwicklerversionen der Mod sind auf [url=https://github.com/conner-olsen/eu5-faster-universalis]GitHub verfügbar.[/url]
 
  [h1]Wichtig:[/h1]
- Sie [b]müssen[/b] die Einstellung „Spielgeschwindigkeit, wenn eine ausgewählte Einheit in den Kampf eintritt“ deaktivieren, da die Zeit sonst beim Betrachten einer Schlacht stehen bleibt.
+ Sie [b]müssen[/b] die Einstellung „Spielgeschwindigkeit, wenn eine ausgewählte Einheit in den Kampf eintritt“ deaktivieren, da die Zeit sonst stehen bleibt, wenn Sie eine Schlacht betrachten.
 [/quote]
 
