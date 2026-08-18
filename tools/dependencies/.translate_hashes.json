@@ -25,16 +25,16 @@
       "turkish": "cd5250ab74dd64a6c06a3c13e7e408abf8dd1569df01607ae2f0f3b2d1a5b8f4"
     },
     "english\\fum_l_english.yml": {
-      "braz_por": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d",
-      "french": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d",
-      "german": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d",
-      "japanese": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d",
-      "korean": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d",
-      "polish": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d",
-      "russian": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d",
-      "simp_chinese": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d",
-      "spanish": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d",
-      "turkish": "6863956077a352eeef1d756abe8143de0c2365dd821029e6da3c57723680bd0d"
+      "braz_por": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745",
+      "french": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745",
+      "german": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745",
+      "japanese": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745",
+      "korean": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745",
+      "polish": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745",
+      "russian": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745",
+      "simp_chinese": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745",
+      "spanish": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745",
+      "turkish": "1a1e3922c0919f3c11c21021a7a8026fa1f1d7bf0ae27210b2f26e7037579745"
     }
   },
   "files": {
@@ -138,6 +138,7 @@
       "AUTO_MODIFIER_NAME_fum_battle_initiative_adjustment": "d5cf2388d5eb032d598f38ca952197e652cc202146a4bcd1f681a151b7a065b9",
       "AUTO_MODIFIER_NAME_fum_child_education_correction": "adbfa5e5c6715a2e333e7fb17ccd191233d2388cf250f1cf16a6af3239f90c39",
       "AUTO_MODIFIER_NAME_fum_combat_speed_correction": "d5cf2388d5eb032d598f38ca952197e652cc202146a4bcd1f681a151b7a065b9",
+      "AUTO_MODIFIER_NAME_fum_land_morale_attrition_cost_correction": "776c145b8e0871c23bbabc7480b95b5bb7820ffa83233603ebac4adcc27e2ed1",
       "AUTO_MODIFIER_NAME_fum_land_morale_movement_cost_correction": "e27d64fe01d82aa7da994ddc174cb4ed954e85799c0f29a0d1dd50fa631cb98c",
       "AUTO_MODIFIER_NAME_fum_naval_damage_done_correction": "d5cf2388d5eb032d598f38ca952197e652cc202146a4bcd1f681a151b7a065b9",
       "AUTO_MODIFIER_NAME_fum_navy_speed_correction": "ad0d75c6e32963f3033de76d2e35bf98fa307ca00d124cc16e356307f1187aff",
