@@ -1,8 +1,12 @@
-﻿# Vanilla tick rate, so neither correction applies.
+﻿# Vanilla tick rate, so none of these corrections apply.
 fum_day_skip_delta = {
 	value = 0
 }
 
 fum_tick_ratio_delta = {
+	value = 0
+}
+
+fum_battle_day_tick_delta = {
 	value = 0
 }

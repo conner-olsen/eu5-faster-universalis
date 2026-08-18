@@ -7,3 +7,8 @@ fum_day_skip_delta = {
 fum_tick_ratio_delta = {
 	value = 5
 }
+
+# 4.54 / 6 - 1. Combat is 4.54x faster per tick and a tick is half a day, so a battle spans 6/4.54 the day ticks of vanilla.
+fum_battle_day_tick_delta = {
+	value = -0.24333
+}

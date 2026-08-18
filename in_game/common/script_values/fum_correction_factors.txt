@@ -1,4 +1,4 @@
-﻿# Both derived from HOUR_TICK (loading_screen/common/defines/fum_adjustable_defines.txt).
+﻿# All derived from HOUR_TICK and the combat speed multiplier (loading_screen/common/defines/fum_adjustable_defines.txt).
 
 # HOUR_TICK / 24 - 1. A 47-hour tick spans ~1.96 days but only ever processes one day of progress.
 fum_day_skip_delta = {
@@ -8,4 +8,9 @@ fum_day_skip_delta = {
 # HOUR_TICK / 2 - 1. Per-tick rates fire 23.5x less often than on vanilla's 2-hour tick.
 fum_tick_ratio_delta = {
 	value = 22.5
+}
+
+# 4.54 / 12 - 1. Combat is 4.54x faster per tick but every tick still carries a day, so a battle spans 12/4.54 the day ticks of vanilla.
+fum_battle_day_tick_delta = {
+	value = -0.62167
 }

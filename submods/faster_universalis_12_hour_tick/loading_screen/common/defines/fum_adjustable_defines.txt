@@ -10,6 +10,7 @@ NUnit = {
 	NAVY_MOVEMENT_SPEED = 3.0 # 0.5
 }
 
+# Battles run HOUR_TICK/2/4.54 = 12/2/4.54 = 1.32x longer in game time than vanilla.
 NCombat = {
 	RETREAT_STRENGTH_DAMAGE = 0.02 # 0.1
 	MINIMUM_COMBAT_DURATION = 5 # 24

@@ -62,6 +62,7 @@ NUnit = {
 }
 
 # Default combat speed optimized for the maximum increase while keeping initiative the same: (1/(0.1+0.02*6))=(50/11)=4.54
+# Battles run HOUR_TICK/2/4.54 = 47/2/4.54 = 5.18x longer in game time than vanilla.
 NCombat = {
 	RETREAT_STRENGTH_DAMAGE = 0.02 # 0.1
 	MINIMUM_COMBAT_DURATION = 5 # 24

@@ -83,6 +83,19 @@ fum_corr_land_morale_movement_cost_value = {
 	}
 }
 
+fum_corr_land_morale_attrition_cost_value = {
+	if = {
+		limit = {
+			has_variable = fum_corr_land_morale_attrition_cost
+		}
+		value = var:fum_corr_land_morale_attrition_cost
+	}
+	else = {
+		value = fum_battle_day_tick_delta
+		multiply = 0.01 # Vanilla country_base_values (in_game/common/auto_modifiers/country.txt:219)
+	}
+}
+
 fum_corr_army_movement_speed_value = {
 	if = {
 		limit = {

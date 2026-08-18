@@ -222,6 +222,7 @@ fum_refresh_all_corrections = {
 fum_refresh_corrections = {
 	fum_refresh_correction = { MODIFIER = country_child_education BASE = 1 DELTA = fum_day_skip_delta }
 	fum_refresh_correction = { MODIFIER = land_morale_movement_cost BASE = 0 DELTA = fum_tick_ratio_delta }
+	fum_refresh_correction = { MODIFIER = land_morale_attrition_cost BASE = 0 DELTA = fum_battle_day_tick_delta }
 	fum_refresh_correction = { MODIFIER = army_movement_speed BASE = 1 DELTA = fum_army_speed_delta }
 	fum_refresh_correction = { MODIFIER = navy_movement_speed BASE = 1 DELTA = fum_navy_speed_delta }
 	fum_refresh_correction = { MODIFIER = naval_damage_done BASE = 1 DELTA = fum_battle_length_delta }
