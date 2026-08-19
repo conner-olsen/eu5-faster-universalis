@@ -13,11 +13,11 @@
 fum_europe_centric_effect = {
 	if = {
 		limit = { has_global_variable = fum_block_recolonization_setting }
-		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = yes }
-		sub_continent:south_asia = { fum_remove_and_disable_sub_continent = yes }
-		sub_continent:south_east_asia = { fum_remove_and_disable_sub_continent = yes }
-		sub_continent:australasia = { fum_remove_and_disable_sub_continent = yes }
-		sub_continent:pacific_islands = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = { CULTURE = zhongyuan_culture RELIGION = sanjiao } }
+		sub_continent:south_asia = { fum_remove_and_disable_sub_continent = { CULTURE = telugu RELIGION = hindu } }
+		sub_continent:south_east_asia = { fum_remove_and_disable_sub_continent = { CULTURE = malay_culture RELIGION = mahayana } }
+		sub_continent:australasia = { fum_remove_and_disable_sub_continent = { CULTURE = noongar_culture RELIGION = dreamtime_religion } }
+		sub_continent:pacific_islands = { fum_remove_and_disable_sub_continent = { CULTURE = adzera_culture RELIGION = imunu_religion } }
 	} else = {
 		sub_continent:east_asia = { fum_remove_sub_continent = yes }
 		sub_continent:south_asia = { fum_remove_sub_continent = yes }
@@ -31,11 +31,11 @@ fum_europe_centric_effect = {
 fum_asia_centric_effect = {
 	if = {
 		limit = { has_global_variable = fum_block_recolonization_setting }
-		sub_continent:western_europe = { fum_remove_and_disable_sub_continent = yes }
-		sub_continent:eastern_europe = { fum_remove_and_disable_sub_continent = yes }
-		sub_continent:north_africa = { fum_remove_and_disable_sub_continent = yes }
-		sub_continent:west_africa = { fum_remove_and_disable_sub_continent = yes }
-		sub_continent:central_africa = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:western_europe = { fum_remove_and_disable_sub_continent = { CULTURE = castilian RELIGION = catholic } }
+		sub_continent:eastern_europe = { fum_remove_and_disable_sub_continent = { CULTURE = novgorodian RELIGION = orthodox } }
+		sub_continent:north_africa = { fum_remove_and_disable_sub_continent = { CULTURE = zenati RELIGION = sunni } }
+		sub_continent:west_africa = { fum_remove_and_disable_sub_continent = { CULTURE = mandinka RELIGION = sunni } }
+		sub_continent:central_africa = { fum_remove_and_disable_sub_continent = { CULTURE = chokwe RELIGION = bantu_religion } }
 	}
 	else = {
 		sub_continent:western_europe = { fum_remove_sub_continent = yes }
@@ -51,7 +51,7 @@ fum_asia_centric_effect = {
 fum_remove_east_asia_effect = {
 	if = {
 		limit = { has_global_variable = fum_block_recolonization_setting }
-		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = yes }
+		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = { CULTURE = zhongyuan_culture RELIGION = sanjiao } }
 	} else = {
 		sub_continent:east_asia = { fum_remove_sub_continent = yes }
 	}
@@ -87,6 +87,7 @@ fum_remove_and_disable_sub_continent = {
 				mode = add
 			}
 			fum_disable_location = yes
+			fum_seed_filler_pop = { CULTURE = $CULTURE$ RELIGION = $RELIGION$ }
 		}
 	}
 }
@@ -131,11 +132,22 @@ fum_remove_location_and_pops = {
 	}
 }
 
+# Root scope: location. The engine backfills an empty location from its own map-data culture and religion.
+fum_seed_filler_pop = {
+	add_pop = {
+		culture = culture:$CULTURE$
+		religion = religion:$RELIGION$
+		type = pop_type:peasants
+		size = 0.001
+	}
+}
+
 fum_remove_unowned_pops = {
 	every_location_in_the_world = {
 		if = {
 			limit = {
 				has_owner = no
+				NOT = { has_location_modifier = fum_location_disabled_static_modifier }
 			}
 			every_pop = {
 				destroy_pop = this
