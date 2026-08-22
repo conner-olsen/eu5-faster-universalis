@@ -138,7 +138,7 @@ fum_seed_filler_pop = {
 		culture = culture:$CULTURE$
 		religion = religion:$RELIGION$
 		type = pop_type:peasants
-		size = 0.001
+		size = 0.01
 	}
 }
 
