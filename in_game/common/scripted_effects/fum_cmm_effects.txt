@@ -314,24 +314,24 @@ fum_apply_reduction_preset = {
 	}
 }
 
-# Root scope: country. Ticks Merge Pops.
+# Root scope: country.
 fum_tick_merge = {
 	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = merge_pops item = $ITEM$ value = 1 }
 }
 
-# Root scope: country. Ticks Remove Countries and Merge Pops.
+# Root scope: country.
 fum_tick_removal = {
 	fum_tick_merge = { LIST = $LIST$ ITEM = $ITEM$ }
 	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = remove_countries item = $ITEM$ value = 1 }
 }
 
-# Root scope: country. Ticks Remove Countries, Merge Pops and Remove Pops.
+# Root scope: country.
 fum_tick_pop_removal = {
 	fum_tick_removal = { LIST = $LIST$ ITEM = $ITEM$ }
 	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = remove_pops item = $ITEM$ value = 1 }
 }
 
-# Root scope: country. Ticks every option.
+# Root scope: country.
 fum_tick_full_removal = {
 	fum_tick_pop_removal = { LIST = $LIST$ ITEM = $ITEM$ }
 	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = block_colonization item = $ITEM$ value = 1 }
