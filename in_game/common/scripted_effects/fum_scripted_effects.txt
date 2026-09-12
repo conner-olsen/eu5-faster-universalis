@@ -10,97 +10,95 @@
 	}
 }
 
-fum_europe_centric_effect = {
-	if = {
-		limit = { has_global_variable = fum_block_recolonization_setting }
-		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = { CULTURE = zhongyuan_culture RELIGION = sanjiao } }
-		sub_continent:south_asia = { fum_remove_and_disable_sub_continent = { CULTURE = telugu RELIGION = hindu } }
-		sub_continent:south_east_asia = { fum_remove_and_disable_sub_continent = { CULTURE = malay_culture RELIGION = mahayana } }
-		sub_continent:australasia = { fum_remove_and_disable_sub_continent = { CULTURE = noongar_culture RELIGION = dreamtime_religion } }
-		sub_continent:pacific_islands = { fum_remove_and_disable_sub_continent = { CULTURE = adzera_culture RELIGION = imunu_religion } }
-	} else = {
-		sub_continent:east_asia = { fum_remove_sub_continent = yes }
-		sub_continent:south_asia = { fum_remove_sub_continent = yes }
-		sub_continent:south_east_asia = { fum_remove_sub_continent = yes }
-		sub_continent:australasia = { fum_remove_sub_continent = yes }
-		sub_continent:pacific_islands = { fum_remove_sub_continent = yes }
-	}
-	sub_continent:south_america = { fum_remove_sub_continent = yes }
-}
+# Root scope: country. Runs the ticked World Reduction options, one column at a time.
+fum_apply_world_reduction = {
+	clear_variable_list = fum_wr_remove_countries
+	clear_variable_list = fum_wr_merge_pops
+	clear_variable_list = fum_wr_remove_pops
+	clear_variable_list = fum_wr_block_colonization
+	fum_gather_reduction_columns = { SETTING = fum__america }
+	fum_gather_reduction_columns = { SETTING = fum__oceania }
+	fum_gather_reduction_columns = { SETTING = fum__asia }
+	fum_gather_reduction_columns = { SETTING = fum__africa }
+	fum_gather_reduction_columns = { SETTING = fum__europe }
 
-fum_asia_centric_effect = {
-	if = {
-		limit = { has_global_variable = fum_block_recolonization_setting }
-		sub_continent:western_europe = { fum_remove_and_disable_sub_continent = { CULTURE = castilian RELIGION = catholic } }
-		sub_continent:eastern_europe = { fum_remove_and_disable_sub_continent = { CULTURE = novgorodian RELIGION = orthodox } }
-		sub_continent:north_africa = { fum_remove_and_disable_sub_continent = { CULTURE = zenati RELIGION = sunni } }
-		sub_continent:west_africa = { fum_remove_and_disable_sub_continent = { CULTURE = mandinka RELIGION = sunni } }
-		sub_continent:central_africa = { fum_remove_and_disable_sub_continent = { CULTURE = chokwe RELIGION = bantu_religion } }
-	}
-	else = {
-		sub_continent:western_europe = { fum_remove_sub_continent = yes }
-		sub_continent:eastern_europe = { fum_remove_sub_continent = yes }
-		sub_continent:north_africa = { fum_remove_sub_continent = yes }
-		sub_continent:west_africa = { fum_remove_sub_continent = yes }
-		sub_continent:central_africa = { fum_remove_sub_continent = yes }
-	}
-	sub_continent:north_america = { fum_remove_sub_continent = yes }
-	sub_continent:south_america = { fum_remove_sub_continent = yes }
-}
-
-fum_remove_east_asia_effect = {
-	if = {
-		limit = { has_global_variable = fum_block_recolonization_setting }
-		sub_continent:east_asia = { fum_remove_and_disable_sub_continent = { CULTURE = zhongyuan_culture RELIGION = sanjiao } }
-	} else = {
-		sub_continent:east_asia = { fum_remove_sub_continent = yes }
-	}
-}
-
-fum_remove_low_importance_nations_effect = {
-	sub_continent:pacific_islands = { fum_remove_sub_continent = yes }
-	sub_continent:north_america = { fum_remove_sub_continent = yes }
-	sub_continent:south_america = { fum_remove_sub_continent = yes }
-}
-
-fum_remove_sub_continent = {
-	every_location_in_sub_continent = {
-		limit = {
-			is_land = yes
-		}
-		fum_remove_location = yes
-	}
-}
-
-fum_remove_and_disable_sub_continent = {
-	every_location_in_sub_continent = {
-		limit = {
-			is_land = yes
-		}
-		if = {
-			limit = {
-				fum_can_remove_location = yes
-			}
-			add_location_modifier = {
-				modifier = fum_location_disabled_static_modifier
-				years = -1
-				mode = add
-			}
-			fum_disable_location = yes
-			fum_seed_filler_pop = { CULTURE = $CULTURE$ RELIGION = $RELIGION$ }
+	# Remove Pops includes the merge.
+	every_in_list = {
+		variable = fum_wr_remove_pops
+		prev = {
+			remove_list_variable = { name = fum_wr_merge_pops target = prev }
 		}
 	}
-}
 
-fum_remove_location = {
+	every_in_list = {
+		variable = fum_wr_remove_countries
+		fum_remove_sub_continent_countries = yes
+		set_global_variable = fum_countries_removed
+	}
+	every_in_list = {
+		variable = fum_wr_merge_pops
+		fum_merge_sub_continent_pops = yes
+	}
+	every_in_list = {
+		variable = fum_wr_remove_pops
+		fum_replace_sub_continent_pops = yes
+	}
+	every_in_list = {
+		variable = fum_wr_block_colonization
+		fum_block_sub_continent_colonization = yes
+	}
+
 	if = {
 		limit = {
-			fum_can_remove_location = yes
+			is_target_in_variable_list = { name = fum_wr_remove_countries target = sub_continent:east_asia }
+			is_target_in_variable_list = { name = fum_wr_remove_countries target = sub_continent:south_asia }
 		}
+		set_global_variable = fum_asia_removed
+	}
+
+	clear_variable_list = fum_wr_remove_countries
+	clear_variable_list = fum_wr_merge_pops
+	clear_variable_list = fum_wr_remove_pops
+	clear_variable_list = fum_wr_block_colonization
+}
+
+# Root scope: country. Appends one subcontinent list's ticked rows to the four column lists.
+fum_gather_reduction_columns = {
+	fum_gather_reduction_column = { SETTING = $SETTING$ SLOT = 1 LIST = fum_wr_remove_countries }
+	fum_gather_reduction_column = { SETTING = $SETTING$ SLOT = 2 LIST = fum_wr_merge_pops }
+	fum_gather_reduction_column = { SETTING = $SETTING$ SLOT = 3 LIST = fum_wr_remove_pops }
+	fum_gather_reduction_column = { SETTING = $SETTING$ SLOT = 4 LIST = fum_wr_block_colonization }
+}
+
+# Root scope: country.
+fum_gather_reduction_column = {
+	cmm_build_list_bool_list = { setting = $SETTING$ field_slot = $SLOT$ list_name = fum_wr_column }
+	every_in_list = {
+		variable = fum_wr_column
+		prev = {
+			add_to_variable_list = { name = $LIST$ target = prev }
+		}
+	}
+	clear_variable_list = fum_wr_column
+}
+
+# Root scope: sub-continent.
+fum_remove_sub_continent_countries = {
+	every_region_in_continent = {
+		limit = { fum_is_kept_region = no }
+		fum_remove_region_countries = yes
+	}
+}
+
+# Root scope: region.
+fum_remove_region_countries = {
+	every_location_in_region = {
+		limit = { is_land = yes }
 		fum_strip_location = yes
 	}
 }
 
+# Root scope: location.
 fum_strip_location = {
 	every_unit_in_location = {
 		destroy_unit = yes
@@ -118,40 +116,244 @@ fum_strip_location = {
 	}
 }
 
-fum_disable_location = {
-	fum_remove_location_and_pops = yes
-	change_development = -100
-	change_location_rank = location_rank:rural_settlement
+# Root scope: sub-continent. Every region takes its largest culture and religion by population.
+fum_merge_sub_continent_pops = {
+	every_region_in_continent = {
+		limit = { fum_is_kept_region = no }
+		fum_merge_region_pops = yes
+	}
 }
 
-# Regardless of pop removal settings, disabled regions should have their pops removed.
-fum_remove_location_and_pops = {
-	fum_strip_location = yes
+# Root scope: region.
+fum_merge_region_pops = {
+	fum_find_region_majority = yes
+	if = {
+		limit = { local_var:fum_culture_best > 0 }
+		fum_convert_region_countries = yes
+		every_location_in_region = {
+			limit = { is_land = yes }
+			every_pop = {
+				change_pop_culture = scope:fum_culture
+				change_pop_religion = scope:fum_religion
+			}
+			force_refresh_culture_and_religion = this
+		}
+	}
+}
+
+# Root scope: sub-continent. Merges like fum_merge_sub_continent_pops, then leaves each location
+# an undeveloped rural settlement of 10 people.
+fum_replace_sub_continent_pops = {
+	every_region_in_continent = {
+		limit = { fum_is_kept_region = no }
+		fum_replace_region_pops = yes
+	}
+}
+
+# Root scope: region.
+fum_replace_region_pops = {
+	fum_find_region_majority = yes
+	if = {
+		limit = { local_var:fum_culture_best > 0 }
+		fum_convert_region_countries = yes
+		every_location_in_region = {
+			limit = { is_land = yes }
+			fum_replace_location_pops = { SIZE = 0.01 }
+			change_development = -100
+			change_location_rank = location_rank:rural_settlement
+		}
+	}
+}
+
+# Root scope: location. Leaves one pop of $SIZE$ of the culture and religion in scope:fum_culture and
+# scope:fum_religion. The engine backfills an empty location from its own map-data culture and religion.
+fum_replace_location_pops = {
 	every_pop = {
 		destroy_pop = this
 	}
+	add_pop = {
+		culture = scope:fum_culture
+		religion = scope:fum_religion
+		type = pop_type:peasants
+		size = $SIZE$
+	}
+	force_refresh_culture_and_religion = this
 }
 
-# Root scope: location. The engine backfills an empty location from its own map-data culture and religion.
-fum_seed_filler_pop = {
-	add_pop = {
-		culture = culture:$CULTURE$
-		religion = religion:$RELIGION$
-		type = pop_type:peasants
-		size = 0.01
+# Root scope: none. Console only: effect fum_repair_low_pop_locations
+# Every land location under 10 people is left one 1k pop of its region's majority culture and
+# religion.
+fum_repair_low_pop_locations = {
+	every_region = {
+		fum_find_region_majority = yes
+		if = {
+			limit = { local_var:fum_culture_best > 0 }
+			every_location_in_region = {
+				limit = {
+					is_land = yes
+					population < 0.01
+				}
+				fum_replace_location_pops = { SIZE = 1 }
+			}
+		}
 	}
 }
 
-fum_remove_unowned_pops = {
-	every_location_in_the_world = {
-		if = {
-			limit = {
-				has_owner = no
-				NOT = { has_location_modifier = fum_location_disabled_static_modifier }
+# Root scope: none. Console only: effect lambert_mp
+lambert_mp = {
+	fum_remove_sop_effect = yes
+	fum_repair_low_pop_locations = yes
+	sub_continent:north_america = {
+		fum_remove_sub_continent_countries = yes
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:south_america = {
+		fum_remove_sub_continent_countries = yes
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:australasia = {
+		fum_remove_sub_continent_countries = yes
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:pacific_islands = {
+		fum_remove_sub_continent_countries = yes
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:central_africa = {
+		fum_remove_sub_continent_countries = yes
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:southern_africa = {
+		fum_remove_sub_continent_countries = yes
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:north_asia = {
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:west_africa = {
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:east_africa = {
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:south_asia = {
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:south_east_asia = {
+		fum_merge_sub_continent_pops = yes
+	}
+	sub_continent:east_asia = {
+		every_region_in_continent = {
+			limit = { NOT = { this = region:south_china_region } }
+			fum_remove_region_countries = yes
+			fum_replace_region_pops = yes
+			fum_block_region_colonization = yes
+		}
+	}
+	region:south_china_region = {
+		fum_merge_region_pops = yes
+	}
+	set_global_variable = fum_countries_removed
+}
+
+# Root scope: region. Leaves the largest culture and religion by population in scope:fum_culture
+# and scope:fum_religion. A region with no pops leaves local_var:fum_culture_best at 0.
+fum_find_region_majority = {
+	clear_local_variable_map = fum_culture_pop
+	clear_local_variable_map = fum_religion_pop
+	set_local_variable = { name = fum_culture_best value = 0 }
+	set_local_variable = { name = fum_religion_best value = 0 }
+	every_location_in_region = {
+		every_pop = {
+			fum_tally_pop_culture = yes
+			fum_tally_pop_religion = yes
+		}
+	}
+}
+
+# Root scope: pop.
+fum_tally_pop_culture = {
+	culture = {
+		save_scope_as = fum_tally_key
+	}
+	if = {
+		limit = { is_key_in_local_variable_map = { name = fum_culture_pop target = scope:fum_tally_key } }
+		set_local_variable = { name = fum_tally value = "local_variable_map(fum_culture_pop|scope:fum_tally_key)" }
+	}
+	else = {
+		set_local_variable = { name = fum_tally value = 0 }
+	}
+	change_local_variable = { name = fum_tally add = pop_size }
+	add_to_local_variable_map = { name = fum_culture_pop key = scope:fum_tally_key value = local_var:fum_tally }
+	if = {
+		limit = { local_var:fum_tally > local_var:fum_culture_best }
+		set_local_variable = { name = fum_culture_best value = local_var:fum_tally }
+		culture = {
+			save_scope_as = fum_culture
+		}
+	}
+}
+
+# Root scope: pop.
+fum_tally_pop_religion = {
+	religion = {
+		save_scope_as = fum_tally_key
+	}
+	if = {
+		limit = { is_key_in_local_variable_map = { name = fum_religion_pop target = scope:fum_tally_key } }
+		set_local_variable = { name = fum_tally value = "local_variable_map(fum_religion_pop|scope:fum_tally_key)" }
+	}
+	else = {
+		set_local_variable = { name = fum_tally value = 0 }
+	}
+	change_local_variable = { name = fum_tally add = pop_size }
+	add_to_local_variable_map = { name = fum_religion_pop key = scope:fum_tally_key value = local_var:fum_tally }
+	if = {
+		limit = { local_var:fum_tally > local_var:fum_religion_best }
+		set_local_variable = { name = fum_religion_best value = local_var:fum_tally }
+		religion = {
+			save_scope_as = fum_religion
+		}
+	}
+}
+
+# Root scope: region.
+fum_convert_region_countries = {
+	every_location_in_region = {
+		limit = {
+			is_capital = yes
+			has_owner = yes
+		}
+		owner = {
+			change_culture = scope:fum_culture
+			change_religion = scope:fum_religion
+			every_character = {
+				change_character_culture = scope:fum_culture
+				change_character_religion = scope:fum_religion
 			}
-			every_pop = {
-				destroy_pop = this
-			}
+		}
+	}
+}
+
+# Root scope: sub-continent.
+fum_block_sub_continent_colonization = {
+	every_region_in_continent = {
+		limit = { fum_is_kept_region = no }
+		fum_block_region_colonization = yes
+	}
+}
+
+# Root scope: region.
+fum_block_region_colonization = {
+	every_location_in_region = {
+		limit = {
+			is_land = yes
+			NOT = { has_location_modifier = fum_location_disabled_static_modifier }
+		}
+		add_location_modifier = {
+			modifier = fum_location_disabled_static_modifier
+			years = -1
+			mode = add
 		}
 	}
 }
@@ -194,33 +396,6 @@ fum_apply_meritocracy_spread = {
 			}
 			change_institution_progress = { type = institution:meritocracy value = 100 }
 		}
-	}
-}
-
-fum_apply_performance_settings = {
-	if = {
-		limit = { has_global_variable = fum__sop_removal_setting }
-		fum_remove_sop_effect = yes
-	}
-	if = {
-		limit = { has_global_variable = fum__europe_centric_setting }
-		fum_europe_centric_effect = yes
-	}
-	if = {
-		limit = { has_global_variable = fum__asia_centric_setting }
-		fum_asia_centric_effect = yes
-	}
-	if = {
-		limit = { has_global_variable = fum__remove_low_importance_setting }
-		fum_remove_low_importance_nations_effect = yes
-	}
-	if = {
-		limit = { has_global_variable = fum__remove_east_asia_setting }
-		fum_remove_east_asia_effect = yes
-	}
-	if = {
-		limit = { has_global_variable = fum__pop_removal_setting }
-		fum_remove_unowned_pops = yes
 	}
 }
 

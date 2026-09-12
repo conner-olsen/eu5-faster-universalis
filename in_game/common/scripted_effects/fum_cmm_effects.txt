@@ -1,76 +1,11 @@
 ﻿# Root scope: country.
 fum_register_cmf_mod = {
-	# Performance (performance) Tab
+	# Common (common) Tab
 	## Removals (removals) Group
-	cmm_register_global_bool_setting = {
-		mod_id = fum
-		setting_id = sop_removal
-		tab_id = performance
-		group_id = removals
-		default_value = 1
-	}
-	cmm_sync_bool_alias = {
-		setting = fum__sop_removal
-		alias = fum__sop_removal_setting
-	}
-
-	cmm_register_global_dropdown_setting = {
-		mod_id = fum
-		setting_id = nation_removal
-		tab_id = performance
-		group_id = removals
-		default_index = 1
-		option_count = 5
-	}
-	cmm_sync_dropdown_option_alias = {
-		setting = fum__nation_removal
-		index = 2
-		alias = fum__remove_low_importance_setting
-	}
-	cmm_sync_dropdown_option_alias = {
-		setting = fum__nation_removal
-		index = 3
-		alias = fum__remove_east_asia_setting
-	}
-	cmm_sync_dropdown_option_alias = {
-		setting = fum__nation_removal
-		index = 4
-		alias = fum__europe_centric_setting
-	}
-	cmm_sync_dropdown_option_alias = {
-		setting = fum__nation_removal
-		index = 5
-		alias = fum__asia_centric_setting
-	}
-
-	cmm_register_global_bool_setting = {
-		mod_id = fum
-		setting_id = block_recolonization
-		tab_id = performance
-		group_id = removals
-		default_value = 0
-	}
-	cmm_sync_bool_alias = {
-		setting = fum__block_recolonization
-		alias = fum_block_recolonization_setting
-	}
-
-	cmm_register_global_bool_setting = {
-		mod_id = fum
-		setting_id = pop_removal
-		tab_id = performance
-		group_id = removals
-		default_value = 0
-	}
-	cmm_sync_bool_alias = {
-		setting = fum__pop_removal
-		alias = fum__pop_removal_setting
-	}
-
 	cmm_register_global_button_setting = {
 		mod_id = fum
-		setting_id = apply_performance_settings
-		tab_id = performance
+		setting_id = sop_removal
+		tab_id = common
 		group_id = removals
 	}
 
@@ -78,7 +13,7 @@ fum_register_cmf_mod = {
 	cmm_register_global_bool_setting = {
 		mod_id = fum
 		setting_id = character_culling
-		tab_id = performance
+		tab_id = common
 		group_id = character_culling
 		default_value = 0
 	}
@@ -90,7 +25,7 @@ fum_register_cmf_mod = {
 	cmm_register_global_slider_setting = {
 		mod_id = fum
 		setting_id = max_characters_per_nation
-		tab_id = performance
+		tab_id = common
 		group_id = character_culling
 		default_value = 200
 		min_value = 10
@@ -101,6 +36,91 @@ fum_register_cmf_mod = {
 		setting = fum__max_characters_per_nation
 		alias = fum__max_characters_per_nation
 	}
+
+	# World Reduction (world_reduction) Tab
+	## General (general) Group
+	cmm_register_global_dropdown_setting = {
+		mod_id = fum
+		setting_id = reduction_preset
+		tab_id = world_reduction
+		group_id = general
+		default_index = 1
+		option_count = 4
+	}
+
+	cmm_register_global_button_setting = {
+		mod_id = fum
+		setting_id = apply_world_reduction
+		tab_id = world_reduction
+		group_id = general
+	}
+
+	## America (america) List
+	cmm_register_global_settings_list = {
+		mod_id = fum
+		setting_id = america
+		tab_id = world_reduction
+		item_count = 2
+		is_ordered = 0
+	}
+	cmm_set_list_item_value = { mod_id = fum setting_id = america item = 1 value = sub_continent:north_america }
+	cmm_set_list_item_value = { mod_id = fum setting_id = america item = 2 value = sub_continent:south_america }
+	fum_register_reduction_fields = { LIST = america }
+
+	## Oceania (oceania) List
+	cmm_register_global_settings_list = {
+		mod_id = fum
+		setting_id = oceania
+		tab_id = world_reduction
+		item_count = 2
+		is_ordered = 0
+	}
+	cmm_set_list_item_value = { mod_id = fum setting_id = oceania item = 1 value = sub_continent:australasia }
+	cmm_set_list_item_value = { mod_id = fum setting_id = oceania item = 2 value = sub_continent:pacific_islands }
+	fum_register_reduction_fields = { LIST = oceania }
+
+	## Asia (asia) List
+	cmm_register_global_settings_list = {
+		mod_id = fum
+		setting_id = asia
+		tab_id = world_reduction
+		item_count = 6
+		is_ordered = 0
+	}
+	cmm_set_list_item_value = { mod_id = fum setting_id = asia item = 1 value = sub_continent:middle_east }
+	cmm_set_list_item_value = { mod_id = fum setting_id = asia item = 2 value = sub_continent:central_asia }
+	cmm_set_list_item_value = { mod_id = fum setting_id = asia item = 3 value = sub_continent:south_asia }
+	cmm_set_list_item_value = { mod_id = fum setting_id = asia item = 4 value = sub_continent:south_east_asia }
+	cmm_set_list_item_value = { mod_id = fum setting_id = asia item = 5 value = sub_continent:east_asia }
+	cmm_set_list_item_value = { mod_id = fum setting_id = asia item = 6 value = sub_continent:north_asia }
+	fum_register_reduction_fields = { LIST = asia }
+
+	## Africa (africa) List
+	cmm_register_global_settings_list = {
+		mod_id = fum
+		setting_id = africa
+		tab_id = world_reduction
+		item_count = 5
+		is_ordered = 0
+	}
+	cmm_set_list_item_value = { mod_id = fum setting_id = africa item = 1 value = sub_continent:north_africa }
+	cmm_set_list_item_value = { mod_id = fum setting_id = africa item = 2 value = sub_continent:west_africa }
+	cmm_set_list_item_value = { mod_id = fum setting_id = africa item = 3 value = sub_continent:central_africa }
+	cmm_set_list_item_value = { mod_id = fum setting_id = africa item = 4 value = sub_continent:east_africa }
+	cmm_set_list_item_value = { mod_id = fum setting_id = africa item = 5 value = sub_continent:southern_africa }
+	fum_register_reduction_fields = { LIST = africa }
+
+	## Europe (europe) List
+	cmm_register_global_settings_list = {
+		mod_id = fum
+		setting_id = europe
+		tab_id = world_reduction
+		item_count = 2
+		is_ordered = 0
+	}
+	cmm_set_list_item_value = { mod_id = fum setting_id = europe item = 1 value = sub_continent:western_europe }
+	cmm_set_list_item_value = { mod_id = fum setting_id = europe item = 2 value = sub_continent:eastern_europe }
+	fum_register_reduction_fields = { LIST = europe }
 
 	# QoL (qol) Tab
 	## Speeds (speeds) Group
@@ -159,56 +179,28 @@ fum_register_cmf_mod = {
 	}
 }
 
+# Root scope: country. The four option columns every subcontinent list carries, in slot order.
+fum_register_reduction_fields = {
+	cmm_register_list_bool_field = { mod_id = fum setting_id = $LIST$ field_id = remove_countries default_value = 0 }
+	cmm_register_list_bool_field = { mod_id = fum setting_id = $LIST$ field_id = merge_pops default_value = 0 }
+	cmm_register_list_bool_field = { mod_id = fum setting_id = $LIST$ field_id = remove_pops default_value = 0 }
+	cmm_register_list_bool_field = { mod_id = fum setting_id = $LIST$ field_id = block_colonization default_value = 0 }
+	cmm_set_list_field_width = { mod_id = fum setting_id = $LIST$ field_id = remove_countries width = 140 }
+	cmm_set_list_field_width = { mod_id = fum setting_id = $LIST$ field_id = merge_pops width = 140 }
+	cmm_set_list_field_width = { mod_id = fum setting_id = $LIST$ field_id = remove_pops width = 140 }
+	cmm_set_list_field_width = { mod_id = fum setting_id = $LIST$ field_id = block_colonization width = 140 }
+}
+
 # Callback handler for cmf_on_callback.
 # var:cmf_callback is the flag of the setting, alert, or action bar element that was interacted with.
 # Scope: country
 fum_handle_cmf_callback = {
 	switch = {
 		trigger = var:cmf_callback
-		# Performance (performance) Tab
+		# Common (common) Tab
 		## Removals (removals) Group
 		flag:fum__sop_removal = {
-			cmm_sync_bool_alias = {
-				setting = fum__sop_removal
-				alias = fum__sop_removal_setting
-			}
-		}
-		flag:fum__nation_removal = {
-			cmm_sync_dropdown_option_alias = {
-				setting = fum__nation_removal
-				index = 2
-				alias = fum__remove_low_importance_setting
-			}
-			cmm_sync_dropdown_option_alias = {
-				setting = fum__nation_removal
-				index = 3
-				alias = fum__remove_east_asia_setting
-			}
-			cmm_sync_dropdown_option_alias = {
-				setting = fum__nation_removal
-				index = 4
-				alias = fum__europe_centric_setting
-			}
-			cmm_sync_dropdown_option_alias = {
-				setting = fum__nation_removal
-				index = 5
-				alias = fum__asia_centric_setting
-			}
-		}
-		flag:fum__block_recolonization = {
-			cmm_sync_bool_alias = {
-				setting = fum__block_recolonization
-				alias = fum_block_recolonization_setting
-			}
-		}
-		flag:fum__pop_removal = {
-			cmm_sync_bool_alias = {
-				setting = fum__pop_removal
-				alias = fum__pop_removal_setting
-			}
-		}
-		flag:fum__apply_performance_settings = {
-			fum_apply_performance_settings = yes
+			fum_remove_sop_effect = yes
 		}
 		## Character Culling (character_culling) Group
 		flag:fum__character_culling = {
@@ -222,6 +214,14 @@ fum_handle_cmf_callback = {
 				setting = fum__max_characters_per_nation
 				alias = fum__max_characters_per_nation
 			}
+		}
+		# World Reduction (world_reduction) Tab
+		## General (general) Group
+		flag:fum__reduction_preset = {
+			fum_apply_reduction_preset = yes
+		}
+		flag:fum__apply_world_reduction = {
+			fum_apply_world_reduction = yes
 		}
 		# QoL (qol) Tab
 		## Speeds (speeds) Group
@@ -258,4 +258,110 @@ fum_handle_cmf_callback = {
 			fum_refresh_all_corrections = yes
 		}
 	}
+}
+
+# Root scope: country. Called by every subcontinent list's _on_changed scripted GUI.
+fum_reduction_list_changed = {
+	cmm_apply_list_change = {
+		setting = $SETTING$
+	}
+	# Option 1 is Custom.
+	cmm_set_setting_value = {
+		setting = fum__reduction_preset
+		value = 1
+	}
+}
+
+# Root scope: country. A preset ticks its subcontinents and clears everything else.
+fum_apply_reduction_preset = {
+	fum_clear_reduction_options = yes
+	if = {
+		limit = { "global_variable_map(cmm|flag:fum__reduction_preset)" = 2 } # Low Impact
+		fum_tick_removal = { LIST = america ITEM = 1 } # North America
+		fum_tick_removal = { LIST = america ITEM = 2 } # South America
+		fum_tick_removal = { LIST = oceania ITEM = 1 } # Australasia
+		fum_tick_removal = { LIST = oceania ITEM = 2 } # Pacific Islands
+		fum_tick_removal = { LIST = africa ITEM = 3 } # Central Africa
+		fum_tick_removal = { LIST = africa ITEM = 5 } # Southern Africa
+		fum_tick_merge = { LIST = asia ITEM = 6 } # North Asia
+		fum_tick_merge = { LIST = africa ITEM = 2 } # West Africa
+		fum_tick_merge = { LIST = africa ITEM = 4 } # East Africa
+	}
+	else_if = {
+		limit = { "global_variable_map(cmm|flag:fum__reduction_preset)" = 3 } # Europe Centric
+		fum_tick_full_removal = { LIST = asia ITEM = 3 } # South Asia
+		fum_tick_full_removal = { LIST = asia ITEM = 4 } # South East Asia
+		fum_tick_full_removal = { LIST = asia ITEM = 5 } # East Asia
+		fum_tick_pop_removal = { LIST = asia ITEM = 6 } # North Asia
+		fum_tick_full_removal = { LIST = oceania ITEM = 1 } # Australasia
+		fum_tick_full_removal = { LIST = oceania ITEM = 2 } # Pacific Islands
+		fum_tick_removal = { LIST = america ITEM = 1 } # North America
+		fum_tick_removal = { LIST = america ITEM = 2 } # South America
+		fum_tick_removal = { LIST = africa ITEM = 3 } # Central Africa
+		fum_tick_removal = { LIST = africa ITEM = 5 } # Southern Africa
+		fum_tick_merge = { LIST = africa ITEM = 2 } # West Africa
+		fum_tick_merge = { LIST = africa ITEM = 4 } # East Africa
+	}
+	else_if = {
+		limit = { "global_variable_map(cmm|flag:fum__reduction_preset)" = 4 } # Asia Centric
+		fum_tick_full_removal = { LIST = europe ITEM = 1 } # Western Europe
+		fum_tick_full_removal = { LIST = europe ITEM = 2 } # Eastern Europe
+		fum_tick_full_removal = { LIST = america ITEM = 1 } # North America
+		fum_tick_full_removal = { LIST = america ITEM = 2 } # South America
+		fum_tick_removal = { LIST = africa ITEM = 1 } # North Africa
+		fum_tick_removal = { LIST = africa ITEM = 2 } # West Africa
+		fum_tick_removal = { LIST = africa ITEM = 3 } # Central Africa
+	}
+}
+
+# Root scope: country. Ticks Merge Pops.
+fum_tick_merge = {
+	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = merge_pops item = $ITEM$ value = 1 }
+}
+
+# Root scope: country. Ticks Remove Countries and Merge Pops.
+fum_tick_removal = {
+	fum_tick_merge = { LIST = $LIST$ ITEM = $ITEM$ }
+	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = remove_countries item = $ITEM$ value = 1 }
+}
+
+# Root scope: country. Ticks Remove Countries, Merge Pops and Remove Pops.
+fum_tick_pop_removal = {
+	fum_tick_removal = { LIST = $LIST$ ITEM = $ITEM$ }
+	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = remove_pops item = $ITEM$ value = 1 }
+}
+
+# Root scope: country. Ticks every option.
+fum_tick_full_removal = {
+	fum_tick_pop_removal = { LIST = $LIST$ ITEM = $ITEM$ }
+	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = block_colonization item = $ITEM$ value = 1 }
+}
+
+# Root scope: country.
+fum_clear_reduction_options = {
+	fum_clear_reduction_row = { LIST = america ITEM = 1 }
+	fum_clear_reduction_row = { LIST = america ITEM = 2 }
+	fum_clear_reduction_row = { LIST = oceania ITEM = 1 }
+	fum_clear_reduction_row = { LIST = oceania ITEM = 2 }
+	fum_clear_reduction_row = { LIST = asia ITEM = 1 }
+	fum_clear_reduction_row = { LIST = asia ITEM = 2 }
+	fum_clear_reduction_row = { LIST = asia ITEM = 3 }
+	fum_clear_reduction_row = { LIST = asia ITEM = 4 }
+	fum_clear_reduction_row = { LIST = asia ITEM = 5 }
+	fum_clear_reduction_row = { LIST = asia ITEM = 6 }
+	fum_clear_reduction_row = { LIST = africa ITEM = 1 }
+	fum_clear_reduction_row = { LIST = africa ITEM = 2 }
+	fum_clear_reduction_row = { LIST = africa ITEM = 3 }
+	fum_clear_reduction_row = { LIST = africa ITEM = 4 }
+	fum_clear_reduction_row = { LIST = africa ITEM = 5 }
+	fum_clear_reduction_row = { LIST = europe ITEM = 1 }
+	fum_clear_reduction_row = { LIST = europe ITEM = 2 }
+}
+
+# Root scope: country.
+fum_clear_reduction_row = {
+	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = remove_countries item = $ITEM$ value = 0 }
+	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = merge_pops item = $ITEM$ value = 0 }
+	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = remove_pops item = $ITEM$ value = 0 }
+	cmm_set_list_field_value = { mod_id = fum setting_id = $LIST$ field_id = block_colonization item = $ITEM$ value = 0 }
 }

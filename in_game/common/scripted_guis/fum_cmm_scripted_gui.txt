@@ -1,0 +1,34 @@
+﻿fum__america_on_changed = {
+	scope = country
+	effect = {
+		fum_reduction_list_changed = { SETTING = fum__america }
+	}
+}
+
+fum__oceania_on_changed = {
+	scope = country
+	effect = {
+		fum_reduction_list_changed = { SETTING = fum__oceania }
+	}
+}
+
+fum__asia_on_changed = {
+	scope = country
+	effect = {
+		fum_reduction_list_changed = { SETTING = fum__asia }
+	}
+}
+
+fum__africa_on_changed = {
+	scope = country
+	effect = {
+		fum_reduction_list_changed = { SETTING = fum__africa }
+	}
+}
+
+fum__europe_on_changed = {
+	scope = country
+	effect = {
+		fum_reduction_list_changed = { SETTING = fum__europe }
+	}
+}
